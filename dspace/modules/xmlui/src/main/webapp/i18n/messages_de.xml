@@ -195,7 +195,7 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityBrowser.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Bereichsliste</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Bereichsliste</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Bereiche in FID GEO</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Bereiche in FID AAC</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Wählen Sie einen Bereich, um die enthaltenen Sammlungen zu durchstöbern.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
@@ -225,7 +225,7 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Ihre Anregungen/Meinung</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Ihre Anregungen/Meinung</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Ihre Anregungen/Meinung</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Danke für Ihre Anregungen/Meinung zu FID GEO. Ihre Kommentare sind jederzeit willkommen!</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Danke für Ihre Anregungen/Meinung zu FID AAC. Ihre Kommentare sind jederzeit willkommen!</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Ihre E-Mail-Adresse</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">Diese Adresse wird benutzt, damit wir ggf. mit Ihnen Rücksprache halten können.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Kommentar</message>
@@ -405,7 +405,7 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Einloggen</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">In FID GEO Einloggen</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">In FID AAC Einloggen</message>
 	<message key="xmlui.EPerson.PasswordLogin.email_address">E-Mail-Addresse</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">Die angegebene E-Mail-Adresse und/oder das Passwort sind ungültig.</message>
 	<message key="xmlui.EPerson.PasswordLogin.password">Passwort</message>
@@ -418,7 +418,7 @@
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Einloggen</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">In FID GEO einloggen</message>
+	<message key="xmlui.EPerson.LDAPLogin.head1">In FID AAC einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">Benutzername</message>
 	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">Der Benutzername und/oder Passwort sind ungültig.</message>
 	<message key="xmlui.EPerson.LDAPLogin.password">Passwort</message>
@@ -517,8 +517,8 @@
 	<!-- general submission aspect messages -->
 	<message key="xmlui.Submission.general.default.title">Ressourcen einreichen</message>
 	<message key="xmlui.Submission.general.default.trail">Ressourcen einreichen</message>
-	<message key="xmlui.Submission.general.mydspace_home">Mein FID GEO</message>
-	<message key="xmlui.Submission.general.go_mydspace">Gehe zu Mein FID GEO</message>
+	<message key="xmlui.Submission.general.mydspace_home">Mein FID AAC</message>
+	<message key="xmlui.Submission.general.go_mydspace">Gehe zu Mein FID AAC</message>
 	<message key="xmlui.Submission.general.submission.title">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.submission.trail">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.submission.head">Dokument veröffentlichen</message>	
@@ -595,7 +595,7 @@
 
     <!-- Same transformer, completed submissions section -->
     <message key="xmlui.Submission.Submissions.completed.head">Angenommene Veröffentlichungen</message>
-    <message key="xmlui.Submission.Submissions.completed.info">Dies sind Ihre Veröffentlichungen, die in FID GEO angenommen wurden.</message>
+    <message key="xmlui.Submission.Submissions.completed.info">Dies sind Ihre Veröffentlichungen, die in FID AAC angenommen wurden.</message>
     <message key="xmlui.Submission.Submissions.completed.column1">Zugangsdatum</message>
     <message key="xmlui.Submission.Submissions.completed.column2">Titel</message>
     <message key="xmlui.Submission.Submissions.completed.column3">SAmmlung</message>
@@ -610,7 +610,7 @@
 	<message key="xmlui.Submission.submit.progressbar.verify">Überprüfen</message>
 	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative Commons Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.CClicense">CC Lizenz</message>
-	<message key="xmlui.Submission.submit.progressbar.license">FID GEO Lizenz</message>
+	<message key="xmlui.Submission.submit.progressbar.license">FID AAC Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.complete">Fertig</message>
 	
 	<!-- org.dspace.app.xmlui.Submission.submit.ResumeStep -->
@@ -795,7 +795,7 @@
 	<message key="xmlui.Submission.submit.CCLicenseStep.select_change">Auswahl oder Änderung der Lizenz</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
-	<message key="xmlui.Submission.submit.LicenseStep.head">FID GEO Lizenz</message>
+	<message key="xmlui.Submission.submit.LicenseStep.head">FID AAC Lizenz</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Dies ist der letzte Schritt:</strong> Damit Ihr Dokument im Institutionellen Repositorium entsprechend verarbeitet und weiterverbreitet werden kann, müssen Sie folgenden Bedingungen zustimmen.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info2">Akzeptieren Sie die Standardlizenzbestimmung des Repositoriums indem Sie 'Ich akzeptiere die Lizenzbestimmungen' anhaken und klicken Sie dann auf 'Veröffentlichung abschließen'.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">Wenn Sie Fragen zu den Lizenzbestimmungen haben, wenden Sie sich an den Administrator.</message>
@@ -1181,7 +1181,7 @@
 	<!-- org.dspace.app.xmlui.administrative.registries.MetadatRegistryMain.java -->
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.title">Metadaten Referenzliste</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.head1">Metadaten Referenzliste</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">Die Metadatenreferenzliste enthält alle Metadatenfelder dieses Repositoriums. Die Metadatenfelder können auf mehrere Schema aufgeteilt werden. FID GEO benötigt als Basis qualifiziertes Dublin Core. Sie können das Dublin Core Schema erweitern oder neue Schemata anlegen.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">Die Metadatenreferenzliste enthält alle Metadatenfelder dieses Repositoriums. Die Metadatenfelder können auf mehrere Schema aufgeteilt werden. FID AAC benötigt als Basis qualifiziertes Dublin Core. Sie können das Dublin Core Schema erweitern oder neue Schemata anlegen.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column2">ID</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column3">Namensraum</message>
@@ -1662,7 +1662,7 @@
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Harvesting</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.options_harvest">Quelle des Inhalts</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.label_source">Quelle des Inhalts</message>
-	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">Dies ist eine Standard-FID GEO-Sammlung</message>
+	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">Dies ist eine Standard-FID AAC-Sammlung</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_harvested">Diese Sammlung bezieht ihren Inhalt via Harvesting aus einer externen Quelle.</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.submit_save">Speichern</message>
 	
@@ -1795,7 +1795,7 @@
 	<message key="xmlui.administrative.ControlPanel.trail">Systeminformationen</message>
 	<message key="xmlui.administrative.ControlPanel.head">Systeminformationen</message>
 	<message key="xmlui.administrative.ControlPanel.option_java">Java Umgebung</message>
-	<message key="xmlui.administrative.ControlPanel.option_dspace">FID GEO Konfiguration</message>
+	<message key="xmlui.administrative.ControlPanel.option_dspace">FID AAC Konfiguration</message>
 	<message key="xmlui.administrative.ControlPanel.option_alerts">Systemweite Benachrichtigungen</message>
 	<message key="xmlui.administrative.ControlPanel.hours">{0} Stunde(n)</message>
 	<message key="xmlui.administrative.ControlPanel.minutes">{0} Minute(n)</message>
@@ -1820,9 +1820,9 @@
     <message key="xmlui.administrative.ControlPanel.cocoon_cache_clear">(Cache sofort löschen)</message>
     <message key="xmlui.administrative.ControlPanel.cocoon_persistent_cache_size">Persistente Cache Größe ({0})</message>
     <message key="xmlui.administrative.ControlPanel.cocoon_transient_cache_size">Flüchtige Cache Größe ({0})</message>	
-	<message key="xmlui.administrative.ControlPanel.dspace_head">FID GEO Einstellungen</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_dir">FID GEO Installationsverzeichnis</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_url">FID GEO Basis-URL</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_head">FID AAC Einstellungen</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_dir">FID AAC Installationsverzeichnis</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_url">FID AAC Basis-URL</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_version">DSpace Version</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DSpace Name des Hosts</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_name">Name der Seite</message>
@@ -1884,7 +1884,7 @@
     <!-- System-wide Curation Tasks form (org.dspace.app.xmlui.aspect.administrative.CurateForm) -->
     <message key="xmlui.administrative.CurateForm.title">Datenpflege</message>
     <message key="xmlui.administrative.CurateForm.trail">Datenpflege - Aufgaben</message>
-    <message key="xmlui.administrative.CurateForm.object_label_name">Handle eines FID GEO Objektes</message>
+    <message key="xmlui.administrative.CurateForm.object_label_name">Handle eines FID AAC Objektes</message>
     <message key="xmlui.administrative.CurateForm.object_hint">Hinweis: Geben Sie [ihr-handle-prefix]/0 ein um ein Aufgabe systemweit durchzuführen (nicht alle Aufgaben können auf allen Objekten ausgeführt werden).</message>
     <message key="xmlui.administrative.CurateForm.task_label_name">Aufgabe</message>
     <!-- Used by Curate<DSO>Form classes also -->
@@ -2191,7 +2191,7 @@
   <message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Nicht-Referenzwert: @1@</message>
 
   <!-- mobile theme -->
-  <message key="xmlui.mobile.home_mobile">FID GEO Mobil</message>
+  <message key="xmlui.mobile.home_mobile">FID AAC Mobil</message>
   <message key="xmlui.mobile.search_all">Suche</message>
   <message key="xmlui.mobile.browse_all">Stöbern nach:</message>
   <message key="xmlui.mobile.browse_date">Datum</message>
@@ -2515,13 +2515,13 @@
   <message key="xmlui.dri2xhtml.structural.aboutus-link">Über uns</message>
   <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
   <message key="xmlui.home.text">
-	<h2>Publikationsserver für Fachliteratur zum System Erde und Weltall</h2>
+	<h2>Publikationsserver des Fachinformationsdienstes Anglo-American Culture</h2>
 <!--<div class="row icons">
                 <div class="col-lg-3">
                     <div class="bs-component">
                               <div class="well">        
                                 <image src="/themes/Mirage2/images/publish.png" />-->
-                                <h3><a href="handle/11858/Geology">Geologie</a></h3>
+                                <h3><a href="handle/11858/1">Anglistik / Großbritannienstudien</a></h3>
                                 <!--<small>Erstveröffentlichung ....<br />
                                 dauerhaft Adressierbar via DOI... <br />
                                 zitierbar .... 
@@ -2534,7 +2534,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/archive.png" />-->
-                                <h3><a href="handle/11858/Paleontology">Paläontologie</a></h3>
+                                <h3><a href="handle/11858/2">Amerikastudien</a></h3>
                                 <!--<small>Zweitveröffentlichung ....<br />
                                 dauerhaft aufbewahrt ... <br />
                                 langfristig nutzbar ... <br/>
@@ -2548,7 +2548,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/distribute.png" />-->
-                                <h3><a href="handle/11858/Geochemistry_Mineralogy_Petrology">Geochemie, Mineralogie, Petrologie</a></h3>
+                                <h3><a href="handle/11858/3">Kanadastudien</a></h3>
                                 <!--<small>sichtbar in FID...<br />
                                 DRIVER, COAR, OpenAIRE, OA-Netzwerk ...<br />
                                 &#160;
@@ -2561,7 +2561,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/Geophysics">Geophysik, Fernerkundung</a></h3>
+                                <h3><a href="handle/11858/4">Australien- und Neuseelandstudien</a></h3>
  <!--<small>frei zugänglich ...<br />
                                 finanzielle Unterstützung durch Fonds ... <br />
                                 Prioritätssicherung ...
@@ -2569,30 +2569,7 @@
                               </div>
                         </div>
                 </div>-->
-                            <!--<div class="col-lg-3">
-                    <div class="bs-component">
-                              <div class="well">
-                                <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/Energy_Resources_Environment">Energie, Ressourcen, Umwelt</a></h3>
-                                <!--<small>frei zugänglich ...<br />
-                                finanzielle Unterstützung durch Fonds ... <br />
-                                Prioritätssicherung ...
-                                </small>
-                              </div>
-                        </div>
-                </div>-->
-                            <!--<div class="col-lg-3">
-                    <div class="bs-component">
-                              <div class="well">
-                                <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/Geography">Geographie</a></h3>
-                                <!--<small>frei zugänglich ...<br />
-                                finanzielle Unterstützung durch Fonds ... <br />
-                                Prioritätssicherung ...
-                                </small>
-                              </div>
-                        </div>
-                </div>-->
+
 <!--	<div class="row">	
 	<p><strong><span class="text-success">FID GEO</span> stellt die Forschungsergebnisse der Universität Göttingen frei zur Verfügung</strong> <br />Der Publikationenserver macht damit die Arbeiten der Göttinger Wissenschaftlerinnen und Wissenschaftler weltweit sichtbar und erleichtert den Austausch mit der wissenschaftlichen Fachcommunity.</p>
 
