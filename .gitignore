@@ -30,4 +30,4 @@ META-INF/
 ##Mac noise
 .DS_Store
 
-/dspace/config/dspace.cfg
+dspace/config/dspace.cfg
