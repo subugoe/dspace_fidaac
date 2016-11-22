@@ -2652,6 +2652,9 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publicationKind">Publikationsart</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publicationKind">Publikationsart</message>
   <message key="xmlui.Discovery.AbstractSearch.type_publicationKind">Publikationsart</message>
+  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publisher">Herausgeber</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publisher">Herausgeber</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_publisher">Herausgeber</message>
   <message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
   <message key="xmlui.general.publish_here">Hier veröffentlichen</message>
 
