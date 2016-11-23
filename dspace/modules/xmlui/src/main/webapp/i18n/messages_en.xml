@@ -2585,4 +2585,6 @@
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publisher">Publisher</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publisher">Publisher</message>
   <message key="xmlui.Discovery.AbstractSearch.type_publisher">Publisher</message>
+  <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Discover</message>
+  <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... more</message>
 </catalogue>
