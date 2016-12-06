@@ -2576,7 +2576,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/32">Zeitschriften</a></h3>
+                                <h3><a href="handle/11858/32">Zeitschriftenarchiv</a></h3>
  <!--<small>frei zugänglich ...<br />
                                 finanzielle Unterstützung durch Fonds ... <br />
                                 Prioritätssicherung ...
@@ -2673,5 +2673,11 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="xmlui.Discovery.AbstractSearch.type_publisher">Herausgeber</message>
   <message key="xmlui.general.publish_now">Jetzt veröffentlichen</message>
   <message key="xmlui.general.publish_here">Hier veröffentlichen</message>
+  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Publikationstyp</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Publikationstyp</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_type">Publikationstyp</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_SubjectField">Kategorie</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.SubjectField">Kategorie</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_SubjectField">Kategorie</message>
 
 </catalogue>

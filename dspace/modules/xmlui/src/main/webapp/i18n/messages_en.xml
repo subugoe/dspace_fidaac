@@ -2601,4 +2601,10 @@
   <message key="xmlui.Discovery.AbstractSearch.type_publisher">Publisher</message>
   <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Discover</message>
   <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... more</message>
+  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Type of Publication</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Type of Publication</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_type">Type of Publication</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_SubjectField">Category</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.SubjectField">Category</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_SubjectField">Category</message>
 </catalogue>
