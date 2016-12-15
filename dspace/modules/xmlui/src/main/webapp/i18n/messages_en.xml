@@ -2607,4 +2607,9 @@
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_SubjectField">Category</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.SubjectField">Category</message>
   <message key="xmlui.Discovery.AbstractSearch.type_SubjectField">Category</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.series.column_heading">Journals</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.series">Journals</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.series">Journals</message>
+  <message key="xmlui.ArtifactBrowser.Navigation.browse_series">Journals</message>
+
 </catalogue>

@@ -2676,8 +2676,13 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Publikationstyp</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Publikationstyp</message>
   <message key="xmlui.Discovery.AbstractSearch.type_type">Publikationstyp</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_SubjectField">Kategorie</message>
+  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_SubjectField">Kategorie</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.SubjectField">Kategorie</message>
   <message key="xmlui.Discovery.AbstractSearch.type_SubjectField">Kategorie</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.series.column_heading">Zeitschriften</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.series">Zeitschriften</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.series">Zeitschriften</message>
+  <message key="xmlui.ArtifactBrowser.Navigation.browse_series">Zeitschriften</message>
+
 
 </catalogue>
