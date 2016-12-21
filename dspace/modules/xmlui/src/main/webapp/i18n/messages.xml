@@ -2614,6 +2614,18 @@ DRIVER betreibt eine Infrastruktur für Repositorien, die alle europäischen Lä
 		</p>
 </div> -->
   </message>
+  <message key="xmlui.series.head"><h2>Zeitschriftenarchiv</h2></message>
+  <message key="xmlui.series.text">
+        <!--<ul>
+        <li><a href="handle/11858/10">Discussion Papers / Centre for Regional Studies</a></li>
+        <li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
+        <li><a href="handle/11858/13">Electronic Journal of the Freiberg Geoscience Department</a></li>
+        <li><a href="handle/11858/11">Greifswalder Geographische Arbeiten</a></li>
+        <li><a href="handle/11858/14">Neubrandenburger Geologische Beiträge</a></li>
+        <li><a href="handle/11858/9">Scientific Technical Report / Deutsches Geoforschungszentrum Potsdam</a></li>
+        </ul>-->
+  </message>
+
   <message key="xmlui.error.contact"><a href="mailto:mmuehlh@sub.uni-goettingen.de">Systemadministrator</a></message>
 
   <message key="xmlui.error.show_stack">Java Stack</message>
