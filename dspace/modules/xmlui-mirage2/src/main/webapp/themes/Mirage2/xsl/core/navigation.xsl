@@ -19,16 +19,16 @@
 -->
 
 <xsl:stylesheet xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
-	xmlns:dri="http://di.tamu.edu/DRI/1.0/"
-	xmlns:mets="http://www.loc.gov/METS/"
-	xmlns:xlink="http://www.w3.org/TR/xlink/"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-	xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"
-	xmlns:xhtml="http://www.w3.org/1999/xhtml"
-	xmlns:mods="http://www.loc.gov/mods/v3"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns="http://www.w3.org/1999/xhtml"
-	exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
+xmlns:dri="http://di.tamu.edu/DRI/1.0/"
+xmlns:mets="http://www.loc.gov/METS/"
+xmlns:xlink="http://www.w3.org/TR/xlink/"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"
+xmlns:xhtml="http://www.w3.org/1999/xhtml"
+xmlns:mods="http://www.loc.gov/mods/v3"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns="http://www.w3.org/1999/xhtml"
+exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
 
     <xsl:output indent="yes"/>
 
@@ -227,10 +227,22 @@
     </xsl:template>
 
     <xsl:template match="dri:options//dri:item[dri:xref]">
-        <a href="{dri:xref/@target}">
+        <a>
+<!-- href="{dri:xref/@target}">-->
+        <xsl:attribute name="href">
+                <!-- global browsing by series: show static page -->
+                <xsl:choose>
+                        <xsl:when test="../@id='aspect.browseArtifacts.Navigation.list.global' and contains(dri:xref/@target, 'type=series')">
+                                <xsl:text>/series</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                                <xsl:value-of select="dri:xref/@target"/>
+                        </xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
             <xsl:call-template name="standardAttributes">
                 <xsl:with-param name="class">list-group-item ds-option</xsl:with-param>
-            </xsl:call-template>
+           </xsl:call-template>
             <xsl:choose>
                 <xsl:when test="dri:xref/node()">
                     <xsl:apply-templates select="dri:xref/node()"/>
