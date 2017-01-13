@@ -2515,7 +2515,7 @@
                     <div class="bs-component">
                               <div class="well">        
                                 <image src="/themes/Mirage2/images/publish.png" />-->
-                                <h3><a href="handle/11858/31">Anglistik / Großbritannienstudien</a></h3>
+                                <h3><a href="handle/11858/31/browse?type=subject">Anglistik / Großbritannienstudien</a></h3>
                                 <!--<small>Erstveröffentlichung ....<br />
                                 dauerhaft Adressierbar via DOI... <br />
                                 zitierbar .... 
@@ -2528,7 +2528,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/archive.png" />-->
-                                <h3><a href="handle/11858/28">Amerikastudien</a></h3>
+                                <h3><a href="handle/11858/28/browse?type=subject">Amerikastudien</a></h3>
                                 <!--<small>Zweitveröffentlichung ....<br />
                                 dauerhaft aufbewahrt ... <br />
                                 langfristig nutzbar ... <br/>
@@ -2542,7 +2542,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/distribute.png" />-->
-                                <h3><a href="handle/11858/29">Kanadastudien</a></h3>
+                                <h3><a href="handle/11858/29/browse?type=subject">Kanadastudien</a></h3>
                                 <!--<small>sichtbar in FID...<br />
                                 DRIVER, COAR, OpenAIRE, OA-Netzwerk ...<br />
                                 &#160;
@@ -2555,7 +2555,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/30">Australien- und Neuseelandstudien</a></h3>
+                                <h3><a href="handle/11858/30/browse?type=subject">Australien- und Neuseelandstudien</a></h3>
  <!--<small>frei zugänglich ...<br />
                                 finanzielle Unterstützung durch Fonds ... <br />
                                 Prioritätssicherung ...
@@ -2569,7 +2569,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/32">Zeitschriften</a></h3>
+                                <h3><a href="handle/11858/32/browse?type=subject">Zeitschriften</a></h3>
  <!--<small>frei zugänglich ...<br />
                                 finanzielle Unterstützung durch Fonds ... <br />
                                 Prioritätssicherung ...
