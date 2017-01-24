@@ -222,7 +222,19 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
             <xsl:call-template name="standardAttributes">
                 <xsl:with-param name="class">list-group-item ds-option</xsl:with-param>
             </xsl:call-template>
+		    <xsl:choose>     
+		<xsl:when test="../@n='SubjectField' and @rend='selected'">
+			<xsl:variable name="field"><xsl:value-of select="substring-before(., ' ')" /></xsl:variable>
+			<i18n:text><xsl:value-of select="$field" /></i18n:text><xsl:value-of select="concat(' ', substring-after(.,' '))"/>
+		</xsl:when>
+		<xsl:when test="../@n='type' and @rend='selected'">
+                        <xsl:variable name="type"><xsl:value-of select="substring-before(., ' ')" /></xsl:variable>
+                        <i18n:text><xsl:value-of select="$type" /></i18n:text><xsl:value-of select="concat(' ', substring-after(.,' '))"/>
+                </xsl:when>
+		<xsl:otherwise>
             <xsl:apply-templates />
+	</xsl:otherwise>
+	    </xsl:choose>
         </div>
     </xsl:template>
 
@@ -244,6 +256,15 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                 <xsl:with-param name="class">list-group-item ds-option</xsl:with-param>
            </xsl:call-template>
             <xsl:choose>
+	<xsl:when test="contains(dri:xref/@target, 'filtertype=SubjectField')">
+	<xsl:variable name="field"><xsl:value-of select="substring-before(dri:xref/node(), ' (')" /></xsl:variable>
+	<i18n:text><xsl:value-of select="$field" /></i18n:text><xsl:value-of select="concat(' ', substring-after(dri:xref/node(), ' '))" /> 
+        </xsl:when>
+	<xsl:when test="contains(dri:xref/@target, 'filtertype=type')">
+        <xsl:variable name="type"><xsl:value-of select="substring-before(dri:xref/node(), ' (')" /></xsl:variable>
+        <i18n:text><xsl:value-of select="$type" /></i18n:text><xsl:value-of select="concat(' ', substring-after(dri:xref/node(), ' '))" />
+        </xsl:when>
+
                 <xsl:when test="dri:xref/node()">
                     <xsl:apply-templates select="dri:xref/node()"/>
                 </xsl:when>
