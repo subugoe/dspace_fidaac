@@ -114,7 +114,7 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_for">Suche nach</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Autor</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_title">Titel</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Schlagwort</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Kategorie</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">Zusammenfassung</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">Betreuer</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_series">Serie</message>
@@ -163,13 +163,13 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">absteigend</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Autorenname</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Schlagwort</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Kategorie</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Auflistung  {0} nach Autor {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Auflistung  {0} nach Autor</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Auflistung {0} nach Schlagwort {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Auflistung {0} nach Schlagwort</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Auflistung {0} nach Kategorie {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Auflistung {0} nach Kategorie</message>
 	
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.title">Auflistung {0} nach Titel {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.title">Auflistung {0} nach Titel</message>
@@ -254,7 +254,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Bereiche &amp; Sammlungen</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titel</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autoren</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Schlagworte</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Kategorien</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Erscheinungsdatum</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Zugangsdatum</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">Diese Sammlung</message>
@@ -660,7 +660,7 @@
 	<message key="xmlui.Submission.submit.DescribeStep.report_no">Zählung</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Schlagwort Kategorien</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Schlagwort Kategorien</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Nach Schlagworten filtern</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Nach Kategorien filtern</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filtern</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Bitte warten Sie, der Thesaurus wird geladen.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">Beim Laden des Thesaurus ist ein Fehler aufgetreten. Bitte versuchen Sie es später nochmal.</message>
@@ -2028,7 +2028,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Erschienen</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Verlag</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Schlagwort</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Kategorie</message>
 	
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Dateien zu dieser Ressource</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Dateien</message>
@@ -2197,7 +2197,7 @@
   <message key="xmlui.mobile.browse_date">Datum</message>
   <message key="xmlui.mobile.browse_author">Autor</message>
   <message key="xmlui.mobile.browse_title">Titel</message>
-  <message key="xmlui.mobile.browse_subject">Schlagwort</message>
+  <message key="xmlui.mobile.browse_subject">Kategorie</message>
   <message key="xmlui.mobile.related_google_scholar">verwandt</message>
   <message key="xmlui.mobile.items_in_google_scholar">Dokumente in Google Scholar</message>
   <message key="xmlui.mobile.download">Download</message>
@@ -2273,7 +2273,7 @@
 
   <!-- org.dspace.app.xmlui.artifactbrowser.AdvancedSearch.java -->
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.contributor.author_filter">Autor</message>
-  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject_filter">Schlagwort</message>
+  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.subject_filter">Kategorie</message>
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.type_filter">Typ</message>
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.date.issued">Erscheinungsdatum</message>
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Erscheinungsdatum</message>
@@ -2298,7 +2298,7 @@
 
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">Auflistung nach: Autor</message>
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">Auflistung nach: Titel</message>
-  <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Auflistung nach: Schlagwort</message>
+  <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">Auflistung nach: Kategorie</message>
         
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">Auflistung nach: Kurzfassung</message>
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">Auflistung nach: Serie</message>
@@ -2309,7 +2309,7 @@
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_taxon_browse">Auflistung nach: Kategorie</message>
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_contributor_browse">Auflistung nach: Mitarbeiter</message>
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_creator_browse">Auflistung nach: Urheber</message>
-  <message key="xmlui.ArtifactBrowser.AbstractSearch.type_subject_browse">Auflistung nach: Schlagwort</message>
+  <message key="xmlui.ArtifactBrowser.AbstractSearch.type_subject_browse">Auflistung nach: Kategorie</message>
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_description_browse">Auflistung nach: Beschreibung</message>
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_relation_browse">Auflistung nach: Beziehung</message>
   <message key="xmlui.ArtifactBrowser.AbstractSearch.type_mime_browse">Auflistung nach: Mime-Typ</message>
@@ -2320,7 +2320,7 @@
 
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Autor</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Titel</message>
-  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Schlagwort</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Kategorie</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Erscheinungsdatum</message>
 
   <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">Anzeige der Dokumente {0}-{1}</message>
@@ -2328,9 +2328,9 @@
   <message key="xmlui.Discovery.AbstractSearch.type_author">Filtern nach: Autor</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Autor</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">Autor</message>
-  <message key="xmlui.Discovery.AbstractSearch.type_subject">Filtern nach: Schlagwort</message>
-  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Schlagwort</message>
-  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Schlagwort</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_subject">Filtern nach: Kategorie</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Kategorie</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">Kategorie</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">Erscheinungsdatum</message>
 
   <message key="xmlui.Discovery.AbstractSearch.startswith">Anfang</message>
@@ -2696,6 +2696,20 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.series">Zeitschriften</message>
   <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.series">Zeitschriften</message>
   <message key="xmlui.ArtifactBrowser.Navigation.browse_series">Zeitschriften</message>
+
+  <message key="literature">Literaturwissenschaften</message>
+  <message key="media">Medienwissenschaften</message>
+  <message key="geography">Geographie</message>
+  <message key="history">Geschichte</message>
+  <message key="law">Jura</message>
+  <message key="cultur">Kulturwissenschaften</message>
+  <message key="linguistics">Sprachwissenschaften</message>
+  <message key="politics">Politikwissenschaften</message>
+  <message key="socialsciences">Sozialwissenschaften</message>
+  <message key="englangteaching">Fachdidaktik</message>
+  <message key="article">Artikel</message>
+  <message key="monograph">Monograph</message>
+
 
 
 </catalogue>
