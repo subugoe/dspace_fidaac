@@ -155,7 +155,25 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                     </form>
                 </div>
             </xsl:if>
-            <xsl:apply-templates/>
+
+	<xsl:apply-templates select="dri:list[@n='browse']"/>
+
+	<xsl:apply-templates select="dri:list[@n='discovery']"/>
+
+	<!--Hilfe-Link-->
+	<div class="list-group"><a class="list-group-item active">	<span class="h5 list-group-item-heading h5">Infos</span></a>
+                                <a href="/help" class="list-group-item ds-option">Hilfe</a></div>
+
+	<xsl:apply-templates select="dri:list[@n='account']"/>
+
+	<xsl:apply-templates select="dri:list[@n='context']"/>
+
+	<xsl:apply-templates select="dri:list[@n='administrative']"/>
+
+	<xsl:apply-templates select="dri:list[@n='statistics']"/>
+	
+
+            <!--<xsl:apply-templates/>-->
             <!-- DS-984 Add RSS Links to Options Box -->
             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
                 <div>
