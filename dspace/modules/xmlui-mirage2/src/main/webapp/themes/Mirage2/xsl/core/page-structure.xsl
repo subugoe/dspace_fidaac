@@ -693,12 +693,15 @@
         <footer>
                 <div class="row">
                     <hr/>
-                    <div class="col-xs-7 col-sm-8">
-                        <div>
-                            <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2015&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
-                        </div>
+			<div class="col-xs-7 col-sm-8">
                         <div class="hidden-print">
-                            <a>
+                             <a href="/impressum"> <i18n:text>xmlui.dri2xhtml.structural.impressum-link</i18n:text></a>
+                             <xsl:text> | </xsl:text>
+                             <a href="http://aac.sub.uni-goettingen.de/ueber"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
+                             <xsl:text> | </xsl:text>
+                             <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
+                             <xsl:text> | </xsl:text>
+                             <a>
                                 <xsl:attribute name="href">
                                     <xsl:value-of
                                             select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
@@ -716,18 +719,10 @@
                                 <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
                             </a>
                         </div>
-                    </div>
-                    <div class="col-xs-5 col-sm-4 hidden-print">
-                        <div class="pull-right">
-                            <span class="theme-by">Theme by&#160;</span>
-                            <br/>
-                            <a title="@mire NV" target="_blank" href="http://atmire.com">
-                                <img alt="@mire NV" src="{concat($theme-path, '/images/@mirelogo-small.png')}"/>
-                            </a>
-                        </div>
+                	</div>
 
-                    </div>
-                </div>
+		</div>
+
                 <!--Invisible link to HTML sitemap (for search engines) -->
                 <a class="hidden">
                     <xsl:attribute name="href">
