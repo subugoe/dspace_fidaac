@@ -245,6 +245,10 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
 			<xsl:variable name="field"><xsl:value-of select="substring-before(., ' ')" /></xsl:variable>
 			<i18n:text><xsl:value-of select="$field" /></i18n:text><xsl:value-of select="concat(' ', substring-after(.,' '))"/>
 		</xsl:when>
+		<xsl:when test="../@n='typeDigitized' and @rend='selected'">
+                        <xsl:variable name="digitized"><xsl:value-of select="substring-before(., ' ')" /></xsl:variable>
+                        <i18n:text><xsl:value-of select="$digitized" /></i18n:text><xsl:value-of select="concat(' ', substring-after(.,' '))"/>
+                </xsl:when>
 		<xsl:when test="../@n='type' and @rend='selected'">
                         <xsl:variable name="type"><xsl:value-of select="substring-before(., ' ')" /></xsl:variable>
                         <i18n:text><xsl:value-of select="$type" /></i18n:text><xsl:value-of select="concat(' ', substring-after(.,' '))"/>
@@ -277,6 +281,10 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
 	<xsl:when test="contains(dri:xref/@target, 'filtertype=SubjectField')">
 	<xsl:variable name="field"><xsl:value-of select="substring-before(dri:xref/node(), ' (')" /></xsl:variable>
 	<i18n:text><xsl:value-of select="$field" /></i18n:text><xsl:value-of select="concat(' ', substring-after(dri:xref/node(), ' '))" /> 
+        </xsl:when>
+	<xsl:when test="contains(dri:xref/@target, 'filtertype=typeDigitized')">
+        <xsl:variable name="digitized"><xsl:value-of select="substring-before(dri:xref/node(), ' (')" /></xsl:variable>
+        <i18n:text><xsl:value-of select="$digitized" /></i18n:text><xsl:value-of select="concat(' ', substring-after(dri:xref/node(), ' '))" />
         </xsl:when>
 	<xsl:when test="contains(dri:xref/@target, 'filtertype=type')">
         <xsl:variable name="type"><xsl:value-of select="substring-before(dri:xref/node(), ' (')" /></xsl:variable>

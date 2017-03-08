@@ -2516,7 +2516,7 @@
                     <div class="bs-component">
                               <div class="well">        
                                 <image src="/themes/Mirage2/images/publish.png" />-->
-                                <h3><a href="handle/11858/31/browse?type=subject">Anglistik / Großbritannienstudien</a></h3>
+                                <h3><a href="handle/11858/31">Anglistik / Großbritannienstudien</a></h3>
                                 <!--<small>Erstveröffentlichung ....<br />
                                 dauerhaft Adressierbar via DOI... <br />
                                 zitierbar .... 
@@ -2529,7 +2529,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/archive.png" />-->
-                                <h3><a href="handle/11858/28/browse?type=subject">Amerikastudien</a></h3>
+                                <h3><a href="handle/11858/28">Amerikastudien</a></h3>
                                 <!--<small>Zweitveröffentlichung ....<br />
                                 dauerhaft aufbewahrt ... <br />
                                 langfristig nutzbar ... <br/>
@@ -2543,7 +2543,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/distribute.png" />-->
-                                <h3><a href="handle/11858/29/browse?type=subject">Kanadastudien</a></h3>
+                                <h3><a href="handle/11858/29">Kanadastudien</a></h3>
                                 <!--<small>sichtbar in FID...<br />
                                 DRIVER, COAR, OpenAIRE, OA-Netzwerk ...<br />
                                 &#160;
@@ -2556,7 +2556,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/30/browse?type=subject">Australien- und Neuseelandstudien</a></h3>
+                                <h3><a href="handle/11858/30">Australien- und Neuseelandstudien</a></h3>
  <!--<small>frei zugänglich ...<br />
                                 finanzielle Unterstützung durch Fonds ... <br />
                                 Prioritätssicherung ...
@@ -2570,7 +2570,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/32/browse?type=subject">Zeitschriften</a></h3>
+                                <h3><a href="handle/11858/32">Zeitschriften</a></h3>
  <!--<small>frei zugänglich ...<br />
                                 finanzielle Unterstützung durch Fonds ... <br />
                                 Prioritätssicherung ...
@@ -2637,6 +2637,19 @@
   <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">The ID used is not found or not valid. Please check it or continue manually with the next-Button.</div></message>
   <message key="xmlui.Submission.submit.PrefillStep.help">If an identifier is present, the bibliographic data to the document will be automatically entered in the next step.</message>
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Please activate the checkbox if you want to override the already imported bibliographic data!</message>
-<message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
+  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_typeDigitized">Digitalisat</message>
+
+  <message key="literarystudies">Literary Studies</message>
+  <message key="mediastudies">Media Studies</message>
+  <message key="geography">Geography</message>
+  <message key="history">History</message>
+  <message key="law">Law</message>
+  <message key="culturalstudies">Cultural Studies</message>
+  <message key="linguistics">Linguistics</message>
+  <message key="politics">Politics</message>
+  <message key="socialsciences">Social Sciences</message>
+  <message key="englishanguageteaching">English Language Teaching</message>
+
 
 </catalogue>
