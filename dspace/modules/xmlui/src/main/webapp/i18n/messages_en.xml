@@ -97,7 +97,7 @@
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head2">Communities or Collections matching your query</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head3">Items matching your query</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">Search produced no results.</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">All of FID AAC</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">The Stacks</message>
 
    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.title">title</message>
    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dateissued">issue date</message>
@@ -208,7 +208,7 @@
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CollectionViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.search_scope">Search Scope</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">All of FID AAC</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">The Stacks</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Search within this collection:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titles</message>
@@ -218,9 +218,9 @@
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_recent_submissions">Recent Submissions</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityBrowser.java -->
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Community List</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Community List</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Communities in FID AAC</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">List of Collections</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">List of Collections</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Collections</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Select a community to browse its collections.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
@@ -272,13 +272,13 @@
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Browse</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of FID AAC</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communities &amp; Collections</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">The Stacks</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjects</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">By Issue Date</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">By Submit Date</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Issue Date</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Submit Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_collection">This Collection</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">This Community</message>
 
@@ -2181,10 +2181,10 @@
 	<message key="xmlui.dri2xhtml.structural.logout">Logout</message>
 	<message key="xmlui.dri2xhtml.structural.login">Login</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Search FID AAC</message>
+	<message key="xmlui.dri2xhtml.structural.search">The Stacks</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Advanced Search</message>
-	<message key="xmlui.dri2xhtml.structural.search-in-community">This Community</message>
-	<message key="xmlui.dri2xhtml.structural.search-in-collection">This Collection</message>
+	<message key="xmlui.dri2xhtml.structural.search-in-community">this Community</message>
+	<message key="xmlui.dri2xhtml.structural.search-in-collection">this Collection</message>
 
 	<message key="xmlui.dri2xhtml.structural.pagination-previous">Previous Page</message>
 	<message key="xmlui.dri2xhtml.structural.pagination-info">Now showing items {0}-{1} of {2}</message>
@@ -2510,13 +2510,14 @@
     <message key="xmlui.dri2xhtml.structural.rights-link">Terms Of Use</message>
 
     <message key="xmlui.home.text">
-        <h2>Publication- and archiving plattform of the FID Anglo-American Culture</h2>
+        <h2>The Stacks</h2>
+	<h3>The Repository for</h3>
 <!--<div class="row icons">
                 <div class="col-lg-3">
                     <div class="bs-component">
                               <div class="well">        
                                 <image src="/themes/Mirage2/images/publish.png" />-->
-                                <h3><a href="handle/11858/31">Anglistik / Großbritannienstudien</a></h3>
+                                <h3><a href="handle/11858/31">English; British and Irish Studies</a></h3>
                                 <!--<small>Erstveröffentlichung ....<br />
                                 dauerhaft Adressierbar via DOI... <br />
                                 zitierbar .... 
@@ -2529,7 +2530,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/archive.png" />-->
-                                <h3><a href="handle/11858/28">Amerikastudien</a></h3>
+                                <h3><a href="handle/11858/28">American Studies</a></h3>
                                 <!--<small>Zweitveröffentlichung ....<br />
                                 dauerhaft aufbewahrt ... <br />
                                 langfristig nutzbar ... <br/>
@@ -2543,7 +2544,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/distribute.png" />-->
-                                <h3><a href="handle/11858/29">Kanadastudien</a></h3>
+                                <h3><a href="handle/11858/29">Canadian Studies</a></h3>
                                 <!--<small>sichtbar in FID...<br />
                                 DRIVER, COAR, OpenAIRE, OA-Netzwerk ...<br />
                                 &#160;
@@ -2556,7 +2557,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/30">Australien- und Neuseelandstudien</a></h3>
+                                <h3><a href="handle/11858/30">Australian and New Zealand Studies</a></h3>
  <!--<small>frei zugänglich ...<br />
                                 finanzielle Unterstützung durch Fonds ... <br />
                                 Prioritätssicherung ...
@@ -2570,7 +2571,7 @@
                     <div class="bs-component">
                               <div class="well">
                                 <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/32">Zeitschriften</a></h3>
+                                <h3><a href="handle/11858/32">Periodicals archive</a></h3>
  <!--<small>frei zugänglich ...<br />
                                 finanzielle Unterstützung durch Fonds ... <br />
                                 Prioritätssicherung ...
@@ -2617,13 +2618,13 @@
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Type of Publication</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Type of Publication</message>
   <message key="xmlui.Discovery.AbstractSearch.type_type">Type of Publication</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_SubjectField">Category</message>
-  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.SubjectField">Category</message>
-  <message key="xmlui.Discovery.AbstractSearch.type_SubjectField">Category</message>
-  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.series.column_heading">Journals</message>
-  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.series">Journals</message>
-  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.series">Journals</message>
-  <message key="xmlui.ArtifactBrowser.Navigation.browse_series">Journals</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_SubjectField">Subjects</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.SubjectField">Subjects</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_SubjectField">Subjects</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.series.column_heading">Periodicals</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.series">Periodicals</message>
+  <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.series">Periodicals</message>
+  <message key="xmlui.ArtifactBrowser.Navigation.browse_series">Periodicals</message>
 
   <!-- org.dspace.app.xmlui.Submission.submit.PrefillStep -->
   <message key="xmlui.Submission.submit.progressbar.prefill">Metadata Import</message>
