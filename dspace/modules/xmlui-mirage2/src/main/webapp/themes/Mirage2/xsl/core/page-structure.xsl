@@ -336,7 +336,7 @@
                         </button>
 
                         <a href="{$context-path}/" class="navbar-brand">
-                            FID AAC <!--<img src="{$theme-path}/images/DSpace-logo-line.svg" />-->
+                            <img src="{$theme-path}/images/logo_fidaac.svg" />
                         </a>
 
 
