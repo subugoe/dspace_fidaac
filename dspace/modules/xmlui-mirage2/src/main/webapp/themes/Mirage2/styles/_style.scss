@@ -68,3 +68,17 @@ body {
     line-height: 1.5;
     font-weight: normal;
 }
+
+.navbar-nav > li > a {
+    line-height: 30px;
+    font-size: 115%;
+}
+
+header .navbar-brand img {
+   height: 41px;
+   width: 188px;
+   z-index: 1;
+   display: block;
+   text-indent: -9999px;
+   position: relative;
+}
