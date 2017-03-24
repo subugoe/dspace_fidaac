@@ -1987,7 +1987,7 @@
 	</message>
 	<message key="xmlui.dri2xhtml.structural.contact-link">Kontakt</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Feedback abschicken</message>
-	
+	 <message key="xmlui.dri2xhtml.structural.help-link">Hilfe</message>
 	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repositorium (Manakin basiert)</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profil: </message>
@@ -2698,10 +2698,8 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.series">Zeitschriften und Serien</message>
   <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.series">Zeitschriften und Serien</message>
   <message key="xmlui.ArtifactBrowser.Navigation.browse_series">Zeitschriften und Serien</message>
-  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_typeDigitized">Digitalisat</message>
 
-  <message key="digitizedyes">Digitalisat</message>
-  <message key="digitizedno">kein Digitalisat</message>
+
   <message key="literarystudies">Literaturwissenschaften</message>
   <message key="mediastudies">Medienwissenschaften</message>
   <message key="geography">Geographie</message>
@@ -2712,8 +2710,14 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="politics">Politikwissenschaften</message>
   <message key="socialsciences">Sozialwissenschaften</message>
   <message key="englishanguageteaching">Fachdidaktik</message>
-  <message key="article">Artikel</message>
+  <message key="article">Zeitschriftenartikel</message>
   <message key="monograph">Monograph</message>
+  <message key="digitalReproduction">Digitalisat</message>
+  <message key="anthology">Sammelband</message>
+  <message key="anthologyArticle">Sammelbandbeitrag</message>
+  <message key="preprint">Erstveröffentlichung</message>
+  <message key="conferenceObject">Konferenzband</message>
+  <message key="conferencePaper">Konferenzbeitrag</message>
 
   <!-- org.dspace.app.xmlui.Submission.submit.PrefillStep -->
   <message key="xmlui.Submission.submit.progressbar.prefill">Metadata Import</message>

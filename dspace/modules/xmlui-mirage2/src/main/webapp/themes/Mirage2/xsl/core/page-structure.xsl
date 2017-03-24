@@ -336,7 +336,7 @@
                         </button>
 
                         <a href="{$context-path}/" class="navbar-brand">
-                            <img src="{$theme-path}/images/logo_fidaac.svg" />
+                            <img class="visible-sm visible-md visible-lg" src="{$theme-path}/images/logo_fidaac.svg" />
                         </a>
 
 
@@ -700,6 +700,8 @@
                              <a href="http://aac.sub.uni-goettingen.de/ueber"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
                              <xsl:text> | </xsl:text>
                              <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
+                             <xsl:text> | </xsl:text>
+			     <a href ="/help"> <i18n:text>xmlui.dri2xhtml.structural.help-link</i18n:text></a>
                              <xsl:text> | </xsl:text>
                              <a>
                                 <xsl:attribute name="href">

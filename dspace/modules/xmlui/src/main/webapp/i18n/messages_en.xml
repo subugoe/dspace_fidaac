@@ -2174,7 +2174,7 @@
 	</message>
 	<message key="xmlui.dri2xhtml.structural.contact-link">Contact Us</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Send Feedback</message>
-
+         <message key="xmlui.dri2xhtml.structural.help-link">Help</message>
 	<message key="xmlui.dri2xhtml.structural.head-subtitle">FID AAC Repository</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profile: </message>
@@ -2652,5 +2652,13 @@
   <message key="socialsciences">Social Sciences</message>
   <message key="englishanguageteaching">English Language Teaching</message>
 
+  <message key="preprint">Preprint</message>
+  <message key="monograph">Monograph</message>
+  <message key="article">Article</message>
+  <message key="anthologyArticle">Article in Anthology</message>
+  <message key="anthology">Anthology</message>
+  <message key="conferenceObject">Conference Object</message>
+  <message key="conferencePaper">Conference Paper</message>
+  <message key="digitalReproduction">Digital Reproduction</message>
 
 </catalogue>
