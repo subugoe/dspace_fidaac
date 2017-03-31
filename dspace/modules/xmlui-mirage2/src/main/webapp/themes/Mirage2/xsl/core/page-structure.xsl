@@ -259,6 +259,8 @@
                 }
             </script>
 
+
+
             <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 9]&gt;
                 &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/html5shiv/dist/html5shiv.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
                 &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/respond/dest/respond.min.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
@@ -337,9 +339,11 @@
 
                         <a href="{$context-path}/" class="navbar-brand">
                             <img class="visible-sm visible-md visible-lg" src="{$theme-path}/images/logo_fidaac.svg" />
+			</a>
+			<a href="{$context-path}/" class="navbar-brand-small">
+ 			    <img class="visible-xs hidden-sm hidden-md hidden-lg" src="{$theme-path}/images/logo_fidaac_small.png" />
                         </a>
-
-
+			<div class="pull-right visible-md visible-lg logo-title"><table><tr><td>Library of Anglo-American Culture and History</td></tr><tr><td class="logo-title-middle">FID AAC</td></tr></table></div>
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
                         <ul class="nav nav-pills pull-left ">
 

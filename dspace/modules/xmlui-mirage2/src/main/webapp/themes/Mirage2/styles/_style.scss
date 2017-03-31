@@ -22,7 +22,7 @@
 
 @include selection {
     color: white;
-    background: hotpink;
+    background: #3399ff;
 }
 
 header .navbar-default {
@@ -82,3 +82,21 @@ header .navbar-brand img {
    text-indent: -9999px;
    position: relative;
 }
+
+header .navbar-brand-small img {
+   height: 20px;
+   width: 94px;
+   z-index: 1;
+   display: block;
+   text-indent: -9999px;
+   position: relative;
+   margin-top: 15px;
+}
+
+.logo-title {
+   padding-top: 15px;
+   font-size: 115%;
+   color: #fff;
+   text-align: center;
+}
+
