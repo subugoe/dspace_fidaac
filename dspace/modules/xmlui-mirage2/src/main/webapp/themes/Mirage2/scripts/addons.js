@@ -2,7 +2,7 @@
 {
     if (/English/.test($("#ds-language-selection > a > span").text()))
     {
-        $("h2, li, a, a > span").each(function ()
+        $("h2, li, a, a > span, head > title").each(function ()
         {
             if ($(this).text() == "Gesamter Bestand") {
                 $(this).text("All Publications");
