@@ -2,7 +2,7 @@
 {
     if (/English/.test($("#ds-language-selection > a > span").text()))
     {
-        $("a, a > span").each(function ()
+        $("h2, li, a, a > span").each(function ()
         {
             if ($(this).text() == "Gesamter Bestand") {
                 $(this).text("All Publications");
@@ -20,7 +20,7 @@
             if ($(this).text() == "Kanadastudien") {
                 $(this).text("Canadian Studies");
             }
-            if (/Archiv/.test($(this).text())) {
+            if (/Zeitschriften/.test($(this).text())) {
                 $(this).text("Periodicals archive");
             }
                        
