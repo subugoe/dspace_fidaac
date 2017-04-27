@@ -2,12 +2,12 @@
 {
     if (/English/.test($("#ds-language-selection > a > span").text()))
     {
-        $("h2, li, a, a > span, head > title").each(function ()
+        $("li, h2, a, a > span, head > title").each(function ()
         {
             if ($(this).text() == "Gesamter Bestand") {
                 $(this).text("All Publications");
             }
-            if (/Anglistik/.test($(this).text())) {
+            if (/Irlandstudien$/.test($(this).text())) {
                 $(this).text("English; British and Irish Studies");
             }
             if ($(this).text() == "Amerikastudien") {
@@ -20,7 +20,7 @@
             if ($(this).text() == "Kanadastudien") {
                 $(this).text("Canadian Studies");
             }
-            if (/Zeitschriften/.test($(this).text())) {
+            if (/Serien$/.test($(this).text())) {
                 $(this).text("Periodicals archive");
             }
                        
