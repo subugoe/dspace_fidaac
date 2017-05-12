@@ -699,9 +699,9 @@
                     <hr/>
 			<div class="col-xs-7 col-sm-8">
                         <div class="hidden-print">
-                             <a href="/impressum"> <i18n:text>xmlui.dri2xhtml.structural.impressum-link</i18n:text></a>
+			     <a href="/impressum"> <i18n:text>xmlui.dri2xhtml.structural.impressum-link</i18n:text></a>
                              <xsl:text> | </xsl:text>
-                             <a href="http://aac.sub.uni-goettingen.de/ueber"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
+                             <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
                              <xsl:text> | </xsl:text>
                              <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
                              <xsl:text> | </xsl:text>

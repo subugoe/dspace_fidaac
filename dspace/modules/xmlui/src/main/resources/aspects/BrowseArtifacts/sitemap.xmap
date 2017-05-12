@@ -71,6 +71,14 @@ collections / items / and bitstreams.
                 <map:serialize type="xml"/>
            </map:match>
 
+<!-- statische Seite für Über Uns -->
+            <map:match pattern="aboutus">
+                <map:act type="DSpacePropertyFileReader">
+                <map:parameter name="dspace.dir" value="dspace.dir" />
+                <map:transform type="Include" src="file://{dspace.dir}/config/aboutus.xml" />
+                </map:act>
+                <map:serialize type="xml"/>
+           </map:match>
 
   <!-- statische Seite für Nutzungsbedingungen -->
             <map:match pattern="rights">
