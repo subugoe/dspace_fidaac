@@ -2022,7 +2022,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Vorschau</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Titel</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Autor(en)</message>
-        <message key="xmlui.dri2xhtml.METS-1.0.item-editor">Herausgeber</message>
+        <message key="xmlui.dri2xhtml.METS-1.0.item-editor">, Hrg. </message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Zusammenfassung</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Beschreibung</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
@@ -2515,6 +2515,11 @@
   <message key="xmlui.dri2xhtml.structural.aboutus-link">Über uns</message>
   <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
   <message key="xmlui.dri2xhtml.structural.rights-link">Nutzungsbedingungen</message>
+  <message key="xmlui.aboutus.head">Über Uns</message>
+  <message key="xmlui.help.head">Hilfe</message>
+  <message key="xmlui.rights.head">Nutzungsbedingungen</message>
+
+
   <message key="xmlui.home.text">
 	<h2>The Stacks</h2>
 	<h3>Das Repositorium für</h3>
@@ -2711,7 +2716,7 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="socialsciences">Sozialwissenschaften</message>
   <message key="englishanguageteaching">Fachdidaktik</message>
   <message key="article">Zeitschriftenartikel</message>
-  <message key="monograph">Monograph</message>
+  <message key="monograph">Monographie</message>
   <message key="digitalReproduction">Digitalisat</message>
   <message key="anthology">Sammelband</message>
   <message key="anthologyArticle">Sammelbandbeitrag</message>
@@ -2732,5 +2737,10 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="xmlui.Submission.submit.PrefillStep.help">Falls für die Publikation kein Identifier vorliegt, gehen Sie bitte auf Weiter. Ist ein Identifier vorhanden, werden die bibliographischen Daten zum Dokument im nächsten Schritt automatisch eingetragen.</message>
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Bitte die Checkbox Überschreiben nur aktivieren, wenn sie die eingetragene Id korrigieren wollen.</message>
 <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypemono">Monographie</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Sammelband</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Zeitschriftenartikel</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Sammelbandbeitrag</message>
+<message key="xmlui.dri2xhtml.METS-1.0.editor">Hrg. </message>
 
 </catalogue>

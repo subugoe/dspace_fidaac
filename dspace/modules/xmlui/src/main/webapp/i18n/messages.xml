@@ -2508,6 +2508,10 @@
     <message key="xmlui.dri2xhtml.structural.aboutus-link">About us</message>
     <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
     <message key="xmlui.dri2xhtml.structural.rights-link">Terms Of Use</message>
+     <message key="xmlui.aboutus.head">About Us</message>
+   <message key="xmlui.help.head">Help</message>
+   <message key="xmlui.rights.head">Rights</message>
+
 
     <message key="xmlui.home.text">
         <h2>The Stacks</h2>
@@ -2639,6 +2643,13 @@
   <message key="xmlui.Submission.submit.PrefillStep.help">If an identifier is present, the bibliographic data to the document will be automatically entered in the next step.</message>
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Please activate the checkbox if you want to override the already imported bibliographic data!</message>
   <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.item-editor">, ed. </message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypemono">Monograph</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Anthology</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Article</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Article in Anthology</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.editor">Ed. </message>
+
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_typeDigitized">Digitalisat</message>
 
   <message key="literarystudies">Literary Studies</message>
