@@ -111,3 +111,16 @@ header .navbar-brand-small img {
 .thumbnail {
    margin-bottom: 0;
 }
+
+footer {
+   margin-top: 50px;
+}
+
+footer .row > div {
+   border-top: none;
+}
+
+@media (max-width: 767px) {
+ .item-wrapper.row {
+  border-bottom: none;
+}}
