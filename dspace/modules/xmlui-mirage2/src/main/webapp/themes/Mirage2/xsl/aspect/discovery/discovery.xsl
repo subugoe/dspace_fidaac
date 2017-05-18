@@ -652,7 +652,7 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
-                    <h4><i>
+                    <h4>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
@@ -677,11 +677,11 @@
                             <xsl:text>&#160;</xsl:text>
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
-                    </i></h4>
+                    </h4>
                 </xsl:element>
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.journal'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.journal'))]/dri:item"/><xsl:text> </xsl:text>
+                                <i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.journal'))]/dri:item"/></i><xsl:text> </xsl:text>
                             </xsl:when>
                         </xsl:choose>
 		<xsl:choose>
