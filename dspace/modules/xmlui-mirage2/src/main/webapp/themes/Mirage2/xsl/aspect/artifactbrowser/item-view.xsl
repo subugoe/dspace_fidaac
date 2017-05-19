@@ -105,6 +105,11 @@
 
     <xsl:template match="dim:dim" mode="itemSummaryView-DIM">
         <div class="item-summary-view-metadata">
+
+	<xsl:choose>
+		<!--Monograph-->
+	  <xsl:when test="dim:field[@element='type'] = 'monograph'">
+
             <xsl:call-template name="itemSummaryView-DIM-title"/>
             <div class="row">
                 <div class="col-sm-4">
@@ -128,6 +133,34 @@
                     <xsl:call-template name="itemSummaryView-collections"/>
                 </div>
             </div>
+	  </xsl:when>
+	  <xsl:otherwise>
+		 <xsl:call-template name="itemSummaryView-DIM-title"/>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-12">
+                            <xsl:call-template name="itemSummaryView-DIM-thumbnail"/>
+                        </div>
+                        <div class="col-xs-6 col-sm-12">
+                            <xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                        </div>
+                    </div>
+                    <xsl:call-template name="itemSummaryView-DIM-date"/>
+                    <xsl:call-template name="itemSummaryView-DIM-authors"/>
+                    <xsl:if test="$ds_item_view_toggle_url != ''">
+                        <xsl:call-template name="itemSummaryView-show-full"/>
+                    </xsl:if>
+                </div>
+                <div class="col-sm-8">
+                    <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                    <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                    <xsl:call-template name="itemSummaryView-collections"/>
+                </div>
+            </div>
+	  </xsl:otherwise>
+	</xsl:choose>
+
         </div>
     </xsl:template>
 
@@ -443,7 +476,15 @@
                     </xsl:otherwise>
                 </xsl:choose>
                 <xsl:text>)</xsl:text>
-            </a>
+            </a><br/>
+
+<!--Metadaten-Export-->
+	<div class="metadataexport"><h5><i18n:text>xmlui.metadata.export</i18n:text></h5>
+		<a><xsl:attribute name="href"><xsl:value-of select="concat('/endnote/handle/11858/', substring-before(substring-after($href, '11858/'), '/')) "/></xsl:attribute><xsl:text>Endnote</xsl:text></a><br/>
+		<a><xsl:attribute name="href"><xsl:value-of select="concat('/bibtex/handle/11858/', substring-before(substring-after($href, '11858/'), '/')) "/></xsl:attribute><xsl:text>BibTex</xsl:text></a><br/>
+		<a><xsl:attribute name="href"><xsl:value-of select="concat('/ris/handle/11858/', substring-before(substring-after($href, '11858/'), '/')) "/></xsl:attribute><xsl:text>RIS</xsl:text></a>
+	</div>
+
         </div>
     </xsl:template>
 

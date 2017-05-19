@@ -2671,5 +2671,6 @@
   <message key="conferenceObject">Conference Object</message>
   <message key="conferencePaper">Conference Paper</message>
   <message key="digitalReproduction">Digital Reproduction</message>
+  <message key="xmlui.metadata.export">Metadata Export: </message>
 
 </catalogue>
