@@ -109,31 +109,134 @@
 	<xsl:choose>
 		<!--Monograph-->
 	  <xsl:when test="dim:field[@element='type'] = 'monograph'">
-
-            <xsl:call-template name="itemSummaryView-DIM-title"/>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-12">
-                            <xsl:call-template name="itemSummaryView-DIM-thumbnail"/>
-                        </div>
-                        <div class="col-xs-6 col-sm-12">
-                            <xsl:call-template name="itemSummaryView-DIM-file-section"/>
-                        </div>
-                    </div>
-                    <xsl:call-template name="itemSummaryView-DIM-date"/>
-                    <xsl:call-template name="itemSummaryView-DIM-authors"/>
-                    <xsl:if test="$ds_item_view_toggle_url != ''">
-                        <xsl:call-template name="itemSummaryView-show-full"/>
-                    </xsl:if>
-                </div>
-                <div class="col-sm-8">
-                    <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-                    <xsl:call-template name="itemSummaryView-DIM-URI"/>
-                    <xsl:call-template name="itemSummaryView-collections"/>
-                </div>
-            </div>
+		<xsl:call-template name="itemSummaryView-DIM-title"/>
+		<xsl:call-template name="itemSummaryView-DIM-authors"/>
+		<xsl:call-template name="itemSummaryView-DIM-date"/>
+		<xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
+		<xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
+		<div><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></div>
+		<!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
+		<xsl:call-template name="itemSummaryView-DIM-language"/>
+		<xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
+		<xsl:call-template name="itemSummaryView-DIM-descriptionSponsor"/>-->
+		<xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <!--<xsl:call-template name="itemSummaryView-DIM-doi"/>-->
+                <span class="spacer">&#160;</span>
+                <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
+                <td><xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                <xsl:if test="$ds_item_view_toggle_url != ''">
+                <xsl:call-template name="itemSummaryView-show-full"/>
+                </xsl:if></td></tr></table>
+                <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                <xsl:call-template name="itemSummaryView-collections"/>
+		
 	  </xsl:when>
+		<!--/Monograph-->
+	
+	 <!--Zeitschriftenartikel-->
+          <xsl:when test="dim:field[@element='type'] = 'article'">
+                <xsl:call-template name="itemSummaryView-DIM-title"/>
+                <xsl:call-template name="itemSummaryView-DIM-authors"/>
+                <xsl:call-template name="itemSummaryView-DIM-date"/>
+                <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
+                <xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
+                <div><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypearticle</i18n:text></div>
+                <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
+                <xsl:call-template name="itemSummaryView-DIM-language"/>
+                <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
+                <xsl:call-template name="itemSummaryView-DIM-descriptionSponsor"/>-->
+                <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <!--<xsl:call-template name="itemSummaryView-DIM-doi"/>-->
+                <span class="spacer">&#160;</span>
+                <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
+                <td><xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                <xsl:if test="$ds_item_view_toggle_url != ''">
+                <xsl:call-template name="itemSummaryView-show-full"/>
+                </xsl:if></td></tr></table>
+                <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                <xsl:call-template name="itemSummaryView-collections"/>
+
+          </xsl:when>
+                <!--/Zeitschriftenartikel-->
+
+	<!--Sammelband-->
+          <xsl:when test="dim:field[@element='type'] = 'anthology'">
+                <xsl:call-template name="itemSummaryView-DIM-title"/>
+                <xsl:call-template name="itemSummaryView-DIM-authors"/>
+                <xsl:call-template name="itemSummaryView-DIM-date"/>
+                <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
+                <xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
+                <div><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeantho</i18n:text></div>
+                <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
+                <xsl:call-template name="itemSummaryView-DIM-language"/>
+                <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
+                <xsl:call-template name="itemSummaryView-DIM-descriptionSponsor"/>-->
+                <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <!--<xsl:call-template name="itemSummaryView-DIM-doi"/>-->
+                <span class="spacer">&#160;</span>
+                <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
+                <td><xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                <xsl:if test="$ds_item_view_toggle_url != ''">
+                <xsl:call-template name="itemSummaryView-show-full"/>
+                </xsl:if></td></tr></table>
+                <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                <xsl:call-template name="itemSummaryView-collections"/>
+
+          </xsl:when>
+                <!--/Sammelband-->
+
+	<!--Sammelbandbeitrag-->
+          <xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">
+                <xsl:call-template name="itemSummaryView-DIM-title"/>
+                <xsl:call-template name="itemSummaryView-DIM-authors"/>
+                <xsl:call-template name="itemSummaryView-DIM-date"/>
+                <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
+                <xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
+                <div><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></div>
+                <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
+                <xsl:call-template name="itemSummaryView-DIM-language"/>
+                <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
+                <xsl:call-template name="itemSummaryView-DIM-descriptionSponsor"/>-->
+                <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <!--<xsl:call-template name="itemSummaryView-DIM-doi"/>-->
+                <span class="spacer">&#160;</span>
+                <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
+                <td><xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                <xsl:if test="$ds_item_view_toggle_url != ''">
+                <xsl:call-template name="itemSummaryView-show-full"/>
+                </xsl:if></td></tr></table>
+                <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                <xsl:call-template name="itemSummaryView-collections"/>
+
+          </xsl:when>
+                <!--/Sammelbandbeitrag-->
+
+	<!--Digitalisat-->
+          <xsl:when test="dim:field[@element='type'] = 'digitalReproduction'">
+                <xsl:call-template name="itemSummaryView-DIM-title"/>
+                <xsl:call-template name="itemSummaryView-DIM-authors"/>
+                <xsl:call-template name="itemSummaryView-DIM-date"/>
+                <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
+                <xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
+                <div><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypedigital</i18n:text></div>
+                <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
+                <xsl:call-template name="itemSummaryView-DIM-language"/>
+                <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
+                <xsl:call-template name="itemSummaryView-DIM-descriptionSponsor"/>-->
+                <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <!--<xsl:call-template name="itemSummaryView-DIM-doi"/>-->
+                <span class="spacer">&#160;</span>
+                <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
+                <td><xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                <xsl:if test="$ds_item_view_toggle_url != ''">
+                <xsl:call-template name="itemSummaryView-show-full"/>
+                </xsl:if></td></tr></table>
+                <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                <xsl:call-template name="itemSummaryView-collections"/>
+
+          </xsl:when>
+                <!--/Digitalisat-->
+
 	  <xsl:otherwise>
 		 <xsl:call-template name="itemSummaryView-DIM-title"/>
             <div class="row">
@@ -316,6 +419,32 @@
             </div>
         </xsl:if>
     </xsl:template>
+
+	<xsl:template name="itemSummaryView-DIM-publisher">
+        	<xsl:if test="dim:field[@element='publisher']">
+                	<xsl:for-each select="dim:field[@element='publisher']">
+                        	<xsl:copy-of select="./node()"/>
+                	</xsl:for-each>
+        	</xsl:if>
+	</xsl:template>
+
+	 <xsl:template name="itemSummaryView-DIM-publishedIn">
+                <xsl:if test="dim:field[@element='publishedIn']">
+                        <xsl:for-each select="dim:field[@element='publishedIn']">
+                                <xsl:copy-of select="./node()"/><xsl:text>: </xsl:text>
+                        </xsl:for-each>
+                </xsl:if>
+        </xsl:template>
+
+	 <xsl:template name="itemSummaryView-DIM-ispartofseries">
+                <xsl:if test="dim:field[@element='relation' and @qualifier='ispartofseries']">
+                        <xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartofseries']">
+                                <xsl:copy-of select="./node()"/>
+                        </xsl:for-each>
+                </xsl:if>
+        </xsl:template>
+
+
 
     <xsl:template name="itemSummaryView-DIM-date">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
