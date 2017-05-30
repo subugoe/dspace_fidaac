@@ -110,11 +110,11 @@ public class DescribeStep extends AbstractSubmissionStep
      */
     private static void initializeInputsReader(Locale locale) throws DCInputsReaderException
     {
-        if (INPUTS_READER == null)
-        {
+        /*if (INPUTS_READER == null)
+        {*/
             INPUTS_READER = new DCInputsReader(I18nUtil.getInputFormsFileName(locale));
-            System.out.println("Fatching input form: " + I18nUtil.getInputFormsFileName(locale));
-        }
+           /* System.out.println("Fatching input form: " + I18nUtil.getInputFormsFileName(locale));
+        }*/
     }
     
     /**
@@ -145,8 +145,8 @@ public class DescribeStep extends AbstractSubmissionStep
         ProcessingException, SAXException, IOException
         {
             super.setup(resolver,objectModel,src,parameters);
-            //this.locale = context.getCurrentLocale();
-	    this.locale = I18nUtils.findLocale(objectModel, "locale-attribute", parameters, I18nUtil.getDefaultLocale(), true);
+            this.locale = context.getCurrentLocale();
+	    //this.locale = I18nUtils.findLocale(objectModel, "locale-attribute", parameters, I18nUtil.getDefaultLocale(), true);
             //Ensure that the InputsReader is initialized
             try
             {
