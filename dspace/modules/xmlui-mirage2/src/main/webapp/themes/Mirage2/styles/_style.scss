@@ -101,7 +101,7 @@ header .navbar-brand-small img {
 }
 
 .dctype {
-   float: right; 
+   margin-top: 10px; 
 }
 
 #aspect_discovery_SimpleSearch_div_search-results .ds-artifact-item {
@@ -132,4 +132,16 @@ table.item-view td {
 
 .item-page-field-wrapper {
   margin-bottom: 5px;
+}
+
+span.artifact-title {
+  font-size: 16px;
+}
+ 
+#main-container .row-offcanvas {
+  background-color: white;
+}
+
+div.artifact-info {
+  margin-bottom: 10px;
 }

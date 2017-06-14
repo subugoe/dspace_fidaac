@@ -211,7 +211,7 @@
 
 
 				<div class="col-sm-9 artifact-description">
-					
+					<div class="artifact-info">
 					<span class="author h4">    <small>
                         <xsl:choose>
                             <!--<xsl:when test="dri:list[@n=(concat($handle, ':dc.contributor.author'))]">
@@ -279,7 +279,7 @@
                             </span>
                             <xsl:text>):</xsl:text>
                             </small></span>
-                    </xsl:if>
+                    </xsl:if></div>
 				
 				
 				<xsl:element name="a">
@@ -293,7 +293,7 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
-                    <h4><i>
+                     <span class="artifact-title"><i>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
@@ -304,10 +304,10 @@
                         </xsl:choose>
 						<xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
-                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/><xsl:text>.</xsl:text>
+                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-
+			<xsl:text>.</xsl:text>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -318,7 +318,7 @@
                             <xsl:text>&#160;</xsl:text>
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
-                    </i></h4>
+                    </i></span>
                 </xsl:element>
 		 <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.publishedIn'))]">
@@ -330,7 +330,7 @@
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
                             </xsl:when>
                  </xsl:choose>
-		 <span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeantho</i18n:text></span>
+		 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeantho</i18n:text></div>
 
                 <!--<div class="artifact-info">
                     
@@ -388,7 +388,7 @@
 
 
 				<div class="col-sm-9 artifact-description">
-					
+					<div class="artifact-info">
 					<span class="author h4">    <small>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.contributor.author'))]">
@@ -456,7 +456,7 @@
                             </span>
                             <xsl:text>):</xsl:text>
                             </small></span>
-                    </xsl:if>
+                    </xsl:if></div>
 				
 				
 				<xsl:element name="a">
@@ -470,7 +470,7 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
-                    <h4><i>
+                    <span class="artifact-title"><i>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
@@ -481,10 +481,10 @@
                         </xsl:choose>
 						<xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
-                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/><xsl:text>.</xsl:text>
+                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-
+			<xsl:text>.</xsl:text>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -495,7 +495,7 @@
                             <xsl:text>&#160;</xsl:text>
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
-                    </i></h4>
+                    </i></span>
                 </xsl:element>
 		 <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.publishedIn'))]">
@@ -514,7 +514,7 @@
                  </xsl:choose>
 
 
-                 <span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></span>
+                 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></div>
  
 		<!--<div class="artifact-info">
                     
@@ -570,7 +570,7 @@
 
 
                                 <div class="col-sm-9 artifact-description">
-
+					<div class="artifact-info">
                                         <span class="author h4">    <small>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.contributor.author'))]">
@@ -638,7 +638,7 @@
                             </span>
                             <xsl:text>):</xsl:text>
                             </small></span>
-                    </xsl:if>
+                    </xsl:if></div>
 
 
                                 <xsl:element name="a">
@@ -652,10 +652,10 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
-                    <h4>
+                    <span class="artifact-title">
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                                <xsl:text>&quot;</xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -663,10 +663,10 @@
                         </xsl:choose>
                                                 <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
-                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/><xsl:text>.</xsl:text>
+                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-
+			<xsl:text>.&quot;</xsl:text>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -677,7 +677,7 @@
                             <xsl:text>&#160;</xsl:text>
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
-                    </h4>
+                    </span>
                 </xsl:element>
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.journal'))]">
@@ -706,7 +706,7 @@
                  </xsl:choose>
 
 
-                 <span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypearticle</i18n:text></span>
+                 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypearticle</i18n:text></div>
 
                 <!--<div class="artifact-info">
 
@@ -761,7 +761,7 @@
 
 
                                 <div class="col-sm-9 artifact-description">
-
+					<div class="artifact-info">
                                         <span class="author h4">    <small>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.contributor.author'))]">
@@ -829,7 +829,7 @@
                             </span>
                             <xsl:text>):</xsl:text>
                             </small></span>
-                    </xsl:if>
+                    </xsl:if></div>
 
 
                                 <xsl:element name="a">
@@ -843,10 +843,10 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
-                    <h4><i>
+                    <span class="artifact-title"><i>
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                               <xsl:text>&quot;</xsl:text> <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -857,7 +857,7 @@
                                 <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/><xsl:text>.</xsl:text>
                             </xsl:when>
                         </xsl:choose>
-
+			<xsl:text>.&quot;</xsl:text>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -868,35 +868,36 @@
                             <xsl:text>&#160;</xsl:text>
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
-                    </i></h4>
+                    </i></span>
                 </xsl:element>
-		 <xsl:choose>
-                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.editor'))]">
-                                <i18n:text>xmlui.dri2xhtml.METS-1.0.editor</i18n:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item"/><xsl:text>. </xsl:text>
-                            </xsl:when>
-                        </xsl:choose>
-                 <xsl:choose>
-                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.publishedIn'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publishedIn'))]/dri:item"/><xsl:text>: </xsl:text>
-                            </xsl:when>
-                        </xsl:choose>
-                 <xsl:choose>
-                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.publisher'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
-                            </xsl:when>
-                 </xsl:choose>
-		<xsl:choose>
-                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text> - </xsl:text>
-                            </xsl:when>
-                 </xsl:choose>
-                <xsl:choose>
-                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]/dri:item"/><xsl:text>.</xsl:text>
-                            </xsl:when>
-                 </xsl:choose>
+		<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.ispartof'))]">
+                                <i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.ispartof'))]/dri:item"/><xsl:text>. </xsl:text></i>
+                            </xsl:if>
 
-                 <span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></span>
+                  <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.editor'))]">
+				<i18n:text>xmlui.dri2xhtml.METS-1.0.editor</i18n:text>
+                                <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item">
+                                    <xsl:apply-templates select="."/>
+                                    <xsl:if test="count(following-sibling::dri:item) != 0">
+                                        <xsl:text>, </xsl:text>
+                                    </xsl:if>
+                                </xsl:for-each>	
+				<xsl:text>. </xsl:text>
+                    </xsl:if>
+                        <xsl:if test="dri:list[@n=(concat($handle, ':dc.publishedIn'))]">
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publishedIn'))]/dri:item"/><xsl:text>: </xsl:text>
+                            </xsl:if>
+                            <xsl:if test="dri:list[@n=(concat($handle, ':dc.publisher'))]">
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
+                            </xsl:if>
+                            <xsl:if test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
+                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text> - </xsl:text>
+                            </xsl:if>
+                            <xsl:if test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]">
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]/dri:item"/><xsl:text>.</xsl:text>
+                            </xsl:if>
+
+                 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></div>
 
                 <!--<div class="artifact-info">
 

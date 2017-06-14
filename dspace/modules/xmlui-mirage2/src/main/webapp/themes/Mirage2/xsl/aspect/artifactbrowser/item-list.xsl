@@ -153,17 +153,18 @@
             </xsl:if>-->
 	<xsl:choose>
 	<xsl:when test="dim:field[@element='type'] = 'article'">
-	<h4 class="artifact-title">
+	<span class="artifact-title">
                 <xsl:element name="a">
                     <xsl:attribute name="href">
                         <xsl:value-of select="$href"/>
                     </xsl:attribute>
                     <xsl:choose>
                         <xsl:when test="dim:field[@element='title']">
-                            <xsl:value-of select="dim:field[@element='title'][1]/node()"/>
+                            <xsl:text>&quot;</xsl:text><xsl:value-of select="dim:field[@element='title'][1]/node()"/>
                                 <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
                                 <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
                                 </xsl:if>
+			<xsl:text>.&quot; </xsl:text>
                         </xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -176,21 +177,23 @@
                     </xsl:attribute>
                     &#xFEFF; <!-- non-breaking space to force separating the end tag -->
                 </span>
-            </h4>
+            </span>
 	</xsl:when>
 
-	<xsl:otherwise>
-		<h4 class="artifact-title"><i>
+
+	 <xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">
+        <span class="artifact-title">
                 <xsl:element name="a">
                     <xsl:attribute name="href">
                         <xsl:value-of select="$href"/>
                     </xsl:attribute>
                     <xsl:choose>
                         <xsl:when test="dim:field[@element='title']">
-                            <xsl:value-of select="dim:field[@element='title'][1]/node()"/>
+                            <xsl:text>&quot;</xsl:text><xsl:value-of select="dim:field[@element='title'][1]/node()"/>
                                 <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
                                 <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
                                 </xsl:if>
+                        <xsl:text>.&quot; </xsl:text>
                         </xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
@@ -203,7 +206,35 @@
                     </xsl:attribute>
                     &#xFEFF; <!-- non-breaking space to force separating the end tag -->
                 </span>
-            </i></h4>
+            </span>
+        </xsl:when>
+
+	<xsl:otherwise>
+		<span class="artifact-title"><i>
+                <xsl:element name="a">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="$href"/>
+                    </xsl:attribute>
+                    <xsl:choose>
+                        <xsl:when test="dim:field[@element='title']">
+                            <xsl:value-of select="dim:field[@element='title'][1]/node()"/>
+                                <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
+                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                </xsl:if>
+                        <xsl:text>. </xsl:text>
+			</xsl:when>
+                        <xsl:otherwise>
+                            <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:element>
+                <span class="Z3988">
+                    <xsl:attribute name="title">
+                        <xsl:call-template name="renderCOinS"/>
+                    </xsl:attribute>
+                    &#xFEFF; <!-- non-breaking space to force separating the end tag -->
+                </span>
+            </i></span>
 	</xsl:otherwise>
 	</xsl:choose>
 
@@ -248,22 +279,51 @@
                             </xsl:if>
 
         </xsl:when>
+	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">
+                            <xsl:if test="dim:field[@element='relation'][@qualifier='ispartof']">
+                               <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']" /></i><xsl:text>. </xsl:text>
+                            </xsl:if>
+			    <xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
+				<i18n:text>xmlui.dri2xhtml.METS-1.0.editor</i18n:text>
+                        	    <xsl:for-each select="dim:field[@element='relation'][@qualifier='editor']">
+                                	<xsl:copy-of select="node()"/>
+                                	<xsl:if test="count(following-sibling::dim:field[@element='relation'][@qualifier='editor']) != 0">
+                                    	<xsl:text>, </xsl:text>
+					</xsl:if>
+				    </xsl:for-each>
+                                <xsl:text>. </xsl:text>
+                            </xsl:if>
+                            <xsl:if test="dim:field[@element='publishedIn']">
+                                <xsl:text> </xsl:text><xsl:value-of select="dim:field[@element='publishedIn']" /><xsl:text>: </xsl:text>
+                            </xsl:if>
+			    <xsl:if test="dim:field[@element='publisher']">
+                                <xsl:value-of select="dim:field[@element='publisher']" />
+                            </xsl:if>
+                            <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
+                                <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']" /><xsl:text> - </xsl:text>
+                            </xsl:if>
+                            <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
+                                <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']" /><xsl:text>.</xsl:text>
+                            </xsl:if>
+
+        </xsl:when>
+
 </xsl:choose>
 	
 	<xsl:if test="dim:field[@element='type'] = 'monograph'">
-		<span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></span>
+		<div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></div>
 	</xsl:if>
 	<xsl:if test="dim:field[@element='type'] = 'article'">
-                <span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypearticle</i18n:text></span>
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypearticle</i18n:text></div>
         </xsl:if>
 	<xsl:if test="dim:field[@element='type'] = 'anthology'">
-                <span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeantho</i18n:text></span>
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeantho</i18n:text></div>
         </xsl:if>
 	<xsl:if test="dim:field[@element='type'] = 'anthologyArticle'">
-                <span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></span>
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></div>
         </xsl:if>
 	 <xsl:if test="dim:field[@element='type'] = 'digitalReproduction'">
-                <span class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypedigital</i18n:text></span>
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypedigital</i18n:text></div>
         </xsl:if>
 
         </div>
