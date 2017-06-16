@@ -2649,6 +2649,9 @@
   <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Article</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Article in Anthology</message>
   <message key="xmlui.dri2xhtml.METS-1.0.editor">Ed. </message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypedigital">Digital Reproduction</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypecoursedesc">Course Description</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypesyllabus">Syllabus</message>
 
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_typeDigitized">Digitalisat</message>
 
@@ -2671,6 +2674,10 @@
   <message key="conferenceObject">Conference Object</message>
   <message key="conferencePaper">Conference Paper</message>
   <message key="digitalReproduction">Digital Reproduction</message>
+  <message key="courseDescription">Course Description</message>
+  <message key="syllabus">Syllabus</message>
+
   <message key="xmlui.metadata.export">Metadata Export: </message>
+
 
 </catalogue>
