@@ -114,14 +114,14 @@
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:when>
-                        <!--<xsl:when test="dim:field[@element='contributor']">
-                            <xsl:for-each select="dim:field[@element='contributor']">
+                        <xsl:when test="dim:field[@element='contributor'][@qualifier='organiser']">
+                            <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organiser']">
                                 <xsl:copy-of select="node()"/>
-                                <xsl:if test="count(following-sibling::dim:field[@element='contributor']) != 0">
+                                <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='organiser']) != 0">
                                     <xsl:text>; </xsl:text>
                                 </xsl:if>
                             </xsl:for-each>
-                        </xsl:when>-->
+                        </xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                         </xsl:otherwise>
@@ -181,7 +181,7 @@
 	</xsl:when>
 
 
-	 <xsl:when test="dim:field[@element='type'] = 'courseDescription' or dim:field[@element='type'] = 'syllabus'">
+	 <xsl:when test="dim:field[@element='type'] = 'courseDescription' or dim:field[@element='type'] = 'syllabus' or dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall'">
         <span class="artifact-title"><i>
                 <xsl:element name="a">
                     <xsl:attribute name="href">
@@ -320,6 +320,12 @@
                                 <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='description'][@qualifier='semester']" /><xsl:text>. </xsl:text>
                             </xsl:if>
         </xsl:when>
+	 <xsl:when test="dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall'">
+                            <xsl:if test="dim:field[@element='relation'][@qualifier='event']">
+                                <xsl:value-of select="dim:field[@element='relation'][@qualifier='event']" /><xsl:text>. </xsl:text>
+                            </xsl:if>
+        </xsl:when>
+
 	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">
                             <xsl:if test="dim:field[@element='relation'][@qualifier='ispartof']">
                                <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']" /></i><xsl:text>. </xsl:text>
@@ -372,6 +378,19 @@
 	<xsl:if test="dim:field[@element='type'] = 'syllabus'">
                 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypesyllabus</i18n:text></div>
         </xsl:if>
+	<xsl:if test="dim:field[@element='type'] = 'conferenceReport'">
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfreport</i18n:text></div>
+        </xsl:if>
+        <xsl:if test="dim:field[@element='type'] = 'conferenceProg'">
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfprog</i18n:text></div>
+        </xsl:if>
+	 <xsl:if test="dim:field[@element='type'] = 'conferenceCall'">
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfcall</i18n:text></div>
+        </xsl:if>
+        <xsl:if test="dim:field[@element='type'] = 'conferenceBoA'">
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfboa</i18n:text></div>
+        </xsl:if>
+
         </div>
     </xsl:template>
 
