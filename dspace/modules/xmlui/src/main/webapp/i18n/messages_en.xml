@@ -2508,9 +2508,49 @@
     <message key="xmlui.dri2xhtml.structural.aboutus-link">About us</message>
     <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
     <message key="xmlui.dri2xhtml.structural.rights-link">Terms Of Use</message>
+    <message key="xmlui.dri2xhtml.structural.copyright-link">Copyright</message>
      <message key="xmlui.aboutus.head">About Us</message>
    <message key="xmlui.help.head">Help</message>
    <message key="xmlui.rights.head">Rights</message>
+
+
+  <message key="xmlui.copyright.text">
+        <h2 class="ds-div-head page-header first-page-header">Copyright</h2>
+        <div>
+                <figure>
+                <image src="/themes/Mirage2/images/britain.jpg" width="80" height="80"/>
+                <figcaption>
+                        ESA - <a href="http://www.esa.int/spaceinimages/Images/2009/02/Great_Britain_and_Ireland">Great Britain and Ireland</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/">CC-BY-$
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure>
+                <image src="/themes/Mirage2/images/australia.jpg" width="80" height="80"/>
+                <figcaption>
+                        NASA - <a href="https://images.nasa.gov/#/details-s44-81-055.html">Linear Dunes and Playas, Simson Desert, South Australia, Australia</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html">Publi$
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure>
+                <image src="/themes/Mirage2/images/canada.jpg" width="80" height="80"/>
+                <figcaption>
+                        NASA - <a href="https://images.nasa.gov/#/details-STS099-706-090.html">Earth observations of Hudson Bay, Canada taken from OV-105 during STS-99</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.h$
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure>
+                <image src="/themes/Mirage2/images/america.jpg" width="80" height="80"/>
+                <figcaption>
+                        NASA - <a href="https://www.flickr.com/photos/gsfc/29114378602/">Olympic National Park</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY 2.0</a>
+                </figcaption>
+                </figure>
+        </div>
+
+
+  </message>
 
 
     <message key="xmlui.home.text">
