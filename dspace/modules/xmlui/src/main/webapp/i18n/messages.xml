@@ -2508,84 +2508,85 @@
     <message key="xmlui.dri2xhtml.structural.aboutus-link">About us</message>
     <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
     <message key="xmlui.dri2xhtml.structural.rights-link">Terms Of Use</message>
+    <message key="xmlui.dri2xhtml.structural.copyright-link">Copyright</message>
      <message key="xmlui.aboutus.head">About Us</message>
    <message key="xmlui.help.head">Help</message>
    <message key="xmlui.rights.head">Rights</message>
 
-
-    <message key="xmlui.home.text">
-        <h2>The Stacks</h2>
-	<h3>The Repository for</h3>
-<!--<div class="row icons">
-                <div class="col-lg-3">
-                    <div class="bs-component">
-                              <div class="well">        
-                                <image src="/themes/Mirage2/images/publish.png" />-->
-                                <h3><a href="handle/11858/31">English; British and Irish Studies</a></h3>
-                                <!--<small>Erstveröffentlichung ....<br />
-                                dauerhaft Adressierbar via DOI... <br />
-                                zitierbar .... 
-                                </small>
-                              </div>
-                        </div>
-                </div>-->
-
-          <!--<div class="col-lg-3">
-                    <div class="bs-component">
-                              <div class="well">
-                                <image src="/themes/Mirage2/images/archive.png" />-->
-                                <h3><a href="handle/11858/28">American Studies</a></h3>
-                                <!--<small>Zweitveröffentlichung ....<br />
-                                dauerhaft aufbewahrt ... <br />
-                                langfristig nutzbar ... <br/>
-                                &#160;
-                                </small>
-                              </div>
-                        </div>
-                </div>-->
-
-                <!--<div class="col-lg-3">
-                    <div class="bs-component">
-                              <div class="well">
-                                <image src="/themes/Mirage2/images/distribute.png" />-->
-                                <h3><a href="handle/11858/29">Canadian Studies</a></h3>
-                                <!--<small>sichtbar in FID...<br />
-                                DRIVER, COAR, OpenAIRE, OA-Netzwerk ...<br />
-                                &#160;
-                                </small>
-                              </div>
-                        </div>
-                </div>-->
-
-              <!--<div class="col-lg-3">
-                    <div class="bs-component">
-                              <div class="well">
-                                <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/30">Australian and New Zealand Studies</a></h3>
- <!--<small>frei zugänglich ...<br />
-                                finanzielle Unterstützung durch Fonds ... <br />
-                                Prioritätssicherung ...
-                                </small>
-                              </div>
-                        </div>
-                </div>-->
-
-
-              <!--<div class="col-lg-3">
-                    <div class="bs-component">
-                              <div class="well">
-                                <image src="/themes/Mirage2/images/openaccss.png" />-->
-                                <h3><a href="handle/11858/32">Periodicals archive</a></h3>
- <!--<small>frei zugänglich ...<br />
-                                finanzielle Unterstützung durch Fonds ... <br />
-                                Prioritätssicherung ...
-                                </small>
-                              </div>
-                        </div>
-                </div>-->
+  <message key="xmlui.copyright.head">Copyright</message>
+  <message key="xmlui.copyright.text">
+        <div>
+                <figure class="copyrightimages">
+                <image src="/themes/Mirage2/images/britain80.jpg"/>
+                <figcaption>
+                        ESA - <a href="http://www.esa.int/spaceinimages/Images/2009/02/Great_Britain_and_Ireland">Great Britain and Ireland</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/">CC-BY-SA 3.0 IGO</a>
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure class="copyrightimages">
+                <image src="/themes/Mirage2/images/australia80.jpg"/>
+                <figcaption>
+                        NASA - <a href="https://images.nasa.gov/#/details-s44-81-055.html">Linear Dunes and Playas, Simson Desert, South Australia, Australia</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html">Public Domain</a>
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure class="copyrightimages">
+                <image src="/themes/Mirage2/images/canada80.jpg"/>
+                <figcaption>
+                        NASA - <a href="https://images.nasa.gov/#/details-STS099-706-090.html">Earth observations of Hudson Bay, Canada taken from OV-105 during STS-99</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html">Public Domain</a>
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure class="copyrightimages">
+                <image src="/themes/Mirage2/images/america80.jpg"/>
+                <figcaption>
+                        NASA - <a href="https://www.flickr.com/photos/gsfc/29114378602/">Olympic National Park</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY 2.0</a>
+                </figcaption>
+                </figure>
+        </div>
 
 
   </message>
+
+
+<message key="xmlui.home.text">
+        <h2>The Stacks</h2>
+        <h3>The Repository for</h3>
+
+        <div id="first_row">
+                <figure class="frontpage_images">
+                <a href="handle/11858/28">
+                <image class="frontpage" src="/themes/Mirage2/images/america.jpg" alt="American Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">American Studies</figcaption>
+                </figure>
+                <figure class="frontpage_images">
+                <a href="handle/11858/31">
+                <image class="frontpage" src="/themes/Mirage2/images/britain.jpg" alt="English; British and Irish Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">English; British and Irish Studies</figcaption>
+                </figure>
+        </div>
+        <div id="second_row">
+                <figure class="frontpage_images">
+                <a href="handle/11858/30">
+                <image class="frontpage" src="/themes/Mirage2/images/australia.jpg" alt="Australian and New Zealand Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">Australian and New Zealand Studies</figcaption>
+                </figure>
+                <figure class="frontpage_images">
+                <a href="handle/11858/29">
+                <image class="frontpage" src="/themes/Mirage2/images/canada.jpg" alt="Canadian Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">Canadian Studies</figcaption>
+                </figure>
+        </div>
+  </message>
+
+
   <message key="xmlui.series.head"><h2>Periodicals</h2></message>
   <message key="xmlui.series.text">
         <!--<ul>

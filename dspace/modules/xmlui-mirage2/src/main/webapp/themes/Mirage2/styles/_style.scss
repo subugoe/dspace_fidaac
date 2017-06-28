@@ -145,3 +145,48 @@ span.artifact-title {
 div.artifact-info {
   margin-bottom: 10px;
 }
+
+figure.copyrightimages {
+  margin-bottom: 10px;
+}
+
+img.frontpage {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    opacity: .8;
+    -webit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+img.frontpage:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+figure.frontpage_images {
+    display: inline-block;
+    margin-right: 60px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 60px;
+    position: relative;
+    width: 220px;
+}
+
+#first_row img, #second_row img {
+    display: inline-block;
+}
+
+figure.frontpage_images figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    -webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box;
+    text-align: left;
+    color: white;
+}
