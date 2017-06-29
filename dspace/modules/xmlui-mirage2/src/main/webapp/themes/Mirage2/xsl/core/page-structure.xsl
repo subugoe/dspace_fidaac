@@ -701,7 +701,7 @@
                         <div class="hidden-print">
 			     <a href="/impressum"> <i18n:text>xmlui.dri2xhtml.structural.impressum-link</i18n:text></a>
                              <xsl:text> | </xsl:text>
-			     <a href ="/copyright"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
+			     <a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
                              <xsl:text> | </xsl:text>
                              <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
                              <xsl:text> | </xsl:text>

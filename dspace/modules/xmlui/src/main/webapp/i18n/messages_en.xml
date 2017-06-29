@@ -2508,12 +2508,12 @@
     <message key="xmlui.dri2xhtml.structural.aboutus-link">About us</message>
     <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
     <message key="xmlui.dri2xhtml.structural.rights-link">Terms Of Use</message>
-    <message key="xmlui.dri2xhtml.structural.copyright-link">Copyright</message>
+    <message key="xmlui.dri2xhtml.structural.copyright-link">Credits</message>
      <message key="xmlui.aboutus.head">About Us</message>
    <message key="xmlui.help.head">Help</message>
    <message key="xmlui.rights.head">Rights</message>
 
-  <message key="xmlui.copyright.head">Copyright</message>
+  <message key="xmlui.copyright.head">Credits</message>
   <message key="xmlui.copyright.text">
         <div>
                 <figure class="copyrightimages">
@@ -2563,25 +2563,25 @@
                 </a>
                 <figcaption class="frontpage_caption">American Studies</figcaption>
                 </figure>
-                <figure class="frontpage_images">
-                <a href="handle/11858/31">
-                <image class="frontpage" src="/themes/Mirage2/images/britain.jpg" alt="English; British and Irish Studies"/>
-                </a>
-                <figcaption class="frontpage_caption">English; British and Irish Studies</figcaption>
-                </figure>
-        </div>
-        <div id="second_row">
-                <figure class="frontpage_images">
+		<figure class="frontpage_images">
                 <a href="handle/11858/30">
                 <image class="frontpage" src="/themes/Mirage2/images/australia.jpg" alt="Australian and New Zealand Studies"/>
                 </a>
                 <figcaption class="frontpage_caption">Australian and New Zealand Studies</figcaption>
                 </figure>
+	</div>
+        <div id="second_row">
                 <figure class="frontpage_images">
                 <a href="handle/11858/29">
                 <image class="frontpage" src="/themes/Mirage2/images/canada.jpg" alt="Canadian Studies"/>
                 </a>
                 <figcaption class="frontpage_caption">Canadian Studies</figcaption>
+                </figure>
+		 <figure class="frontpage_images">
+                <a href="handle/11858/31">
+                <image class="frontpage" src="/themes/Mirage2/images/britain.jpg" alt="English; British and Irish Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">English; British and Irish Studies</figcaption>
                 </figure>
         </div>
   </message>

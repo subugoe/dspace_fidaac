@@ -150,7 +150,7 @@ figure.copyrightimages {
   margin-bottom: 10px;
 }
 
-img.frontpage {
+/*img.frontpage {
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%);
     opacity: .8;
@@ -162,14 +162,14 @@ img.frontpage:hover {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
     opacity: 1;
-}
+}*/
 
 figure.frontpage_images {
     display: inline-block;
     margin-right: 60px;
     margin-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     position: relative;
     width: 220px;
 }

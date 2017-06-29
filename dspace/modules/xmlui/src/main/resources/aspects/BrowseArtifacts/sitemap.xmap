@@ -90,10 +90,10 @@ collections / items / and bitstreams.
            </map:match>
 
  <!-- statische Seite für Bildnachweise -->
-            <map:match pattern="copyright">
+            <map:match pattern="credits">
                 <map:act type="DSpacePropertyFileReader">
                 <map:parameter name="dspace.dir" value="dspace.dir" />
-                <map:transform type="Include" src="file://{dspace.dir}/config/copyright.xml" />
+                <map:transform type="Include" src="file://{dspace.dir}/config/credits.xml" />
                 </map:act>
                 <map:serialize type="xml"/>
            </map:match>
