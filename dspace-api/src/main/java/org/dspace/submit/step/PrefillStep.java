@@ -451,15 +451,27 @@ public class PrefillStep extends AbstractProcessingStep
                 Element jElement = retrieveDOIXML(doi);
 
             log.info("DOI-Data: " + jElement.toString());
-
+		String jElementString = jElement.toString();
                 if(jElement != null)
                 {
-                    // Use the ingest process to parse the XML document, transformation is done
-                    // using XSLT
-                    IngestionCrosswalk xwalk = (IngestionCrosswalk) PluginManager.getNamedPlugin(
-                                                        IngestionCrosswalk.class, "DOI");
-                    xwalk.ingest(context, subInfo.getSubmissionItem().getItem(), jElement);
-                    return true;
+			if(jElementString.startsWith("[Element: <doi"))
+				{
+					// Use the ingest process to parse the XML document, transformation is done
+					// using XSLT
+					IngestionCrosswalk xwalk = (IngestionCrosswalk) PluginManager.getNamedPlugin(
+												IngestionCrosswalk.class, "DOI");
+					xwalk.ingest(context, subInfo.getSubmissionItem().getItem(), jElement);
+					return true;
+				}
+			else
+				{
+					// Use the ingest process to parse the XML document, transformation is done
+					// using XSLT
+					IngestionCrosswalk xwalk = (IngestionCrosswalk) PluginManager.getNamedPlugin(
+												IngestionCrosswalk.class, "DOID");
+					xwalk.ingest(context, subInfo.getSubmissionItem().getItem(), jElement);
+					return true;
+				}
                 }
             }
             catch (Exception ex)
