@@ -1,6 +1,8 @@
 package org.dspace.submit.step;
 
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import org.dspace.content.InProgressSubmission;
 import org.dspace.submit.AbstractProcessingStep;
 import org.dspace.submit.step.SampleStep;
@@ -43,6 +45,7 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.*;
 import javax.xml.transform.stream.*;
 import org.dspace.core.ConfigurationManager;
+import org.json.*;
 
 /**
  * Main processing code for lookups
@@ -204,15 +207,58 @@ public class PrefillStep extends AbstractProcessingStep
         protected Element retrieveDOIXML(String doi) throws Exception
         {
         Document doc = null;
+	InputStream xml;
             try
             {
                 DOMParser parser = new DOMParser();
                 parser.setFeature("http://xml.org/sax/features/validation",false);
                 String doiURL = ConfigurationManager.getProperty("doi.url");
-                parser.parse(doiURL + doi);
-                doc=parser.getDocument();
+		
+		URL resourceUrl, base, next;
+        	HttpURLConnection conn;
+        	String location;
+        	String url = "https://doi.org/" + doi;
 
+        	while (true)
+        	{
+            		resourceUrl = new URL(url);
+            		conn        = (HttpURLConnection) resourceUrl.openConnection();
 
+            		conn.setConnectTimeout(15000);
+            		conn.setReadTimeout(15000);
+            		conn.setInstanceFollowRedirects(false);   // Make the logic below easier to detect redirections
+            		conn.setRequestProperty("Accept", "application/vnd.datacite.datacite+xml");
+            		switch (conn.getResponseCode())
+            		{
+                		case HttpURLConnection.HTTP_MOVED_PERM:
+                		case HttpURLConnection.HTTP_MOVED_TEMP:
+                		case HttpURLConnection.HTTP_SEE_OTHER:
+                    			location = conn.getHeaderField("Location");
+                    			base     = new URL(url);
+                    			next     = new URL(base, location);  // Deal with relative URLs
+                    			url      = next.toExternalForm();
+
+                    	continue;
+	            	}
+        	    	break;
+        	}
+        	log.info("nachuml" + url);
+
+		if (url.startsWith("https://data.datacite.org")) 
+		{
+        		HttpURLConnection conn2 = (HttpURLConnection) new URL(url).openConnection();
+        		conn2.setRequestProperty("Accept", "application/vnd.datacite.datacite+xml");
+        		xml = conn2.getInputStream();
+		}
+		else
+		{
+			HttpURLConnection conn2 = (HttpURLConnection) new URL(url).openConnection();
+                        conn2.setRequestProperty("Accept", "application/vnd.crossref.unixref+xml");
+                        xml = conn2.getInputStream();
+		}
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	        DocumentBuilder builder2 = factory.newDocumentBuilder();
+		doc=builder2.parse(xml);
                 Transformer transformer = TransformerFactory.newInstance().newTransformer();
                 transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
@@ -220,9 +266,8 @@ public class PrefillStep extends AbstractProcessingStep
                 StreamResult result = new StreamResult(new StringWriter());
                 DOMSource source = new DOMSource(doc);
                 transformer.transform(source, result);
-
-                String xmlString = result.getWriter().toString();
-                log.info("Fetched Doc: " + xmlString);
+		String xmlString = result.getWriter().toString();
+		log.info("Fetched Doc: " + xmlString);
 
 
                 if(doc != null)
@@ -235,6 +280,7 @@ public class PrefillStep extends AbstractProcessingStep
                     log.info("DOI-Data: " + builder.build(element).toString());
 
                     return builder.build(element);
+
                 }
 
             }
