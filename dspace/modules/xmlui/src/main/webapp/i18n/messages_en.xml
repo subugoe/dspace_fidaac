@@ -2589,9 +2589,10 @@
 
   <message key="xmlui.series.head"><h2>Periodicals</h2></message>
   <message key="xmlui.series.text">
-        <!--<ul>
-        <li><a href="handle/11858/10">Discussion Papers / Centre for Regional Studies</a></li>
-        <li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
+        <ul>
+        <li><a href="handle/11858/48/browse?type=series">American Studies Journal</a></li>
+        </ul>
+	<!--<li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
         <li><a href="handle/11858/13">Electronic Journal of the Freiberg Geoscience Department</a></li>
         <li><a href="handle/11858/11">Greifswalder Geographische Arbeiten</a></li>
         <li><a href="handle/11858/14">Neubrandenburger Geologische Beiträge</a></li>
@@ -2668,9 +2669,9 @@
   <message key="law">Law</message>
   <message key="culturalstudies">Cultural Studies</message>
   <message key="linguistics">Linguistics</message>
-  <message key="politics">Politics</message>
-  <message key="socialsciences">Social Sciences</message>
-  <message key="englishanguageteaching">English Language Teaching</message>
+  <message key="politicalscience">Politics</message>
+  <message key="socialscience">Social Sciences</message>
+  <message key="englishlanguageteaching">English Language Teaching</message>
 
   <message key="preprint">Preprint</message>
   <message key="monograph">Monograph</message>

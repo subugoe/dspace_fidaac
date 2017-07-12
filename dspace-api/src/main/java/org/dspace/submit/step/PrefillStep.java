@@ -458,6 +458,7 @@ public class PrefillStep extends AbstractProcessingStep
 				{
 					// Use the ingest process to parse the XML document, transformation is done
 					// using XSLT
+					log.info("crossref");
 					IngestionCrosswalk xwalk = (IngestionCrosswalk) PluginManager.getNamedPlugin(
 												IngestionCrosswalk.class, "DOI");
 					xwalk.ingest(context, subInfo.getSubmissionItem().getItem(), jElement);
@@ -467,6 +468,7 @@ public class PrefillStep extends AbstractProcessingStep
 				{
 					// Use the ingest process to parse the XML document, transformation is done
 					// using XSLT
+					log.info("datacite");
 					IngestionCrosswalk xwalk = (IngestionCrosswalk) PluginManager.getNamedPlugin(
 												IngestionCrosswalk.class, "DOID");
 					xwalk.ingest(context, subInfo.getSubmissionItem().getItem(), jElement);

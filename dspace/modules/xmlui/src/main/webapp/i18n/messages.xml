@@ -2508,12 +2508,12 @@
     <message key="xmlui.dri2xhtml.structural.aboutus-link">About us</message>
     <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
     <message key="xmlui.dri2xhtml.structural.rights-link">Terms Of Use</message>
-    <message key="xmlui.dri2xhtml.structural.copyright-link">Copyright</message>
+    <message key="xmlui.dri2xhtml.structural.copyright-link">Credits</message>
      <message key="xmlui.aboutus.head">About Us</message>
    <message key="xmlui.help.head">Help</message>
    <message key="xmlui.rights.head">Rights</message>
 
-  <message key="xmlui.copyright.head">Copyright</message>
+  <message key="xmlui.copyright.head">Credits</message>
   <message key="xmlui.copyright.text">
         <div>
                 <figure class="copyrightimages">
@@ -2563,25 +2563,25 @@
                 </a>
                 <figcaption class="frontpage_caption">American Studies</figcaption>
                 </figure>
-                <figure class="frontpage_images">
-                <a href="handle/11858/31">
-                <image class="frontpage" src="/themes/Mirage2/images/britain.jpg" alt="English; British and Irish Studies"/>
-                </a>
-                <figcaption class="frontpage_caption">English; British and Irish Studies</figcaption>
-                </figure>
-        </div>
-        <div id="second_row">
-                <figure class="frontpage_images">
+		<figure class="frontpage_images">
                 <a href="handle/11858/30">
                 <image class="frontpage" src="/themes/Mirage2/images/australia.jpg" alt="Australian and New Zealand Studies"/>
                 </a>
                 <figcaption class="frontpage_caption">Australian and New Zealand Studies</figcaption>
                 </figure>
+	</div>
+        <div id="second_row">
                 <figure class="frontpage_images">
                 <a href="handle/11858/29">
                 <image class="frontpage" src="/themes/Mirage2/images/canada.jpg" alt="Canadian Studies"/>
                 </a>
                 <figcaption class="frontpage_caption">Canadian Studies</figcaption>
+                </figure>
+		 <figure class="frontpage_images">
+                <a href="handle/11858/31">
+                <image class="frontpage" src="/themes/Mirage2/images/britain.jpg" alt="English; British and Irish Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">English; British and Irish Studies</figcaption>
                 </figure>
         </div>
   </message>
@@ -2589,9 +2589,10 @@
 
   <message key="xmlui.series.head"><h2>Periodicals</h2></message>
   <message key="xmlui.series.text">
-        <!--<ul>
-        <li><a href="handle/11858/10">Discussion Papers / Centre for Regional Studies</a></li>
-        <li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
+        <ul>
+        <li><a href="handle/11858/48/browse?type=series">American Studies Journal</a></li>
+        </ul>
+	<!--<li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
         <li><a href="handle/11858/13">Electronic Journal of the Freiberg Geoscience Department</a></li>
         <li><a href="handle/11858/11">Greifswalder Geographische Arbeiten</a></li>
         <li><a href="handle/11858/14">Neubrandenburger Geologische Beiträge</a></li>
@@ -2668,9 +2669,9 @@
   <message key="law">Law</message>
   <message key="culturalstudies">Cultural Studies</message>
   <message key="linguistics">Linguistics</message>
-  <message key="politics">Politics</message>
-  <message key="socialsciences">Social Sciences</message>
-  <message key="englishanguageteaching">English Language Teaching</message>
+  <message key="politicalscience">Politics</message>
+  <message key="socialscience">Social Sciences</message>
+  <message key="englishlanguageteaching">English Language Teaching</message>
 
   <message key="preprint">Preprint</message>
   <message key="monograph">Monograph</message>
