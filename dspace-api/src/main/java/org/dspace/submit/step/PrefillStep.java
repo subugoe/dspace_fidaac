@@ -217,7 +217,7 @@ public class PrefillStep extends AbstractProcessingStep
 		URL resourceUrl, base, next;
         	HttpURLConnection conn;
         	String location;
-        	String url = "https://doi.org/" + doi;
+        	String url = doiURL + doi;
 
         	while (true)
         	{
@@ -450,7 +450,6 @@ public class PrefillStep extends AbstractProcessingStep
             {
                 Element jElement = retrieveDOIXML(doi);
 
-            log.info("DOI-Data: " + jElement.toString());
 		String jElementString = jElement.toString();
                 if(jElement != null)
                 {
