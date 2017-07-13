@@ -471,6 +471,7 @@ public class PrefillStep extends AbstractProcessingStep
 					log.info("datacite");
 					IngestionCrosswalk xwalk = (IngestionCrosswalk) PluginManager.getNamedPlugin(
 												IngestionCrosswalk.class, "DOID");
+					log.info(xwalk);
 					xwalk.ingest(context, subInfo.getSubmissionItem().getItem(), jElement);
 					return true;
 				}
