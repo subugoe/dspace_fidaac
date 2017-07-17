@@ -8,7 +8,7 @@
                 $(this).text("All Publications");
             }
             if (/Irlandstudien$/.test($(this).text())) {
-                $(this).text("English; British and Irish Studies");
+                $(this).text("English / British and Irish Studies");
             }
             if ($(this).text() == "Amerikastudien") {
                 $(this).text("American Studies");
