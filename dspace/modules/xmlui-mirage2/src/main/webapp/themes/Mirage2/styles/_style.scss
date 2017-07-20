@@ -13,7 +13,7 @@
 
 //example mixin to set the text-selection style
 
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
 
 @mixin selection {
     ::-moz-selection { @content; }
@@ -67,6 +67,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     font-weight: normal;
+    color: #191919;
 }
 
 .navbar-nav > li > a {
@@ -189,4 +190,14 @@ figure.frontpage_images figcaption {
           box-sizing: border-box;
     text-align: left;
     color: white;
+}
+
+div.itemview-citation {
+   font-size: 18px;
+   font-weight: lighter;
+   margin-bottom: 5px;
+}
+
+div.itemview-citation b {
+  font-weight: 400;
 }

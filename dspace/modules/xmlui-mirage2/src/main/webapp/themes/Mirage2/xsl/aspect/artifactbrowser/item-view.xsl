@@ -105,16 +105,63 @@
 
     <xsl:template match="dim:dim" mode="itemSummaryView-DIM">
         <div class="item-summary-view-metadata">
-
 	<xsl:choose>
+
 		<!--Monograph-->
 	  <xsl:when test="dim:field[@element='type'] = 'monograph'">
 		<xsl:call-template name="itemSummaryView-DIM-title"/>
-		<xsl:call-template name="itemSummaryView-DIM-authors"/>
+		
+		<div class="itemview-citation">
+		<xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
+                   <xsl:choose>
+                    <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
+                        <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
+                            <b><xsl:call-template name="itemSummaryView-DIM-authors-entry" /></b><xsl:text>, </xsl:text>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="dim:field[@element='creator']">
+                        <xsl:for-each select="dim:field[@element='creator']">
+                            <b><xsl:call-template name="itemSummaryView-DIM-authors-entry" /></b><xsl:text>, </xsl:text>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="dim:field[@element='contributor']">
+                        <xsl:for-each select="dim:field[@element='contributor']">
+                            <b><xsl:call-template name="itemSummaryView-DIM-authors-entry" /></b><xsl:text>, </xsl:text>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
+                    </xsl:otherwise>
+                   </xsl:choose>
+</xsl:if>
+				<xsl:choose>
+				<xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) &gt; 1">
+                <i><xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/></i>
+                     <xsl:for-each select="dim:field[@element='title'][not(@qualifier)]">
+                            <xsl:if test="not(position() = 1)">
+                                <xsl:value-of select="./node()"/>
+                                <xsl:if test="count(following-sibling::dim:field[@element='title'][not(@qualifier)]) != 0">
+                                    <xsl:text>; </xsl:text>
+                                    <br/>
+                                </xsl:if>
+                            </xsl:if>
+
+                        </xsl:for-each>
+					</xsl:when>
+						<xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) = 1">
+						<i><xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/></i>
+                    </xsl:when>
+					<xsl:otherwise>
+						<i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+					</xsl:otherwise>
+				</xsl:choose>
+		<xsl:text>, </xsl:text><xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
 		<xsl:call-template name="itemSummaryView-DIM-date"/>
-		<xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
+		</div>
+
+
 		<xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
-		<div><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></div>
+		<div class="item-page-field-wrapper"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></div>
 		<!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
 		<xsl:call-template name="itemSummaryView-DIM-language"/>
 		<xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
@@ -391,18 +438,17 @@
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-authors-entry">
-        <div>
+        
             <xsl:if test="@authority">
                 <xsl:attribute name="class"><xsl:text>ds-dc_contributor_author-authority</xsl:text></xsl:attribute>
             </xsl:if>
             <xsl:copy-of select="node()"/>
-        </div>
+        
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-URI">
         <xsl:if test="dim:field[@element='identifier' and @qualifier='uri' and descendant::text()]">
             <div class="simple-item-view-uri item-page-field-wrapper table">
-                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text></h5>
                 <span>
                     <xsl:for-each select="dim:field[@element='identifier' and @qualifier='uri']">
                         <a>
@@ -431,7 +477,7 @@
 	 <xsl:template name="itemSummaryView-DIM-publishedIn">
                 <xsl:if test="dim:field[@element='publishedIn']">
                         <xsl:for-each select="dim:field[@element='publishedIn']">
-                                <xsl:copy-of select="./node()"/><xsl:text>: </xsl:text>
+                               <xsl:copy-of select="./node()"/><xsl:text>: </xsl:text>
                         </xsl:for-each>
                 </xsl:if>
         </xsl:template>
@@ -448,17 +494,12 @@
 
     <xsl:template name="itemSummaryView-DIM-date">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
-            <div class="simple-item-view-date word-break item-page-field-wrapper table">
-                <h5>
-                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-date</i18n:text>
-                </h5>
                 <xsl:for-each select="dim:field[@element='date' and @qualifier='issued']">
-                    <xsl:copy-of select="substring(./node(),1,10)"/>
+                    <xsl:text>, </xsl:text><xsl:copy-of select="substring(./node(),1,10)"/><xsl:text>. </xsl:text>
                     <xsl:if test="count(following-sibling::dim:field[@element='date' and @qualifier='issued']) != 0">
                         <br/>
                     </xsl:if>
                 </xsl:for-each>
-            </div>
         </xsl:if>
     </xsl:template>
 
