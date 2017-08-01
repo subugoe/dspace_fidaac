@@ -2523,33 +2523,33 @@
   <message key="xmlui.copyright.text">
 	<div>
 		<figure class="copyrightimages">
-		<image src="/themes/Mirage2/images/britain80.jpg"/>
+		<image src="/themes/Mirage2/images/britain80.jpg" alt="Great Britain and Ireland from Space"/>
 		<figcaption>
-			ESA - <a href="http://www.esa.int/spaceinimages/Images/2009/02/Great_Britain_and_Ireland">Great Britain and Ireland</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/">CC-BY-SA 3.0 IGO</a>
+			ESA - <a href="http://www.esa.int/spaceinimages/Images/2009/02/Great_Britain_and_Ireland" title="Link to Source Image Great Britain and Ireland">Great Britain and Ireland</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/" title="Link to Creative Commons License BY-SA 3.0">CC-BY-SA 3.0 IGO</a>
 		</figcaption>
 		</figure>			
 	</div>
 	<div>
                 <figure class="copyrightimages">
-                <image src="/themes/Mirage2/images/australia80.jpg"/>
+                <image src="/themes/Mirage2/images/australia80.jpg" alt="Linear Dunes and Playas, Simson Desert, South Australia, Australia from Space"/>
                 <figcaption>
-                        NASA - <a href="https://images.nasa.gov/#/details-s44-81-055.html">Linear Dunes and Playas, Simson Desert, South Australia, Australia</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html">Public Domain</a>
+                        NASA - <a href="https://images.nasa.gov/#/details-s44-81-055.html" title="Link to Source Image Australia">Linear Dunes and Playas, Simson Desert, South Australia, Australia</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html" title="Link to Nasa License Public Domain">Public Domain</a>
                 </figcaption>
                 </figure>
         </div>
 	<div>
                 <figure class="copyrightimages">
-                <image src="/themes/Mirage2/images/canada80.jpg"/>
+                <image src="/themes/Mirage2/images/canada80.jpg" alt="Earth observations of Hudson Bay, Canada taken from OV-105 during STS-99"/>
                 <figcaption>
-                        NASA - <a href="https://images.nasa.gov/#/details-STS099-706-090.html">Earth observations of Hudson Bay, Canada taken from OV-105 during STS-99</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html">Public Domain</a>
+                        NASA - <a href="https://images.nasa.gov/#/details-STS099-706-090.html" title="Link to Source Image Canada">Earth observations of Hudson Bay, Canada taken from OV-105 during STS-99</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html" title="Linkt to Nasa License Public Domain">Public Domain</a>
                 </figcaption>
                 </figure>
         </div>
 	<div>
                 <figure class="copyrightimages">
-                <image src="/themes/Mirage2/images/america80.jpg"/>
+                <image src="/themes/Mirage2/images/america80.jpg" alt="Olympic National Park, America from Space"/>
                 <figcaption>
-                        NASA - <a href="https://www.flickr.com/photos/gsfc/29114378602/">Olympic National Park</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY 2.0</a>
+                        NASA - <a href="https://www.flickr.com/photos/gsfc/29114378602/" title="Link to Source Image America">Olympic National Park</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by/2.0/" title="Link to Creative Commons Licence BY 2.0">CC-BY 2.0</a>
                 </figcaption>
                 </figure>
         </div>
