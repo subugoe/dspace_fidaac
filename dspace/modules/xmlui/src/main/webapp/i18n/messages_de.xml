@@ -598,7 +598,7 @@
     <message key="xmlui.Submission.Submissions.completed.info">Dies sind Ihre Veröffentlichungen, die in FID AAC angenommen wurden.</message>
     <message key="xmlui.Submission.Submissions.completed.column1">Zugangsdatum</message>
     <message key="xmlui.Submission.Submissions.completed.column2">Titel</message>
-    <message key="xmlui.Submission.Submissions.completed.column3">SAmmlung</message>
+    <message key="xmlui.Submission.Submissions.completed.column3">Sammlung</message>
     <message key="xmlui.Submission.Submissions.completed.limit">Es werden 50 Ihrer Veröffentlichungen angezeigt. </message>
     <message key="xmlui.Submission.Submissions.completed.displayall">Anzeige aller Veröffentlichungen.</message>
 
@@ -648,11 +648,11 @@
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.publisher">Herausgeber</message>
 	
 	<!-- org.dspace.app.xmlui.Submission.submit.DescribeStep -->
-	<message key="xmlui.Submission.submit.DescribeStep.head">Dokument beschreiben</message>
+	<message key="xmlui.Submission.submit.DescribeStep.head">Dokument beschreiben <small>(* zeigen Pflichtfelder an)</small></message>
 	<message key="xmlui.Submission.submit.DescribeStep.unknown_field">Fehler: Unbekannter Feldtyp</message>
 	<message key="xmlui.Submission.submit.DescribeStep.required_field">Dieses Feld ist obligatorisch</message>
 	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Nachname, <i>z. B. Mustermann</i></message>
-	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">Vorname(n) + Titel, <i>Max Dr.</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">Vorname(n) <i>Max</i></message>
 	<message key="xmlui.Submission.submit.DescribeStep.year">Jahr</message>
 	<message key="xmlui.Submission.submit.DescribeStep.month">Monat</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">Tag</message>
@@ -2723,5 +2723,10 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfcall">Call for Papers</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfboa">Book of Abstracts</message>
 
+<message key="xmlui.dri2xhtml.METS-1.0.standard-license-text">Nutzungslizenz(en) für diese Dokumente: </message>
+<message key="xmlui.dri2xhtml.METS-1.0.link-standard-license"><a href="/rights" >Standard FID AAC Lizenz</a></message>
+
+<message key="xmlui.impressum.text.privacy">Diese Website erfasst anonymisierte Daten zur Nutzung.<br />
+Zustimmung verweigern: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=de" target="_blank">Meine Besuche sollen nicht erfasst werden.</a></message>
 
 </catalogue>
