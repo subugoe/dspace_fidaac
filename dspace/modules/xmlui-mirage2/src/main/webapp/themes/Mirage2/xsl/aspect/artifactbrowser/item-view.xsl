@@ -44,10 +44,10 @@
         <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
         mode="itemSummaryView-DIM"/>
 
-        <xsl:copy-of select="$SFXLink" />
+       <xsl:copy-of select="$SFXLink" />
 
         <!-- Generate the Creative Commons license information from the file section (DSpace deposit license hidden by default)-->
-        <xsl:if test="./mets:fileSec/mets:fileGrp[@USE='CC-LICENSE' or @USE='LICENSE']">
+        <!--<xsl:if test="./mets:fileSec/mets:fileGrp[@USE='CC-LICENSE' or @USE='LICENSE']">
             <div class="license-info table">
                 <p>
                     <i18n:text>xmlui.dri2xhtml.METS-1.0.license-text</i18n:text>
@@ -56,11 +56,8 @@
                     <xsl:apply-templates select="./mets:fileSec/mets:fileGrp[@USE='CC-LICENSE' or @USE='LICENSE']" mode="simple"/>
                 </ul>
             </div>
-        </xsl:if>
-	<xsl:if test="not(//dim:field[@element='rights'][@qualifier='uri'])">
-                <div class="testlizenz"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-        </xsl:if>
-
+        </xsl:if>-->
+	
     </xsl:template>
 
     <!-- An item rendered in the detailView pattern, the "full item record" view of a DSpace item in Manakin. -->
@@ -174,7 +171,8 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                 <xsl:call-template name="itemSummaryView-collections"/>
-		
+		<div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>		
+		<div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
 	  </xsl:when>
 		<!--/Monograph-->
 	
@@ -1197,9 +1195,9 @@
     </xsl:template>
 
     <!-- Generate the license information from the file section -->
-    <xsl:template match="mets:fileGrp[@USE='CC-LICENSE']" mode="simple">
+    <!--<xsl:template match="mets:fileGrp[@USE='CC-LICENSE']" mode="simple">
         <li><a href="{mets:file/mets:FLocat[@xlink:title='license_text']/@xlink:href}"><i18n:text>xmlui.dri2xhtml.structural.link_cc</i18n:text></a></li>
-    </xsl:template>
+    </xsl:template>-->
 
     <!-- Generate the license information from the file section -->
     <xsl:template match="mets:fileGrp[@USE='LICENSE']" mode="simple">

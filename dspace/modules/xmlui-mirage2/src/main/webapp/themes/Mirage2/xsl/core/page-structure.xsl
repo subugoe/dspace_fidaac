@@ -618,7 +618,7 @@
         </xsl:variable>
 
         <xsl:if test="$ccLicenseName and $ccLicenseUri and contains($ccLicenseUri, 'creativecommons')">
-            <div about="{$handleUri}" class="row">
+            <div about="{$handleUri}" class="row" style="margin-top: 10px;">
             <div class="col-sm-3 col-xs-12">
                 <a rel="license"
                    href="{$ccLicenseUri}"
@@ -691,7 +691,6 @@
              </xsl:attribute>
         </img>
     </xsl:template>
-
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
         <footer>
