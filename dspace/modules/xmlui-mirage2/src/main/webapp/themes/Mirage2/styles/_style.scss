@@ -193,11 +193,15 @@ figure.frontpage_images figcaption {
 }
 
 div.itemview-citation {
-   font-weight: 300;
-   font-size: 16px;
+   font-size: 18px;
    margin-bottom: 5px;
 }
 
-div.itemview-citation b {
-  font-weight: 600;
+div.itemview-citation-small {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+ 
+.control-label.required::after {
+  content: none;
 }
