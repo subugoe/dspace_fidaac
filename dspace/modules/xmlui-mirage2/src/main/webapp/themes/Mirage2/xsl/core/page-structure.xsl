@@ -10,7 +10,7 @@
 
 <!--
     Main structure of the page, determines where
-    header, footer, body, navigation are structurally rendered.
+    header,  footer, body, navigation are structurally rendered.
     Rendering of the header, footer, trail and alerts
 
     Author: art.lowel at atmire.com
@@ -122,8 +122,6 @@
                             <xsl:call-template name="buildFooter"/>
                              </div>
                          </div>
-
-
                         </xsl:otherwise>
                     </xsl:choose>
                     <!-- Javascript at the bottom for fast page loading -->
@@ -694,20 +692,20 @@
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
         <footer>
-                <div class="row">
+                <div class="row-footer">
                     <hr/>
 			<div class="col-xs-7 col-sm-8">
                         <div class="hidden-print">
 			     <a href="/impressum"> <i18n:text>xmlui.dri2xhtml.structural.impressum-link</i18n:text></a>
-                             <xsl:text> | </xsl:text>
+                             <xsl:text>  </xsl:text>
 			     <a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
-                             <xsl:text> | </xsl:text>
+                             <xsl:text>  </xsl:text>
                              <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
-                             <xsl:text> | </xsl:text>
+                             <xsl:text>  </xsl:text>
                              <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
-                             <xsl:text> | </xsl:text>
+                             <xsl:text>  </xsl:text>
 			     <a href ="/help"> <i18n:text>xmlui.dri2xhtml.structural.help-link</i18n:text></a>
-                             <xsl:text> | </xsl:text>
+                             <xsl:text>  </xsl:text>
                              <a>
                                 <xsl:attribute name="href">
                                     <xsl:value-of
@@ -716,7 +714,7 @@
                                 </xsl:attribute>
                                 <i18n:text>xmlui.dri2xhtml.structural.contact-link</i18n:text>
                             </a>
-                            <xsl:text> | </xsl:text>
+                            <xsl:text>  </xsl:text>
                             <a>
                                 <xsl:attribute name="href">
                                     <xsl:value-of
@@ -727,6 +725,13 @@
                             </a>
                         </div>
                 	</div>
+
+			<div class="col-xs-5 col-sm-4 footer-right hidden-print">
+				<div class="pull-right">
+				<a title="DFG" href="http://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" height="24"/></a>
+				<xsl:text>  </xsl:text><a title="SUB Göttingen" href="http://www.sub.uni-goettingen.de"><img src="{$theme-path}/images/sub-logo.png" height="30"/></a>
+				</div>
+			</div>
 
 		</div>
 
