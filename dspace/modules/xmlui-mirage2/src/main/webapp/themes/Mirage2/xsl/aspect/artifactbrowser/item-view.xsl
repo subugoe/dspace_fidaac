@@ -597,6 +597,7 @@
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-thumbnail">
+
         <div class="thumbnail">
             <xsl:choose>
                 <xsl:when test="//mets:fileSec/mets:fileGrp[@USE='THUMBNAIL']">
@@ -612,11 +613,16 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:variable>
-                    <img alt="Thumbnail">
+		<a>
+		<xsl:attribute name="href">
+		<xsl:value-of select="concat(substring-before($src,'.jpg'), '?sequence=1&amp;isAllowed=y')"/>
+                </xsl:attribute>    
+			<img alt="Thumbnail">
                         <xsl:attribute name="src">
                             <xsl:value-of select="$src"/>
                         </xsl:attribute>
                     </img>
+		</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <img alt="Thumbnail">
