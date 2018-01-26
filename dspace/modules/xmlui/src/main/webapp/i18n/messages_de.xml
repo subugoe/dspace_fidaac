@@ -485,10 +485,10 @@
 	<message key="xmlui.EPerson.StartRegistration.para1">Die E-Mail-Adresse wird bereits von einem Benutzer verwendet. Wenn Sie Ihr Passwort vergessen haben, Klicken Sie bitte auf Passwort vergessen.</message>
 	<message key="xmlui.EPerson.StartRegistration.reset_password_for">Passwort neu setzen für: </message>
 	<message key="xmlui.EPerson.StartRegistration.submit_reset">Passwort neu setzen</message>
-	<message key="xmlui.EPerson.StartRegistration.head2">Registrierung Neuer Benutzer</message>
+	<message key="xmlui.EPerson.StartRegistration.head2">Registrierung neuer Benutzer</message>
 	<message key="xmlui.EPerson.StartRegistration.para2">Legen Sie einen Benutzeraccount an, um Dienste wie das Abonnement von Neuerscheinungen nutzen zu können.</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address">E-Mail-Adresse</message>
-	<message key="xmlui.EPerson.StartRegistration.email_address_help">Diese E-Mail-Adresse wird überprüft und als Ihre Benutzername verwandt.</message>
+	<message key="xmlui.EPerson.StartRegistration.email_address_help">Diese E-Mail-Adresse wird überprüft und als Ihr Benutzername verwandt.</message>
 	<message key="xmlui.EPerson.StartRegistration.error_bad_email">Es war nicht möglich, an diese Adresse eine E-Mail zu schicken.</message>
 	<message key="xmlui.EPerson.StartRegistration.submit_register">Registrieren</message>
 	
@@ -542,7 +542,7 @@
 	<!-- org.dspace.app.xmlui.Submission.submissions -->
 	<message key="xmlui.Submission.Submissions.title">Veröffentlichungen &amp; Geschäftsgänge</message>
 	<message key="xmlui.Submission.Submissions.trail">Veröffentlichungen</message>
-	<message key="xmlui.Submission.Submissions.head">Veröffentlichungen  &amp; übernommen Aufgaben</message>
+	<message key="xmlui.Submission.Submissions.head">Veröffentlichungen  &amp; übernommene Aufgaben</message>
 	<message key="xmlui.Submission.Submissions.untitled"><i>ohne Titel</i></message>
 	<message key="xmlui.Submission.Submissions.email">E-Mail: </message>
 	<!-- Same transformer, workflow section -->
@@ -575,7 +575,7 @@
 	<message key="xmlui.Submission.Submissions.submit_head3">Autoren:</message>
 	<message key="xmlui.Submission.Submissions.submit_info3">Es gibt keine unvollendeten Veröffentlichungen</message>
 	<message key="xmlui.Submission.Submissions.submit_head4">Supervision:</message>
-	<message key="xmlui.Submission.Submissions.submit_submit_remove">Entfernen der ausgewählten Supervisionen</message>
+	<message key="xmlui.Submission.Submissions.submit_submit_remove">Ausgewählte Beiträge/Einreichungen löschen</message>
 	<!-- Same transformer, inprogress section -->
 	<message key="xmlui.Submission.Submissions.progress_head1">Ihre Veröffentlichungen im Geschäftsgang</message>
 	<message key="xmlui.Submission.Submissions.progress_info1">Dies sind von Ihnen abgeschlossene Veröffentlichungen, die sich noch im Geschäftsgang befinden.</message>
@@ -1986,7 +1986,7 @@
 		</p>
 	</message>
 	<message key="xmlui.dri2xhtml.structural.contact-link">Kontakt</message>
-	<message key="xmlui.dri2xhtml.structural.feedback-link">Feedback abschicken</message>
+	<message key="xmlui.dri2xhtml.structural.feedback-link">Feedback</message>
 	 <message key="xmlui.dri2xhtml.structural.help-link">Hilfe</message>
 	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repositorium (Manakin basiert)</message>
 
@@ -2699,13 +2699,13 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <!-- org.dspace.app.xmlui.Submission.submit.PrefillStep -->
   <message key="xmlui.Submission.submit.progressbar.prefill">Metadata Import</message>
   <message key="xmlui.Submission.submit.PrefillStep.head">Metadata Import</message>
-  <message key="xmlui.Submission.submit.PrefillStep.explanation_note">Falls Ihr Dokument über DOI oder PPN (GVK Identifier) verfügt, geben Sie ihn hier ein. Sonst fahren Sie einfach mit weiter fort.</message>
+  <message key="xmlui.Submission.submit.PrefillStep.explanation_note">Falls Ihr Dokument über DOI oder PPN (GVK Identifier) verfügt, geben Sie diese hier ein (ohne doi.org, z.B. 10.2222/2222). Sonst fahren Sie bitte mit Weiter fort.</message>
   <message key="xmlui.Submission.submit.PrefillStep.doi">DOI</message>
   <message key="xmlui.Submission.submit.PrefillStep.doilabel">DOI</message>
   <message key="xmlui.Submission.submit.PrefillStep.ppn">PPN</message>
   <message key="xmlui.Submission.submit.PrefillStep.ppnlabel">PPN</message>
   <message key="xmlui.Submission.submit.PrefillStep.refresh.label">Überschreiben</message>
-  <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">Der verwendete ID ist nicht gültig oder nicht gefunden.  Korrigieren Sie Ihre Angabe oder fahren Sie mit dem weiter-Knpof manuell fort.</div></message>
+  <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">Die verwendete ID ist nicht gültig oder wurde nicht gefunden.  Korrigieren Sie Ihre Angabe oder fahren Sie mit dem Weiter-Knopf manuell fort.</div></message>
   <message key="xmlui.Submission.submit.PrefillStep.help">Falls für die Publikation kein Identifier vorliegt, gehen Sie bitte auf Weiter. Ist ein Identifier vorhanden, werden die bibliographischen Daten zum Dokument im nächsten Schritt automatisch eingetragen.</message>
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Bitte die Checkbox Überschreiben nur aktivieren, wenn sie die eingetragene Id korrigieren wollen.</message>
 <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
@@ -2728,5 +2728,7 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
 
 <message key="xmlui.impressum.text.privacy">Diese Website erfasst anonymisierte Daten zur Nutzung.<br />
 Zustimmung verweigern: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=de" target="_blank">Meine Besuche sollen nicht erfasst werden.</a></message>
+
+<message key="xmlui.dri2xhtml.METS-1.0.citation-link">Zitierfähiger Link: </message>
 
 </catalogue>

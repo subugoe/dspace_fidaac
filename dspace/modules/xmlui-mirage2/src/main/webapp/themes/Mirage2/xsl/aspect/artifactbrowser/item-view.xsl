@@ -459,7 +459,7 @@
                                 <xsl:when test="count(dim:field[@element='title'][not(@qualifier)])">
                                 <xsl:value-of select="dim:field[@element='title'][not(@qualifier)]"/>
                                 <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
-                                <xsl:text>: </xsl:text><i><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" /></i>
+                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
                                 </xsl:if>
                                 </xsl:when>
                                 <xsl:otherwise>
