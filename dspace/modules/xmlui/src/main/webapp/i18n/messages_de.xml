@@ -656,8 +656,8 @@
 	<message key="xmlui.Submission.submit.DescribeStep.year">Jahr</message>
 	<message key="xmlui.Submission.submit.DescribeStep.month">Monat</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">Tag</message>
-	<message key="xmlui.Submission.submit.DescribeStep.series_name">Serie</message>
-	<message key="xmlui.Submission.submit.DescribeStep.report_no">Zählung</message>
+	<message key="xmlui.Submission.submit.DescribeStep.series_name">Reihe</message>
+	<message key="xmlui.Submission.submit.DescribeStep.report_no">Band</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Schlagwort Kategorien</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Schlagwort Kategorien</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Nach Kategorien filtern</message>
@@ -698,7 +698,7 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Datei(en) hochladen</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">Datei</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Bitte geben Sie den voll qualifizierten Pfad zu der Datei auf Ihrem Rechner an. Wenn Sie auf "Durchsuchen" klicken, öffnet sich ein neues Fenster, in welchem Sie die Datei auf Ihrem Rechner suchen und auswählen können.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Bitte geben Sie den voll qualifizierten Pfad zu der Datei auf Ihrem Rechner an. Wenn Sie auf den Button klicken, öffnet sich ein neues Fenster, in welchem Sie die Datei auf Ihrem Rechner suchen und auswählen können.</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">Ein Problem ist während des Hochladens Ihrer Datei aufgetreten. Dies kann verschiedene Gründe haben: der Dateiname war fehlerhaft, aufgrund eines Netzwerkproblems wurde die Datei nicht korrekt übertragen oder Sie haben versucht, eine Dateiformat hochzuladen, welches auf dem Repositorium nicht zugelassen ist. Bitte überprüfen Sie Ihre Eingaben und versuchen es noch einmal.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_error">Die Datei wurde nich hochgeladen, da sie scheinbar einen Virus enthält. Bitte wenden Sie sich an den System-Administrator.</message>
     <message key="xmlui.Submission.submit.UploadStep.virus_checker_error">Beim Virusscan der Datei ist ein technisches Problem aufgetreten. Bitte wenden Sie sich an den System-Administrator.</message>
@@ -810,7 +810,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.CompletedStep -->
 	<message key="xmlui.Submission.submit.CompletedStep.head">Veröffentlichung abgeschlossen</message>	
-	<message key="xmlui.Submission.submit.CompletedStep.info1">Ihre Veröffentlichung durchläuft nun den für diese Sammlung festgelegten Geschäftsgang. Sie werden per E-Mail benachrichtigt, sobald dieser abgeschlossen umd Ihr Dokument in der Sammlung archiviert wurde oder erhalten ggf. eine E-Mail mit Rückfragen des Bearbeiters. Den Bearbeitungsstand Ihrer Veröffentlichung können Sie über Ihre Veröffentlichungsseite einsehen.</message>	
+	<message key="xmlui.Submission.submit.CompletedStep.info1">Ihre Veröffentlichung durchläuft nun den für diese Sammlung festgelegten Geschäftsgang. Sie werden per E-Mail benachrichtigt, sobald dieser abgeschlossen und Ihr Dokument in der Sammlung archiviert wurde oder erhalten ggf. eine E-Mail mit Rückfragen des Bearbeiters. Den Bearbeitungsstand Ihrer Veröffentlichung können Sie über Ihre Veröffentlichungsseite einsehen.</message>	
 	<message key="xmlui.Submission.submit.CompletedStep.go_submission">Zur Veröffentlichungsseite</message>	
 	<message key="xmlui.Submission.submit.CompletedStep.submit_again">Ein weiteres Dokument veröffentlichen</message>		
 
@@ -2699,14 +2699,14 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <!-- org.dspace.app.xmlui.Submission.submit.PrefillStep -->
   <message key="xmlui.Submission.submit.progressbar.prefill">Metadata Import</message>
   <message key="xmlui.Submission.submit.PrefillStep.head">Metadata Import</message>
-  <message key="xmlui.Submission.submit.PrefillStep.explanation_note">Falls Ihr Dokument über DOI oder PPN (GVK Identifier) verfügt, geben Sie diese hier ein (ohne doi.org, z.B. 10.2222/2222). Sonst fahren Sie bitte mit Weiter fort.</message>
+  <message key="xmlui.Submission.submit.PrefillStep.help">Falls Ihr Dokument über DOI oder PPN (GVK Identifier) verfügt, geben Sie diese hier ein (ohne doi.org, z.B. 10.2222/2222). Sonst fahren Sie bitte mit Weiter fort.</message>
   <message key="xmlui.Submission.submit.PrefillStep.doi">DOI</message>
   <message key="xmlui.Submission.submit.PrefillStep.doilabel">DOI</message>
   <message key="xmlui.Submission.submit.PrefillStep.ppn">PPN</message>
   <message key="xmlui.Submission.submit.PrefillStep.ppnlabel">PPN</message>
   <message key="xmlui.Submission.submit.PrefillStep.refresh.label">Überschreiben</message>
-  <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">Die verwendete ID ist nicht gültig oder wurde nicht gefunden.  Korrigieren Sie Ihre Angabe oder fahren Sie mit dem Weiter-Knopf manuell fort.</div></message>
-  <message key="xmlui.Submission.submit.PrefillStep.help">Falls für die Publikation kein Identifier vorliegt, gehen Sie bitte auf Weiter. Ist ein Identifier vorhanden, werden die bibliographischen Daten zum Dokument im nächsten Schritt automatisch eingetragen.</message>
+  <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">Die verwendete ID ist nicht gültig oder wurde nicht gefunden.  Korrigieren Sie Ihre Angabe (bitte nur die ID angeben, ohne doi.org o.ä. vorweg) oder fahren Sie mit dem Weiter-Knopf manuell fort.</div></message>
+  <!--<message key="xmlui.Submission.submit.PrefillStep.help">Falls für die Publikation kein Identifier vorliegt, gehen Sie bitte auf Weiter. Ist ein Identifier vorhanden, werden die bibliographischen Daten zum Dokument im nächsten Schritt automatisch eingetragen.</message>-->
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Bitte die Checkbox Überschreiben nur aktivieren, wenn sie die eingetragene Id korrigieren wollen.</message>
 <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypemono">Monographie</message>
