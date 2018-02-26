@@ -2645,7 +2645,7 @@
   <!--<message key="xmlui.Submission.submit.PrefillStep.help">If the document has an identifier, the bibliographic data will be automatically inserted in the next step. Enter the DOI without doi.org/, for example 10.2222/2222.</message>-->
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Please activate the checkbox if you want to override the already imported bibliographic data!</message>
   <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
-  <message key="xmlui.dri2xhtml.METS-1.0.item-editor">, ed. </message>
+  <message key="xmlui.dri2xhtml.METS-1.0.item-editor">, eds. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypemono">Monograph</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Anthology</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Article</message>
@@ -2691,6 +2691,8 @@
 
   <message key="xmlui.dri2xhtml.METS-1.0.standard-license-text">Use license(s) for these documents: </message>
   <message key="xmlui.dri2xhtml.METS-1.0.link-standard-license"><a href="/rights" >Standard FID AAC License</a></message>
+  <message key="xmlui.dri2xhtml.METS-1.0.citation-link">Link for Citation: </message>
+  <message key="xmlui.series.periodicals">Periodicals</message>
 
 
 <message key="xmlui.impressum.text.privacy"> Piwik opt-out: <br />If you do not want to consent to the storage and analysis of the user information generated, you can opt out.<br />

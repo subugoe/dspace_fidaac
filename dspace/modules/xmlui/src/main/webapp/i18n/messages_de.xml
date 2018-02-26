@@ -2730,5 +2730,6 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
 Zustimmung verweigern: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=de" target="_blank">Meine Besuche sollen nicht erfasst werden.</a></message>
 
 <message key="xmlui.dri2xhtml.METS-1.0.citation-link">Zitierfähiger Link: </message>
+<message key="xmlui.series.periodicals">Zeitschriften</message>
 
 </catalogue>

@@ -109,11 +109,21 @@
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='lecturer']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='lecturer']">
                                 <xsl:copy-of select="node()"/>
-                                <xsl:if test="count(following-sibling::dim:field[@element='creator'][@qualifier='lecturer']) != 0">
+                                <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='lecturer']) != 0">
                                     <xsl:text>; </xsl:text>
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:when>
+			<xsl:when test="dim:field[@element='contributor'][@qualifier='editor']">
+                            <xsl:for-each select="dim:field[@element='contributor'][@qualifier='editor']">
+                                <xsl:copy-of select="node()"/>
+                                <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='editor']) != 0">
+                                    <xsl:text>; </xsl:text>
+                                </xsl:if>
+                            </xsl:for-each>
+			<i18n:text>xmlui.dri2xhtml.METS-1.0.item-editor</i18n:text>				
+                        </xsl:when>
+
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='organiser']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organiser']">
                                 <xsl:copy-of select="node()"/>
@@ -297,7 +307,7 @@
                                 <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']" />
                             </xsl:if>
 			    <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
-                                <xsl:text> </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']" />
+                                <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']" />
                             </xsl:if>
                             <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
                                 <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']" /><xsl:text> - </xsl:text>

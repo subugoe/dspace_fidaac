@@ -239,14 +239,14 @@
                                      <xsl:apply-templates select="."/>                             
                                     <xsl:if test="count(following-sibling::dri:item) != 0">
                                         <xsl:text>; </xsl:text>
-                                    </xsl:if><i18n:text>xmlui.dri2xhtml.METS-1.0.item-editor</i18n:text>
+                                    </xsl:if>
                                 </xsl:for-each>
                             </xsl:when>
                             <xsl:otherwise>
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                             </xsl:otherwise>
                         </xsl:choose>
-                        </small></span>
+                        <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editor</i18n:text></small></span>
                     <xsl:text> </xsl:text>
                     <xsl:if test="dri:list[@n=(concat($handle, ':dc.date.issued'))]">
                         <span class="publisher-date h4">   <small>
@@ -634,7 +634,7 @@
                         </xsl:choose>
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]">
-                                <xsl:text> </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]/dri:item"/>
+                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]/dri:item"/>
                             </xsl:when>
                  </xsl:choose>
                   <xsl:choose>
@@ -786,7 +786,7 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
-                    <span class="artifact-title"><i>
+                    <span class="artifact-title">
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                <xsl:text>&quot;</xsl:text> <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
@@ -811,7 +811,7 @@
                             <xsl:text>&#160;</xsl:text>
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
-                    </i></span>
+                    </span>
                 </xsl:element>
 		<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.ispartof'))]">
                                 <i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.ispartof'))]/dri:item"/><xsl:text>. </xsl:text></i>
