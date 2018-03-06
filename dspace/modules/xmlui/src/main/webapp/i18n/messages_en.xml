@@ -518,20 +518,20 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Sign in</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">Sign in to FID AAC</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">Sign in to The Stacks</message>
 	<message key="xmlui.EPerson.PasswordLogin.email_address">E-Mail Address</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">The email address and/or password supplied were not valid.</message>
 	<message key="xmlui.EPerson.PasswordLogin.password">Password</message>
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Forgot your password?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Sign in</message>
-	<message key="xmlui.EPerson.PasswordLogin.head2">Register new user</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates, and submit new items to FID AAC.</message>
+	<message key="xmlui.EPerson.PasswordLogin.head2">Create a new account</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Register as a new user to submit new items to The Stacks and to subscribe to collections for email updates.</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Click here to register.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Sign in</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">Sign in to FID AAC</message>
+	<message key="xmlui.EPerson.LDAPLogin.head1">Sign in to The Stacks</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">User Name</message>
 	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">The user name and/or password supplied were not valid.</message>
 	<message key="xmlui.EPerson.LDAPLogin.password">Password</message>
@@ -630,16 +630,16 @@
 	<!-- general submission aspect messages -->
 	<message key="xmlui.Submission.general.mydspace_home">MyFID AAC Home</message>
 	<message key="xmlui.Submission.general.go_mydspace">Go to MyFID AAC Home</message>
-	<message key="xmlui.Submission.general.submission.title">Item submission</message>
-	<message key="xmlui.Submission.general.submission.trail">Item submission</message>
-	<message key="xmlui.Submission.general.submission.head">Item submission</message>
+	<message key="xmlui.Submission.general.submission.title">Item Submission</message>
+	<message key="xmlui.Submission.general.submission.trail">Item Submission</message>
+	<message key="xmlui.Submission.general.submission.head">Item Submission</message>
 	<message key="xmlui.Submission.general.submission.previous">&lt; Previous</message>
 	<message key="xmlui.Submission.general.submission.save">Save &amp; Exit</message>
 	<message key="xmlui.Submission.general.submission.next">Next &gt;</message>
-	<message key="xmlui.Submission.general.submission.complete">Complete submission</message>
-	<message key="xmlui.Submission.general.workflow.title">Item submission</message>
-	<message key="xmlui.Submission.general.workflow.trail">Item submission</message>
-	<message key="xmlui.Submission.general.workflow.head">Item submission</message>
+	<message key="xmlui.Submission.general.submission.complete">Complete Submission</message>
+	<message key="xmlui.Submission.general.workflow.title">Item Submission</message>
+	<message key="xmlui.Submission.general.workflow.trail">Item Submission</message>
+	<message key="xmlui.Submission.general.workflow.head">Item Submission</message>
 	<message key="xmlui.Submission.general.showfull">Show full item record</message>
 	<message key="xmlui.Submission.general.showsimple">Show simple item record</message>
 	<message key="xmlui.Submission.general.default.title">Submission</message>
@@ -760,11 +760,11 @@
 	<message key="xmlui.Submission.submit.InitialQuestionsStep.publisher">Publisher</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.DescribeStep -->
-	<message key="xmlui.Submission.submit.DescribeStep.head">Describe the Item <small>(*obligatory fields)</small></message>
+	<message key="xmlui.Submission.submit.DescribeStep.head">Describe the item <small>(*obligatory fields)</small></message>
 	<message key="xmlui.Submission.submit.DescribeStep.unknown_field">Error: Unknown field type</message>
 	<message key="xmlui.Submission.submit.DescribeStep.required_field">This field is required</message>
 	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Last name, <i>e.g. Smith</i></message>
-	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">First name(s) + "Jr", <i>e.g. Donald Jr</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">First name(s) + "Jr", <i>e.g. Peter Jr</i></message>
 	<message key="xmlui.Submission.submit.DescribeStep.year">Year</message>
 	<message key="xmlui.Submission.submit.DescribeStep.month">Month</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">Day</message>
@@ -807,7 +807,7 @@
     <message key="xmlui.Submission.submit.AccessStep.column3">Start Date</message>
     <message key="xmlui.Submission.submit.AccessStep.column4">End Date</message>
     <message key="xmlui.Submission.submit.AccessStep.table_edit_button">Edit</message>
-    <message key="xmlui.Submission.submit.AccessStep.table_delete_button">Remove</message>
+    <message key="xmlui.Submission.submit.AccessStep.table_delete_button">Mark to Remove</message>
     <message key="xmlui.administrative.authorization.AccessStep.label_date_help">The first day from which access is allowed. Accepted format: yyyy, yyyy-mm, yyyy-mm-dd</message>
     <message key="xmlui.Submission.submit.AccessStep.review_policy_line">Name: {0}; action: {1}, group: {2}, start date: {3}, end date: {4}</message>
     <message key="xmlui.Submission.submit.AccessStep.review_public_item">The item will be searchable</message>
@@ -2505,9 +2505,9 @@
 
     <!-- custom texts -->
     <message key="xmlui.footer.text">Developed and hosted by <br /><a href="https://www.sub.uni-goettingen.de/sub-aktuell/">States- and University Library Göttingen</a></message>
-    <message key="xmlui.dri2xhtml.structural.aboutus-link">About us</message>
+    <message key="xmlui.dri2xhtml.structural.aboutus-link">About Us</message>
     <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
-    <message key="xmlui.dri2xhtml.structural.rights-link">Terms Of Use</message>
+    <message key="xmlui.dri2xhtml.structural.rights-link">Terms of Use</message>
     <message key="xmlui.dri2xhtml.structural.copyright-link">Credits</message>
      <message key="xmlui.aboutus.head">About Us</message>
    <message key="xmlui.help.head">Help</message>
@@ -2635,20 +2635,20 @@
   <!-- org.dspace.app.xmlui.Submission.submit.PrefillStep -->
   <message key="xmlui.Submission.submit.progressbar.prefill">Metadata Import</message>
   <message key="xmlui.Submission.submit.PrefillStep.head">Metadata Import</message>
-  <message key="xmlui.Submission.submit.PrefillStep.help">If your publication has a DOI or PPN (GVK-Identifier), enter it here please (without doi.org, for example 10.2222/2222). We will try to fetch the bibliographic data automatically. Otherwise proceed with next. </message>
+  <message key="xmlui.Submission.submit.PrefillStep.help">If your publication has a DOI or PPN (GVK-Identifier), enter it here please (without doi.org, for example 10.2222/2222). We will try to fetch the bibliographic data automatically. </message>
   <message key="xmlui.Submission.submit.PrefillStep.doi">DOI</message>
   <message key="xmlui.Submission.submit.PrefillStep.doilabel">DOI</message>
   <message key="xmlui.Submission.submit.PrefillStep.ppn">PPN</message>
   <message key="xmlui.Submission.submit.PrefillStep.ppnlabel">PPN</message>
   <message key="xmlui.Submission.submit.PrefillStep.refresh.label">Refresh</message>
-  <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">The ID used is not found or not valid. Please correct it (only enter the number, wihtout doi.org) or continue manually with the next-Button.</div></message>
+  <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">The ID used is not found or not valid. Please correct it (only enter the number, wihtout doi.org).</div></message>
   <!--<message key="xmlui.Submission.submit.PrefillStep.help">If the document has an identifier, the bibliographic data will be automatically inserted in the next step. Enter the DOI without doi.org/, for example 10.2222/2222.</message>-->
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Please activate the checkbox if you want to override the already imported bibliographic data!</message>
   <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
   <message key="xmlui.dri2xhtml.METS-1.0.item-editor">, eds. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypemono">Monograph</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Anthology</message>
-  <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Article</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Journal Article</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Article in Anthology</message>
   <message key="xmlui.dri2xhtml.METS-1.0.editor">Ed. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypedigital">Digital Reproduction</message>
@@ -2672,10 +2672,11 @@
   <message key="politicalscience">Politics</message>
   <message key="socialscience">Social Sciences</message>
   <message key="englishlanguageteaching">English Language Teaching</message>
+  <message key="medievalstudies">Medieval Studies</message>
 
   <message key="preprint">Preprint</message>
   <message key="monograph">Monograph</message>
-  <message key="article">Article</message>
+  <message key="article">Journal Article</message>
   <message key="anthologyArticle">Article in Anthology</message>
   <message key="anthology">Anthology</message>
   <message key="conferenceReport">Conference Report</message>

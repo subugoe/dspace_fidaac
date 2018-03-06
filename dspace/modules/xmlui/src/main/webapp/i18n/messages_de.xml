@@ -196,7 +196,7 @@
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Sammlungsübersicht</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Sammlungsübersicht</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Sammlungen</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Wählen Sie eine Sammlung um den Inhalt zu durchstöbern.</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Wählen Sie eine Sammlung, um den Inhalt zu durchstöbern.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.search_scope">Suchbereich</message>
@@ -405,20 +405,20 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Einloggen</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">In FID AAC Einloggen</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">In The Stacks einloggen</message>
 	<message key="xmlui.EPerson.PasswordLogin.email_address">E-Mail-Addresse</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">Die angegebene E-Mail-Adresse und/oder das Passwort sind ungültig.</message>
 	<message key="xmlui.EPerson.PasswordLogin.password">Passwort</message>
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Haben Sie Ihr Passwort vergessen?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Einloggen</message>
-	<message key="xmlui.EPerson.PasswordLogin.head2">Einen neuen Benutzer registrieren</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Legen Sie einen Benutzeracccount an, um Dienste wie den Neuerscheinungsinformationsdienst nutzen zu können.</message>
+	<message key="xmlui.EPerson.PasswordLogin.head2">Einen neuen Account anlegen</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Mit einem eigenen Account können Sie Dokumente hochladen und sich per E-Mail über neue Veröffentlichungen in The Stacks informieren lassen.</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Klicken Sie hier, um einen neuen Benutzeraccount anzulegen.</message>
 	
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Einloggen</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">In FID AAC einloggen</message>
+	<message key="xmlui.EPerson.LDAPLogin.head1">In The Stacks einloggen</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">Benutzername</message>
 	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">Der Benutzername und/oder Passwort sind ungültig.</message>
 	<message key="xmlui.EPerson.LDAPLogin.password">Passwort</message>
@@ -2681,6 +2681,8 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="politicalscience">Politikwissenschaften</message>
   <message key="socialscience">Sozialwissenschaften</message>
   <message key="englishlanguageteaching">Fachdidaktik</message>
+  <message key="medievalstudies">Mediävistik</message>
+
   <message key="article">Zeitschriftenartikel</message>
   <message key="monograph">Monographie</message>
   <message key="digitalReproduction">Digitalisat</message>
@@ -2693,19 +2695,19 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="courseDescription">Seminarbeschreibung</message>
   <message key="conferenceReport">Tagungsbericht</message>
   <message key="conferenceProg">Konferenzprogramm</message>
-  <message key="conferenceCall">Call for papers</message>
+  <message key="conferenceCall">Call for Papers</message>
   <message key="conferenceBoA">Book of Abstracts</message>
 
   <!-- org.dspace.app.xmlui.Submission.submit.PrefillStep -->
   <message key="xmlui.Submission.submit.progressbar.prefill">Metadata Import</message>
   <message key="xmlui.Submission.submit.PrefillStep.head">Metadata Import</message>
-  <message key="xmlui.Submission.submit.PrefillStep.help">Falls Ihr Dokument über DOI oder PPN (GVK Identifier) verfügt, geben Sie diese hier ein (ohne doi.org, z.B. 10.2222/2222). Sonst fahren Sie bitte mit Weiter fort.</message>
+  <message key="xmlui.Submission.submit.PrefillStep.help">Falls Ihr Dokument über eine DOI oder PPN (GVK-Identifier) verfügt, geben Sie diese hier ein (ohne doi.org, z.B. 10.2222/2222).</message>
   <message key="xmlui.Submission.submit.PrefillStep.doi">DOI</message>
   <message key="xmlui.Submission.submit.PrefillStep.doilabel">DOI</message>
   <message key="xmlui.Submission.submit.PrefillStep.ppn">PPN</message>
   <message key="xmlui.Submission.submit.PrefillStep.ppnlabel">PPN</message>
   <message key="xmlui.Submission.submit.PrefillStep.refresh.label">Überschreiben</message>
-  <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">Die verwendete ID ist nicht gültig oder wurde nicht gefunden.  Korrigieren Sie Ihre Angabe (bitte nur die ID angeben, ohne doi.org o.ä. vorweg) oder fahren Sie mit dem Weiter-Knopf manuell fort.</div></message>
+  <message key="xmlui.Submission.submit.PrefillStep.identifier.error"><div class="alert alert-warning">Die verwendete ID ist nicht gültig oder wurde nicht gefunden.  Korrigieren Sie Ihre Angabe (bitte nur die ID angeben, ohne doi.org o.ä. vorweg).</div></message>
   <!--<message key="xmlui.Submission.submit.PrefillStep.help">Falls für die Publikation kein Identifier vorliegt, gehen Sie bitte auf Weiter. Ist ein Identifier vorhanden, werden die bibliographischen Daten zum Dokument im nächsten Schritt automatisch eingetragen.</message>-->
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Bitte die Checkbox Überschreiben nur aktivieren, wenn sie die eingetragene Id korrigieren wollen.</message>
 <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
