@@ -245,7 +245,7 @@
                        <xsl:text>, </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
                 </xsl:if>
                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
-                         <xsl:text> - </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>. </xsl:text>
+                         <xsl:text>-</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>. </xsl:text>
                 </xsl:if>
 
 
@@ -515,7 +515,7 @@
                        <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
                 </xsl:if>
                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
-                         <xsl:text> - </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>. </xsl:text>
+                         <xsl:text>-</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>. </xsl:text>
                 </xsl:if>
 
 		

@@ -639,7 +639,7 @@
                  </xsl:choose>
                   <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text> - </xsl:text>
+                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>-</xsl:text>
                             </xsl:when>
                  </xsl:choose>
 		<xsl:choose>
@@ -834,7 +834,7 @@
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
                             </xsl:if>
                             <xsl:if test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text> - </xsl:text>
+                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>-</xsl:text>
                             </xsl:if>
                             <xsl:if test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]/dri:item"/><xsl:text>.</xsl:text>
