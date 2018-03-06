@@ -21,7 +21,7 @@
                 $(this).text("Canadian Studies");
             }
             if (/Serien$/.test($(this).text())) {
-                $(this).text("Periodicals archive");
+                $(this).text("Periodicals Archive");
             }
                        
 
