@@ -338,7 +338,7 @@
 
 	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">
                             <xsl:if test="dim:field[@element='relation'][@qualifier='ispartof']">
-                               <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']" /></i><xsl:text>. </xsl:text>
+                               <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']" /><xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']" /></i><xsl:text>. </xsl:text>
                             </xsl:if>
 			    <xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
 				<i18n:text>xmlui.dri2xhtml.METS-1.0.editor</i18n:text>

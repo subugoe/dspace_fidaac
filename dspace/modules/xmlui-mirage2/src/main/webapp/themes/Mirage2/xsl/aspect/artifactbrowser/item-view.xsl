@@ -501,7 +501,7 @@
 
 
 		<xsl:if test="dim:field[@element='relation'][@qualifier='ispartof']">
-			<xsl:text> </xsl:text><i><xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']/node()"/></i>
+			<xsl:text> </xsl:text><i><xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']/node()"/><xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']/node()"/></i>
 		</xsl:if>
 		<xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
                         <xsl:text>. Eds. </xsl:text><xsl:for-each select="dim:field[@element='relation'][@qualifier='editor']">

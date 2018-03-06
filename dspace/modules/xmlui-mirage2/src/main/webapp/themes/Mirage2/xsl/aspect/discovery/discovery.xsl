@@ -687,7 +687,7 @@
 	
 
 
-                        <xsl:template name="itemSummaryListAnthologyArticle">
+       <xsl:template name="itemSummaryListAnthologyArticle">
                         <xsl:param name="handle"/>
                         <xsl:param name="externalMetadataUrl"/>
 
@@ -814,8 +814,11 @@
                     </span>
                 </xsl:element>
 		<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.ispartof'))]">
-                                <i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.ispartof'))]/dri:item"/><xsl:text>. </xsl:text></i>
+                                <i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.ispartof'))]/dri:item"/>
+				<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.ispartofalt'))]"><xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.ispartofalt'))]/dri:item"/></xsl:if>
+				<xsl:text>. </xsl:text></i>
                             </xsl:if>
+		
 
                   <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.editor'))]">
 				<i18n:text>xmlui.dri2xhtml.METS-1.0.editor</i18n:text>
