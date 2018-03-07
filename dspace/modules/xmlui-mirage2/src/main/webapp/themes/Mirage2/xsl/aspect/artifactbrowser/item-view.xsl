@@ -178,6 +178,7 @@
                 <xsl:call-template name="itemSummaryView-collections"/>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Monograph-->
 
@@ -269,6 +270,7 @@
                 <xsl:call-template name="itemSummaryView-collections"/>
 		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Zeitschriftenartikel-->
 			
@@ -329,6 +331,7 @@
                 <xsl:call-template name="itemSummaryView-collections"/>
 		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Konferenzen-->
 			
@@ -401,6 +404,7 @@
 	        <xsl:call-template name="itemSummaryView-collections"/>
 		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Seminare-->
 	
@@ -459,6 +463,7 @@
                 <xsl:call-template name="itemSummaryView-collections"/>
 		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Sammelband-->
 
@@ -541,6 +546,7 @@
                 <xsl:call-template name="itemSummaryView-collections"/>
 		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Sammelbandbeitrag-->
 
@@ -569,6 +575,7 @@
                 <xsl:call-template name="itemSummaryView-collections"/>
 		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Digitalisat-->
 
@@ -596,7 +603,8 @@
                     <xsl:call-template name="itemSummaryView-collections"/>
 		     <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
-                </div>
+		<xsl:call-template name="display-rights"/>                
+</div>
             </div>
 	  </xsl:otherwise>
 	</xsl:choose>
@@ -1217,7 +1225,7 @@
     </xsl:template>
 
     <xsl:template name="display-rights">
-        <xsl:variable name="file_id" select="jstring:replaceAll(jstring:replaceAll(string(@ADMID), '_METSRIGHTS', ''), 'rightsMD_', '')"/>
+        <!--<xsl:variable name="file_id" select="jstring:replaceAll(jstring:replaceAll(string(@ADMID), '_METSRIGHTS', ''), 'rightsMD_', '')"/>
         <xsl:variable name="rights_declaration" select="../../../mets:amdSec/mets:rightsMD[@ID = concat('rightsMD_', $file_id, '_METSRIGHTS')]/mets:mdWrap/mets:xmlData/rights:RightsDeclarationMD"/>
         <xsl:variable name="rights_context" select="$rights_declaration/rights:Context"/>
         <xsl:variable name="users">
@@ -1238,14 +1246,137 @@
         <xsl:choose>
             <xsl:when test="not ($rights_context/@CONTEXTCLASS = 'GENERAL PUBLIC') and ($rights_context/rights:Permissions/@DISPLAY = 'true')">
                 <a href="{mets:FLocat[@LOCTYPE='URL']/@xlink:href}">
-                    <img width="64" height="64" src="{concat($theme-path,'/images/Crystal_Clear_action_lock3_64px.png')}" title="Read access available for {$users}"/>
+                    <img width="64" height="64" src="{concat($theme-path,'/images/Crystal_Clear_action_lock3_64px.png')}" title="Read access available for {$users}"/>-->
                     <!-- icon source: http://commons.wikimedia.org/wiki/File:Crystal_Clear_action_lock3.png -->
-                </a>
+                <!--</a>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:call-template name="view-open"/>
             </xsl:otherwise>
-        </xsl:choose>
+        </xsl:choose>-->
+		<xsl:choose>
+			<xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC 1.0'">
+				<a href="https://creativecommons.org/licenses/by-nc/1.0/">
+				<img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 1.0"/>
+				</a>
+			</xsl:when>
+			 <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC 2.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc/2.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 2.0"/>
+                                </a>
+                        </xsl:when>
+			 <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC 3.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc/3.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 3.0"/>
+                                </a>
+                        </xsl:when>
+			 <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC 4.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc/4.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 4.0"/>
+                                </a>
+                        </xsl:when>
+			<xsl:when test="dim:field[@element='rights'] = 'CC::CC BY 1.0'">
+                                <a href="https://creativecommons.org/licenses/by/1.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 1.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY 2.0'">
+                                <a href="https://creativecommons.org/licenses/by/2.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 2.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY 3.0'">
+                                <a href="https://creativecommons.org/licenses/by/3.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 3.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY 4.0'">
+                                <a href="https://creativecommons.org/licenses/by/4.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 4.0"/>
+                                </a>
+                        </xsl:when>
+			<xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-SA 1.0'">
+                                <a href="https://creativecommons.org/licenses/by-sa/1.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 1.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-SA 2.0'">
+                                <a href="https://creativecommons.org/licenses/by-sa/2.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 2.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-SA 3.0'">
+                                <a href="https://creativecommons.org/licenses/by-sa/3.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 3.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-SA 4.0'">
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 4.0"/>
+                                </a>
+                        </xsl:when>
+			<xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-ND 1.0'">
+                                <a href="https://creativecommons.org/licenses/by-nd/1.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 1.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-ND 2.0'">
+                                <a href="https://creativecommons.org/licenses/by-nd/2.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 2.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-ND 3.0'">
+                                <a href="https://creativecommons.org/licenses/by-nd/3.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 3.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-ND 4.0'">
+                                <a href="https://creativecommons.org/licenses/by-nd/4.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 4.0"/>
+                                </a>
+                        </xsl:when>
+			 <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC-ND 1.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc-nd/1.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 1.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC-ND 2.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 2.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC-ND 3.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 3.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC-ND 4.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 4.0"/>
+                                </a>
+                        </xsl:when>
+			 <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC-SA 1.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc-sa/1.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 1.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC-SA 2.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 2.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC-SA 3.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 3.0"/>
+                                </a>
+                        </xsl:when>
+                         <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY-NC-SA 4.0'">
+                                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 4.0"/>
+                                </a>
+                        </xsl:when>
+
+		</xsl:choose>
     </xsl:template>
 
     <xsl:template name="getFileIcon">
