@@ -87,7 +87,7 @@ public class DCSeriesNumber
         }
         else
         {
-            return (series + ";" + number);
+            return (series + "; " + number);
         }
     }
 
