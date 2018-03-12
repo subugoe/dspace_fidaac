@@ -197,7 +197,7 @@
 	</xsl:when>
 
 
-	 <xsl:when test="dim:field[@element='type'] = 'courseDescription' or dim:field[@element='type'] = 'syllabus' or dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall'">
+	 <xsl:when test="dim:field[@element='type'] = 'courseDescription' or dim:field[@element='type'] = 'syllabus' or dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall' or dim:field[@element='type'] = 'conferencePaper'">
         <span class="artifact-title"><i>
                 <xsl:element name="a">
                     <xsl:attribute name="href">
@@ -307,13 +307,16 @@
         </xsl:when>
 	<xsl:when test="dim:field[@element='type'] = 'article'">
                             <xsl:if test="dim:field[@element='relation'][@qualifier='journal']">
-                               <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='journal']" /></i><xsl:text> </xsl:text>
+                               <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='journal']" /></i>
+                            </xsl:if>
+			     <xsl:if test="dim:field[@element='relation'][@qualifier='journalalt']">
+                               <i> <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='journalalt']" /></i>
                             </xsl:if>
                             <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='volume']">
-                                <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']" />
+                                <xsl:text> </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']" />
                             </xsl:if>
 			    <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
-                                <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']" />
+                                <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']" />
                             </xsl:if>
                             <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
                                 <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']" /><xsl:text>-</xsl:text>
@@ -336,7 +339,7 @@
                                 <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='description'][@qualifier='semester']" /><xsl:text>. </xsl:text>
                             </xsl:if>
         </xsl:when>
-	 <xsl:when test="dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall'">
+	 <xsl:when test="dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall' or dim:field[@element='type'] = 'conferencePaper'">
                             <xsl:if test="dim:field[@element='relation'][@qualifier='event']">
                                 <xsl:value-of select="dim:field[@element='relation'][@qualifier='event']" /><xsl:text>. </xsl:text>
                             </xsl:if>
@@ -415,6 +418,9 @@
         </xsl:if>
         <xsl:if test="dim:field[@element='type'] = 'conferenceBoA'">
                 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfboa</i18n:text></div>
+        </xsl:if>
+	 <xsl:if test="dim:field[@element='type'] = 'conferencePaper'">
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfpaper</i18n:text></div>
         </xsl:if>
 
         </div>

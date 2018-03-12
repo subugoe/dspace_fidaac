@@ -137,7 +137,7 @@
                                                 </xsl:with-param>
                                         </xsl:call-template>
                                 </xsl:when>
-				<xsl:when test="dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceProg' or dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceReport' or dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceBoA' or dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceCall'">
+				<xsl:when test="dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceProg' or dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceReport' or dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceBoA' or dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceCall' or dri:list[@n=(concat($handle, ':dc.type'))] = 'conferencePaper'">
                                         <xsl:call-template name="itemSummaryListConference">
                                                 <xsl:with-param name="handle">
                                                         <xsl:value-of select="$handle"/>
@@ -632,17 +632,22 @@
                 </xsl:element>
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.journal'))]">
-                                <i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.journal'))]/dri:item"/></i><xsl:text> </xsl:text>
+                                <i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.journal'))]/dri:item"/></i>
+                            </xsl:when>
+                        </xsl:choose>
+		<xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.journalalt'))]">
+                                <i><xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.journalalt'))]/dri:item"/></i>
                             </xsl:when>
                         </xsl:choose>
 		<xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.volume'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.volume'))]/dri:item"/>
+                                <xsl:text> </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.volume'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]/dri:item"/>
+                                <xsl:text>. </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]/dri:item"/>
                             </xsl:when>
                  </xsl:choose>
                   <xsl:choose>
@@ -1076,6 +1081,9 @@
         </xsl:if>
         <xsl:if test="dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceBoA'">
                  <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfboa</i18n:text></div>
+        </xsl:if>
+	 <xsl:if test="dri:list[@n=(concat($handle, ':dc.type'))] = 'conferencePaper'">
+                 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfpaper</i18n:text></div>
         </xsl:if>
             </div>
         </div>

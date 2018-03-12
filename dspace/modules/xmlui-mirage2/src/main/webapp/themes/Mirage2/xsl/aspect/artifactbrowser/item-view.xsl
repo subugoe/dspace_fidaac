@@ -236,11 +236,14 @@
 		<xsl:if test="dim:field[@element='relation'][@qualifier='journal']">
 			<i><xsl:value-of select="dim:field[@element='relation'][@qualifier='journal']/node()"/></i>
 		</xsl:if>
+		 <xsl:if test="dim:field[@element='relation'][@qualifier='journalalt']">
+                        <i><xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='journalalt']/node()"/></i>
+                </xsl:if>
 		<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='volume']">
                        <xsl:text> </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']/node()"/>
                 </xsl:if>
 		<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
-                         <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']/node()"/>
+                         <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']/node()"/>
                 </xsl:if>
 		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
                        <xsl:text>, </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
@@ -275,7 +278,7 @@
                 <!--/Zeitschriftenartikel-->
 			
 		<!--Konferenzen-->
-          <xsl:when test="dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceReport'">
+          <xsl:when test="dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferencePaper'">
 		<!-- <b>dc.contributor.organiser, </b> <i>dc.title, </i> dc.relation.event. -->
 		<div class="itemview-citation">
                    <xsl:choose>
@@ -313,7 +316,7 @@
 		                
                 </div>
 
-                <div class="itemview-citation-small"><xsl:if test="dim:field[@element='type'] = 'conferenceBoA'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfboa</i18n:text></xsl:if><xsl:if test="dim:field[@element='type'] = 'conferenceCall'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfcall</i18n:text></xsl:if><xsl:if test="dim:field[@element='type'] = 'conferenceProg'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfprog</i18n:text></xsl:if><xsl:if test="dim:field[@element='type'] = 'conferenceReport'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfreport</i18n:text></xsl:if></div>
+                <div class="itemview-citation-small"><xsl:if test="dim:field[@element='type'] = 'conferenceBoA'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfboa</i18n:text></xsl:if><xsl:if test="dim:field[@element='type'] = 'conferenceCall'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfcall</i18n:text></xsl:if><xsl:if test="dim:field[@element='type'] = 'conferenceProg'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfprog</i18n:text></xsl:if><xsl:if test="dim:field[@element='type'] = 'conferenceReport'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfreport</i18n:text></xsl:if><xsl:if test="dim:field[@element='type'] = 'conferencePaper'"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfpaper</i18n:text></xsl:if></div>
                 <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
                 <xsl:call-template name="itemSummaryView-DIM-language"/>
                 <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>

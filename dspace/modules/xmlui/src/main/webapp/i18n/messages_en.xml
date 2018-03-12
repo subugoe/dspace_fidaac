@@ -769,7 +769,7 @@
 	<message key="xmlui.Submission.submit.DescribeStep.month">Month</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">Day</message>
 	<message key="xmlui.Submission.submit.DescribeStep.series_name">Series Name</message>
-	<message key="xmlui.Submission.submit.DescribeStep.report_no">Report or paper No.</message>
+	<message key="xmlui.Submission.submit.DescribeStep.report_no">Volume No.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Subject Categories</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Subject Categories</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter subjects</message>
@@ -2688,7 +2688,7 @@
   <message key="syllabus">Syllabus</message>
   <message key="conferenceBoA">Book of Abstracts</message>
   <message key="conferenceCall">Call for Papers</message>
-
+  <message key="conferencePaper">Conference Paper</message>
 
   <message key="xmlui.metadata.export">Metadata Export: </message>
 
