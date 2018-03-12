@@ -117,11 +117,17 @@
 			<xsl:when test="dim:field[@element='contributor'][@qualifier='editor']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='editor']">
                                 <xsl:copy-of select="node()"/>
-                                <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='editor']) != 0">
+                    	          <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='editor']) != 0">
                                     <xsl:text>; </xsl:text>
                                 </xsl:if>
                             </xsl:for-each>
-			<i18n:text>xmlui.dri2xhtml.METS-1.0.item-editor</i18n:text>				
+			
+			<xsl:if test="count(dim:field[@element='contributor'][@qualifier='editor']) = 1">
+			 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editorone</i18n:text>
+			</xsl:if>
+			<xsl:if test="count(dim:field[@element='contributor'][@qualifier='editor']) &gt; 1">
+			 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editormult</i18n:text>			 
+			</xsl:if>
                         </xsl:when>
 
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='organiser']">
@@ -338,10 +344,20 @@
 
 	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">
                             <xsl:if test="dim:field[@element='relation'][@qualifier='ispartof']">
-                               <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']" /><xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']" /></i><xsl:text>. </xsl:text>
+                               <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']" />
+				<xsl:if test="dim:field[@element='relation'][@qualifier='ispartofalt']"><xsl:text>: </xsl:text></xsl:if>
+				<xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']" /></i>
+				<xsl:text>. </xsl:text>
                             </xsl:if>
 			    <xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
-				<i18n:text>xmlui.dri2xhtml.METS-1.0.editor</i18n:text>
+
+			 <xsl:if test="count(dim:field[@element='relation'][@qualifier='editor']) = 1">
+                         <i18n:text>xmlui.dri2xhtml.METS-1.0.editorone</i18n:text>
+                        </xsl:if>
+                        <xsl:if test="count(dim:field[@element='relation'][@qualifier='editor']) &gt; 1">
+                         <i18n:text>xmlui.dri2xhtml.METS-1.0.editormult</i18n:text>
+                        </xsl:if>
+
                         	    <xsl:for-each select="dim:field[@element='relation'][@qualifier='editor']">
                                 	<xsl:copy-of select="node()"/>
                                 	<xsl:if test="count(following-sibling::dim:field[@element='relation'][@qualifier='editor']) != 0">

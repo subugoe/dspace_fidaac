@@ -2022,7 +2022,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-preview">Vorschau</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-title">Titel</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-author">Autor(en)</message>
-        <message key="xmlui.dri2xhtml.METS-1.0.item-editor">, Hrg. </message>
+        <message key="xmlui.dri2xhtml.METS-1.0.item-editor">, Hrsg. </message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Zusammenfassung</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Beschreibung</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
@@ -2715,7 +2715,7 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Sammelband</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Zeitschriftenartikel</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Sammelbandbeitrag</message>
-<message key="xmlui.dri2xhtml.METS-1.0.editor">Hrg. </message>
+<message key="xmlui.dri2xhtml.METS-1.0.editor">Hrsg. </message>
 <message key="xmlui.metadata.export">Metadaten-Export: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypedigital">Digitalisat</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypecoursedesc">Seminarbeschreibung</message>

@@ -246,7 +246,15 @@
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                             </xsl:otherwise>
                         </xsl:choose>
-                        <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editor</i18n:text></small></span>
+
+			<xsl:if test="count(dri:list[@n=(concat($handle, ':dc.contributor.editor'))]/dri:item) = 1">
+                         <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editorone</i18n:text>
+                        </xsl:if>
+                        <xsl:if test="count(dri:list[@n=(concat($handle, ':dc.contributor.editor'))]/dri:item) &gt; 1">
+                         <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editormult</i18n:text>
+                        </xsl:if>
+
+			</small></span>
                     <xsl:text> </xsl:text>
                     <xsl:if test="dri:list[@n=(concat($handle, ':dc.date.issued'))]">
                         <span class="publisher-date h4">   <small>
@@ -821,7 +829,14 @@
 		
 
                   <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.editor'))]">
-				<i18n:text>xmlui.dri2xhtml.METS-1.0.editor</i18n:text>
+
+			<xsl:if test="count(dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item) = 1">
+                         <i18n:text>xmlui.dri2xhtml.METS-1.0.editorone</i18n:text>
+                        </xsl:if>
+                        <xsl:if test="count(dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item) &gt; 1">
+                         <i18n:text>xmlui.dri2xhtml.METS-1.0.editormult</i18n:text>
+                        </xsl:if>
+
                                 <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item">
                                     <xsl:apply-templates select="."/>
                                     <xsl:if test="count(following-sibling::dri:item) != 0">

@@ -428,7 +428,14 @@
                         <i18n:text>xmlui.dri2xhtml.METS-1.0.no-editor</i18n:text>
                     </xsl:otherwise>
                    </xsl:choose>
-			<i18n:text>xmlui.dri2xhtml.METS-1.0.item-editor</i18n:text>
+			
+			<xsl:if test="count(dim:field[@element='contributor'][@qualifier='editor']) = 1">
+                         <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editorone</i18n:text>
+                        </xsl:if>
+                        <xsl:if test="count(dim:field[@element='contributor'][@qualifier='editor']) &gt; 1">
+                         <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editormult</i18n:text>
+                        </xsl:if>
+			
                         <xsl:call-template name="itemSummaryView-DIM-date"/>
                                 <xsl:choose>
                                 <xsl:when test="count(dim:field[@element='title'][not(@qualifier)])">
@@ -506,10 +513,22 @@
 
 
 		<xsl:if test="dim:field[@element='relation'][@qualifier='ispartof']">
-			<xsl:text> </xsl:text><i><xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']/node()"/><xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']/node()"/></i>
+			<xsl:text> </xsl:text><i><xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']/node()"/>
+			
+			<xsl:if test="dim:field[@element='relation'][@qualifier='ispartofalt']"><xsl:text>: </xsl:text></xsl:if>
+			<xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']/node()"/>
+			</i>
 		</xsl:if>
 		<xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
-                        <xsl:text>. Eds. </xsl:text><xsl:for-each select="dim:field[@element='relation'][@qualifier='editor']">
+                        
+			<xsl:if test="count(dim:field[@element='relation'][@qualifier='editor']) = 1">
+                         <xsl:text>. </xsl:text><i18n:text>xmlui.dri2xhtml.METS-1.0.editorone</i18n:text>
+                        </xsl:if>
+                        <xsl:if test="count(dim:field[@element='relation'][@qualifier='editor']) &gt; 1">
+                         <xsl:text>. </xsl:text><i18n:text>xmlui.dri2xhtml.METS-1.0.editormult</i18n:text>
+                        </xsl:if>
+
+			<xsl:for-each select="dim:field[@element='relation'][@qualifier='editor']">
                             <xsl:value-of select="./node()"/><xsl:text>. </xsl:text>
                         </xsl:for-each>
                 </xsl:if>

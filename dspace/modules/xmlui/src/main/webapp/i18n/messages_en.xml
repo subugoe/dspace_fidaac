@@ -2645,12 +2645,14 @@
   <!--<message key="xmlui.Submission.submit.PrefillStep.help">If the document has an identifier, the bibliographic data will be automatically inserted in the next step. Enter the DOI without doi.org/, for example 10.2222/2222.</message>-->
   <message key="xmlui.Submission.submit.PrefillStep.refresh_help">Please activate the checkbox if you want to override the already imported bibliographic data!</message>
   <message key="xmlui.dri2xhtml.METS-1.0.item-doi">DOI</message>
-  <message key="xmlui.dri2xhtml.METS-1.0.item-editor">, eds. </message>
+  <message key="xmlui.dri2xhtml.METS-1.0.item-editorone">, ed. </message>
+  <message key="xmlui.dri2xhtml.METS-1.0.item-editormult">, eds. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypemono">Monograph</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Anthology</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Journal Article</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Article in Anthology</message>
-  <message key="xmlui.dri2xhtml.METS-1.0.editor">Ed. </message>
+  <message key="xmlui.dri2xhtml.METS-1.0.editorone">Ed. </message>
+  <message key="xmlui.dri2xhtml.METS-1.0.editormult">Eds. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypedigital">Digital Reproduction</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypecoursedesc">Course Description</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypesyllabus">Syllabus</message>
