@@ -515,8 +515,8 @@
 
 
 	<!-- general submission aspect messages -->
-	<message key="xmlui.Submission.general.default.title">Ressourcen einreichen</message>
-	<message key="xmlui.Submission.general.default.trail">Ressourcen einreichen</message>
+	<message key="xmlui.Submission.general.default.title">Dokument veröffentlichen</message>
+	<message key="xmlui.Submission.general.default.trail">Dokument veröffentlichen</message>
 	<message key="xmlui.Submission.general.mydspace_home">Mein FID AAC</message>
 	<message key="xmlui.Submission.general.go_mydspace">Gehe zu Mein FID AAC</message>
 	<message key="xmlui.Submission.general.submission.title">Dokument veröffentlichen</message>
@@ -561,9 +561,9 @@
 	<message key="xmlui.Submission.Submissions.workflow_info3">Keine Dokumente im gemeinsamen Aufgabenpool vorhanden</message>
 	<!-- Same transformer, submissions section -->
 	<message key="xmlui.Submission.Submissions.submit_head1">Veröffentlichen</message>
-	<message key="xmlui.Submission.Submissions.submit_info1a">Sie können </message>
-	<message key="xmlui.Submission.Submissions.submit_info1b">eine neue Veröffentlichung starten</message>
-	<message key="xmlui.Submission.Submissions.submit_info1c">Der Veröffentlichungsprozess beinhaltet die Beschreibung des Dokuments und das Hochladen der zugehörigen Dateien. Jeder Bereich oder Sammlung kann seine eigenen Veröffentlichungsbestimmungen haben.</message>
+	<message key="xmlui.Submission.Submissions.submit_info1a">Starten Sie </message>
+	<message key="xmlui.Submission.Submissions.submit_info1b">eine neue Veröffentlichung</message>
+	<message key="xmlui.Submission.Submissions.submit_info1c">Der Veröffentlichungsprozess beinhaltet die Beschreibung des Dokuments und das Hochladen der zugehörigen Dateien.</message>
 	<message key="xmlui.Submission.Submissions.submit_head2">Unvollendete Veröffentlichungen</message>
 	<message key="xmlui.Submission.Submissions.submit_info2a">Dies sind Ihre unvollendeten Veröffentlichungen. Sie können statt dessen auch </message>
 	<message key="xmlui.Submission.Submissions.submit_info2b">eine neue Veröffentlichung beginnen</message>
@@ -698,7 +698,7 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.UploadStep -->
 	<message key="xmlui.Submission.submit.UploadStep.head">Datei(en) hochladen</message>
 	<message key="xmlui.Submission.submit.UploadStep.file">Datei</message>
-	<message key="xmlui.Submission.submit.UploadStep.file_help">Bitte geben Sie den voll qualifizierten Pfad zu der Datei auf Ihrem Rechner an. Wenn Sie auf den Button klicken, öffnet sich ein neues Fenster, in welchem Sie die Datei auf Ihrem Rechner suchen und auswählen können.</message>
+	<message key="xmlui.Submission.submit.UploadStep.file_help">Bitte geben Sie den Pfad zu der Datei auf Ihrem Rechner an. Wenn Sie auf den Button klicken, öffnet sich ein neues Fenster, in welchem Sie die Datei auf Ihrem Rechner suchen und auswählen können.</message>
 	<message key="xmlui.Submission.submit.UploadStep.upload_error">Ein Problem ist während des Hochladens Ihrer Datei aufgetreten. Dies kann verschiedene Gründe haben: der Dateiname war fehlerhaft, aufgrund eines Netzwerkproblems wurde die Datei nicht korrekt übertragen oder Sie haben versucht, eine Dateiformat hochzuladen, welches auf dem Repositorium nicht zugelassen ist. Bitte überprüfen Sie Ihre Eingaben und versuchen es noch einmal.</message>
 	<message key="xmlui.Submission.submit.UploadStep.virus_error">Die Datei wurde nich hochgeladen, da sie scheinbar einen Virus enthält. Bitte wenden Sie sich an den System-Administrator.</message>
     <message key="xmlui.Submission.submit.UploadStep.virus_checker_error">Beim Virusscan der Datei ist ein technisches Problem aufgetreten. Bitte wenden Sie sich an den System-Administrator.</message>
@@ -911,7 +911,7 @@
     <message key="xmlui.administrative.Navigation.administrative_private">Nicht sichtbare Dokumente</message>    
 	<message key="xmlui.administrative.Navigation.administrative_control_panel">Systemdaten</message>
 	<message key="xmlui.administrative.Navigation.statistics">Statistiken</message>
-	<message key="xmlui.administrative.Navigation.administrative_import_metadata">Metadaten Importieren</message>
+	<message key="xmlui.administrative.Navigation.administrative_import_metadata">Metadaten importieren</message>
 	<message key="xmlui.administrative.Navigation.administrative_curation">Datenpflege - Aufgaben</message>
 	
     <!-- my account items -->
@@ -2618,8 +2618,8 @@
 
 
   <message key="xmlui.administrative.Navigation.administrative_content">Dokumente</message>
-  <message key="xmlui.administrative.Navigation.administrative_batch_import">Dokumente Importeren</message>
-  <message key="xmlui.administrative.batchimport.general.head1">Dokumente Importeren</message>
+  <message key="xmlui.administrative.Navigation.administrative_batch_import">Dokumente importieren</message>
+  <message key="xmlui.administrative.batchimport.general.head1">Dokumente importieren</message>
   <message key="xmlui.administrative.batchimport.general.select_collection">Sammlung auswählen</message>
   <message key="xmlui.administrative.batchimport.general.collection">Sammlungen</message>
   <message key="xmlui.administrative.batchimport.general.collection_help"></message>
