@@ -92,7 +92,19 @@
             <div class="artifact-info">
                 <span class="author h4">
                     <small>
-                    <xsl:choose>
+	<xsl:choose>
+		<xsl:when  test="dim:field[@element='type'] = 'courseDescription' or dim:field[@element='type'] = 'syllabus' or dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall' or dim:field[@element='type'] = 'conferencePaper'">
+			<xsl:if test="dim:field[@element='contributor'][@qualifier='organiser']">
+                            <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organiser']">
+                                <xsl:copy-of select="node()"/>
+                                <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='organiser']) != 0">
+                                    <xsl:text>; </xsl:text>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:if>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:choose>			
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
                                 <span>
@@ -122,12 +134,12 @@
                                 </xsl:if>
                             </xsl:for-each>
 			
-			<xsl:if test="count(dim:field[@element='contributor'][@qualifier='editor']) = 1">
-			 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editorone</i18n:text>
-			</xsl:if>
-			<xsl:if test="count(dim:field[@element='contributor'][@qualifier='editor']) &gt; 1">
-			 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editormult</i18n:text>			 
-			</xsl:if>
+				<xsl:if test="count(dim:field[@element='contributor'][@qualifier='editor']) = 1">
+				 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editorone</i18n:text>
+				</xsl:if>
+				<xsl:if test="count(dim:field[@element='contributor'][@qualifier='editor']) &gt; 1">
+				 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-editormult</i18n:text>			 
+				</xsl:if>
                         </xsl:when>
 
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='organiser']">
@@ -141,6 +153,8 @@
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                         </xsl:otherwise>
+			</xsl:choose>
+			</xsl:otherwise>
                     </xsl:choose>
                     </small>
                 </span>
@@ -167,6 +181,7 @@
                     <xsl:value-of select="util:shortenString($abstract, 220, 10)"/>
                 </div>
             </xsl:if>-->
+
 	<xsl:choose>
 	<xsl:when test="dim:field[@element='type'] = 'article'">
 	<span class="artifact-title">
@@ -340,9 +355,18 @@
                             </xsl:if>
         </xsl:when>
 	 <xsl:when test="dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall' or dim:field[@element='type'] = 'conferencePaper'">
-                            <xsl:if test="dim:field[@element='relation'][@qualifier='event']">
-                                <xsl:value-of select="dim:field[@element='relation'][@qualifier='event']" /><xsl:text>. </xsl:text>
-                            </xsl:if>
+                        <!--<xsl:if test="dim:field[@element='relation'][@qualifier='event']">
+                               <xsl:value-of select="dim:field[@element='relation'][@qualifier='event']" /><xsl:text>. </xsl:text>
+                        </xsl:if>-->
+			 <xsl:if test="dim:field[@element='relation'][@qualifier='eventLocation']">
+                               <xsl:value-of select="dim:field[@element='relation'][@qualifier='eventLocation']" /><xsl:text>, </xsl:text>
+                        </xsl:if>
+			 <xsl:if test="dim:field[@element='relation'][@qualifier='eventStart']">
+                               <xsl:value-of select="dim:field[@element='relation'][@qualifier='eventStart']" />
+                        </xsl:if>
+			 <xsl:if test="dim:field[@element='relation'][@qualifier='eventEnd']">
+                               <xsl:text> - </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventEnd']" /><xsl:text>. </xsl:text>
+                        </xsl:if>
         </xsl:when>
 
 	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">

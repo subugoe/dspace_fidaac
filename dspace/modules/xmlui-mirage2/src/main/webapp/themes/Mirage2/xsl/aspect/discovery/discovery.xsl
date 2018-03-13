@@ -931,6 +931,22 @@
                         </xsl:choose>
                         </small></span>
                     <xsl:text> </xsl:text>
+                    <xsl:if test="dri:list[@n=(concat($handle, ':dc.date.issued'))]">
+                        <span class="publisher-date h4">   <small>
+                            <xsl:text>(</xsl:text>
+                            <!--<xsl:if test="dri:list[@n=(concat($handle, ':dc.publisher'))]">
+                                <span class="publisher">
+                                    <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
+                                </span>
+                                <xsl:text>, </xsl:text>
+                            </xsl:if>-->
+                            <span class="date">
+                                <xsl:value-of
+                                        select="substring(dri:list[@n=(concat($handle, ':dc.date.issued'))]/dri:item,1,10)"/>
+                            </span>
+                            <xsl:text>):</xsl:text>
+                            </small></span>
+                    </xsl:if>
                     </div>
                                 <xsl:element name="a">
 
@@ -1026,7 +1042,23 @@
                             </xsl:otherwise>
                         </xsl:choose>
                         </small></span>
-                    <xsl:text> </xsl:text>
+			<xsl:text> </xsl:text>
+                    <xsl:if test="dri:list[@n=(concat($handle, ':dc.date.issued'))]">
+                        <span class="publisher-date h4">   <small>
+                            <xsl:text>(</xsl:text>
+                            <!--<xsl:if test="dri:list[@n=(concat($handle, ':dc.publisher'))]">
+                                <span class="publisher">
+                                    <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
+                                </span>
+                                <xsl:text>, </xsl:text>
+                            </xsl:if>-->
+                            <span class="date">
+                                <xsl:value-of
+                                        select="substring(dri:list[@n=(concat($handle, ':dc.date.issued'))]/dri:item,1,10)"/>
+                            </span>
+                            <xsl:text>):</xsl:text>
+                            </small></span>
+                    </xsl:if>
                     </div>
                                 <xsl:element name="a">
 
@@ -1067,8 +1099,17 @@
                         </span>
                     </i></span>
  </xsl:element>
-        <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.event'))]">
+	<!--<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.event'))]">
                         <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.event'))]/dri:item"/><xsl:text>. </xsl:text>
+        </xsl:if>-->
+	 <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventLocation'))]">
+                        <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventLocation'))]/dri:item"/><xsl:text>, </xsl:text>
+        </xsl:if>
+        <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]">
+			<xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]/dri:item"/>
+        </xsl:if>
+	<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]">
+                        <xsl:text> - </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]/dri:item"/><xsl:text>. </xsl:text>
         </xsl:if>
          <xsl:if test="dri:list[@n=(concat($handle, ':dc.type'))] = 'conferenceCall'">
                  <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeconfcall</i18n:text></div>

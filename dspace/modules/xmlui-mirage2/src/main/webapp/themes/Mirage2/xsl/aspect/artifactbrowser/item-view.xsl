@@ -310,9 +310,18 @@
                                 </xsl:choose>
 
 
-		<xsl:if test="dim:field[@element='relation'][@qualifier='event']">
+		<!--<xsl:if test="dim:field[@element='relation'][@qualifier='event']">
 			<xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='event']/node()"/><xsl:text>. </xsl:text>
-		</xsl:if>
+		</xsl:if>-->
+		<xsl:if test="dim:field[@element='relation'][@qualifier='eventLocation']">
+                        <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventLocation']/node()"/><xsl:text>, </xsl:text>
+                </xsl:if>
+		<xsl:if test="dim:field[@element='relation'][@qualifier='eventStart']">
+                        <xsl:value-of select="dim:field[@element='relation'][@qualifier='eventStart']/node()"/>
+                </xsl:if>
+		<xsl:if test="dim:field[@element='relation'][@qualifier='eventEnd']">
+                        <xsl:text> - </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventEnd']/node()"/><xsl:text>. </xsl:text>
+                </xsl:if>
 		                
                 </div>
 
