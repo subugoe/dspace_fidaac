@@ -1331,11 +1331,11 @@
                 </xsl:with-param>
             </xsl:call-template>
 
-            <div class="col-sm-3">
+<!--            <div class="col-sm-3">
                 <p>
                     <xsl:apply-templates select="dri:field[@id='aspect.discovery.SimpleSearch.field.scope']"/>
                 </p>
-            </div>
+            </div>-->
 
             <div class="col-sm-9">
                 <p class="input-group">
