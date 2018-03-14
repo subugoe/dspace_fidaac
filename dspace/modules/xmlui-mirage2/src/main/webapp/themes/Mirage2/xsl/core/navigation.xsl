@@ -122,6 +122,7 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                                 </span>
                             </div>
 
+			<xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='containerType']/text() = 'type:collection'">
                             <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container']">
                                 <div class="radio">
                                     <label>
@@ -138,19 +139,20 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                                                         select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='container'],':')"/>
                                             </xsl:attribute>
                                         </input>
-                                        <xsl:choose>
+                                 <!--       <xsl:choose>
                                             <xsl:when
                                                     test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='focus'][@qualifier='containerType']/text() = 'type:community'">
                                                 <i18n:text>xmlui.dri2xhtml.structural.search-in-community</i18n:text>
                                             </xsl:when>
-                                            <xsl:otherwise>
+                                            <xsl:otherwise>-->
                                                 <i18n:text>xmlui.dri2xhtml.structural.search-in-collection</i18n:text>
-                                            </xsl:otherwise>
+                                            <!--</xsl:otherwise>
 
-                                        </xsl:choose>
+                                        </xsl:choose>-->
                                     </label>
                                 </div>
                             </xsl:if>
+			</xsl:if>
                         </fieldset>
                     </form>
                 </div>
