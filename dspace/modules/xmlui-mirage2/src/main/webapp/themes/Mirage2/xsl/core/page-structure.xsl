@@ -692,7 +692,7 @@
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
         <footer>
-                <div class="row-footer">
+                <div class="row-footer visible-md visible-lg">
                     <hr/>
 			<div class="col-xs-7 col-sm-8">
                         <div class="hidden-print">
@@ -726,7 +726,7 @@
                         </div>
                 	</div>
 
-			<div class="col-xs-5 col-sm-4 footer-right hidden-print">
+			<div class="col-xs-5 col-sm-4 footer-right hidden-print visible-md visible-lg">
 				<div class="pull-right">
 				<a title="DFG" href="http://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" height="24"/></a>
 				<xsl:text>  </xsl:text><a title="SUB Göttingen" href="http://www.sub.uni-goettingen.de"><img src="{$theme-path}/images/sub-logo.png" height="30"/></a>
@@ -734,6 +734,46 @@
 			</div>
 
 		</div>
+		<div class="row-footer hidden-md hidden-lg visible-xs visible-sm">
+                    <hr/>
+                        <div class="col-xs-7 col-sm-8">
+                        <div class="hidden-print">
+                             <a href="/impressum"> <i18n:text>xmlui.dri2xhtml.structural.impressum-link</i18n:text></a>
+                             <br/>
+                             <a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
+                             <br/>
+                             <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
+                             <br/>
+                             <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
+                             <br/>
+                             <a href ="/help"> <i18n:text>xmlui.dri2xhtml.structural.help-link</i18n:text></a>
+                             <br/>
+                             <a>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of
+                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                                    <xsl:text>/contact</xsl:text>
+                                </xsl:attribute>
+                                <i18n:text>xmlui.dri2xhtml.structural.contact-link</i18n:text>
+                            </a>
+                            <br/>
+                            <a>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of
+                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                                    <xsl:text>/feedback</xsl:text>
+                                </xsl:attribute>
+                                <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
+                            </a>
+			    <br/>
+			  <div style="margin-top: 10px;">
+			    <a title="DFG" href="http://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" height="24" style="margin-bottom: 5px"/></a>
+			    <a title="SUB Göttingen" href="http://www.sub.uni-goettingen.de" style="margin-left: -5px"><img src="{$theme-path}/images/sub-logo.png" height="30"/></a>
+                          </div>
+			</div>
+                        </div>
+
+                </div>
 
                 <!--Invisible link to HTML sitemap (for search engines) -->
                 <a class="hidden">
