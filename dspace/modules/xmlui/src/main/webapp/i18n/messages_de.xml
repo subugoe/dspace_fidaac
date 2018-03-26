@@ -689,7 +689,7 @@
     <message key="xmlui.Submission.submit.AccessStep.column3">Datum für den Beginn</message>
     <message key="xmlui.Submission.submit.AccessStep.column4">Datum für das Beenden</message>
     <message key="xmlui.Submission.submit.AccessStep.table_edit_button">Bearbeiten</message>
-    <message key="xmlui.Submission.submit.AccessStep.table_delete_button">Entfernen</message>
+    <message key="xmlui.Submission.submit.AccessStep.table_delete_button">Zum Entfernen markieren</message>
     <message key="xmlui.administrative.authorization.AccessStep.label_date_help">Zulässige Formate: jjjj, jjjj-mm, jjjj-mm-tt</message>
 
     <!-- org.dspace.app.xmlui.Submission.submit.EditPolicyStep -->
