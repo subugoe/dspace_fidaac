@@ -155,10 +155,8 @@
                                 </xsl:otherwise>
                                 </xsl:choose>
                 <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
-                </div>
-
-
                 <xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
+		</div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></div>
                 <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
                 <xsl:call-template name="itemSummaryView-DIM-language"/>

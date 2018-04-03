@@ -2637,13 +2637,13 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_relationCollection">Sammlung alt</message>
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publicationType">Publikationstyp</message>
   <message key="xmlui.mirage2.forms.CompositeFieldSet.add">Hinzufügen</message>
-  <message key="xmlui.mirage2.forms.CompositeFieldSet.remove">Löschen</message>
+  <message key="xmlui.mirage2.forms.CompositeFieldSet.remove">Zum entfernen markieren</message>
   <message key="xmlui.mirage2.forms.nonCompositeFieldSet.add">Hinzufügen</message>
-  <message key="xmlui.mirage2.forms.nonCompositeFieldSet.remove">Löschen</message>
+  <message key="xmlui.mirage2.forms.nonCompositeFieldSet.remove">Zum entfernen markieren</message>
   <message key="xmlui.mirage2.forms.instanceCompositeFieldSet.add">Hinzufügen</message>
-  <message key="xmlui.mirage2.forms.instanceCompositeFieldSet.remove">Löschen</message>
+  <message key="xmlui.mirage2.forms.instanceCompositeFieldSet.remove">Zum entfernen markieren</message>
   <message key="xmlui.mirage2.forms.instancedCompositeFields.add">Hinzufügen</message>
-  <message key="xmlui.mirage2.forms.instancedCompositeFields.remove">Löschen</message>
+  <message key="xmlui.mirage2.forms.instancedCompositeFields.remove">Zum entfernen markieren</message>
   <message key="xmlui.Discovery.AbstractSearch.type_relationCollection">Sammlung alt</message>
   <message key="xmlui.Discovery.AbstractSearch.type_publicationType">Publikationstyp</message>
   <message key="xmlui.Discovery.AbstractSearch.type_subjectGokverbal">GOK verbal</message>
