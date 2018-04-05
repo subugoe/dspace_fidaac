@@ -367,6 +367,17 @@
 			 <xsl:if test="dim:field[@element='relation'][@qualifier='eventEnd']">
                                <xsl:text> - </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventEnd']" /><xsl:text>. </xsl:text>
                         </xsl:if>
+			 <xsl:if test="dim:field[@element='contributor'][@qualifier='organizedBy']">
+                        <i18n:text>xmlui.dri2xhtml.organizedBy</i18n:text>
+                        <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organizedBy']">
+                                     <xsl:apply-templates select="."/>
+                                    <xsl:if test="count(following-sibling::dri:item) != 0">
+                                        <xsl:text>; </xsl:text>
+                                    </xsl:if>
+                        </xsl:for-each>
+                        <xsl:text>. </xsl:text>
+        </xsl:if>
+
         </xsl:when>
 
 	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">

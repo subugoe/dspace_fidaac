@@ -2697,6 +2697,9 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="conferenceProg">Konferenzprogramm</message>
   <message key="conferenceCall">Call for Papers</message>
   <message key="conferenceBoA">Book of Abstracts</message>
+  <message key="review">Rezension</message>
+
+  
 
   <!-- org.dspace.app.xmlui.Submission.submit.PrefillStep -->
   <message key="xmlui.Submission.submit.progressbar.prefill">Metadata Import</message>
@@ -2725,6 +2728,7 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfcall">Call for Papers</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfboa">Book of Abstracts</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfpaper">Conference Paper</message>
+ <message key="xmlui.dri2xhtml.METS-1.0.dctypereview">Rezension</message>
 
 <message key="xmlui.dri2xhtml.METS-1.0.standard-license-text">Nutzungslizenz(en) für diese Dokumente: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.link-standard-license"><a href="/rights" >Standard FID AAC Lizenz</a></message>
@@ -2734,5 +2738,6 @@ Zustimmung verweigern: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminH
 
 <message key="xmlui.dri2xhtml.METS-1.0.citation-link">Zitierfähiger Link: </message>
 <message key="xmlui.series.periodicals">Zeitschriften</message>
+<message key="xmlui.dri2xhtml.organizedBy">Organisiert durch </message>
 
 </catalogue>

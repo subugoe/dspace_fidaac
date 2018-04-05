@@ -2660,7 +2660,7 @@
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfprog">Conference Programme</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfboa">Book of Abstracts</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfcall">Call for Papers</message>
-
+   <message key="xmlui.dri2xhtml.METS-1.0.dctypereview">Review</message>
 
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_typeDigitized">Digitalisat</message>
 
@@ -2689,14 +2689,16 @@
   <message key="conferenceBoA">Book of Abstracts</message>
   <message key="conferenceCall">Call for Papers</message>
   <message key="conferencePaper">Conference Paper</message>
+  <message key="review">Review</message>   
 
   <message key="xmlui.metadata.export">Metadata Export: </message>
+  
 
   <message key="xmlui.dri2xhtml.METS-1.0.standard-license-text">Use license(s) for these documents: </message>
   <message key="xmlui.dri2xhtml.METS-1.0.link-standard-license"><a href="/rights" >Standard FID AAC License</a></message>
   <message key="xmlui.dri2xhtml.METS-1.0.citation-link">Link for Citation: </message>
   <message key="xmlui.series.periodicals">Periodicals</message>
-
+  <message key="xmlui.dri2xhtml.organizedBy">Organized by </message>
 
 <message key="xmlui.impressum.text.privacy"> Piwik opt-out: <br />If you do not want to consent to the storage and analysis of the user information generated, you can opt out.<br />
 <a href="http://piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=de" target="_blank">Opt-out of Piwik</a></message>
