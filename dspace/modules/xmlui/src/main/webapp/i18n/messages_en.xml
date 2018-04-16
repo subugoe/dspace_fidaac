@@ -770,9 +770,9 @@
 	<message key="xmlui.Submission.submit.DescribeStep.day">Day</message>
 	<message key="xmlui.Submission.submit.DescribeStep.series_name">Series Name</message>
 	<message key="xmlui.Submission.submit.DescribeStep.report_no">Volume No.</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Subject Categories</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Subject Categories</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter subjects</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Select CC License</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Creative Commons Licenses</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter licences</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filter</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Please wait while the controlled vocabulary is loading.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">There was an issue when loading the controlled vocabulary, please try again later.</message>
@@ -2699,6 +2699,10 @@
   <message key="xmlui.series.periodicals">Periodicals</message>
 
   <message key="xmlui.dri2xhtml.organizedBy">Organized by </message>
+
+  <message key="xmlui.dri2xhtml.METS-1.0.reviewof"> Review of </message>
+  <message key="xmlui.dri2xhtml.METS-1.0.reviewofby">, by </message>
+
 
 <message key="xmlui.impressum.text.privacy"> Piwik opt-out: <br />If you do not want to consent to the storage and analysis of the user information generated, you can opt out.<br />
 <a href="http://piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=de" target="_blank">Opt-out of Piwik</a></message>

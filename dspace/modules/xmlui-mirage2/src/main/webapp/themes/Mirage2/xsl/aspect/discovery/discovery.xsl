@@ -639,7 +639,7 @@
                     </span>
                 </xsl:element>
 		<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.reviewOf'))]">
-			<xsl:text>Review of </xsl:text><i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.reviewOf'))]/dri:item"/><xsl:text>, by </xsl:text></i>
+			<i18n:text>xmlui.dri2xhtml.METS-1.0.reviewof</i18n:text><i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.reviewOf'))]/dri:item"/><i18n:text>xmlui.dri2xhtml.METS-1.0.reviewofby</i18n:text></i>
 		</xsl:if>
                 <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.reviewOfBy'))]">
 			<xsl:for-each select="dri:list[@n=(concat($handle, ':dc.relation.reviewOfBy'))]/dri:item">
