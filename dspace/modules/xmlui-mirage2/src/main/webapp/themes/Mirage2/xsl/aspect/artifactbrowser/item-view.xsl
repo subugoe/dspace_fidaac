@@ -181,8 +181,8 @@
                 <!--/Monograph-->
 
 	
-	 <!--Zeitschriftenartikel-->
-          <xsl:when test="dim:field[@element='type'] = 'article'">
+	 <!--Zeitschriftenartikel/Review-->
+          <xsl:when test="dim:field[@element='type'] = 'article' or dim:field[@element='type'] = 'review'">
 		<div class="itemview-citation">
 
 		<xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
@@ -228,7 +228,18 @@
                                         <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                                 </xsl:otherwise>
                         </xsl:choose>
-
+		<xsl:if test="dim:field[@element='relation'][@qualifier='reviewOf']">
+                                <xsl:text> Review of </xsl:text><i><xsl:value-of select="dim:field[@element='relation'][@qualifier='reviewOf']" /></i><xsl:text>, by </xsl:text>
+                </xsl:if>
+                <xsl:if test="dim:field[@element='relation'][@qualifier='reviewOfBy']">
+			<xsl:for-each select="dim:field[@element='relation'][@qualifier='reviewOfBy']">
+                                <xsl:apply-templates select="." />
+				<xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='reviewOfBy']) != 0">
+                                        <xsl:text>; </xsl:text>
+                                 </xsl:if>
+			</xsl:for-each>
+			<xsl:text>. </xsl:text>
+                </xsl:if>
 
 
 		<xsl:if test="dim:field[@element='relation'][@qualifier='journal']">
@@ -253,7 +264,13 @@
 
                 </div>
 
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypearticle</i18n:text></div>
+                <div class="itemview-citation-small">
+		<xsl:if test="dim:field[@element='type'] = 'review'">
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.dctypereview</i18n:text>
+        </xsl:if>
+        <xsl:if test="dim:field[@element='type'] = 'article'">
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.dctypearticle</i18n:text>
+        </xsl:if></div>
                 <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
                 <xsl:call-template name="itemSummaryView-DIM-language"/>
                 <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>

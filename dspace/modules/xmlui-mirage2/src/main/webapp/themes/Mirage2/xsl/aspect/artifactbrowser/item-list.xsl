@@ -183,7 +183,7 @@
             </xsl:if>-->
 
 	<xsl:choose>
-	<xsl:when test="dim:field[@element='type'] = 'article'">
+	<xsl:when test="dim:field[@element='type'] = 'article' or dim:field[@element='type'] = 'review'">
 	<span class="artifact-title">
                 <xsl:element name="a">
                     <xsl:attribute name="href">
@@ -301,6 +301,7 @@
 
         
 <xsl:choose>
+
 	<xsl:when test="dim:field[@element='type'] = 'monograph'">
 	                    <xsl:if test="dim:field[@element='publishedIn']">
 				<xsl:value-of select="dim:field[@element='publishedIn']" /><xsl:text>: </xsl:text>
@@ -320,7 +321,19 @@
                                 <xsl:value-of select="dim:field[@element='publisher']" /><xsl:text>. </xsl:text>
                             </xsl:if>
         </xsl:when>
-	<xsl:when test="dim:field[@element='type'] = 'article'">
+	<xsl:when test="dim:field[@element='type'] = 'article' or dim:field[@element='type'] = 'review'">
+			   <xsl:if test="dim:field[@element='relation'][@qualifier='reviewOf']">
+                                <xsl:text> Review of </xsl:text><i><xsl:value-of select="dim:field[@element='relation'][@qualifier='reviewOf']" /></i><xsl:text>, by </xsl:text>
+                            </xsl:if>
+			     <xsl:if test="dim:field[@element='relation'][@qualifier='reviewOfBy']">
+	                        <xsl:for-each select="dim:field[@element='relation'][@qualifier='reviewOfBy']">
+                                <xsl:apply-templates select="." />
+                                <xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='reviewOfBy']) != 0">
+                                        <xsl:text>; </xsl:text>
+        	                </xsl:if>
+                	        </xsl:for-each>
+                       	 	<xsl:text>. </xsl:text>
+                	    </xsl:if>
                             <xsl:if test="dim:field[@element='relation'][@qualifier='journal']">
                                <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='journal']" /></i>
                             </xsl:if>
@@ -421,6 +434,10 @@
 
 </xsl:choose>
 	
+
+	<xsl:if test="dim:field[@element='type'] = 'review'">
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypereview</i18n:text></div>
+        </xsl:if>
 	<xsl:if test="dim:field[@element='type'] = 'monograph'">
 		<div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypemono</i18n:text></div>
 	</xsl:if>

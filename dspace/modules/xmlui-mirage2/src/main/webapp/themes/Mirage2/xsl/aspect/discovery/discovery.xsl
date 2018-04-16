@@ -639,8 +639,18 @@
                     </span>
                 </xsl:element>
 		<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.reviewOf'))]">
-			<xsl:text>Review of </xsl:text><i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.reviewOf'))]/dri:item"/><xsl:text>. </xsl:text></i>
+			<xsl:text>Review of </xsl:text><i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.reviewOf'))]/dri:item"/><xsl:text>, by </xsl:text></i>
 		</xsl:if>
+                <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.reviewOfBy'))]">
+			<xsl:for-each select="dri:list[@n=(concat($handle, ':dc.relation.reviewOfBy'))]/dri:item">
+		           <xsl:apply-templates select="."/>
+			   <xsl:if test="count(following-sibling::dri:item) != 0">
+                                 <xsl:text>; </xsl:text>
+                           </xsl:if>
+                        </xsl:for-each>
+		<xsl:text>. </xsl:text>
+                </xsl:if>
+
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.journal'))]">
                                 <i><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.journal'))]/dri:item"/></i>
