@@ -272,13 +272,13 @@
             <title>
                 <xsl:choose>
                     <xsl:when test="starts-with($request-uri, 'page/about')">
-                        <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
+                        <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text><xsl:text> - The Stacks Lib AAC</xsl:text>
                     </xsl:when>
                     <xsl:when test="not($page_title)">
-                        <xsl:text>  </xsl:text>
+                        <xsl:text>  </xsl:text><xsl:text> - The Stacks Lib AAC</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:copy-of select="$page_title/node()" />
+                        <xsl:copy-of select="$page_title/node()" /><xsl:text> - The Stacks Lib AAC</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
             </title>

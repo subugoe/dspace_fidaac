@@ -2519,6 +2519,7 @@
   <message key="xmlui.aboutus.head">Über Uns</message>
   <message key="xmlui.help.head">Hilfe</message>
   <message key="xmlui.rights.head">Nutzungsbedingungen</message>
+  <message key="xmlui.imprint.head">Impressum</message>
   <message key="xmlui.copyright.head">Bildnachweise</message>
   <message key="xmlui.copyright.text">
 	<div>

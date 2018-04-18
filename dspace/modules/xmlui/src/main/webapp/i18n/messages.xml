@@ -2512,7 +2512,7 @@
      <message key="xmlui.aboutus.head">About Us</message>
    <message key="xmlui.help.head">Help</message>
    <message key="xmlui.rights.head">Rights</message>
-
+  <message key="xmlui.imprint.head">Imprint</message>
   <message key="xmlui.copyright.head">Credits</message>
   <message key="xmlui.copyright.text">
         <div>
