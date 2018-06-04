@@ -174,8 +174,8 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                 <xsl:call-template name="itemSummaryView-collections"/>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+                <!--<div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Monograph-->
@@ -286,8 +286,8 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                 <xsl:call-template name="itemSummaryView-collections"/>
-		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Zeitschriftenartikel-->
@@ -366,8 +366,8 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                 <xsl:call-template name="itemSummaryView-collections"/>
-		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Konferenzen-->
@@ -439,8 +439,8 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
 	        <xsl:call-template name="itemSummaryView-collections"/>
-		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Seminare-->
@@ -505,8 +505,8 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                 <xsl:call-template name="itemSummaryView-collections"/>
-		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Sammelband-->
@@ -600,8 +600,8 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                 <xsl:call-template name="itemSummaryView-collections"/>
-		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Sammelbandbeitrag-->
@@ -629,8 +629,8 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                 <xsl:call-template name="itemSummaryView-collections"/>
-		 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Digitalisat-->
@@ -657,8 +657,8 @@
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                     <xsl:call-template name="itemSummaryView-DIM-URI"/>
                     <xsl:call-template name="itemSummaryView-collections"/>
-		     <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>
+		<!--     <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>                
 </div>
             </div>
@@ -1339,6 +1339,11 @@
                          <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY 2.0'">
                                 <a href="https://creativecommons.org/licenses/by/2.0/">
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 2.0"/>
+                                </a>
+                        </xsl:when>
+			<xsl:when test="dim:field[@element='rights'] = 'CC::CC BY 2.5'">
+                                <a href="https://creativecommons.org/licenses/by/2.5/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 2.5"/>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'CC::CC BY 3.0'">
