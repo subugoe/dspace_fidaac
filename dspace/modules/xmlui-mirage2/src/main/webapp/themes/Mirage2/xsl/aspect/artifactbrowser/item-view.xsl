@@ -665,6 +665,19 @@
 	  </xsl:otherwise>
 	</xsl:choose>
 
+	<!--Twitter-Share-Button-->
+	<div id="socialmedia">
+                        <xsl:text>Share on: </xsl:text>
+                        <ul class="share-buttons">
+				<li><a>
+                                        <xsl:attribute name="href"><xsl:value-of select="concat('http://twitter.com/intent/tweet?text=', //dim:field[@element='title' and not(@qualifier)], '&amp;url=', //dim:field[@element='identifier' and @qualifier='uri']) "/></xsl:attribute>
+                                <img src="{concat($theme-path,'images/twitter-16.png')}" title="Twitter"> </img>
+                                </a></li>
+
+                        </ul>
+	</div>
+
+
         </div>
     </xsl:template>
 
