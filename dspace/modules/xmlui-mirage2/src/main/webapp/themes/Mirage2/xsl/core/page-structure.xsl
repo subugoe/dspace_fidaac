@@ -105,8 +105,7 @@
                                             <xsl:apply-templates select="*[not(self::dri:options)]"/>
 
                                             <div class="visible-xs visible-sm">
-                                                <hr />
-						<xsl:call-template name="buildFooter"/>
+                                                <xsl:call-template name="buildFooter"/>
                                             </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
@@ -339,15 +338,12 @@
                         <a href="{$context-path}/" class="navbar-brand">
                             <img class="visible-sm visible-md visible-lg" alt="Open Startpage" src="{$theme-path}/images/logo_fidaac.svg" />
 			</a>
-			<a href="{$context-path}/" class="navbar-brand-small pull-left visible-xs navbar-brand-xs">
+			<a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
  			    <img class="visible-xs hidden-sm hidden-md hidden-lg"  alt="Open Startpage" src="{$theme-path}/images/logo_fidaac_small.png" />
                         </a>
 			<div class="pull-right visible-md visible-lg logo-title"><table><tr><td>Library of Anglo-American Culture and History</td></tr><tr><td class="logo-title-middle">FID AAC</td></tr></table></div>
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
-                        <ul class="nav navbar-nav pull-left">
-                              <li><a href="https://libaac.de" title="Library AAC" target="_blank">Library AAC</a></li>
-                        </ul>
-			<ul class="nav nav-pills pull-left ">
+                        <ul class="nav nav-pills pull-left ">
 
                             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
                                 <li id="ds-language-selection-xs" class="dropdown">
@@ -419,9 +415,6 @@
                     </div>
 
                     <div class="navbar-header pull-right hidden-xs">
-			<ul class="nav navbar-nav pull-left">
-                              <li><a href="https://libaac.de" title="Library AAC" target="_blank">Library AAC</a></li>
-                        </ul>
                         <ul class="nav navbar-nav pull-left">
                               <xsl:call-template name="languageSelection"/>
                         </ul>
@@ -730,7 +723,6 @@
                                 </xsl:attribute>
                                 <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
                             </a>
-
                         </div>
                 	</div>
 
@@ -981,3 +973,4 @@
     </xsl:template>
 
 </xsl:stylesheet>
+

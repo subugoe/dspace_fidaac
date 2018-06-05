@@ -162,12 +162,14 @@ footer div.col-xs-7, div.col-sm-8 {
    margin-top: 10px;
    line-height: 20px;
    width: 50%;
+   padding-left: 0;
 }
 
 footer div.footer-right {
    margin-top: 5px;
    line-height: 20px;
    width: 50%;
+   padding-right: 0;
 }
 
 footer .row > div {
@@ -278,4 +280,23 @@ ul.share-buttons li {
 
 hr {
   border-top: 1px solid #ddd;
+}
+
+#toc_container {
+//    background: #f9f9f9 none repeat scroll 0 0;
+//    border: 1px solid #aaa;
+//    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+//    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: inside none none !important;
 }
