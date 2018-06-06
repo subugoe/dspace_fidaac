@@ -72,7 +72,7 @@ public class DSpaceMultipartFilter extends AbstractLogEnabled
             String containerEncoding;
             final String encoding = this.settings.getContainerEncoding();
             if (encoding == null) {
-                containerEncoding = "ISO-8859-1";
+                containerEncoding = "UTF-8";
             } else {
                 containerEncoding = encoding;
             }
