@@ -300,3 +300,18 @@ hr {
 #toc_container li, #toc_container ul, #toc_container ul li{
     list-style: inside none none !important;
 }
+
+details p {
+	margin-left: 15px;
+	padding-top: 10px;
+}
+details ul {
+	margin-left: 35px;
+	padding-top: 10px;
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+#how ul, #what ul, #benefits ul {
+	 margin-left: 20px;
+}
