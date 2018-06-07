@@ -241,8 +241,8 @@
 	<message key="xmlui.ArtifactBrowser.Contact.title">Contact us</message>
 	<message key="xmlui.ArtifactBrowser.Contact.trail">Contact us</message>
 	<message key="xmlui.ArtifactBrowser.Contact.head">Contact us</message>
-	<message key="xmlui.ArtifactBrowser.Contact.para1">{0} administrators may be contacted at:</message>
-	<message key="xmlui.ArtifactBrowser.Contact.feedback_label">On-line form</message>
+	<message key="xmlui.ArtifactBrowser.Contact.para1">Administrators of The Stacks may be contacted via</message>
+	<message key="xmlui.ArtifactBrowser.Contact.feedback_label">Online form</message>
 	<message key="xmlui.ArtifactBrowser.Contact.feedback_link">Feedback</message>
 	<message key="xmlui.ArtifactBrowser.Contact.email">Email</message>
 
@@ -250,9 +250,9 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Give feedback</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Give feedback</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Give feedback</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Thanks for sharing your feedback about the FID AAC system. Your comments are appreciated!</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Your Email</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">This address will be used to follow up on your feedback.</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Thank you for sharing your feedback on The Stacks. Your comments are welcome any time.</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Your email address</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">This address is used to contact you if we have questions on your comments.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Comments</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.submit">Send Feedback</message>
 
@@ -2514,7 +2514,55 @@
    <message key="xmlui.help.head">Help</message>
    <message key="xmlui.rights.head">Rights</message>
   <message key="xmlui.imprint.head">Imprint</message>
-  <message key="xmlui.privacy.head">Privacy Policy</message>
+  <message key="xmlui.privacy.head">Datenschutzerklärung</message>
+    <message key="xmlui.privacy.text">
+  <p>Wir weisen darauf hin, dass die Daten&#xFC;bertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitsl&#xFC;cken aufweisen kann. Ein l&#xFC;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&#xF6;glich.</p><p>Der Nutzung von im Rahmen der Impressumspflicht ver&#xF6;ffentlichten Kontaktdaten durch Dritte zur &#xDC;bersendung von nicht ausdr&#xFC;cklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdr&#xFC;cklich widersprochen. Die Betreiber der Seiten behalten sich ausdr&#xFC;cklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.</p>
+<h3>Personenbezogene Daten</h3>
+<p>Die Nutzung dieser Webseite ist in der Regel ohne Angabe personenbezogener Daten m&#xF6;glich. Soweit auf diesen Seiten personenbezogene Daten erhoben werden, erfolgt dies, soweit m&#xF6;glich, stets auf freiwilliger Basis und im hier dargestellten Umfang. Diese Daten werden ohne Ihre ausdr&#xFC;ckliche Zustimmung nicht an Dritte weitergegeben.</p><p>S&#xE4;mtliche personenbezogenen Daten werden nur solange gespeichert, wie dies f&#xFC;r den jeweils genannten Zweck erforderlich ist. Hierbei werden bestehende gesetzliche Aufbewahrungsfristen ber&#xFC;cksichtigt.</p>
+<h3>Informationspflicht bei Erhebung von personenbezogenen Daten bei der betroffenen Person</h3>
+<h4>Name und Kontaktdaten des Verantwortlichen</h4>
+<p>Prof. Dr. Ulrike Beisiegel<br/> Wilhelmsplatz 1<br/> 37073 G&#xF6;ttingen<br/> +49 551 39 - 21000 (Tel.)<br/> +49 551 39 - 1821000 (Fax)<br/> praesidentin@uni-goettingen.de</p>
+<h4>Kontaktdaten des betrieblichen Datenschutzbeauftragen</h4>
+<p>Prof. Dr. Andreas Wiebe<br/> Lehrstuhl f&#xFC;r B&#xFC;rgerliches Recht,<br/> Wettbewerbs- und Immaterialg&#xFC;terrecht,<br/> Medien- und Informationsrecht<br/> Platz der G&#xF6;ttinger Sieben 6<br/> D-37073 G&#xF6;ttingen<br/> +49 551 39 -7381 (Tel.)<br/> +49 551 39 - 4437(Fax)<br/> datenschutz@uni-goettingen.de</p>
+<h4>Zwecke und Rechtsgrundlagen der Verarbeitung</h4>
+<p>Soweit wir f&#xFC;r Verarbeitungsvorg&#xE4;nge personenbezogener Daten eine Einwilligung der betroffenen Person einholen, dient Art. 6 Abs. 1 lit. a EU-Datenschutzgrundverordnung (DSGVO) als Rechtsgrundlage. Dies ist immer dann der Fall, wenn Sie mit uns &#xFC;ber eines der vorhandenen Kontaktformulare in Kontakt treten und somit der Verarbeitung der dort erhobenen personenbezogenen Daten zustimmen. Die Verarbeitung der personenbezogenen Daten aus der Eingabemaske dient uns allein zur Bearbeitung der Kontaktaufnahme. Die sonstigen w&#xE4;hrend des Absendevorgangs verarbeiteten personenbezogenen Daten dienen dazu, einen Missbrauch des Kontaktformulars zu verhindern und die Sicherheit unserer informationstechnischen Systeme sicherzustellen.</p>
+<p>Bei der Verarbeitung von personenbezogenen Daten, die zur Erf&#xFC;llung eines Vertrages, dessen Vertragspartei die betroffene Person ist, erforderlich ist, dient Art. 6 Abs. 1 lit. b DSGVO als Rechtsgrundlage. Dies gilt auch f&#xFC;r Verarbeitungsvorg&#xE4;nge, die zur Durchf&#xFC;hrung vorvertraglicher Ma&#xDF;nahmen erforderlich sind.</p>
+<p>Soweit eine Verarbeitung personenbezogener Daten zur Erf&#xFC;llung einer rechtlichen Verpflichtung erforderlich ist, der unser Unternehmen unterliegt, dient Art. 6 Abs. 1 lit. c DSGVO als Rechtsgrundlage.</p>
+<p>F&#xFC;r den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen nat&#xFC;rlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage.</p>
+<p>Ihre Daten werden auf Grundlage von Art. 6 Abs. 1 lit. d DSGVO daf&#xFC;r erhoben, um Ihr Anliegen zu bearbeiten und gleichzeitig die Wahrnehmung unserer Aufgaben zu erm&#xF6;glichen, die im &#xF6;ffentlichen Interesse liegen.</p>
+<p>Ist die Verarbeitung zur Wahrung eines berechtigten Interesses unserer Einrichtung oder eines Dritten erforderlich und &#xFC;berwiegen die Interessen, Grundrechte und Grundfreiheiten des Betroffenen das erstgenannte Interesse nicht, so dient Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage f&#xFC;r die Verarbeitung. Dies ist immer dann der Fall, wenn Sie mit uns &#xFC;ber die angegebene E-Mail-Adresse in Kontakt treten. Im Falle einer Kontaktaufnahme per E-Mail liegt hieran auch das erforderliche berechtigte Interesse an der Verarbeitung der Daten.</p>
+<h4>Empf&#xE4;nger der personenbezogenen Daten</h4>
+<p>Um ihre Anfrage zu beantworten, werden Ihre personenbezogenen Daten an die innerhalb der SUB G&#xF6;ttingen zust&#xE4;ndigen Personen &#xFC;bermittelt.</p>
+<p>&#xDC;bermittlung von personenbezogenen Daten an Dritte bzw. in ein Drittland<br/> Sollte es erforderlich sein, dass personenbezogene Daten an Dritte Personen oder Einrichtungen &#xFC;bermittelt werden, so werden Sie ausdr&#xFC;cklich darauf hingewiesen.</p>
+<p>Es ist nicht geplant Ihre personenbezogenen Daten an ein Drittland zu &#xFC;bermitteln.</p>
+<h4>Dauer der Speicherung der personenbezogenen Daten</h4>
+<p>Ihre Daten werden gespeichert, um die Dienste zu erbringen, mit denen Sie uns beauftragen. Sobald Sie sich abmelden oder um eine L&#xF6;schung der Daten bitten, werden ihre Daten nur noch so lange gespeichert, bis alle laufenden Vorg&#xE4;nge abgeschlossen sind und dann gel&#xF6;scht, es sei denn gesetzliche Vorgaben erfordern eine l&#xE4;ngere Speicherung.</p>
+<p>Die Daten werden gel&#xF6;scht, sobald sie f&#xFC;r die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. F&#xFC;r die personenbezogenen Daten aus der Eingabemaske des Kontaktformulars und diejenigen, die per E-Mail &#xFC;bersandt wurden, ist dies dann der Fall, wenn die jeweilige Konversation mit dem Nutzer beendet ist. Beendet ist die Konversation dann, wenn sich aus den Umst&#xE4;nden entnehmen l&#xE4;sst, dass der betroffene Sachverhalt abschlie&#xDF;end gekl&#xE4;rt ist.</p>
+<h4>Betroffenenrechte</h4>
+<p>Nach der EU-Datenschutzgrundverordnung stehen Ihnen folgende Rechte zu:</p>
+<p>Werden Ihre personenbezogenen Daten verarbeitet, so haben Sie das Recht Auskunft &#xFC;ber die zu Ihrer Person gespeicherten Daten zu erhalten (Art. 15 DSGVO). Sollten unrichtige personenbezogene Daten verarbeitet werden, steht Ihnen ein Recht auf Berichtigung zu (Art. 16 DSGVO). Liegen die gesetzlichen Voraussetzungen vor, so k&#xF6;nnen Sie die L&#xF6;schung oder Einschr&#xE4;nkung der Verarbeitung verlangen sowie Widerspruch gegen die Verarbeitung einlegen (Art. 17, 18 und 21 DSGVO).</p>
+<p>Wenn Sie die erforderlichen Daten nicht angeben, kann Ihr Antrag nicht bearbeitet werden.</p>
+<p>Wenn Sie in die Datenverarbeitung eingewilligt haben oder ein Vertrag zur Datenverarbeitung besteht und die Datenverarbeitung mithilfe automatisierter Verfahren durchgef&#xFC;hrt wird, steht Ihnen gegebenenfalls ein Recht auf Daten&#xFC;bertragbarkeit zu (Art. 20 DSGVO). Sollten Sie von Ihren oben genannten Rechten Gebrauch machen, pr&#xFC;ft Nieders&#xE4;chsische Staats- und Universit&#xE4;tsbibliothek G&#xF6;ttingen, ob die gesetzlichen Voraussetzungen hierf&#xFC;r erf&#xFC;llt sind.</p>
+<p>Zur Aus&#xFC;bung Ihrer Rechte wenden Sie sich bitte an den betrieblichen Datenschutzbeauftragten. Bei datenschutzrechtlichen Beschwerden k&#xF6;nnen Sie sich an die zust&#xE4;ndige Aufsichtsbeh&#xF6;rde wenden:</p>
+<p>Die Landesbeauftragte f&#xFC;r den Datenschutz Niedersachsen<br/> Prinzenstra&#xDF;e 5<br/> 30159 Hannover<br/> +49 551 120 4500 (Tel.)<br/> +49 551 120 4599 (Fax)<br/> poststelle@lfd.niedersachsen.de</p>
+<h4>Widerrufsrecht bei Einwilligung</h4>
+<p>Wenn Sie in die Verarbeitung durch die Nieders&#xE4;chsische Staats- und Universit&#xE4;tsbibliothek G&#xF6;ttingen durch eine entsprechende Erkl&#xE4;rung eingewilligt haben, k&#xF6;nnen Sie die Einwilligung jederzeit f&#xFC;r die Zukunft widerrufen. Die Rechtm&#xE4;&#xDF;igkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Datenverarbeitung wird durch diesen nicht ber&#xFC;hrt.</p>
+<h3>Statistische Daten f&#xFC;r den Betreiber der Website</h3>
+<p>Diese Website nutzt die Open-Source-Software Matomo f&#xFC;r die statistische Auswertung von Besucherzugriffen. Matomo ist datenschutzkonform konfiguriert, Daten werden anonymisiert gespeichert. Die zu diesem Zweck verwendeten &#x201E;Sitzungs-Cookies&#x201C; sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Webseite durch Sie erm&#xF6;glichen. Die durch den Cookie erzeugten Informationen &#xFC;ber Ihre Benutzung dieses Internetangebotes werden auf dem Server der GWDG gespeichert. Die IP-Adresse wird sofort nach der Verarbeitung und vor deren Speicherung anonymisiert. Die von Matomo erfassten Daten werden in anonymisierter Form dazu verwendet, unser Angebot zu verbessern. IP-Adressen werden in Matomo ohne das letzte Tupel gespeichert. Wir wissen, aus welchem Netz eine Anfrage kam, nicht jedoch von welchem Rechner.</p>
+<p>Diese &#x201E;Sitzungs-Cookies&#x201C; beinhalten keine personenbezogenen Daten und verfallen nach Ablauf der Sitzung. Techniken, wie zum Beispiel Java-Applets oder Active-X-Controls, die es erm&#xF6;glichen, das Zugriffsverhalten der Nutzer nachzuvollziehen, werden nicht eingesetzt.</p>
+<p>Im Einzelnen werden &#xFC;ber jeden Zugriff/Abruf folgende Daten gespeichert:</p>
+<ul><li>die ersten beiden Teile der IP-Adresse,</li><li>Datum und Uhrzeit,</li><li>User-Agent der verwendeten Software,</li><li>aufgerufene Seite/Name der abgerufenen Datei,</li><li>&#xFC;bertragene Datenmenge,</li><li>Meldung, ob der Zugriff/Abruf erfolgreich war.</li></ul>
+<p>Rechtsgrundlage f&#xFC;r die Verarbeitung der personenbezogenen Daten der Nutzer ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+<p><strong>Zweck der Datenverarbeitung:</strong> Die Verarbeitung der personenbezogenen Daten der Nutzer erm&#xF6;glicht uns eine Analyse des Surfverhaltens unserer Nutzer. Wir sind durch die Auswertung der gewonnenen Daten in der Lage, Informationen &#xFC;ber die Nutzung der einzelnen Komponenten unserer Webseite zusammenzustellen. Dies hilft uns dabei unsere Webseite und deren Nutzerfreundlichkeit stetig zu verbessern. In diesen Zwecken liegt auch unser berechtigtes Interesse in der Verarbeitung der Daten nach Art. 6 Abs. 1 lit. f DSGVO. Durch die Anonymisierung der IP-Adresse wird dem Interesse der Nutzer an deren Schutz personenbezogener Daten hinreichend Rechnung getragen.</p>
+<p>Durch die Nutzung dieser Website erkl&#xE4;ren Sie sich mit der Bearbeitung der &#xFC;ber Sie erhobenen Daten durch Matomo in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.</p>
+<p><strong>Dauer der Speicherung:</strong> Die Daten werden gel&#xF6;scht, sobald sie f&#xFC;r die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. Im Falle der Erfassung der Daten zur Bereitstellung der Website ist dies der Fall, wenn die jeweilige Sitzung beendet ist.</p>
+<p>Im Falle der Speicherung der Daten in Logfiles ist dies nach sp&#xE4;testens sieben Tagen der Fall. Eine dar&#xFC;berhinausgehende Speicherung ist m&#xF6;glich. In diesem Fall werden die IP-Adressen der Nutzer gel&#xF6;scht oder verfremdet, sodass eine Zuordnung des aufrufenden Clients nicht mehr m&#xF6;glich ist.</p>
+<p><strong>Widerspruchs- und Beseitigungsm&#xF6;glichkeit:</strong> Sie k&#xF6;nnen sich hier entscheiden, ob in Ihrem Browser ein eindeutiger Webanalyse-Cookie abgelegt werden darf, um dem Betreiber der Webseite die Erfassung und Analyse verschiedener statistischer Daten zu erm&#xF6;glichen.</p>
+<p>Wenn Sie sich dagegen entscheiden m&#xF6;chten, klicken Sie den folgenden Link, um den Matomo-Deaktivierungs-Cookie in Ihrem Browser abzulegen.</p>
+<p>N&#xE4;here Informationen zu den Privatsph&#xE4;reeinstellungen der Matomo Software finden Sie unter folgendem Link: <a href="https://matomo.org/docs/privacy/" target="_blank">matomo.org/docs/privacy/</a>.</p>
+<p><iframe src="//piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=de" width="100%" height="220px" frameborder="no"/></p>
+  </message>
+
   <message key="xmlui.copyright.head">Credits</message>
   <message key="xmlui.copyright.text">
         <div>
@@ -2555,8 +2603,9 @@
 
 
 <message key="xmlui.home.text">
-        <h2>The Stacks</h2>
-        <h3>The Repository for</h3>
+	<div style="max-width: 505px;" class="hidden-xs">
+        <h2 style="text-align: center;">The Stacks</h2>
+        <h3 style="text-align: center;">The Subject Repository for:</h3>
 
         <div id="first_row">
                 <figure class="frontpage_images">
@@ -2565,7 +2614,7 @@
                 </a>
                 <figcaption class="frontpage_caption">American Studies</figcaption>
                 </figure>
-		<figure class="frontpage_images">
+		<figure class="frontpage_images" style="margin-right: 0px;">
                 <a href="handle/11858/30">
                 <image class="frontpage" src="/themes/Mirage2/images/australia.jpg" alt="Australian and New Zealand Studies"/>
                 </a>
@@ -2579,12 +2628,46 @@
                 </a>
                 <figcaption class="frontpage_caption">Canadian Studies</figcaption>
                 </figure>
-		 <figure class="frontpage_images">
+		 <figure class="frontpage_images" style="margin-right: 0px;">
                 <a href="handle/11858/31">
                 <image class="frontpage" src="/themes/Mirage2/images/britain.jpg" alt="English / British and Irish Studies"/>
                 </a>
                 <figcaption class="frontpage_caption">English / British and Irish Studies</figcaption>
                 </figure>
+        </div>
+	</div>
+	<div class="visible-xs hidden-sm hidden-md hidden-lg">
+        <h2>The Stacks</h2>
+        <h3>The Subject Repository for:</h3>
+
+        <div id="first_row">
+                <figure class="frontpage_images">
+                <a href="handle/11858/28">
+                <image class="frontpage" src="/themes/Mirage2/images/america.jpg" alt="American Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">American Studies</figcaption>
+                </figure>
+                <figure class="frontpage_images">
+                <a href="handle/11858/30">
+                <image class="frontpage" src="/themes/Mirage2/images/australia.jpg" alt="Australian and New Zealand Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">Australian and New Zealand Studies</figcaption>
+                </figure>
+        </div>
+        <div id="second_row">
+                <figure class="frontpage_images">
+                <a href="handle/11858/29">
+                <image class="frontpage" src="/themes/Mirage2/images/canada.jpg" alt="Canadian Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">Canadian Studies</figcaption>
+                </figure>
+                 <figure class="frontpage_images">
+                <a href="handle/11858/31">
+                <image class="frontpage" src="/themes/Mirage2/images/britain.jpg" alt="English / British and Irish Studies"/>
+                </a>
+                <figcaption class="frontpage_caption">English / British and Irish Studies</figcaption>
+                </figure>
+        </div>
         </div>
   </message>
 
