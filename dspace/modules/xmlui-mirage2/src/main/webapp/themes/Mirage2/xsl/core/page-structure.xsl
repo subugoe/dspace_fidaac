@@ -706,8 +706,8 @@
                              <xsl:text>  </xsl:text>
 			     <a href="/privacy"> <i18n:text>xmlui.dri2xhtml.structural.privacy-link</i18n:text></a>
                              <xsl:text>  </xsl:text>
-			     <a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
-                             <xsl:text>  </xsl:text>
+			     <!--<a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
+                             <xsl:text>  </xsl:text>-->
                              <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
                              <xsl:text>  </xsl:text>
                              <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
@@ -750,8 +750,8 @@
                              <br/>
 			     <a href="/privacy"> <i18n:text>xmlui.dri2xhtml.structural.privacy-link</i18n:text></a>
                              <br/>
-                             <a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
-                             <br/>
+                             <!--<a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
+                             <br/>-->
                              <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
                              <br/>
                              <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>

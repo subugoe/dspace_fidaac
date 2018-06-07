@@ -2513,7 +2513,85 @@
      <message key="xmlui.aboutus.head">About Us</message>
    <message key="xmlui.help.head">Help</message>
    <message key="xmlui.rights.head">Rights</message>
-  <message key="xmlui.imprint.head">Imprint</message>
+  <message key="xmlui.imprint.head">Impressum</message>
+  <message key="xmlui.imprint.text">
+  <h3>Anbieter</h3>
+<p>Anbieter dieser Internetpräsenz (Fachrepositorium The Stacks) ist im Rechtssinne die Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB Göttingen).</p>
+<h3>Adresse</h3>
+<p>Niedersächsische Staats- und Universitätsbibliothek Göttingen<br />
+Georg-August-Universität Göttingen<br />
+Platz der Göttinger Sieben 1<br />
+37073 Göttingen<br />
+Tel.: +49 (0)551 / 39-5212<br />
+Fax: +49 (0)551 / 39-5222<br />
+E-Mail: <a href="mailto:sekretariat@sub.uni-goettingen.de">sekretariat@sub.uni-goettingen.de</a><br />
+Internet: <a href="www.sub.uni-goettingen.de">www.sub.uni-goettingen.de</a></p>
+<h3>Vertreter </h3>
+<p>Die Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) wird vertreten durch den leitenden Direktor Prof. Dr. Wolfram Horstmann.<br />
+Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch die Präsidentin Prof. Dr. Ulrike Beisiegel gesetzlich vertreten. </p>
+<h3>Zuständige Aufsichtsbehörde </h3>
+<p>Georg-August-Universität Göttingen Stiftung Öffentlichen Rechts, Stiftungsausschuss Universität, Wilhelmsplatz 1, 37073 Göttingen </p>
+<h3>Umsatzsteueridentifikationsnummer </h3>
+<p>Die Umsatzsteueridentifikationsnummer der Georg-August-Universität Göttingen lautet: DE 286 005 408</p>
+<h3>Redaktion</h3>
+<p>Redaktionsverantwortlich für die Internetpräsenz von The Stacks ist nach § 55 Abs. 2 RStV: <br />
+Dorothea Schuller<br />
+Niedersächsische Staats- und Universitätsbibliothek Göttingen<br />
+Platz der Göttinger Sieben 1<br />
+37073 Göttingen<br />
+E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettingen.de</a><br />
+<a href="https://libaac.de">https://libaac.de</a></p>
+<h2>Rechtliche Hinweise </h2>
+<h3>Haftung für Inhalte </h3>
+<p>Die Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) ist als Diensteanbieterin für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Die SUB Göttingen ist um Richtigkeit und Aktualität der hier bereitgestellten Informationen bemüht. Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt, dennoch können Fehler und Unklarheiten nicht vollständig ausgeschlossen werden. Die SUB Göttingen übernimmt daher keine Gewähr für die Aktualität, Richtigkeit, Vollständigkeit oder Qualität der bereitgestellten Informationen. </p>
+<p>Insbesondere sind wir als Diensteanbieter nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+<p>Für Schäden materieller oder immaterieller Art, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen unmittelbar oder mittelbar verursacht werden, haftet die SUB Göttingen nicht, sofern ihr nicht nachweislich vorsätzliches oder grob fahrlässiges Verschulden zur Last fällt. Gleiches gilt für kostenlos zum Download bereitgehaltene Software. </p>
+<p>Die SUB Göttingen behält es sich vor, Teile des Internetangebots oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.</p>
+<h3>Haftung für Links </h3>
+<p>Unser Angebot enthält Verknüpfungen (Links) zu Webseiten von anderen Einrichtungen der Universität und zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die SUB Göttingen identifiziert sich deshalb ausdrücklich nicht mit dem Inhalt der verlinkten Seiten und macht sich die fremden Inhalte nicht zu eigen.</p>
+<p>Die gesetzten Links werden im wissenschaftlichen Sinne zitiert und zur Information für Studium, Forschung und Lehre zur Verfügung gestellt. Wir haben die verlinkten Seiten zum Zeitpunkt der erstmaligen Verknüpfung auf mögliche Rechtsverstöße überprüft. Inhalte, durch die eine mögliche zivil- oder strafrechtliche Verantwortlichkeit ausgelöst wird, waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. </p>
+<p>Wenn die SUB Göttingen feststellt oder von anderen darauf hingewiesen wird, dass ein externes Angebot, auf das sie per Link verknüpft hat, eine zivil- oder strafrechtliche Verantwortlichkeit auslöst, wird sie diesen Link umgehend entfernen. Die SUB Göttingen distanziert sich ausdrücklich von derartigen Inhalten.</p>
+<h3>Hinweise zum Urheber- und Kennzeichenrecht </h3>
+<p>Die SUB Göttingen ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihr selbst erstellte Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zurückzugreifen. </p>
+<p>Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind. </p>
+<p>Sofern nicht anders angegeben, stehen das Layout der Homepage von The Stacks, die verwendeten Grafiken sowie die sonstigen Inhalte der Internetpräsenz unter der Creative Commons-Lizenz Namensnennung 4.0 International (CC BY 4.0).</p>
+<p>Jede vom Urheberrechtsgesetz oder der Creative Commons-Lizenz nicht zugelassene Verwertung bedarf vorheriger ausdrücklicher Zustimmung der SUB Göttingen. Dies gilt insbesondere für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Fotokopien und Downloads von Web-Seiten für den privaten, wissenschaftlichen und nicht kommerziellen Gebrauch dürfen hergestellt werden.</p>
+<p>Das Urheberrecht aller Logos liegt bei den jeweiligen Rechteinhabern.</p>
+<h2>Bildnachweise</h2>
+   <div>
+                <figure class="copyrightimages">
+                <image src="/themes/Mirage2/images/britain80.jpg" alt="Great Britain and Ireland from Space"/>
+                <figcaption>
+                        ESA - <a href="http://www.esa.int/spaceinimages/Images/2009/02/Great_Britain_and_Ireland" title="Link to Source Image Great Britain and Ireland">Great Britain and Ireland</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/" title="Link to Creative Commons License BY-SA 3.0">CC-BY-SA 3.0 IGO</a>
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure class="copyrightimages">
+                <image src="/themes/Mirage2/images/australia80.jpg" alt="Linear Dunes and Playas, Simson Desert, South Australia, Australia from Space"/>
+                <figcaption>
+                        NASA - <a href="https://images.nasa.gov/#/details-s44-81-055.html" title="Link to Source Image Australia">Linear Dunes and Playas, Simson Desert, South Australia, Australia</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html" title="Link to Nasa License Public Domain">Public Domain</a>
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure class="copyrightimages">
+                <image src="/themes/Mirage2/images/canada80.jpg" alt="Earth observations of Hudson Bay, Canada taken from OV-105 during STS-99"/>
+                <figcaption>
+                        NASA - <a href="https://images.nasa.gov/#/details-STS099-706-090.html" title="Link to Source Image Canada">Earth observations of Hudson Bay, Canada taken from OV-105 during STS-99</a> - <a href="https://www.nasa.gov/multimedia/guidelines/index.html" title="Linkt to Nasa License Public Domain">Public Domain</a>
+                </figcaption>
+                </figure>
+        </div>
+        <div>
+                <figure class="copyrightimages">
+                <image src="/themes/Mirage2/images/america80.jpg" alt="Olympic National Park, America from Space"/>
+                <figcaption>
+                        NASA - <a href="https://www.flickr.com/photos/gsfc/29114378602/" title="Link to Source Image America">Olympic National Park</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by/2.0/" title="Link to Creative Commons Licence BY 2.0">CC-BY 2.0</a>
+                </figcaption>
+                </figure>
+        </div>
+  </message>
+
   <message key="xmlui.privacy.head">Datenschutzerklärung</message>
     <message key="xmlui.privacy.text">
   <p>Wir weisen darauf hin, dass die Daten&#xFC;bertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitsl&#xFC;cken aufweisen kann. Ein l&#xFC;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&#xF6;glich.</p><p>Der Nutzung von im Rahmen der Impressumspflicht ver&#xF6;ffentlichten Kontaktdaten durch Dritte zur &#xDC;bersendung von nicht ausdr&#xFC;cklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdr&#xFC;cklich widersprochen. Die Betreiber der Seiten behalten sich ausdr&#xFC;cklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.</p>
@@ -2551,7 +2629,7 @@
 <p>Diese Website nutzt die Open-Source-Software Matomo f&#xFC;r die statistische Auswertung von Besucherzugriffen. Matomo ist datenschutzkonform konfiguriert, Daten werden anonymisiert gespeichert. Die zu diesem Zweck verwendeten &#x201E;Sitzungs-Cookies&#x201C; sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Webseite durch Sie erm&#xF6;glichen. Die durch den Cookie erzeugten Informationen &#xFC;ber Ihre Benutzung dieses Internetangebotes werden auf dem Server der GWDG gespeichert. Die IP-Adresse wird sofort nach der Verarbeitung und vor deren Speicherung anonymisiert. Die von Matomo erfassten Daten werden in anonymisierter Form dazu verwendet, unser Angebot zu verbessern. IP-Adressen werden in Matomo ohne das letzte Tupel gespeichert. Wir wissen, aus welchem Netz eine Anfrage kam, nicht jedoch von welchem Rechner.</p>
 <p>Diese &#x201E;Sitzungs-Cookies&#x201C; beinhalten keine personenbezogenen Daten und verfallen nach Ablauf der Sitzung. Techniken, wie zum Beispiel Java-Applets oder Active-X-Controls, die es erm&#xF6;glichen, das Zugriffsverhalten der Nutzer nachzuvollziehen, werden nicht eingesetzt.</p>
 <p>Im Einzelnen werden &#xFC;ber jeden Zugriff/Abruf folgende Daten gespeichert:</p>
-<ul><li>die ersten beiden Teile der IP-Adresse,</li><li>Datum und Uhrzeit,</li><li>User-Agent der verwendeten Software,</li><li>aufgerufene Seite/Name der abgerufenen Datei,</li><li>&#xFC;bertragene Datenmenge,</li><li>Meldung, ob der Zugriff/Abruf erfolgreich war.</li></ul>
+<ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px;"><li>die ersten beiden Teile der IP-Adresse,</li><li>Datum und Uhrzeit,</li><li>User-Agent der verwendeten Software,</li><li>aufgerufene Seite/Name der abgerufenen Datei,</li><li>&#xFC;bertragene Datenmenge,</li><li>Meldung, ob der Zugriff/Abruf erfolgreich war.</li></ul>
 <p>Rechtsgrundlage f&#xFC;r die Verarbeitung der personenbezogenen Daten der Nutzer ist Art. 6 Abs. 1 lit. f DSGVO.</p>
 <p><strong>Zweck der Datenverarbeitung:</strong> Die Verarbeitung der personenbezogenen Daten der Nutzer erm&#xF6;glicht uns eine Analyse des Surfverhaltens unserer Nutzer. Wir sind durch die Auswertung der gewonnenen Daten in der Lage, Informationen &#xFC;ber die Nutzung der einzelnen Komponenten unserer Webseite zusammenzustellen. Dies hilft uns dabei unsere Webseite und deren Nutzerfreundlichkeit stetig zu verbessern. In diesen Zwecken liegt auch unser berechtigtes Interesse in der Verarbeitung der Daten nach Art. 6 Abs. 1 lit. f DSGVO. Durch die Anonymisierung der IP-Adresse wird dem Interesse der Nutzer an deren Schutz personenbezogener Daten hinreichend Rechnung getragen.</p>
 <p>Durch die Nutzung dieser Website erkl&#xE4;ren Sie sich mit der Bearbeitung der &#xFC;ber Sie erhobenen Daten durch Matomo in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.</p>
