@@ -133,7 +133,7 @@ public class PrefillStep extends AbstractProcessingStep
             } else if (type.equals("ppn"))
             //A valid PPN consists of 9 digits
             {
-                return (id.length() == 9);
+                return (id.length() >= 9);
 
             } else
                 return false;
