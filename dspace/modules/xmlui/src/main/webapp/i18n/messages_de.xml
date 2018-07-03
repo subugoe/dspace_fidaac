@@ -2512,7 +2512,7 @@
   <!-- Textanpassungen -->
   <message key="xmlui.footer.text">Entwicklung und Betrieb durch <br /><a href="https://www.sub.uni-goettingen.de/sub-aktuell/">Niedersächsische Saats- und Universitätsbibliothek Göttingen</a></message>  
     
-  <message key="xmlui.dri2xhtml.structural.aboutus-link">Über uns</message>
+  <message key="xmlui.dri2xhtml.structural.aboutus-link">About Us</message>
   <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
   <message key="xmlui.dri2xhtml.structural.privacy-link">Datenschutzerklärung</message>
   <message key="xmlui.dri2xhtml.structural.rights-link">Nutzungsbedingungen</message>

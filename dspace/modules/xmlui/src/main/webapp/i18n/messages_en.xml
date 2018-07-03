@@ -2511,6 +2511,38 @@
     <message key="xmlui.dri2xhtml.structural.rights-link">Terms of Use</message>
     <message key="xmlui.dri2xhtml.structural.copyright-link">Credits</message>
      <message key="xmlui.aboutus.head">About Us</message>
+  <message key="xmlui.aboutus.text">
+  <p>The Stacks is an interdisciplinary Open Access repository provided by the <a href="libaac.de">Library of Anglo-American Culture &amp; History</a> for scholarly publications in:
+   <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px;">
+	<li>English / British and Irish Studies</li>
+ 	<li>Australian and New Zealand Studies</li>
+	<li>American Studies</li>
+	<li>Canadian Studies</li>
+   </ul>
+   </p>
+   <p>The Stacks publishes documents from scholars working in all disciplines and sub-fields, including literary studies, linguistics, cultural, studies, history, media studies, gender studies, history and political science. </p>
+   <p>The Stacks publishes
+    <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px;">
+        <li>articles, monographs, book reviews</li>
+        <li>complete issues and volumes of journals and other periodicals </li>
+   </ul>
+   </p>
+   <p>We also offer to publish and archive
+   <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px;">
+        <li>conference reports</li>
+        <li>calls for papers</li>
+        <li>conference programmes, books of abstracts</li>
+        <li>conference papers</li>
+	<li>course material (course descriptions, syllabi),</li>
+   </ul>
+   </p>
+   <p>If you would like to upload other types of material, please <a href="mailto:fid-aac@sub.uni-goettingen.de">contact us</a>.</p>
+   <p>All uploaded material is made available in Open Access, either immediately or after the time span you choose. You may select a Creative Commons License that best suits your needs.</p>
+   <p>All documents uploaded to The Stacks are assigned (if needed) a unique digital object identifier (DOI) to provide a persistent reference to each document. </p>
+   <p>The Library of Anglo-American Culture &amp; History (Library AAC) is the central provider of literature, resources and services for scholars and students in the fields of American Studies, Australian &amp; New Zealand Studies, Canadian Studies and English / British &amp; Irish Studies. Currently, it is funded by the German Research Foundation (DFG) (<a href="http://www.dfg.de/foerderung/programme/infrastruktur/lis/lis_foerderangebote/fachinformationsdienste_wissenschaft/index.html">'Specialised Information Services'</a>).</p>
+   <p>The main goal of the Library AAC is to develop services which improve access to specialist literature and information for all researchers in Germany working in the fields mentioned above. We aim to tailor our activities to the specific needs of the respective research communities and the individual characteristics of the disciplines. </p>
+   <p>Learn more about our services on our website <a href="https://libaac.de">libaac.de</a>! </p>
+</message>
    <message key="xmlui.help.head">Help</message>
    <message key="xmlui.rights.head">Rights</message>
   <message key="xmlui.imprint.head">Impressum</message>
