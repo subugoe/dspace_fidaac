@@ -610,7 +610,7 @@
 	<message key="xmlui.Submission.submit.progressbar.verify">Überprüfen</message>
 	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative Commons Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.CClicense">CC Lizenz</message>
-	<message key="xmlui.Submission.submit.progressbar.license">FID AAC Lizenz</message>
+	<message key="xmlui.Submission.submit.progressbar.license">Rechtseinräumung</message>
 	<message key="xmlui.Submission.submit.progressbar.complete">Fertig</message>
 	
 	<!-- org.dspace.app.xmlui.Submission.submit.ResumeStep -->
@@ -795,12 +795,12 @@
 	<message key="xmlui.Submission.submit.CCLicenseStep.select_change">Auswahl oder Änderung der Lizenz</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
-	<message key="xmlui.Submission.submit.LicenseStep.head">FID AAC Lizenz</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Dies ist der letzte Schritt:</strong> Damit Ihr Dokument im Institutionellen Repositorium entsprechend verarbeitet und weiterverbreitet werden kann, müssen Sie folgenden Bedingungen zustimmen.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info2">Akzeptieren Sie die Standardlizenzbestimmung des Repositoriums indem Sie 'Ich akzeptiere die Lizenzbestimmungen' anhaken und klicken Sie dann auf 'Veröffentlichung abschließen'.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info3">Wenn Sie Fragen zu den Lizenzbestimmungen haben, wenden Sie sich an den Administrator.</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Lizenzbestimmung</message>
-	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich akzeptiere die Lizenzbestimmungen</message>
+	<message key="xmlui.Submission.submit.LicenseStep.head">Rechtseinräumung für das Publizieren in The Stacks</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Dies ist der letzte Schritt:</strong> Damit Ihr Dokument im Repositorium entsprechend verarbeitet und weiterverbreitet werden kann, müssen Sie folgenden Bedingungen zustimmen.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info2">Klicken Sie anschließend auf 'Veröffentlichung abschließen'.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info3"></message>
+	<message key="xmlui.Submission.submit.LicenseStep.decision_label"></message>
+	<message key="xmlui.Submission.submit.LicenseStep.decision_checkbox">Ich räume dem Repositorium The Stacks die oben genannten Rechte ein</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_error">Sie müssen die Lizenzbestimmung akzeptieren, um Ihre Veröffentlichung abzuschließen. Wenn Sie dies zum jetzigen Zeitpunkt nicht tun können, haben Sie die Möglichkeit Ihre Veröffentlichung zwischenzuspeichern, um sie später zu vollenden oder zu löschen, indem Sie auf 'Speichern/Abbrechen' klicken.</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.RemovedStep -->
@@ -2512,14 +2512,18 @@
   <!-- Textanpassungen -->
   <message key="xmlui.footer.text">Entwicklung und Betrieb durch <br /><a href="https://www.sub.uni-goettingen.de/sub-aktuell/">Niedersächsische Saats- und Universitätsbibliothek Göttingen</a></message>  
     
-  <message key="xmlui.dri2xhtml.structural.aboutus-link">About Us</message>
+  <message key="xmlui.dri2xhtml.structural.aboutus-link">Über Uns</message>
   <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
   <message key="xmlui.dri2xhtml.structural.privacy-link">Datenschutzerklärung</message>
   <message key="xmlui.dri2xhtml.structural.rights-link">Nutzungsbedingungen</message>
   <message key="xmlui.dri2xhtml.structural.copyright-link">Bildnachweise</message>
-  <message key="xmlui.aboutus.head">Über Uns</message>
+  <message key="xmlui.aboutus.head">About Us</message>
   <message key="xmlui.help.head">Hilfe</message>
-  <message key="xmlui.rights.head">Nutzungsbedingungen</message>
+  <message key="xmlui.rights.head">Lizenz für die Nutzung von Dokumenten in The Stacks (The Stacks-Lizenz)</message>
+  <message key="xmlui.rights.text">
+  <p>Nutzerinnen und Nutzer von The Stacks sind berechtigt, Dokumente nach Maßgabe des Urhebergesetzes unentgeltlich zu nutzen, insbesondere, das Dokument zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern und in kleiner Anzahl zu drucken (§§ 53, 60c, 60d UrhG). </p>
+  <p>Darüber hinaus können für einzelne Dokumenten weitere Rechte (z.B. Creative Commons-Lizenzen) gelten. Die jeweilige Lizenz ist dem Dokument zugeordnet und auf der dazugehörigen Download-Seite deutlich gekennzeichnet. Der Lizenztext ist dort verlinkt und kann zu Informationszwecken aufgerufen werden. </p>
+  </message>
   <message key="xmlui.imprint.head">Impressum</message>
   <message key="xmlui.imprint.text">
   <h3>Anbieter</h3>
