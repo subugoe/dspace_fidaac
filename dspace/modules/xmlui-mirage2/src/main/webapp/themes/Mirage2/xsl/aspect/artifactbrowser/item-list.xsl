@@ -321,7 +321,7 @@
                                 <xsl:value-of select="dim:field[@element='publisher']" /><xsl:text>. </xsl:text>
                             </xsl:if>
         </xsl:when>
-	<xsl:when test="dim:field[@element='type'] = 'article' or dim:field[@element='type'] = 'review'">
+	<xsl:when test="dim:field[@element='type'] = 'article' or dim:field[@element='type'] = 'review' or dim:field[@element='type'] = 'digitalReproduction'">
 			   <xsl:if test="dim:field[@element='relation'][@qualifier='reviewOf']">
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.reviewof</i18n:text><i><xsl:value-of select="dim:field[@element='relation'][@qualifier='reviewOf']" /></i><i18n:text>xmlui.dri2xhtml.METS-1.0.reviewofby</i18n:text>
                             </xsl:if>
@@ -345,6 +345,9 @@
                             </xsl:if>
 			    <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
                                 <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']" />
+                            </xsl:if>
+			     <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
+                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']" />
                             </xsl:if>
                             <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
                                 <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']" /><xsl:text>-</xsl:text>

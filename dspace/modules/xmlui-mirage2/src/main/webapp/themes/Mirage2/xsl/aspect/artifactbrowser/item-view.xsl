@@ -182,7 +182,7 @@
 
 	
 	 <!--Zeitschriftenartikel/Review-->
-          <xsl:when test="dim:field[@element='type'] = 'article' or dim:field[@element='type'] = 'review'">
+          <xsl:when test="dim:field[@element='type'] = 'article' or dim:field[@element='type'] = 'review' or dim:field[@element='tpye'] = 'digitalReproduction'">
 		<div class="itemview-citation">
 
 		<xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
@@ -254,6 +254,9 @@
 		<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
                          <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']/node()"/>
                 </xsl:if>
+		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
+                         <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']/node()"/>
+                </xsl:if>
 		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
                        <xsl:text>, </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
                 </xsl:if>
@@ -264,13 +267,17 @@
 
                 </div>
 
-                <div class="itemview-citation-small">
-		<xsl:if test="dim:field[@element='type'] = 'review'">
+        <div class="itemview-citation-small">
+	<xsl:if test="dim:field[@element='type'] = 'review'">
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.dctypereview</i18n:text>
         </xsl:if>
         <xsl:if test="dim:field[@element='type'] = 'article'">
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.dctypearticle</i18n:text>
-        </xsl:if></div>
+        </xsl:if>
+        <xsl:if test="dim:field[@element='type'] = 'digitalReproduction'">
+		<i18n:text>xmlui.dri2xhtml.METS-1.0.dctypedigital</i18n:text>
+	</xsl:if>
+	</div>
                 <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
                 <xsl:call-template name="itemSummaryView-DIM-language"/>
                 <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
@@ -605,35 +612,6 @@
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Sammelbandbeitrag-->
-
-	<!--Digitalisat-->
-          <xsl:when test="dim:field[@element='type'] = 'digitalReproduction'">
-                <xsl:call-template name="itemSummaryView-DIM-title"/>
-                <xsl:call-template name="itemSummaryView-DIM-authors"/>
-                <xsl:call-template name="itemSummaryView-DIM-date-default"/>
-                <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
-                <xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
-                <div><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypedigital</i18n:text></div>
-                <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
-                <xsl:call-template name="itemSummaryView-DIM-language"/>
-                <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
-                <xsl:call-template name="itemSummaryView-DIM-descriptionSponsor"/>-->
-                <xsl:call-template name="itemSummaryView-DIM-URI"/>
-                <xsl:call-template name="itemSummaryView-DIM-DOI"/>
-
-                <span class="spacer">&#160;</span>
-                <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
-                <td><xsl:call-template name="itemSummaryView-DIM-file-section"/>
-                <xsl:if test="$ds_item_view_toggle_url != ''">
-                <xsl:call-template name="itemSummaryView-show-full"/>
-                </xsl:if></td></tr></table>
-                <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-                <xsl:call-template name="itemSummaryView-collections"/>
-		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
-                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
-		<xsl:call-template name="display-rights"/>
-          </xsl:when>
-                <!--/Digitalisat-->
 
 	  <xsl:otherwise>
 		 <xsl:call-template name="itemSummaryView-DIM-title"/>
