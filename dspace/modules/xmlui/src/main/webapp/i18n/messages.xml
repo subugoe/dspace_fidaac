@@ -770,8 +770,8 @@
 	<message key="xmlui.Submission.submit.DescribeStep.day">Day</message>
 	<message key="xmlui.Submission.submit.DescribeStep.series_name">Series Name</message>
 	<message key="xmlui.Submission.submit.DescribeStep.report_no">Volume No.</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Select CC License</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Creative Commons Licenses</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Select License</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Licenses</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter licences</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filter</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Please wait while the controlled vocabulary is loading.</message>

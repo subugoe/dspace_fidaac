@@ -610,7 +610,7 @@
 	<message key="xmlui.Submission.submit.progressbar.verify">Überprüfen</message>
 	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative Commons Lizenz</message>
 	<message key="xmlui.Submission.submit.progressbar.CClicense">CC Lizenz</message>
-	<message key="xmlui.Submission.submit.progressbar.license">Rechtseinräumung</message>
+	<message key="xmlui.Submission.submit.progressbar.license">Rechteeinräumung</message>
 	<message key="xmlui.Submission.submit.progressbar.complete">Fertig</message>
 	
 	<!-- org.dspace.app.xmlui.Submission.submit.ResumeStep -->
@@ -658,8 +658,8 @@
 	<message key="xmlui.Submission.submit.DescribeStep.day">Tag</message>
 	<message key="xmlui.Submission.submit.DescribeStep.series_name">Reihe</message>
 	<message key="xmlui.Submission.submit.DescribeStep.report_no">Band</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">CC Lizenz auswählen</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Creative Commons Lizenzen</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Lizenz auswählen</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Lizenzen</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Nach Lizenzen filtern</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filtern</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Bitte warten Sie, der Thesaurus wird geladen.</message>
@@ -795,7 +795,7 @@
 	<message key="xmlui.Submission.submit.CCLicenseStep.select_change">Auswahl oder Änderung der Lizenz</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
-	<message key="xmlui.Submission.submit.LicenseStep.head">Rechtseinräumung für das Publizieren in The Stacks</message>
+	<message key="xmlui.Submission.submit.LicenseStep.head">Rechteeinräumung für das Publizieren in The Stacks</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Dies ist der letzte Schritt:</strong> Damit Ihr Dokument im Repositorium entsprechend verarbeitet und weiterverbreitet werden kann, müssen Sie folgenden Bedingungen zustimmen.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info2">Klicken Sie anschließend auf 'Veröffentlichung abschließen'.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3"></message>
@@ -2803,13 +2803,13 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_relationCollection">Sammlung alt</message>
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publicationType">Publikationstyp</message>
   <message key="xmlui.mirage2.forms.CompositeFieldSet.add">Hinzufügen</message>
-  <message key="xmlui.mirage2.forms.CompositeFieldSet.remove">Zum entfernen markieren</message>
+  <message key="xmlui.mirage2.forms.CompositeFieldSet.remove">Zum Entfernen markieren</message>
   <message key="xmlui.mirage2.forms.nonCompositeFieldSet.add">Hinzufügen</message>
-  <message key="xmlui.mirage2.forms.nonCompositeFieldSet.remove">Zum entfernen markieren</message>
+  <message key="xmlui.mirage2.forms.nonCompositeFieldSet.remove">Zum Entfernen markieren</message>
   <message key="xmlui.mirage2.forms.instanceCompositeFieldSet.add">Hinzufügen</message>
-  <message key="xmlui.mirage2.forms.instanceCompositeFieldSet.remove">Zum entfernen markieren</message>
+  <message key="xmlui.mirage2.forms.instanceCompositeFieldSet.remove">Zum Entfernen markieren</message>
   <message key="xmlui.mirage2.forms.instancedCompositeFields.add">Hinzufügen</message>
-  <message key="xmlui.mirage2.forms.instancedCompositeFields.remove">Zum entfernen markieren</message>
+  <message key="xmlui.mirage2.forms.instancedCompositeFields.remove">Zum Entfernen markieren</message>
   <message key="xmlui.Discovery.AbstractSearch.type_relationCollection">Sammlung alt</message>
   <message key="xmlui.Discovery.AbstractSearch.type_publicationType">Publikationstyp</message>
   <message key="xmlui.Discovery.AbstractSearch.type_subjectGokverbal">GOK verbal</message>
