@@ -573,8 +573,13 @@
                         </xsl:if>
 
 			<xsl:for-each select="dim:field[@element='relation'][@qualifier='editor']">
-                            <xsl:value-of select="./node()"/><xsl:text>. </xsl:text>
+			<xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='editor']) = 0 and count(preceding-sibling::dim:field[@element='relation' and @qualifier='editor']) != 0"><xsl:text> and </xsl:text></xsl:if>
+                            <xsl:value-of select="substring-after(./node(), ', ')"/><xsl:text> </xsl:text><xsl:value-of select="substring-before(./node(), ',')"/>
+			<xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='editor']) != 0 and count(following-sibling::dim:field[@element='relation' and @qualifier='editor']) != 1">
+                        <xsl:text>, </xsl:text>
+                        </xsl:if>
                         </xsl:for-each>
+			<xsl:text>. </xsl:text>
                 </xsl:if>
 
                  <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>

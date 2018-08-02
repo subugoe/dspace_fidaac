@@ -403,7 +403,7 @@
 				<xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']" /></i>
 				<xsl:text>. </xsl:text>
                             </xsl:if>
-			    <xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
+		    <xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
 
 			 <xsl:if test="count(dim:field[@element='relation'][@qualifier='editor']) = 1">
                          <i18n:text>xmlui.dri2xhtml.METS-1.0.editorone</i18n:text>
@@ -412,14 +412,15 @@
                          <i18n:text>xmlui.dri2xhtml.METS-1.0.editormult</i18n:text>
                         </xsl:if>
 
-                        	    <xsl:for-each select="dim:field[@element='relation'][@qualifier='editor']">
-                                	<xsl:copy-of select="node()"/>
-                                	<xsl:if test="count(following-sibling::dim:field[@element='relation'][@qualifier='editor']) != 0">
-                                    	<xsl:text>, </xsl:text>
-					</xsl:if>
-				    </xsl:for-each>
-                                <xsl:text>. </xsl:text>
-                            </xsl:if>
+			<xsl:for-each select="dim:field[@element='relation'][@qualifier='editor']">
+                        <xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='editor']) = 0 and count(preceding-sibling::dim:field[@element='relation' and @qualifier='editor']) != 0"><xsl:text> and </xsl:text></xsl:if>
+                            <xsl:value-of select="substring-after(./node(), ', ')"/><xsl:text> </xsl:text><xsl:value-of select="substring-before(./node(), ',')"/>
+                        <xsl:if test="count(following-sibling::dim:field[@element='relation' and @qualifier='editor']) != 0 and count(following-sibling::dim:field[@element='relation' and @qualifier='editor']) != 1">
+                        <xsl:text>, </xsl:text>
+                        </xsl:if>
+                        </xsl:for-each>
+                        <xsl:text>. </xsl:text>
+		</xsl:if>
                             <xsl:if test="dim:field[@element='publishedIn']">
                                 <xsl:text> </xsl:text><xsl:value-of select="dim:field[@element='publishedIn']" /><xsl:text>: </xsl:text>
                             </xsl:if>
