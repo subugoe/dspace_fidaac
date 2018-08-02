@@ -1070,13 +1070,22 @@
                          <i18n:text>xmlui.dri2xhtml.METS-1.0.editormult</i18n:text>
                         </xsl:if>
 
-                                <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item">
+			<xsl:for-each select="dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item">
+                        <xsl:if test="count(following-sibling::dri:item) = 0 and count(preceding-sibling::dri:item) != 0"><xsl:text> and </xsl:text></xsl:if>
+                            <xsl:value-of select="substring-after(., ', ')"/><xsl:text> </xsl:text><xsl:value-of select="substring-before(., ',')"/>
+                        <xsl:if test="count(following-sibling::dri:item) != 0 and count(following-sibling::dri:item) != 1">
+                        <xsl:text>, </xsl:text>
+                        </xsl:if>
+                        </xsl:for-each>
+                        <xsl:text>. </xsl:text>
+
+<!--                                <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item">
                                     <xsl:apply-templates select="."/>
                                     <xsl:if test="count(following-sibling::dri:item) != 0">
                                         <xsl:text>, </xsl:text>
                                     </xsl:if>
                                 </xsl:for-each>	
-				<xsl:text>. </xsl:text>
+				<xsl:text>. </xsl:text>-->
                     </xsl:if>
                         <xsl:if test="dri:list[@n=(concat($handle, ':dc.publishedIn'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publishedIn'))]/dri:item"/><xsl:text>: </xsl:text>
