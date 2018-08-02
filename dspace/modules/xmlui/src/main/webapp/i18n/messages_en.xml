@@ -2594,7 +2594,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 <p>Jede vom Urheberrechtsgesetz oder der Creative Commons-Lizenz nicht zugelassene Verwertung bedarf vorheriger ausdrücklicher Zustimmung der SUB Göttingen. Dies gilt insbesondere für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Fotokopien und Downloads von Web-Seiten für den privaten, wissenschaftlichen und nicht kommerziellen Gebrauch dürfen hergestellt werden.</p>
 <p>Das Urheberrecht aller Logos liegt bei den jeweiligen Rechteinhabern.</p>
 <h2>Bildnachweise</h2>
-   <div>
+<!--   <div>
                 <figure class="copyrightimages">
                 <image src="/themes/Mirage2/images/britain80.jpg" alt="Great Britain and Ireland from Space"/>
                 <figcaption>
@@ -2623,6 +2623,14 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
                 <image src="/themes/Mirage2/images/america80.jpg" alt="Olympic National Park, America from Space"/>
                 <figcaption>
                         NASA - <a href="https://www.flickr.com/photos/gsfc/29114378602/" title="Link to Source Image America">Olympic National Park</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by/2.0/" title="Link to Creative Commons Licence BY 2.0">CC-BY 2.0</a>
+                </figcaption>
+                </figure>
+        </div>-->
+	<div>
+                <figure class="copyrightimage">
+                <image src="/themes/Mirage2/images/frontpage160.jpg" alt="peaceful ocean"/>
+                <figcaption>
+                        trent roche - <a href="https://www.flickr.com/photos/trentroche/5582517269/in/photolist-9viRTK" title="Link to Source Image">peaceful ocean</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC-BY-NC 2.0</a>
                 </figcaption>
                 </figure>
         </div>
@@ -2717,7 +2725,15 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 
 
 <message key="xmlui.home.text">
-	<div style="max-width: 505px;" class="hidden-xs">
+<div style="max-width: 900px;">
+        <image style="width: 400px;" class="visible-xs hidden-md hidden-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
+        <image style="width: 840px;" class="hidden-xs visible-md visible-sm visible-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
+        <h2>Welcome to The Stacks!</h2>
+        <p>The Stacks is the subject repository for American Studies, Australian and New Zealand Studies, Canadian Studies, English / British and Irish Studies, including all sub-fields as Anglophone Literatures and Cultures, cultural studies, English language teaching, gender studies, geography, history, law, linguistics, literary studies, media studies, medieval studies, political science, postcolonial studies and social sciences. </p>
+        <p>By publishing in The Stacks, your research will be more visible. All uploaded material is made available in Open Access, either immediately or after the time span you choose. <a href="https://thestacks.libaac.de/help">Read more</a> on how to publish in The Stacks!</p>
+        <p>The Stacks is provided by the <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a>.</p>
+        </div>
+<!--	<div style="max-width: 505px;" class="hidden-xs">
         <h2 style="text-align: center;">The Stacks</h2>
         <h3 style="text-align: center;">The Subject Repository for:</h3>
 
@@ -2782,7 +2798,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
                 <figcaption class="frontpage_caption">English / British and Irish Studies</figcaption>
                 </figure>
         </div>
-        </div>
+        </div>-->
   </message>
 
 
