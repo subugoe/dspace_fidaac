@@ -2867,6 +2867,11 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="medievalstudies">Mediävistik</message>
   <message key="postcolonial">Postkoloniale Studien</message>
 
+  <message key="americanstudies">Amerikastudien</message>
+  <message key="englishstudies">Anglistik &amp; Großbritannien- und Irlandstudien</message>
+  <message key="canadianstudies">Kanadastudien</message>
+  <message key="australianstudies">Australien- und Neuseelandstudien</message>
+
   <message key="article">Zeitschriftenartikel</message>
   <message key="monograph">Monographie</message>
   <message key="digitalReproduction">Digitalisat</message>

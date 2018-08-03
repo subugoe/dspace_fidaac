@@ -2891,6 +2891,10 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="englishlanguageteaching">English Language Teaching</message>
   <message key="medievalstudies">Medieval Studies</message>
   <message key="postcolonial">Postcolonial Studies</message>
+  <message key="americanstudies">American Studies</message>
+  <message key="englishstudies">English / British and Irish Studies</message>
+  <message key="canadianstudies">Canadian Studies</message>
+  <message key="australianstudies">Australian and New Zealand Studies</message>
 
   <message key="preprint">Preprint</message>
   <message key="monograph">Monograph</message>
