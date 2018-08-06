@@ -7,6 +7,9 @@
             if ($(this).text() == "Gesamter Bestand") {
                 $(this).text("All Publications");
             }
+	     if ($(this).text() == "Documents") {
+                $(this).text("Dokumente");
+            }
             if (/Irlandstudien$/.test($(this).text())) {
                 $(this).text("English / British and Irish Studies");
             }

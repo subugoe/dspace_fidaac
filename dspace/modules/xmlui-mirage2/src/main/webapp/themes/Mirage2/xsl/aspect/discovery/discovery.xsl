@@ -678,7 +678,7 @@
                  </xsl:choose>
                   <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>-</xsl:text>
+                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>&#150;</xsl:text>
                             </xsl:when>
                  </xsl:choose>
                 <xsl:choose>
@@ -880,7 +880,7 @@
                  </xsl:choose>
                   <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>-</xsl:text>
+                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>&#150;</xsl:text>
                             </xsl:when>
                  </xsl:choose>
 		<xsl:choose>
@@ -1071,7 +1071,7 @@
                         </xsl:if>
 
 			<xsl:for-each select="dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item">
-                        <xsl:if test="count(following-sibling::dri:item) = 0 and count(preceding-sibling::dri:item) != 0"><xsl:text> and </xsl:text></xsl:if>
+                        <xsl:if test="count(following-sibling::dri:item) = 0 and count(preceding-sibling::dri:item) != 0"><i18n:text>xmlui.dri2xhtml.METS-1.0.lasteditor</i18n:text></xsl:if>
                             <xsl:value-of select="substring-after(., ', ')"/><xsl:text> </xsl:text><xsl:value-of select="substring-before(., ',')"/>
                         <xsl:if test="count(following-sibling::dri:item) != 0 and count(following-sibling::dri:item) != 1">
                         <xsl:text>, </xsl:text>
@@ -1094,7 +1094,7 @@
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
                             </xsl:if>
                             <xsl:if test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>-</xsl:text>
+                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>&#150;</xsl:text>
                             </xsl:if>
                             <xsl:if test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]/dri:item"/><xsl:text>.</xsl:text>

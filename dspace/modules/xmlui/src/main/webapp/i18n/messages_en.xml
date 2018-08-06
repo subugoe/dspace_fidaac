@@ -2514,8 +2514,8 @@
   <message key="xmlui.aboutus.text">
   <p>The Stacks is an interdisciplinary Open Access repository provided by the <a href="libaac.de">Library of Anglo-American Culture &amp; History</a> for scholarly publications in:
    <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px;">
-	<li>English / British and Irish Studies</li>
- 	<li>Australian and New Zealand Studies</li>
+	<li>English / British &amp; Irish Studies</li>
+ 	<li>Australian &amp; New Zealand Studies</li>
 	<li>American Studies</li>
 	<li>Canadian Studies</li>
    </ul>
@@ -2729,7 +2729,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
         <image style="width: 400px;" class="visible-xs hidden-md hidden-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
         <image style="width: 840px;" class="hidden-xs visible-md visible-sm visible-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
         <h2>Welcome to The Stacks!</h2>
-        <p>The Stacks is the subject repository for American Studies, Australian and New Zealand Studies, Canadian Studies, English / British and Irish Studies, including all sub-fields as Anglophone Literatures and Cultures, cultural studies, English language teaching, gender studies, geography, history, law, linguistics, literary studies, media studies, medieval studies, political science, postcolonial studies and social sciences. </p>
+        <p>The Stacks is the subject repository for American Studies, Anglophone literatures &amp; cultures,  Australian &amp; New Zealand Studies, British &amp; Irish Studies, Canadian studies and English, including all sub-fields such as cultural studies, English language teaching, gender studies, geography, history, law, linguistics, literary studies, media studies, medieval studies, political science, postcolonial studies and social sciences. </p>
         <p>By publishing in The Stacks, your research will be more visible. All uploaded material is made available in Open Access, either immediately or after the time span you choose. <a href="https://thestacks.libaac.de/help">Read more</a> on how to publish in The Stacks!</p>
         <p>The Stacks is provided by the <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a>.</p>
         </div>
@@ -2820,13 +2820,13 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="xmlui.mirage2.discovery.reset">Reset filters</message>
   <message key="xmlui.mirage2.itemSummaryView.Collections">Collection</message>
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_relationCollection">Collection old</message>
-  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publicationType">Publication Type</message>
+  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publicationType">Document Type</message>
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subjectGokverbal">GOK verbal</message>
   <message key="xmlui.Discovery.AbstractSearch.type_subjectGokverbal">GOK verbal</message>
   <message key="xmlui.Discovery.AbstractSearch.type_relationCollection">Collection old</message>
-  <message key="xmlui.Discovery.AbstractSearch.type_publicationType">Publication Type</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_publicationType">Document Type</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.relationCollection">Sammlung alt</message>
-  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publicationType">Publication Type</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publicationType">Document Type</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subjectGokverbal">GOK verbal</message>
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publicationKind">Publication Kind</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.publicationKind">Publication Kind</message>
@@ -2836,9 +2836,9 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="xmlui.Discovery.AbstractSearch.type_publisher">Publisher</message>
   <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">Discover</message>
   <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... more</message>
-  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Type of Publication</message>
-  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Type of Publication</message>
-  <message key="xmlui.Discovery.AbstractSearch.type_type">Type of Publication</message>
+  <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Document Type</message>
+  <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.type">Document Type</message>
+  <message key="xmlui.Discovery.AbstractSearch.type_type">Document Type</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_SubjectField">Subjects</message>
   <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.SubjectField">Subjects</message>
   <message key="xmlui.Discovery.AbstractSearch.type_SubjectField">Subjects</message>
@@ -2880,7 +2880,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_typeDigitized">Digitalisat</message>
 
   <message key="literarystudies">Literary Studies</message>
-  <message key="mediastudies">Film and Media Studies</message>
+  <message key="mediastudies">Film &amp; Media Studies</message>
   <message key="geography">Geography</message>
   <message key="history">History</message>
   <message key="law">Law</message>
@@ -2892,9 +2892,16 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="medievalstudies">Medieval Studies</message>
   <message key="postcolonial">Postcolonial Studies</message>
   <message key="americanstudies">American Studies</message>
-  <message key="englishstudies">English / British and Irish Studies</message>
+  <message key="englishstudies">English</message>
+  <message key="britishstudies">British Studies</message>
+  <message key="irishstudies">Irish Studies</message>
   <message key="canadianstudies">Canadian Studies</message>
-  <message key="australianstudies">Australian and New Zealand Studies</message>
+  <message key="australianstudies">Australian Studies</message>
+  <message key="newzealandstudies">New Zealand Studies</message>
+  <message key="digitalhumanities">Digital Humanities</message>
+  <message key="genderstudies">Gender Studies</message>
+  <message key="anglophoneliterature">Anglophone Literatures and Cultures</message>
+
 
   <message key="preprint">Preprint</message>
   <message key="monograph">Monograph</message>
@@ -2922,7 +2929,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 
   <message key="xmlui.dri2xhtml.METS-1.0.reviewof"> Review of </message>
   <message key="xmlui.dri2xhtml.METS-1.0.reviewofby">, by </message>
-
+<message key="xmlui.dri2xhtml.METS-1.0.lasteditor"> and </message>
 
 <message key="xmlui.impressum.text.privacy"> Piwik opt-out: <br />If you do not want to consent to the storage and analysis of the user information generated, you can opt out.<br />
 <a href="http://piwik.gwdg.de/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=de" target="_blank">Opt-out of Piwik</a></message>
@@ -2989,6 +2996,13 @@ Select a Collection &gt; Metadata-Import (optional) &gt; Describe the item (Schr
 </ul>
 Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Dokumentes ist nur während des Veröffentlichungsprozesses möglich. Nach dem Freischalten werden keine Änderungen mehr vorgenommen, um die dauerhafte Zitierbarkeit des Dokuments zu gewährleisten.</p>
 </div>
+
+<h4 class="page-header"><a href="#format" data-toggle="collapse">Muss ich bei der Eingabe der Daten Formatierungsregeln beachten?</a></h4>
+<div id="format" class="collapse"><p>Verwenden Sie bitte die Groß- und Kleinschreibung entsprechend dem MLA-Style. Im Zweifel: <a href="https://capitalizemytitle.com/">Capitalize My Title!</a>. Bitte beachten Sie, dass Kursivierung im Hochladeformular nicht möglich ist.</p></div>
+
+<h4 class="page-header"><a href="#lang" data-toggle="collapse">Ich habe die Sprache von The Stacks gewechselt und erhalte eine Fehlermeldung. Warum?</a></h4>
+<div id="lang" class="collapse"><p>Wenn Sie auf The Stacks in Formularen arbeiten (z.B. im Hochlade-Formular, im Feedback-Formular usw.) lässt sich die Sprache aus technischen Gründen nicht wechseln. Entscheiden Sie sich daher vorab, in welcher Sprache Sie die Formulare bearbeiten möchten.</p></div>
+
 
 <h4 class="page-header"><a href="#save" data-toggle="collapse">Kann ich den Veröffentlichungsprozess auch unterbrechen und später damit weitermachen?</a></h4>
 <div id="save" class="collapse"><p>Sie können den Prozess jederzeit unterbrechen, indem Sie auf „Save &amp; exit“ &gt; „Save it, I’ll work on it later“ klicken. Die angefangene Publikation wird in Ihrem Benutzerkonto gespeichert. Wenn Sie sie wieder aufnehmen möchten, loggen Sie sich mit Ihren Benutzerdaten ein. Auf der Seite „Submissions“ finden Sie die angefangene Publikation unter „Unfinished submissions“. Wenn Sie auf die Publikation klicken und in der Detailansicht auf „Resume“, können Sie mit der Veröffentlichung fortfahren.</p></div>
