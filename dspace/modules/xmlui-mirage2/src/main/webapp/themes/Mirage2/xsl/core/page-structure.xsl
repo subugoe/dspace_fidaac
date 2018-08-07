@@ -126,6 +126,7 @@
                     </xsl:choose>
                     <!-- Javascript at the bottom for fast page loading -->
                     <xsl:call-template name="addJavascript"/>
+		<script src="{concat($theme-path, 'scripts/shariff.min.js')}"></script>
                 </body>
                 <xsl:text disable-output-escaping="yes">&lt;/html&gt;</xsl:text>
 
@@ -176,6 +177,8 @@
             </meta>
 
             <!-- Add stylesheets -->
+		<link href="{concat($theme-path, 'styles/shariff.min.css')}" rel="stylesheet"/>
+
 
             <!--TODO figure out a way to include these in the concat & minify-->
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='stylesheet']">
@@ -341,7 +344,7 @@
 			<a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
  			    <img class="visible-xs hidden-sm hidden-md hidden-lg"  alt="Open Startpage" src="{$theme-path}/images/logo_fidaac_small.png" style="margin-left:15px;"/>
                         </a>
-			<div class="pull-right visible-lg logo-title" style="padding-left: 5px;"><table><tr><td>Library of Anglo-American Culture and History</td></tr><tr><td class="logo-title-middle">FID AAC</td></tr></table></div>
+			<div class="pull-right visible-lg logo-title" style="padding-left: 5px;"><table><tr><td>Library of Anglo-American Culture &amp; History</td></tr><tr><td class="logo-title-middle">FID AAC</td></tr></table></div>
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
                         <ul class="nav navbar-nav pull-left">
                                 <li><a href="https://libaac.de">Library AAC</a></li>

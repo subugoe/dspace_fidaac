@@ -2379,6 +2379,8 @@
 
   <message key="xmlui.Discovery.AbstractSearch.head2">Bereiche und Sammlungen, die Ihrer Suche entsprechen.</message>
   <message key="xmlui.Discovery.AbstractSearch.head3">Dokumente, die Ihrer Suche entsprechen.</message>
+  <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.head">Neuzugänge</message>
+  <message key="xmlui.ArtifactBrowser.AbstractRecentSubmissionTransformer.recent_submissions_more">Mehr</message>
   <!-- End Discovery -->
 
   <!--   Start Sword Client  -->
@@ -2523,6 +2525,13 @@
   <message key="xmlui.rights.text">
   <p>Nutzerinnen und Nutzer von The Stacks sind berechtigt, Dokumente nach Maßgabe des Urhebergesetzes unentgeltlich zu nutzen, insbesondere, das Dokument zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern und in kleiner Anzahl zu drucken (§§ 53, 60c, 60d UrhG). </p>
   <p>Darüber hinaus können für einzelne Dokumenten weitere Rechte (z.B. Creative Commons-Lizenzen) gelten. Die jeweilige Lizenz ist dem Dokument zugeordnet und auf der dazugehörigen Download-Seite deutlich gekennzeichnet. Der Lizenztext ist dort verlinkt und kann zu Informationszwecken aufgerufen werden. </p>
+  <h3>Rechteeinräumung für das Publizieren in The Stacks</h3>
+  <p>Ich stimme einer Rechtevereinbarung in den folgenden Punkten zu:</p>
+  <p>Bei Herausgeberwerken: Ich versichere als unterzeichnende Herausgeberin bzw. Herausgeber, dass von den an dem Werk beteiligten Autorinnen und Autoren die Zustimmung eingeholt wurde, ihre Beiträge in der unten erklärten Art und Weise nutzen zu dürfen. Ich stelle die SUB Göttingen von allen möglichen Ansprüchen der Autorinnen bzw. Autoren frei.</p>
+  <p>1. Rechteeinräumung: Als Urheberin bzw. Urheber räume ich der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) zeitlich unbegrenzt und unwiderruflich das nicht ausschließliche Recht ein, das Werk öffentlich zugänglich zu machen, auf dem Repositorium The Stacks der SUB Göttingen zu archivieren und über Print-on-Demand in Papierform oder auf anderen Speichermedien zu vervielfältigen. Der urheberrechtliche Schutz bleibt durch diese Lizenz unberührt. Mit dem Hochladen des Dokuments ist kein rechtlich verbindlicher Anspruch auf die Bereitstellung oder Archivierung verbunden.</p>
+  <p>2. Rechte Dritter: Als Urheberin bzw. Urheber erkläre ich, dass mit der Bereitstellung des Werkes und jedes Bestandteils (z.B. Abbildungen) keine Rechte Dritter (z.B. Miturheberinnen bzw. Miturheber, Co-Autorinnen bzw. Co-Autoren, Verlage, Verwertungsgesellschaften, Drittmittelgeber) verletzt werden. Ich stelle die SUB Göttingen von etwaigen Ansprüchen Dritter frei. Die SUB Göttingen ist berechtigt, den Zugriff auf ein Dokument zu sperren, soweit konkrete Anhaltspunkte für eine Verletzung von Rechten Dritter bestehen.</p>
+  <p>3. Langzeitarchivierung und Transformation in andere Formate: Als Urheberin bzw. Urheber räume ich der SUB Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, das Werk in ihrem Langzeitarchiv zu speichern und bei Bedarf (z.B. Migration, Barrierefreiheit, bessere Zugänglichkeit oder Erschließung) in andere elektronische und physische Formate zu überführen.</p>
+  <p>4. Weitergabe von Metadaten und Dokumenten: ls Urheberin bzw. Urheber räume ich der SUB Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, die Metadaten des Werks unentgeltlich anderen Datenbanken zur Verfügung zu stellen. Darüber hinaus ist die SUB Göttingen berechtigt, das Werk Dritten im Rahmen nationaler Sammelaufträge zur Online-Bereitstellung oder Archivierung zur Verfügung zu stellen. Wenn Sie Fragen zu der Rechtevereinbarung haben, wenden Sie sich an <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettingen.de</a>.</p>
   </message>
   <message key="xmlui.imprint.head">Impressum</message>
   <message key="xmlui.imprint.text">
