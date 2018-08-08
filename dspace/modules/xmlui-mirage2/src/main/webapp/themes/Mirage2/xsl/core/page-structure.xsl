@@ -338,17 +338,16 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a href="{$context-path}/" class="navbar-brand">
-                            <img class="visible-sm visible-md visible-lg" alt="Open Startpage" src="{$theme-path}/images/logo_fidaac.svg" />
-			</a>
-			<a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
- 			    <img class="visible-xs hidden-sm hidden-md hidden-lg"  alt="Open Startpage" src="{$theme-path}/images/logo_fidaac_small.png" style="margin-left:15px;"/>
+			<a href="{$context-path}/" class="navbar-brand">
+                            <img class="visible-md visible-lg" alt="Open Startpage" src="{$theme-path}/images/Logo.PNG" />
                         </a>
-			<div class="pull-right visible-lg logo-title" style="padding-left: 5px;"><table><tr><td>Library of Anglo-American Culture &amp; History</td></tr><tr><td class="logo-title-middle">FID AAC</td></tr></table></div>
+			<a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
+                            <img class="hidden-xs visible-sm hidden-md hidden-lg"  alt="Open Startpage" src="{$theme-path}/images/Logo.PNG" style="margin-left:15px; height:51px; width:300px;"/>
+                        </a>
+                        <a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
+                            <img class="visible-xs hidden-sm hidden-md hidden-lg"  alt="Open Startpage" src="{$theme-path}/images/Logo.PNG" style="margin-left:15px; height:34px; width:200px;"/>
+                        </a>
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
-                        <ul class="nav navbar-nav pull-left">
-                                <li><a href="https://libaac.de">Library AAC</a></li>
-                        </ul>
 			<ul class="nav nav-pills pull-left ">
 
                             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
@@ -421,9 +420,6 @@
                     </div>
 
                     <div class="navbar-header pull-right hidden-xs">
-                        <ul class="nav navbar-nav pull-left">
-    				<li><a href="https://libaac.de">Library AAC</a></li>		
-			</ul>
 			<ul class="nav navbar-nav pull-left">
                               <xsl:call-template name="languageSelection"/>
                         </ul>
