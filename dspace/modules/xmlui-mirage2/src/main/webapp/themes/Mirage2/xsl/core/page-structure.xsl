@@ -338,15 +338,46 @@
                             <span class="icon-bar"></span>
                         </button>
 
-			<a href="{$context-path}/" class="navbar-brand">
-                            <img class="visible-md visible-lg" alt="Open Startpage" src="{$theme-path}/images/Logo.PNG" />
-                        </a>
-			<a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
-                            <img class="hidden-xs visible-sm hidden-md hidden-lg"  alt="Open Startpage" src="{$theme-path}/images/Logo.PNG" style="margin-left:15px; height:51px; width:300px;"/>
-                        </a>
-                        <a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
+			<div class="clearfixheader float-my-children visible-md visible-lg" style="margin-bottom:10px;">
+			<div>
+			<div class="clearfixheader float-my-children">
+			<div style="color:white;font-size:18px;font-family:Open Sans;line-height:20px;padding-top:10px;font-weight:400;"><a href="{$context-path}/" style="color:white;text-decoration:none;">Library of <br /><span style="font-weight:600;">Anglo-American</span> Culture &amp; History</a></div>
+			</div>
+			<div class="clearfixheader float-my-children">
+   			<a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:7px;"/></a>
+			<div style="padding-left:20px;padding-top: 5px;color:white;font-family:Open Sans;font-size:20px;font-weight:600;"><a  href="{$context-path}/" style="color:white;text-decoration:none;">FID AAC</a></div>
+			</div>
+			</div>
+			<div style="font-size:50px;font-family:Open Sans;color:white;padding-left:40px;padding-top:16px;">
+			<a href="{$context-path}/" style="color:white;text-decoration:none;">The Stacks</a>
+			</div>
+			</div>
+
+			<div class="clearfixheader float-my-children hidden-xs visible-sm hidden-md hidden-lg">
+                        <div>
+                        <div class="clearfixheader float-my-children">
+                        <div style="color:white;font-size:14px;font-family:Open Sans;line-height:18px;padding-top:10px;font-weight:400;"><a href="{$context-path}/" style="color:white;text-decoration:none;">Library of <br /><span style="font-weight:600;">Anglo-American</span> Culture &amp; History</a></div>
+                        </div>
+                        <div class="clearfixheader float-my-children">
+                        <a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:7px;height:20px;"/></a>
+                        <div style="padding-left:30px;padding-top: 5px;color:white;font-family:Open Sans;font-size:14px;font-weight:600;"><a  href="{$context-path}/" style="color:white;text-decoration:none;">FID AAC</a></div>
+                        </div>
+                        </div>
+                        <div style="font-size:40px;font-family:Open Sans;color:white;padding-left:20px;padding-top:16px;">
+                        <a href="{$context-path}/" style="color:white;text-decoration:none;">The Stacks</a>
+                        </div>
+                        </div>
+			
+			<div class="pull-left clearfixheader float-my-children visible-xs hidden-sm hidden-md hidden-lg">
+                        <div><a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:18px;height:15px;"/></a></div>
+                        <div style="font-size:18px;font-family:Open Sans;color:white;padding-left:10px;padding-top:12px;">
+                        <a href="{$context-path}/" style="color:white;text-decoration:none;">The Stacks</a>
+                        </div>
+                        </div>
+
+                        <!--<a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
                             <img class="visible-xs hidden-sm hidden-md hidden-lg"  alt="Open Startpage" src="{$theme-path}/images/Logo.PNG" style="margin-left:15px; height:34px; width:200px;"/>
-                        </a>
+                        </a>-->
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
 			<ul class="nav nav-pills pull-left ">
 

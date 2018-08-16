@@ -28,7 +28,7 @@
 header .navbar-default {
     background-color: #183267;
     position: relative;
-    height: 80px;
+    max-height: 110px;
 }
 
 ul {
@@ -96,17 +96,16 @@ body {
 
 header .navbar-brand img {
    height: 41px;
-   width: 188px;
    z-index: 1;
    display: block;
    text-indent: -9999px;
    position: relative;
-   margin-top: 15px;
+   margin-top: 5px;
+   margin-left: 15px;
 }
 
 header .navbar-brand-small img {
    height: 20px;
-   width: 94px;
    z-index: 1;
    display: block;
    text-indent: -9999px;
@@ -315,3 +314,26 @@ details ul {
 #how ul, #what ul, #benefits ul {
 	 margin-left: 20px;
 }
+/* tell the container's children to float left: */
+.float-my-children > * {
+    float:left;
+    margin-right:5px;
+}
+
+/* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
+
+.clearfixheader {
+    *zoom:1 /* for IE */
+}
+
+.clearfixheader:before,
+.clearfixheader:after {
+    content: " ";
+    display: table;
+}
+
+.clearfixheader:after {
+    clear: both;
+}
+
+
