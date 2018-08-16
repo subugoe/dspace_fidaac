@@ -2733,7 +2733,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 
 <message key="xmlui.home.text">
 <div style="max-width: 900px;">
-        <image style="width: 400px;" class="visible-xs hidden-md hidden-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
+        <image style="width: 340px;" class="visible-xs hidden-md hidden-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
         <image style="width: 840px;" class="hidden-xs visible-md visible-sm visible-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
         <h2>Welcome to The Stacks!</h2>
         <p>The Stacks is the subject repository for American Studies, Anglophone literatures &amp; cultures,  Australian &amp; New Zealand Studies, British &amp; Irish Studies, Canadian studies and English, including all sub-fields such as cultural studies, English language teaching, gender studies, geography, history, law, linguistics, literary studies, media studies, medieval studies, political science, postcolonial studies and social sciences. </p>
