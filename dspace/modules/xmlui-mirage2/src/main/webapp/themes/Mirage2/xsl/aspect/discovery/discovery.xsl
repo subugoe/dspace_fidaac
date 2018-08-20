@@ -840,7 +840,7 @@
                                 <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-			<xsl:text>.&quot;</xsl:text>
+			<xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?'"><xsl:text>.</xsl:text></xsl:if><xsl:text>&quot;</xsl:text>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
