@@ -668,7 +668,7 @@
                         </xsl:choose>
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]">
-                                <xsl:text>. </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]/dri:item"/>
+                                <xsl:text>.</xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]/dri:item"/>
                             </xsl:when>
                  </xsl:choose>
 		<xsl:choose>
@@ -870,7 +870,7 @@
                         </xsl:choose>
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]">
-                                <xsl:text>. </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]/dri:item"/>
+                                <xsl:text>.</xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]/dri:item"/>
                             </xsl:when>
                  </xsl:choose>
 		<xsl:choose>

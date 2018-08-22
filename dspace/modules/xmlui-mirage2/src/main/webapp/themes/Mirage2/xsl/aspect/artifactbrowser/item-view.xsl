@@ -174,7 +174,8 @@
                 <xsl:call-template name="itemSummaryView-show-full"/>
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-                <xsl:call-template name="itemSummaryView-collections"/>
+<!--                <xsl:call-template name="itemSummaryView-collections"/>-->
+		<xsl:call-template name="itemSummaryView-subjects"/>
                 <!--<div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
@@ -253,7 +254,7 @@
                        <xsl:text> </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']/node()"/>
                 </xsl:if>
 		<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
-                         <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']/node()"/>
+                         <xsl:text>.</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']/node()"/>
                 </xsl:if>
 		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
                          <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']/node()"/>
@@ -294,6 +295,7 @@
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                 <xsl:call-template name="itemSummaryView-collections"/>
+		<xsl:call-template name="itemSummaryView-subjects"/>
 		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
@@ -373,7 +375,8 @@
                 <xsl:call-template name="itemSummaryView-show-full"/>
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-                <xsl:call-template name="itemSummaryView-collections"/>
+<!--                <xsl:call-template name="itemSummaryView-collections"/>-->
+		<xsl:call-template name="itemSummaryView-subjects"/>
 		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
@@ -446,7 +449,8 @@
                 <xsl:call-template name="itemSummaryView-show-full"/>
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-	        <xsl:call-template name="itemSummaryView-collections"/>
+<!--	        <xsl:call-template name="itemSummaryView-collections"/>-->
+		<xsl:call-template name="itemSummaryView-subjects"/>
 		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
@@ -512,7 +516,8 @@
                 <xsl:call-template name="itemSummaryView-show-full"/>
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-                <xsl:call-template name="itemSummaryView-collections"/>
+<!--                <xsl:call-template name="itemSummaryView-collections"/>-->
+		<xsl:call-template name="itemSummaryView-subjects"/>
 		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
@@ -612,7 +617,8 @@
                 <xsl:call-template name="itemSummaryView-show-full"/>
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-                <xsl:call-template name="itemSummaryView-collections"/>
+<!--                <xsl:call-template name="itemSummaryView-collections"/>-->
+		<xsl:call-template name="itemSummaryView-subjects"/>
 		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>
@@ -641,6 +647,7 @@
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                     <xsl:call-template name="itemSummaryView-DIM-URI"/>
                     <xsl:call-template name="itemSummaryView-collections"/>
+		<xsl:call-template name="itemSummaryView-subjects"/>
 		<!--     <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
 		<xsl:call-template name="display-rights"/>                
@@ -930,6 +937,19 @@
                 </h5>
                 <xsl:apply-templates select="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference"/>
             </div>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template name="itemSummaryView-subjects">
+         <xsl:if test="dim:field[@element='subject' and @qualifier='field']">
+            <div class="simple-item-view-collections item-page-field-wrapper table" style="margin-bottom: 1.5em;">
+                <h5>
+                        <i18n:text>xmlui.mirage2.itemSummaryView.Subjects</i18n:text>
+                </h5>
+                <xsl:for-each select="dim:field[@element='subject' and @qualifier='field']">
+                        <a><xsl:attribute name="href"><xsl:value-of select="concat('https://thestacks.libaac.de/discover?filtertype=SubjectField&amp;filter_relational_operator=equals', '&amp;filter=', ./node())"/></xsl:attribute><xsl:value-of select="./node()"/></a><br/>
+                </xsl:for-each>
+           </div>
         </xsl:if>
     </xsl:template>
 
@@ -1317,6 +1337,11 @@
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 2.0"/>
                                 </a>
                         </xsl:when>
+			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 2.5'">
+                                <a href="https://creativecommons.org/licenses/by-nc/2.5/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 2.5"/>
+                                </a>
+                        </xsl:when>
 			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 3.0'">
                                 <a href="https://creativecommons.org/licenses/by-nc/3.0/">
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 3.0"/>
@@ -1362,6 +1387,11 @@
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 2.0"/>
                                 </a>
                         </xsl:when>
+			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 2.5'">
+                                <a href="https://creativecommons.org/licenses/by-sa/2.5/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 2.5"/>
+                                </a>
+                        </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 3.0'">
                                 <a href="https://creativecommons.org/licenses/by-sa/3.0/">
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 3.0"/>
@@ -1380,6 +1410,11 @@
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 2.0'">
                                 <a href="https://creativecommons.org/licenses/by-nd/2.0/">
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 2.0"/>
+                                </a>
+                        </xsl:when>
+			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 2.5'">
+                                <a href="https://creativecommons.org/licenses/by-nd/2.5/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 2.5"/>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 3.0'">
@@ -1402,6 +1437,11 @@
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 2.0"/>
                                 </a>
                         </xsl:when>
+			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 2.5'">
+                                <a href="https://creativecommons.org/licenses/by-nc-nd/2.5/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 2.5"/>
+                                </a>
+                        </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 3.0'">
                                 <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 3.0"/>
@@ -1420,6 +1460,11 @@
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 2.0'">
                                 <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">
                                 <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 2.0"/>
+                                </a>
+                        </xsl:when>
+			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 2.5'">
+                                <a href="https://creativecommons.org/licenses/by-nc-sa/2.5/">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 2.5"/>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 3.0'">

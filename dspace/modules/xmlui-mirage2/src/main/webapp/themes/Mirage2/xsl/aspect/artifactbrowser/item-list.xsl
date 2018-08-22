@@ -344,7 +344,7 @@
                                 <xsl:text> </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']" />
                             </xsl:if>
 			    <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
-                                <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']" />
+                                <xsl:text>.</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']" />
                             </xsl:if>
 			     <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
                                 <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']" />

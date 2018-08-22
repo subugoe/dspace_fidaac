@@ -2521,8 +2521,9 @@
   <message key="xmlui.dri2xhtml.structural.copyright-link">Bildnachweise</message>
   <message key="xmlui.aboutus.head">About Us</message>
   <message key="xmlui.help.head">Hilfe</message>
-  <message key="xmlui.rights.head">Lizenz für die Nutzung von Dokumenten in The Stacks (The Stacks-Lizenz)</message>
+  <message key="xmlui.rights.head">Nutzungsbedingungen</message>
   <message key="xmlui.rights.text">
+  <h3>Lizenz für die Nutzung von Dokumenten in The Stacks (The Stacks-Lizenz)</h3>
   <p>Nutzerinnen und Nutzer von The Stacks sind berechtigt, Dokumente nach Maßgabe des Urhebergesetzes unentgeltlich zu nutzen, insbesondere, das Dokument zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern und in kleiner Anzahl zu drucken (§§ 53, 60c, 60d UrhG). </p>
   <p>Darüber hinaus können für einzelne Dokumenten weitere Rechte (z.B. Creative Commons-Lizenzen) gelten. Die jeweilige Lizenz ist dem Dokument zugeordnet und auf der dazugehörigen Download-Seite deutlich gekennzeichnet. Der Lizenztext ist dort verlinkt und kann zu Informationszwecken aufgerufen werden. </p>
   <h3>Rechteeinräumung für das Publizieren in The Stacks</h3>
@@ -3034,5 +3035,6 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 </div>
 </message>
 
+<message key="xmlui.mirage2.itemSummaryView.Subjects">Fachlicher Schwerpunkt</message>
 
 </catalogue>
