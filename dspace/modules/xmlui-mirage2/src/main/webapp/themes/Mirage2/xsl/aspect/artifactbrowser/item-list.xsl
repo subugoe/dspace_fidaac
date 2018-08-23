@@ -193,10 +193,17 @@
                         <xsl:when test="dim:field[@element='title']">
                             <xsl:text>&quot;</xsl:text><xsl:value-of select="dim:field[@element='title'][1]/node()"/>
                                 <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
-                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)],  string-length(dim:field[@element='title'][not(@qualifier)])) != '.'">
+                                <xsl:text>:</xsl:text>
                                 </xsl:if>
-			<xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:text>.</xsl:text></xsl:if><xsl:text>&quot; </xsl:text>
-                        </xsl:when>
+                                <xsl:text> </xsl:text>
+
+				<xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                </xsl:if>
+				<xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:if test="not(dim:field[@element='title'][@qualifier='alternative'])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '?' and substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '!' and substring(dim:field[@element='title'][@qualifier='alternative'],  string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><xsl:if test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:text></xsl:if>
+                                </xsl:if>
+                        <xsl:text>&quot; </xsl:text></xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                         </xsl:otherwise>
@@ -222,7 +229,12 @@
                         <xsl:when test="dim:field[@element='title']">
                             <xsl:value-of select="dim:field[@element='title'][1]/node()"/>
                                 <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
-                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)],  string-length(dim:field[@element='title'][not(@qualifier)])) != '.'">
+                                <xsl:text>:</xsl:text>
+                                </xsl:if>
+                                <xsl:text> </xsl:text>
+
+				<xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
                                 </xsl:if>
                         <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:text>. </xsl:text></xsl:if>
                         </xsl:when>
@@ -250,10 +262,17 @@
                         <xsl:when test="dim:field[@element='title']">
                             <xsl:text>&quot;</xsl:text><xsl:value-of select="dim:field[@element='title'][1]/node()"/>
                                 <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
-                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)],  string-length(dim:field[@element='title'][not(@qualifier)])) != '.'">
+                                <xsl:text>:</xsl:text>
                                 </xsl:if>
-                        <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:text>.</xsl:text></xsl:if><xsl:text>&quot; </xsl:text>
-                        </xsl:when>
+                                <xsl:text> </xsl:text>
+
+				<xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                </xsl:if>
+				<xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:if test="not(dim:field[@element='title'][@qualifier='alternative'])"><xsl:text>. </xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '?' and substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '!' and substring(dim:field[@element='title'][@qualifier='alternative'],  string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><xsl:if test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>. </xsl:text></xsl:if>
+                                </xsl:if>
+                        <xsl:text>&quot; </xsl:text></xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                         </xsl:otherwise>
@@ -278,9 +297,15 @@
                         <xsl:when test="dim:field[@element='title']">
                             <xsl:value-of select="dim:field[@element='title'][1]/node()"/>
                                 <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
-                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)],  string-length(dim:field[@element='title'][not(@qualifier)])) != '.'">
+                                <xsl:text>:</xsl:text>
                                 </xsl:if>
-                        <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:text>. </xsl:text></xsl:if>
+                                <xsl:text> </xsl:text>
+				<xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                </xsl:if>
+				<xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:if test="not(dim:field[@element='title'][@qualifier='alternative'])"><xsl:text>. </xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '?' and substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '!' and substring(dim:field[@element='title'][@qualifier='alternative'],  string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><xsl:if test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>. </xsl:text></xsl:if>
+                                </xsl:if>
 			</xsl:when>
                         <xsl:otherwise>
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
