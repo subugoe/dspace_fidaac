@@ -587,8 +587,8 @@
                                 <xsl:text> </xsl:text>
                                 <xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
                                 </xsl:if>
-				<xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:if test="not(dim:field[@element='title'][@qualifier='alternative'])"><xsl:text>. </xsl:text></xsl:if></xsl:if>
-                                <xsl:if test="substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '?' and substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '!' and substring(dim:field[@element='title'][@qualifier='alternative'],  string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><xsl:if test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>. </xsl:text></xsl:if>
+				<xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:if test="not(dim:field[@element='title'][@qualifier='alternative'])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '?' and substring(dim:field[@element='title'][@qualifier='alternative'], string-length(dim:field[@element='title'][@qualifier='alternative'])) != '!' and substring(dim:field[@element='title'][@qualifier='alternative'],  string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><xsl:if test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:text></xsl:if>
                                 </xsl:if>
 				<xsl:text>&quot; </xsl:text></xsl:when>
                                 <xsl:otherwise>
@@ -644,6 +644,7 @@
                 <xsl:call-template name="itemSummaryView-DIM-descriptionSponsor"/>-->
                 <xsl:call-template name="itemSummaryView-DIM-URI"/>
                 <xsl:call-template name="itemSummaryView-DIM-DOI"/>
+		<xsl:call-template name="itemSummaryView-DIM-relDOI"/>
 
                 <span class="spacer">&#160;</span>
                 <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
@@ -864,6 +865,22 @@
             </div>
         </xsl:if>
     </xsl:template>
+    <xsl:template name="itemSummaryView-DIM-relDOI">
+       <xsl:if test="dim:field[@element='relation' and @qualifier='doi' and descendant::text()]">
+
+                <div class="simple-item-view-uri item-page-field-wrapper table">
+                <span>
+                     <i18n:text>xmlui.dri2xhtml.METS-1.0.relationDOI</i18n:text>
+                        <a>
+                        <xsl:attribute name="href">
+                                <xsl:copy-of select="concat('http://dx.doi.org/', dim:field[@element='relation'][@qualifier='doi'][1]/node())"/>
+                        </xsl:attribute>
+                        <xsl:copy-of select="dim:field[@element='relation'][@qualifier='doi'][1]/node()"/>
+                        </a>
+                </span>
+            </div>
+        </xsl:if>
+    </xsl:template>
     <xsl:template name="itemSummaryView-DIM-DOI">
        <xsl:if test="dim:field[@element='identifier' and @qualifier='doi' and descendant::text()]">
 
@@ -918,7 +935,7 @@
 	 <xsl:template name="itemSummaryView-DIM-ispartofseries">
                 <xsl:if test="dim:field[@element='relation' and @qualifier='ispartofseries']">
                         <xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartofseries']">
-                                <xsl:copy-of select="./node()"/>
+                                <xsl:copy-of select="substring-before(./node(), ';')"/><xsl:copy-of select="substring-after(./node(), ';')"/>
                         </xsl:for-each>
                 </xsl:if>
         </xsl:template>

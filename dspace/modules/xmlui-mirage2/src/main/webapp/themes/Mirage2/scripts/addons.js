@@ -13,6 +13,9 @@
 	     if ($(this).text() == "americanstudies") {
                 $(this).text("American Studies");
             }
+	 if ($(this).text() == "americanstudies&nbsp;×") {
+                $(this).text("American Studies");
+            }
 	 if ($(this).text() == "politicalscience") {
                $(this).text("Politics");
             }
@@ -29,7 +32,7 @@
                $(this).text("Literary Studies");
             }
          if ($(this).text() == "mediastudies") {
-                $(this).text("Film &amp; Media Studies");
+                $(this).text("Film & Media Studies");
             }
          if ($(this).text() == "socialscience") {
                $(this).text("Social Sciences");
@@ -65,6 +68,9 @@
              if ($(this).text() == "americanstudies") {
                 $(this).text("Amerikastudien");
             }
+	 if ($(this).text() == "americanstudies&nbsp;×") {
+                $(this).text("Amerikastudien");
+            }
          if ($(this).text() == "politicalscience") {
                $(this).text("Politikwissenschaften");
             }
@@ -81,7 +87,7 @@
                $(this).text("Literaturwissenschaften");
             }
          if ($(this).text() == "mediastudies") {
-                $(this).text("Film- &amp; Medienwissenschaften");
+                $(this).text("Film- & Medienwissenschaften");
             }
          if ($(this).text() == "socialscience") {
                $(this).text("Sozialwissenschaften");

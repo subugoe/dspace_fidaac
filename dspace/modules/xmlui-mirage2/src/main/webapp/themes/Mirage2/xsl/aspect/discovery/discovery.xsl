@@ -288,7 +288,7 @@
                         </xsl:choose>
                     </xsl:attribute>
                      <span class="artifact-title"><i>
-                        <xsl:choose>
+<!--                        <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
                             </xsl:when>
@@ -301,7 +301,33 @@
                                 <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-			<xsl:text>.</xsl:text>
+			<xsl:text>.</xsl:text>-->
+			<xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                                                <xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>:</xsl:text>
+                                </xsl:if>
+                                <xsl:text> </xsl:text>
+
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'"><xsl:if test="not(dri:list[@n=(concat($handle, ':dc.title.alternative'))])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '.'"><xsl:if test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]"><xsl:text>.</xsl:text></xsl:if>
+                                </xsl:if>
+                            </xsl:when>
+                                <xsl:otherwise>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                </xsl:otherwise>
+                        </xsl:choose>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -432,7 +458,7 @@
                         </xsl:choose>
                     </xsl:attribute>
                     <span class="artifact-title"><i>
-                        <xsl:choose>
+<!--                        <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
                             </xsl:when>
@@ -445,7 +471,33 @@
                                 <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-			<xsl:text>.</xsl:text>
+			<xsl:text>.</xsl:text>-->
+			<xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
+                               <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                                                <xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>:</xsl:text>
+                                </xsl:if>
+                                <xsl:text> </xsl:text>
+
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'"><xsl:if test="not(dri:list[@n=(concat($handle, ':dc.title.alternative'))])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '.'"><xsl:if test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]"><xsl:text>.</xsl:text></xsl:if>
+                                </xsl:if>
+                            </xsl:when>
+                                <xsl:otherwise>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                </xsl:otherwise>
+                        </xsl:choose>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -470,7 +522,7 @@
                  </xsl:choose>
 		  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]">
-                                <xsl:text>. </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item"/>
+                                <xsl:text>. </xsl:text><xsl:value-of select="substring-before(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/><xsl:value-of select="substring-after(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/>
                             </xsl:when>
                  </xsl:choose>
 
@@ -612,7 +664,7 @@
                         </xsl:choose>
                     </xsl:attribute>
                     <span class="artifact-title">
-                        <xsl:choose>
+<!--                        <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:text>&quot;</xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
                             </xsl:when>
@@ -625,7 +677,34 @@
                                 <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-                        <xsl:text>.&quot;</xsl:text>
+                        <xsl:text>.&quot;</xsl:text>-->
+			<xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
+                                <xsl:text>&quot;</xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                                                <xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>:</xsl:text>
+                                </xsl:if>
+                                <xsl:text> </xsl:text>
+
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'"><xsl:if test="not(dri:list[@n=(concat($handle, ':dc.title.alternative'))])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '.'"><xsl:if test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]"><xsl:text>.</xsl:text></xsl:if>
+                                </xsl:if>
+                            </xsl:when>
+                                <xsl:otherwise>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:text>&quot; </xsl:text>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -848,7 +927,9 @@
                                 </xsl:if>
                             </xsl:when>
 				<xsl:otherwise>
+				<xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
 				<xsl:text>.</xsl:text>
+				</xsl:if>
 				</xsl:otherwise>
                         </xsl:choose>
 			<xsl:text>&quot; </xsl:text>
@@ -1039,7 +1120,7 @@
                         </xsl:choose>
                     </xsl:attribute>
                     <span class="artifact-title">
-                        <xsl:choose>
+<!--                        <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                <xsl:text>&quot;</xsl:text> <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
                             </xsl:when>
@@ -1052,7 +1133,34 @@
                                 <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/><xsl:text>.</xsl:text>
                             </xsl:when>
                         </xsl:choose>
-			<xsl:text>.&quot;</xsl:text>
+			<xsl:text>.&quot;</xsl:text>-->
+			<xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
+                                <xsl:text>&quot;</xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                                                <xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>:</xsl:text>
+                                </xsl:if>
+                                <xsl:text> </xsl:text>
+
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'"><xsl:if test="not(dri:list[@n=(concat($handle, ':dc.title.alternative'))])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '.'"><xsl:if test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]"><xsl:text>.</xsl:text></xsl:if>
+                                </xsl:if>
+                            </xsl:when>
+                                <xsl:otherwise>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:text>&quot; </xsl:text>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -1209,7 +1317,7 @@
                         </xsl:choose>
                     </xsl:attribute>
                      <span class="artifact-title"><i>
-                        <xsl:choose>
+<!--                        <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
                             </xsl:when>
@@ -1222,7 +1330,33 @@
                                 <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-                        <xsl:text>.</xsl:text>
+                        <xsl:text>.</xsl:text>-->
+			<xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                                                <xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>:</xsl:text>
+                                </xsl:if>
+                                <xsl:text> </xsl:text>
+
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'"><xsl:if test="not(dri:list[@n=(concat($handle, ':dc.title.alternative'))])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '.'"><xsl:if test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]"><xsl:text>.</xsl:text></xsl:if>
+                                </xsl:if>
+                            </xsl:when>
+                                <xsl:otherwise>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                </xsl:otherwise>
+                        </xsl:choose>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
@@ -1321,7 +1455,7 @@
                         </xsl:choose>
                     </xsl:attribute>
                      <span class="artifact-title"><i>
-                        <xsl:choose>
+<!--                        <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
                             </xsl:when>
@@ -1334,7 +1468,33 @@
                                 <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
                             </xsl:when>
                         </xsl:choose>
-                        <xsl:text>.</xsl:text>
+                        <xsl:text>.</xsl:text>-->
+			<xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                                                <xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]">
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>:</xsl:text>
+                                </xsl:if>
+                                <xsl:text> </xsl:text>
+
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title.alternative'))]/dri:item"/>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'"><xsl:if test="not(dri:list[@n=(concat($handle, ':dc.title.alternative'))])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title.alternative'))], string-length(dri:list[@n=(concat($handle, ':dc.title.alternative'))])) != '.'"><xsl:if test="dri:list[@n=(concat($handle, ':dc.title.alternative'))]"><xsl:text>.</xsl:text></xsl:if>
+                                </xsl:if>
+                            </xsl:when>
+                                <xsl:otherwise>
+                                <xsl:if test="substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '?' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '!' and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n=(concat($handle, ':dc.title'))])) != '.'">
+                                <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                </xsl:otherwise>
+                        </xsl:choose>
                         <!-- Generate COinS with empty content per spec but force Cocoon to not create a minified tag  -->
                         <span class="Z3988">
                             <xsl:attribute name="title">
