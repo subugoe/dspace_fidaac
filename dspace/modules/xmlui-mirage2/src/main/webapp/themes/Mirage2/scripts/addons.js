@@ -13,7 +13,7 @@
 	     if ($(this).text() == "americanstudies") {
                 $(this).text("American Studies");
             }
-	 if ($(this).text() == "americanstudies&nbsp;×") {
+	 if ($(this).text() == "americanstudies ×") {
                 $(this).text("American Studies");
             }
 	 if ($(this).text() == "politicalscience") {

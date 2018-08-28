@@ -396,22 +396,27 @@
                             </xsl:if>
         </xsl:when>
 	 <xsl:when test="dim:field[@element='type'] = 'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall' or dim:field[@element='type'] = 'conferencePaper'">
-                        <!--<xsl:if test="dim:field[@element='relation'][@qualifier='event']">
-                               <xsl:value-of select="dim:field[@element='relation'][@qualifier='event']" /><xsl:text>. </xsl:text>
-                        </xsl:if>-->
-			 <xsl:if test="dim:field[@element='relation'][@qualifier='eventLocation']">
+			<xsl:if test="dim:field[@element='relation'][@qualifier='eventLocation']">
                                <xsl:value-of select="dim:field[@element='relation'][@qualifier='eventLocation']" /><xsl:text>, </xsl:text>
                         </xsl:if>
-			 <xsl:if test="dim:field[@element='relation'][@qualifier='eventStart']">
+			 <!--<xsl:if test="dim:field[@element='relation'][@qualifier='eventStart']">
                                <xsl:value-of select="dim:field[@element='relation'][@qualifier='eventStart']" />
                         </xsl:if>
 			 <xsl:if test="dim:field[@element='relation'][@qualifier='eventEnd']">
                                <xsl:text> - </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventEnd']" /><xsl:text>. </xsl:text>
-                        </xsl:if>
+                        </xsl:if>-->
+			<xsl:if test="dim:field[@element='relation'][@qualifier='eventStart']">
+                        <xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventStart']/node(),9,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventStart']/node(),6,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventStart']/node(),1,4)"/>
+	                </xsl:if>
+        	        <xsl:if test="dim:field[@element='relation'][@qualifier='eventEnd']">
+                        <xsl:text> - </xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventEnd']/node(),9,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventEnd']/node(),6,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventEnd']/node(),1,4)"/>
+                	</xsl:if>
+                	<xsl:text>. </xsl:text>
 			 <xsl:if test="dim:field[@element='contributor'][@qualifier='organizedBy']">
                         <i18n:text>xmlui.dri2xhtml.organizedBy</i18n:text>
                         <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organizedBy']">
-                                     <xsl:apply-templates select="."/>
+				<xsl:copy-of select="substring-after(., ', ')" /><xsl:text> </xsl:text>
+                                    <xsl:copy-of select="substring-before(., ',')" />
                                     <xsl:if test="count(following-sibling::dri:item) != 0">
                                         <xsl:text>; </xsl:text>
                                     </xsl:if>
@@ -456,9 +461,11 @@
                                 <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']" /><xsl:text>&#150;</xsl:text>
                             </xsl:if>
                             <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
-                                <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']" /><xsl:text>.</xsl:text>
+                                <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']" /><xsl:text>. </xsl:text>
                             </xsl:if>
-
+				<xsl:if test="dim:field[@element='relation'][@qualifier='ispartofseries']">
+                                <xsl:value-of select="substring-before(dim:field[@element='relation'][@qualifier='ispartofseries'], ';')" /><xsl:value-of select="substring-after(dim:field[@element='relation'][@qualifier='ispartofseries'], ';')" />
+                            </xsl:if>
         </xsl:when>
 
 </xsl:choose>

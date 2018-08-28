@@ -1218,6 +1218,9 @@
                             <xsl:if test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]/dri:item"/><xsl:text>.</xsl:text>
                             </xsl:if>
+			<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]">
+                                <xsl:text> </xsl:text><xsl:value-of select="substring-before(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/><xsl:value-of select="substring-after(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/>
+                            </xsl:if>
 
                  <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></div>
 
@@ -1513,16 +1516,24 @@
 	 <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventLocation'))]">
                         <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventLocation'))]/dri:item"/><xsl:text>, </xsl:text>
         </xsl:if>
-        <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]">
+        <!--<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]">
 			<xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]/dri:item"/>
         </xsl:if>
 	<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]">
-                        <xsl:text> - </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]/dri:item"/><xsl:text>. </xsl:text>
+                        <xsl:text> - </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]/dri:item"/>
+        </xsl:if>-->
+	<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]">
+        	<xsl:copy-of select="substring(dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]/dri:item,9,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]/dri:item,6,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]/dri:item,1,4)"/>
         </xsl:if>
+        <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]">
+                <xsl:text> - </xsl:text><xsl:copy-of select="substring(dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]/dri:item,9,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]/dri:item,6,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dri:list[@n=(concat($handle, ':dc.relation.eventEnd'))]/dri:item,1,4)"/>
+        </xsl:if>
+	<xsl:text>. </xsl:text>
 	<xsl:if test="dri:list[@n=(concat($handle, ':dc.contributor.organizedBy'))]">
                         <i18n:text>xmlui.dri2xhtml.organizedBy</i18n:text>
                         <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.contributor.organizedBy'))]/dri:item">
-                                     <xsl:apply-templates select="."/>
+				<xsl:copy-of select="substring-after(., ', ')" /><xsl:text> </xsl:text>
+                                    <xsl:copy-of select="substring-before(., ',')" />
                                     <xsl:if test="count(following-sibling::dri:item) != 0">
                                         <xsl:text>; </xsl:text>
                                     </xsl:if>

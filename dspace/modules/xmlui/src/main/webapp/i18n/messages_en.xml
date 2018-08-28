@@ -3029,7 +3029,7 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 </div>
 </message>
 
-<message key="xmlui.mirage2.itemSummaryView.Subjects">Subject</message>
+<message key="xmlui.mirage2.itemSummaryView.Subjects">Subjects: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.relationDOI">DOI of Anthology: </message>
 
 </catalogue>

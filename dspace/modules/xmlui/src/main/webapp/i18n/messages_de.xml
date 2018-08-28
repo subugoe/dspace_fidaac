@@ -2943,7 +2943,7 @@ Zustimmung verweigern: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminH
 
 <message key="xmlui.dri2xhtml.METS-1.0.citation-link">Zitierfähiger Link: </message>
 <message key="xmlui.series.periodicals">Zeitschriften</message>
-<message key="xmlui.dri2xhtml.organizedBy">Organisiert durch </message>
+<message key="xmlui.dri2xhtml.organizedBy">Organisiert von </message>
  <message key="xmlui.dri2xhtml.METS-1.0.reviewof"> Rezension von </message>
   <message key="xmlui.dri2xhtml.METS-1.0.reviewofby">, von </message>
 <message key="xmlui.dri2xhtml.METS-1.0.lasteditor"> und </message>
@@ -3035,7 +3035,7 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 </div>
 </message>
 
-<message key="xmlui.mirage2.itemSummaryView.Subjects">Fachlicher Schwerpunkt</message>
+<message key="xmlui.mirage2.itemSummaryView.Subjects">Fachliche Schwerpunkte: </message>
 
 <message key="xmlui.dri2xhtml.METS-1.0.relationDOI">DOI des Sammelwerks: </message>
 

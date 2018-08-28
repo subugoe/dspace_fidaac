@@ -307,7 +307,7 @@
                 <xsl:call-template name="itemSummaryView-show-full"/>
                 </xsl:if></td></tr></table>
                 <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-                <xsl:call-template name="itemSummaryView-collections"/>
+                <!--<xsl:call-template name="itemSummaryView-collections"/>-->
 		<xsl:call-template name="itemSummaryView-subjects"/>
 		<!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
@@ -359,15 +359,18 @@
                         <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:text>. </xsl:text></xsl:if><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventLocation']/node()"/><xsl:text>, </xsl:text>
                 </xsl:if>
 		<xsl:if test="dim:field[@element='relation'][@qualifier='eventStart']">
-                        <xsl:value-of select="dim:field[@element='relation'][@qualifier='eventStart']/node()"/>
+                        <xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventStart']/node(),9,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventStart']/node(),6,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventStart']/node(),1,4)"/>
                 </xsl:if>
 		<xsl:if test="dim:field[@element='relation'][@qualifier='eventEnd']">
-                        <xsl:text> - </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventEnd']/node()"/><xsl:text>. </xsl:text>
+                        <xsl:text> - </xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventEnd']/node(),9,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventEnd']/node(),6,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventEnd']/node(),1,4)"/>
                 </xsl:if>
+		<xsl:text>. </xsl:text>
 		<xsl:if test="dim:field[@element='contributor'][@qualifier='organizedBy']">
                         <i18n:text>xmlui.dri2xhtml.organizedBy</i18n:text>
                         <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organizedBy']">
-                                     <xsl:apply-templates select="."/>
+                                     <!--<xsl:apply-templates select="."/>-->
+				    <xsl:copy-of select="substring-after(., ', ')" /><xsl:text> </xsl:text>
+				    <xsl:copy-of select="substring-before(., ',')" />
                                     <xsl:if test="count(following-sibling::dri:item) != 0">
                                         <xsl:text>; </xsl:text>
                                     </xsl:if>
@@ -631,7 +634,7 @@
                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
                          <xsl:text>&#150;</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>. </xsl:text>
                 </xsl:if>
-
+		<xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
 		
                 </div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></div>
@@ -682,7 +685,7 @@
                 <div class="col-sm-8">
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                     <xsl:call-template name="itemSummaryView-DIM-URI"/>
-                    <xsl:call-template name="itemSummaryView-collections"/>
+                    <!--<xsl:call-template name="itemSummaryView-collections"/>-->
 		<xsl:call-template name="itemSummaryView-subjects"/>
 		<!--     <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
