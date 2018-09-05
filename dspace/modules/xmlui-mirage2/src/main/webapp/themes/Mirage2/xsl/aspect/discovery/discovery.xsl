@@ -522,7 +522,14 @@
                  </xsl:choose>
 		  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]">
-                                <xsl:text>. </xsl:text><xsl:value-of select="substring-before(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/><xsl:value-of select="substring-after(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/>
+                                <xsl:text>. </xsl:text>
+				<xsl:if test="contains(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')">
+				<xsl:value-of select="substring-before(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/><xsl:value-of select="substring-after(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/>
+				</xsl:if>
+				 <xsl:if test="not(contains(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';'))">
+                                <xsl:value-of select="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item" />
+                                </xsl:if>
+				<xsl:text>.</xsl:text>
                             </xsl:when>
                  </xsl:choose>
 
@@ -757,7 +764,7 @@
                  </xsl:choose>
                   <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>&#150;</xsl:text>
+                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>&#150;</xsl:text>
                             </xsl:when>
                  </xsl:choose>
                 <xsl:choose>
@@ -967,12 +974,12 @@
                  </xsl:choose>
 		<xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.article'))]">
-                                <xsl:text>. </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.article'))]/dri:item"/>
+                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.article'))]/dri:item"/>
                             </xsl:when>
                  </xsl:choose>
                   <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
-                                <xsl:text>, </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>&#150;</xsl:text>
+                                <xsl:text>: </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]/dri:item"/><xsl:text>&#150;</xsl:text>
                             </xsl:when>
                  </xsl:choose>
 		<xsl:choose>
@@ -1219,7 +1226,14 @@
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.lastPage'))]/dri:item"/><xsl:text>.</xsl:text>
                             </xsl:if>
 			<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]">
-                                <xsl:text> </xsl:text><xsl:value-of select="substring-before(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/><xsl:value-of select="substring-after(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/>
+                                <xsl:text> </xsl:text>
+				<xsl:if test="contains(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')">
+				<xsl:value-of select="substring-before(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/><xsl:value-of select="substring-after(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';')"/>
+				</xsl:if>
+                                 <xsl:if test="not(contains(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item, ';'))">
+                                <xsl:value-of select="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item" />
+                                </xsl:if>
+				<xsl:text>.</xsl:text>
                             </xsl:if>
 
                  <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></div>

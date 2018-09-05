@@ -335,7 +335,15 @@
 				<xsl:value-of select="dim:field[@element='publisher']" /><xsl:text>. </xsl:text>
                             </xsl:if>
                             <xsl:if test="dim:field[@element='relation'][@qualifier='ispartofseries']">
-				<xsl:value-of select="substring-before(dim:field[@element='relation'][@qualifier='ispartofseries'], ';')" /><xsl:value-of select="substring-after(dim:field[@element='relation'][@qualifier='ispartofseries'], ';')" />
+				<xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartofseries']">
+                                <xsl:if test="contains(./node(), ';')">
+                                <xsl:copy-of select="substring-before(./node(), ';')"/><xsl:copy-of select="substring-after(./node(), ';')"/>
+                                </xsl:if>
+                                <xsl:if test="not(contains(./node(), ';'))">
+                                <xsl:copy-of select="./node()" />
+                                </xsl:if>
+                        </xsl:for-each>
+			<xsl:text>.</xsl:text>
                             </xsl:if>
 	</xsl:when>
 	<xsl:when test="dim:field[@element='type'] = 'anthology'">
@@ -375,7 +383,7 @@
                                 <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']" />
                             </xsl:if>
                             <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
-                                <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']" /><xsl:text>&#150;</xsl:text>
+                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']" /><xsl:text>&#150;</xsl:text>
                             </xsl:if>
                      	    <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
                                 <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']" /><xsl:text>.</xsl:text>
@@ -464,7 +472,15 @@
                                 <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']" /><xsl:text>. </xsl:text>
                             </xsl:if>
 				<xsl:if test="dim:field[@element='relation'][@qualifier='ispartofseries']">
-                                <xsl:value-of select="substring-before(dim:field[@element='relation'][@qualifier='ispartofseries'], ';')" /><xsl:value-of select="substring-after(dim:field[@element='relation'][@qualifier='ispartofseries'], ';')" />
+				<xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartofseries']">
+                                <xsl:if test="contains(./node(), ';')">
+                                <xsl:copy-of select="substring-before(./node(), ';')"/><xsl:copy-of select="substring-after(./node(), ';')"/>
+                                </xsl:if>
+                                <xsl:if test="not(contains(./node(), ';'))">
+                                <xsl:copy-of select="./node()" />
+                                </xsl:if>
+                        	</xsl:for-each>
+				<xsl:text>.</xsl:text>
                             </xsl:if>
         </xsl:when>
 

@@ -273,7 +273,7 @@
                          <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']/node()"/>
                 </xsl:if>
 		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
-                       <xsl:text>, </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
+                       <xsl:text>: </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
                 </xsl:if>
                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
                          <xsl:text>&#150;</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>. </xsl:text>
@@ -938,8 +938,14 @@
 	 <xsl:template name="itemSummaryView-DIM-ispartofseries">
                 <xsl:if test="dim:field[@element='relation' and @qualifier='ispartofseries']">
                         <xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartofseries']">
+				<xsl:if test="contains(./node(), ';')">
                                 <xsl:copy-of select="substring-before(./node(), ';')"/><xsl:copy-of select="substring-after(./node(), ';')"/>
+				</xsl:if>
+				<xsl:if test="not(contains(./node(), ';'))">
+                                <xsl:copy-of select="./node()" />
+                                </xsl:if>
                         </xsl:for-each>
+		<xsl:text>.</xsl:text>
                 </xsl:if>
         </xsl:template>
 
