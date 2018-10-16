@@ -659,7 +659,7 @@
 	<message key="xmlui.Submission.submit.DescribeStep.series_name">Reihe</message>
 	<message key="xmlui.Submission.submit.DescribeStep.report_no">Band</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Lizenz auswählen</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Lizenzen</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Lizenzen (Um die Ordner mit den älteren Versionen zu öffnen, auf die Ordnersymbole klicken.)</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Nach Lizenzen filtern</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filtern</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Bitte warten Sie, der Thesaurus wird geladen.</message>
@@ -2514,12 +2514,47 @@
   <!-- Textanpassungen -->
   <message key="xmlui.footer.text">Entwicklung und Betrieb durch <br /><a href="https://www.sub.uni-goettingen.de/sub-aktuell/">Niedersächsische Saats- und Universitätsbibliothek Göttingen</a></message>  
     
-  <message key="xmlui.dri2xhtml.structural.aboutus-link">Über Uns</message>
+  <message key="xmlui.dri2xhtml.structural.aboutus-link">Über uns</message>
   <message key="xmlui.dri2xhtml.structural.impressum-link">Impressum</message>
   <message key="xmlui.dri2xhtml.structural.privacy-link">Datenschutzerklärung</message>
   <message key="xmlui.dri2xhtml.structural.rights-link">Nutzungsbedingungen</message>
   <message key="xmlui.dri2xhtml.structural.copyright-link">Bildnachweise</message>
-  <message key="xmlui.aboutus.head">About Us</message>
+  <message key="xmlui.aboutus.head">Über uns</message>
+  <message key="xmlui.aboutus.text">
+  <p>The Stacks ist ein interdisziplinäres Open Access Repositorium, das von der <a href="libaac.de">Library of Anglo-American Culture &amp; History</a> für die Veröffentlichung wissenschaftlicher Publikationen aus den Fächern 
+   <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px; margin-bottom: 10px;">
+        <li>Amerikastudien</li>
+        <li>Anglistik</li>
+        <li>Anglophone Literaturen und Kulturen</li>
+        <li>Australien- &amp; Neuseelandstudien</li>
+        <li>Großbritannien- &amp; Irlandstudien</li>
+        <li>Kanadastudien</li>
+   </ul>
+   betrieben wird.
+   </p>
+   <p>In The Stacks können Dokumente von Wissenschaftler*innen dieser Fächer und aller Unterdisziplinen wie Fachdidaktik, Film- &amp; Medienwissenschaften, Geographie, Geschichte, Geschlechterforschung, Kulturwissenschaften, Linguistik, Literaturwissenschaften, Mediävistik, Politikwissenschaften, Postkoloniale Studien, Recht und Sozialwissenschaften publiziert werden.</p>
+   <p>In The Stacks werden
+    <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px; margin-bottom: 10px;">
+        <li>Artikel, Monographien, Rezensionen</li>
+        <li>vollständige Ausgaben und Bände von Zeitschriften und Serien</li>
+   </ul>
+   </p>
+   <p>aufgenommen. Außerdem können Sie
+   <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px; margin-bottom: 10px;">
+        <li>Calls for Papers</li>
+        <li>Konferenzprogramme, Books of Abstracts</li>
+        <li>Vorträge</li>
+        <li>Konferenzberichte</li>
+        <li>Seminarmaterialien (Seminarbeschreibungen, Syllabi)</li>
+   </ul>
+   in The Stacks publizieren und archivieren.
+   </p>
+   <p>Alle hochgeladenen Materialien werden im Open Access verfügbar gemacht, entweder sofort oder nach einer von Ihnen festgelegten Zeitspanne. Sie können Ihrem Dokument zudem eine Creative Commons-Lizenz zuweisen, die Ihren Anforderungen am besten entspricht.</p>
+   <p>Wenn gewünscht, erhalten die hochgeladenen Dokumente einen eindeutigen Digital Object Identifier (DOI), um ihre Referenzierbarkeit zu gewährleisten.</p>
+   <p>Die Library of Anglo-American Culture &amp; History (Library AAC) stellt Literatur, andere Wissensressourcen und Dienste für Wissenschaftler*innen und Studierende in den Fächern Amerikastudien, Anglistik, Anglophone Literaturen und Kulturen, Australien- &amp; Neuseelandstudien, Großbritannien- &amp; Irlandstudien und Kanadastudien zur Verfügung. Zurzeit wird die Library AAC von der Deutschen Forschungsgemeinschaft (DFG) finanziert (<a href="http://www.dfg.de/foerderung/programme/infrastruktur/lis/lis_foerderangebote/fachinformationsdienste_wissenschaft/index.html">'Fachinformationsdienste'</a>).</p>
+   <p>Ziel der Library AAC ist es, mit ihren Diensten den Zugang zu spezialisierter Forschungsliteratur und Fachinformation für alle in Deutschland arbeitenden Wissenschaftler*innen in den oben genannten Fächern zu verbessern. Wir streben danach, unsere Angebote bestmöglich an den Bedürfnissen der Fachgemeinschaft und den Spezifika der betreffenden Disziplinen auszurichten.</p>
+   <p>Lesen Sie mehr über unsere Dienste auf unserer Webseite <a href="https://libaac.de">libaac.de</a>! </p>
+</message>
   <message key="xmlui.help.head">Hilfe</message>
   <message key="xmlui.rights.head">Nutzungsbedingungen</message>
   <message key="xmlui.rights.text">

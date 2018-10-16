@@ -16,6 +16,9 @@
 	 if ($(this).text() == "americanstudies ×") {
                 $(this).text("American Studies");
             }
+	if ($(this).text() == "anglophoneliterature") {
+                $(this).text("Anglophone Literatures and Cultures");
+            }
 	 if ($(this).text() == "politicalscience") {
                $(this).text("Politics");
             }
@@ -25,6 +28,9 @@
          if ($(this).text() == "englishstudies") {
                $(this).text("English");
 	}
+	if ($(this).text() == "irishstudies") {
+               $(this).text("Irish Studies");
+        }
 	    if ($(this).text() == "linguistics") {
                 $(this).text("Linguistics");
             }
@@ -71,6 +77,9 @@
 	 if ($(this).text() == "americanstudies&nbsp;×") {
                 $(this).text("Amerikastudien");
             }
+	 if ($(this).text() == "anglophoneliterature") {
+                $(this).text("Anglophone Literaturen und Kulturen");
+            }
          if ($(this).text() == "politicalscience") {
                $(this).text("Politikwissenschaften");
             }
@@ -79,6 +88,9 @@
             }
          if ($(this).text() == "englishstudies") {
                $(this).text("Anglistik");
+        }
+	if ($(this).text() == "irishstudies") {
+               $(this).text("Irlandstudien");
         }
             if ($(this).text() == "linguistics") {
                 $(this).text("Sprachwissenschaften");
