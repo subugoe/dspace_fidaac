@@ -127,6 +127,7 @@
                     <!-- Javascript at the bottom for fast page loading -->
                     <xsl:call-template name="addJavascript"/>
 		<script src="{concat($theme-path, 'scripts/shariff.min.js')}"></script>
+		<script src="{concat($theme-path, 'scripts/addons.js')}"></script>
                 </body>
                 <xsl:text disable-output-escaping="yes">&lt;/html&gt;</xsl:text>
 

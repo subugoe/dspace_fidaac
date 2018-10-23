@@ -111,7 +111,7 @@
                $(this).text("Geschichte");
             }
          if ($(this).text() == "britishstudies") {
-                $(this).text("Großbritannienstudien");
+                $(this).text("Gro\u00dfbritannienstudien");
             }
          if ($(this).text() == "canadianstudies") {
                $(this).text("Kanadastudien");
@@ -123,7 +123,7 @@
                $(this).text("Jura");
             }
 	if ($(this).text() == "medievalstudies") {
-               $(this).text("Mediävistik");
+               $(this).text("Medi\u00E4vistik");
             }
 
 

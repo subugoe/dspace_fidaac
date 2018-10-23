@@ -1388,6 +1388,10 @@
             </xsl:otherwise>
         </xsl:choose>-->
 		<xsl:choose>
+			<xsl:when test="dim:field[@element='rights'] = 'L::The Stacks License'">
+				<a href="/rights"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-thestacks-license</i18n:text>
+                                </a>
+                        </xsl:when>
 			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 1.0'">
 				<a href="https://creativecommons.org/licenses/by-nc/1.0/">
 				<img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 1.0"/>
