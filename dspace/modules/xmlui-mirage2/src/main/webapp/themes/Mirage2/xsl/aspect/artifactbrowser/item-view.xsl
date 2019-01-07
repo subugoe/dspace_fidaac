@@ -876,7 +876,7 @@
                      <i18n:text>xmlui.dri2xhtml.METS-1.0.relationDOI</i18n:text>
                         <a>
                         <xsl:attribute name="href">
-                                <xsl:copy-of select="concat('http://dx.doi.org/', dim:field[@element='relation'][@qualifier='doi'][1]/node())"/>
+                                <xsl:copy-of select="concat('http://doi.org/', dim:field[@element='relation'][@qualifier='doi'][1]/node())"/>
                         </xsl:attribute>
                         <xsl:copy-of select="dim:field[@element='relation'][@qualifier='doi'][1]/node()"/>
                         </a>
@@ -892,7 +892,7 @@
                      <xsl:text>DOI: </xsl:text>
 			<a>
 			<xsl:attribute name="href">
-				<xsl:copy-of select="concat('http://dx.doi.org/', dim:field[@element='identifier'][@qualifier='doi'][1]/node())"/>
+				<xsl:copy-of select="concat('http://doi.org/', dim:field[@element='identifier'][@qualifier='doi'][1]/node())"/>
                 	</xsl:attribute>
 			<xsl:copy-of select="dim:field[@element='identifier'][@qualifier='doi'][1]/node()"/>
 			</a>
