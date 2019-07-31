@@ -2820,6 +2820,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="xmlui.series.text">
         <ul>
         <li><a href="handle/11858/48/browse?type=series">American Studies Journal</a></li>
+	<li><a href="handle/11858/377/browse?type=series">americana</a></li>
 	</ul>
         <!--<li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
         <li><a href="handle/11858/13">Electronic Journal of the Freiberg Geoscience Department</a></li>
@@ -2935,7 +2936,8 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="courseDescription">Seminarbeschreibung</message>
   <message key="conferenceReport">Tagungsbericht</message>
   <message key="conferenceProg">Konferenzprogramm</message>
-  <message key="conferenceCall">Call for Papers</message>
+  <message key="conferenceCall">Call for Papers (Konferenz)</message>
+  <message key="cfppublication">Call for Papers (Publikation)</message>
   <message key="conferenceBoA">Book of Abstracts</message>
   <message key="review">Rezension</message>
 
@@ -2965,7 +2967,8 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
 <message key="xmlui.dri2xhtml.METS-1.0.dctypesyllabus">Seminarplan</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfreport">Tagungsbericht</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfprog">Konferenzprogramm</message>
-<message key="xmlui.dri2xhtml.METS-1.0.dctypeconfcall">Call for Papers</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypeconfcall">Call for Papers (Konferenz)</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypecfppublication">Call for Papers (Publikation)</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfboa">Book of Abstracts</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfpaper">Conference Paper</message>
  <message key="xmlui.dri2xhtml.METS-1.0.dctypereview">Rezension</message>
