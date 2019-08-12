@@ -950,7 +950,7 @@ dim:field[@element='contributor' and descendant::text()]">
                         <xsl:attribute name="href">
                                 <xsl:copy-of select="concat('https://doi.org/', dim:field[@element='relation'][@qualifier='doi'][1]/node())"/>
                         </xsl:attribute>
-                        <xsl:copy-of select="dim:field[@element='relation'][@qualifier='doi'][1]/node()"/>
+                        <xsl:copy-of select="concat('https://doi.org/', dim:field[@element='relation'][@qualifier='doi'][1]/node())"/>
                         </a>
                 </span>
             </div>
@@ -965,7 +965,7 @@ dim:field[@element='contributor' and descendant::text()]">
 			<xsl:attribute name="href">
 				<xsl:copy-of select="concat('https://doi.org/', dim:field[@element='identifier'][@qualifier='doi'][1]/node())"/>
                 	</xsl:attribute>
-			<xsl:copy-of select="dim:field[@element='identifier'][@qualifier='doi'][1]/node()"/>
+			<xsl:copy-of select="concat('https://doi.org/', dim:field[@element='identifier'][@qualifier='doi'][1]/node())"/>
 			</a>
 		</span>
             </div>
