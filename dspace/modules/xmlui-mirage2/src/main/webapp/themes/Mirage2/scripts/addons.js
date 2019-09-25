@@ -13,6 +13,9 @@
 	     if ($(this).text() == "americanstudies") {
                 $(this).text("American Studies");
             }
+	if ($(this).text() == "australianstudies") {
+                $(this).text("Australian Studies");
+            }
 	 if ($(this).text() == "americanstudies ×") {
                 $(this).text("American Studies");
             }
@@ -74,6 +77,9 @@
              if ($(this).text() == "americanstudies") {
                 $(this).text("Amerikastudien");
             }
+	if ($(this).text() == "australianstudies") {
+                $(this).text("Australienstudien");
+            }
 	 if ($(this).text() == "americanstudies&nbsp;×") {
                 $(this).text("Amerikastudien");
             }
@@ -111,7 +117,7 @@
                $(this).text("Geschichte");
             }
          if ($(this).text() == "britishstudies") {
-                $(this).text("Gro\u00dfbritannienstudien");
+                $(this).text("Großbritannienstudien");
             }
          if ($(this).text() == "canadianstudies") {
                $(this).text("Kanadastudien");
@@ -123,7 +129,7 @@
                $(this).text("Jura");
             }
 	if ($(this).text() == "medievalstudies") {
-               $(this).text("Medi\u00E4vistik");
+               $(this).text("Mediävistik");
             }
 
 
