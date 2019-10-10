@@ -72,10 +72,11 @@
                 <span class="author h4">
                     <small>
 	<xsl:choose>
-		<xsl:when test="dim:field[@element='type'] = 'courseDescription' or dim:field[@element='type'] = 'syllabus' or dim:field[@element='type'] = 
-'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall' 
+
+	               <xsl:when test="dim:field[@element='type'] = 'courseDescription'  or dim:field[@element='type'] =
+'conferenceReport' or dim:field[@element='type'] = 'conferenceProg' or dim:field[@element='type'] = 'conferenceBoA' or dim:field[@element='type'] = 'conferenceCall'
 or dim:field[@element='type'] = 'conferencePaper'">
-			<xsl:if test="dim:field[@element='contributor'][@qualifier='organiser']">
+                        <xsl:if test="dim:field[@element='contributor'][@qualifier='organiser']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organiser']">
                                 <xsl:copy-of select="node()"/>
                                 <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='organiser']) != 0">
@@ -83,7 +84,19 @@ or dim:field[@element='type'] = 'conferencePaper'">
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:if>
-		</xsl:when>
+                </xsl:when>
+				<xsl:when test="dim:field[@element='type'] = 'syllabus'">
+                        <xsl:if test="dim:field[@element='contributor'][@qualifier='lecturer']">
+                            <xsl:for-each select="dim:field[@element='contributor'][@qualifier='lecturer']">
+                                <xsl:copy-of select="node()"/>
+                                <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='lecturer']) != 0">
+                                    <xsl:text>; </xsl:text>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:if>
+                </xsl:when>
+
+
 		<xsl:otherwise>
 			<xsl:choose>
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
@@ -215,8 +228,6 @@ or dim:field[@element='type'] = 'conferencePaper' or dim:field[@element='type'] 
                     <xsl:choose>
                         <xsl:when test="dim:field[@element='title']">
                             <xsl:value-of select="dim:field[@element='title'][1]/node()"/>
-				<xsl:if test="not(contains(dim:field[@element='title'][1]/node(), 'Call for'))"><xsl:text> (Call for Papers)</xsl:text>
-				</xsl:if>
                                 <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
                                 <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != 
 '?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and 
@@ -410,10 +421,10 @@ select="dim:field[@element='relation'][@qualifier='reviewOf']" /></i><i18n:text>
         </xsl:when>
 	<xsl:when test="dim:field[@element='type'] = 'courseDescription' or dim:field[@element='type'] = 'syllabus'">
                             <xsl:if test="dim:field[@element='description'][@qualifier='seminar']">
-                                <xsl:value-of select="dim:field[@element='description'][@qualifier='seminar']" />
+                                <xsl:value-of select="dim:field[@element='description'][@qualifier='seminar']" /><xsl:text>. </xsl:text>
                             </xsl:if>
                             <xsl:if test="dim:field[@element='description'][@qualifier='location']">
-                                <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='description'][@qualifier='location']" />
+                                <xsl:value-of select="dim:field[@element='description'][@qualifier='location']" />
                             </xsl:if>
                             <xsl:if test="dim:field[@element='description'][@qualifier='institution']">
                                 <xsl:text>, </xsl:text><xsl:value-of select="dim:field[@element='description'][@qualifier='institution']" />
