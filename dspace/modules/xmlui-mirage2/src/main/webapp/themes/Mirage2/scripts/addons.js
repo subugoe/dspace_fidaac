@@ -67,6 +67,10 @@
 	if ($(this).text() == "medievalstudies") {
                $(this).text("Medieval Studies");
             }
+	if ($(this).text() == "postcolonial") {
+               $(this).text("Postcolonial Studies");
+            }
+
         });
     }
 
@@ -130,6 +134,9 @@
             }
 	if ($(this).text() == "medievalstudies") {
                $(this).text("Mediävistik");
+            }
+	 if ($(this).text() == "postcolonial") {
+               $(this).text("Postkoloniale Studien");
             }
 
 
