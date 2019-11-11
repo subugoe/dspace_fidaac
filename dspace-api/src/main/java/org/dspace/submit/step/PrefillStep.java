@@ -244,7 +244,7 @@ public class PrefillStep extends AbstractProcessingStep
         	}
         	log.info("nachuml" + url);
 
-		if (url.startsWith("https://data.datacite.org")) 
+		if (url.startsWith("https://data.crosscite.org") || url.startsWith("https://data.crosscite.org")) 
 		{
         		HttpURLConnection conn2 = (HttpURLConnection) new URL(url).openConnection();
         		conn2.setRequestProperty("Accept", "application/vnd.datacite.datacite+xml");
