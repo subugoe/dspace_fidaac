@@ -461,8 +461,8 @@ select="substring(dim:field[@element='relation'][@qualifier='eventEnd']/node(),1
                         <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organizedBy']">
 				<xsl:copy-of select="substring-after(., ', ')" /><xsl:text> </xsl:text>
                                     <xsl:copy-of select="substring-before(., ',')" />
-                                    <xsl:if test="count(following-sibling::dri:item) != 0">
-                                        <xsl:text>; </xsl:text>
+                                    <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='organizedBy']) != 0">
+                                        <xsl:text>, </xsl:text>
                                     </xsl:if>
                         </xsl:for-each>
                         <xsl:text>. </xsl:text>

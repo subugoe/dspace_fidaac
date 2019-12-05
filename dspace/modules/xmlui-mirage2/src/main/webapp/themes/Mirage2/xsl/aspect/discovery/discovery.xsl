@@ -1539,7 +1539,7 @@ substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n
                                 <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.contributor.organiser'))]/dri:item">
                                      <xsl:apply-templates select="."/>
                                     <xsl:if test="count(following-sibling::dri:item) != 0">
-                                        <xsl:text>; </xsl:text>
+                                        <xsl:text>, </xsl:text>
                                     </xsl:if>
                                 </xsl:for-each>
                             </xsl:when>

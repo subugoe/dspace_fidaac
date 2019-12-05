@@ -348,7 +348,7 @@ substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[
                         <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '?' and 
 substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and 
 substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:text>. 
-</xsl:text></xsl:if><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventLocation']/node()"/><xsl:text>, </xsl:text>
+</xsl:text></xsl:if><br/><xsl:value-of select="dim:field[@element='relation'][@qualifier='eventLocation']/node()"/><xsl:text>, </xsl:text>
                 </xsl:if>
 		<xsl:if test="dim:field[@element='relation'][@qualifier='eventStart']">
                         <xsl:copy-of select="substring(dim:field[@element='relation'][@qualifier='eventStart']/node(),9,2)"/><xsl:text>.</xsl:text><xsl:copy-of 
@@ -368,8 +368,8 @@ select="substring(dim:field[@element='relation'][@qualifier='eventEnd']/node(),1
                                      <!--<xsl:apply-templates select="."/>-->
 				    <xsl:copy-of select="substring-after(., ', ')" /><xsl:text> </xsl:text>
 				    <xsl:copy-of select="substring-before(., ',')" />
-                                    <xsl:if test="count(following-sibling::dri:item) != 0">
-                                        <xsl:text>; </xsl:text>
+                                    <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='organizedBy']) != 0">
+                                        <xsl:text>, </xsl:text>
                                     </xsl:if>
                         </xsl:for-each>
                         <xsl:text>. </xsl:text>

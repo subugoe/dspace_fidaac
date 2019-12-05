@@ -976,6 +976,10 @@
 
     <!--The Language Selection-->
     <xsl:template name="languageSelection">
+	<xsl:variable name="curRequestURI">
+            <xsl:value-of select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='curRequestURI'],/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'])"/>
+        </xsl:variable>
+
         <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
             <li id="ds-language-selection" class="dropdown">
                 <xsl:variable name="active-locale" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
@@ -999,8 +1003,10 @@
                             </xsl:if>
                             <a>
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="$current-uri"/>
-                                    <xsl:text>?locale-attribute=</xsl:text>
+                       <!--             <xsl:value-of select="$current-uri"/>
+                                    <xsl:text>?locale-attribute=</xsl:text>-->
+					<xsl:value-of select="$curRequestURI"/>
+                                    <xsl:call-template name="getLanguageURL"/>
                                     <xsl:value-of select="$locale"/>
                                 </xsl:attribute>
                                 <xsl:value-of
@@ -1012,6 +1018,35 @@
             </li>
         </xsl:if>
     </xsl:template>
+<xsl:template name="getLanguageURL">
+        <xsl:variable name="queryString" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='queryString']"/>
+        <xsl:choose>
+            <!-- There allready is a query string so append it and the language argument -->
+            <xsl:when test="$queryString != ''">
+                <xsl:text>?</xsl:text>
+                <xsl:choose>
+                    <xsl:when test="contains($queryString, '&amp;locale-attribute')">
+                        <xsl:value-of select="substring-before($queryString, '&amp;locale-attribute')"/>
+                        <xsl:text>&amp;locale-attribute=</xsl:text>
+                    </xsl:when>
+                    <!-- the query string is only the locale-attribute so remove it to append the correct one -->
+                    <xsl:when test="starts-with($queryString, 'locale-attribute')">
+                        <xsl:text>locale-attribute=</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="$queryString"/>
+                        <xsl:text>&amp;locale-attribute=</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>?locale-attribute=</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+
+
 
 </xsl:stylesheet>
 
