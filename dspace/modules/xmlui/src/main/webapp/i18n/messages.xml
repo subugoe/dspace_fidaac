@@ -2574,7 +2574,7 @@ E-Mail: <a href="mailto:sekretariat@sub.uni-goettingen.de">sekretariat@sub.uni-g
 Internet: <a href="www.sub.uni-goettingen.de">www.sub.uni-goettingen.de</a></p>
 <h3>Vertreter </h3>
 <p>Die Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) wird vertreten durch den leitenden Direktor Prof. Dr. Wolfram Horstmann.<br />
-Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch die Präsidentin (kommissarisch) Dr. Valérie Schüller (Vizepräsidentin für Finanzen und Personal) gesetzlich vertreten. </p>
+Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch Prof. Dr. Reinhard Jahn gesetzlich vertreten, der beauftragt ist, das Amt des Präsidenten wahrzunehmen. </p>
 <h3>Zuständige Aufsichtsbehörde </h3>
 <p>Georg-August-Universität Göttingen Stiftung Öffentlichen Rechts, Stiftungsausschuss Universität, Wilhelmsplatz 1, 37073 Göttingen </p>
 <h3>Umsatzsteueridentifikationsnummer </h3>
@@ -2741,7 +2741,17 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
         <h2>Welcome to The Stacks!</h2>
         <p>The Stacks is the subject repository for American studies, Anglophone literatures &amp; cultures,  Australian &amp; New Zealand studies, British &amp; Irish studies, Canadian studies and English, including all sub-fields such as cultural studies, English language teaching, gender studies, geography, history, law, linguistics, literary studies, media studies, medieval studies, political science, postcolonial studies and social sciences. </p>
         <p>By publishing in The Stacks, your research will be more visible. All uploaded material is made available in Open Access, either immediately or after the time span you choose. <a href="https://thestacks.libaac.de/help">Read more</a> on how to publish in The Stacks!</p>
-        <p>The Stacks is provided by the <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a>.</p>
+        <p style="margin-bottom:20px;">The Stacks is provided by the <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a>.</p>
+	<h2 class="page-header">Regular Contributors</h2>
+<p>
+<image style="width: 40px;vertical-align:middle;margin-right:5px;" src="/themes/Mirage2/images/asjlogo.jpg" alt="ASJ Logo"/>
+<span>American Studies Journal</span>
+</p>
+<p style="margin-bottom: 40px;">
+<image style="width: 40px;vertical-align:middle;margin-right:5px;" src="/themes/Mirage2/images/gastlogo.svg" alt="GASt Logo"/>
+<span>German Association for Australian Studies</span>
+</p>
+
         </div>
 <!--	<div style="max-width: 505px;" class="hidden-xs">
         <h2 style="text-align: center;">The Stacks</h2>
