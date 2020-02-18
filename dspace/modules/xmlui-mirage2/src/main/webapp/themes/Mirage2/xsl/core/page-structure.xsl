@@ -349,13 +349,13 @@
 			<div style="padding-left:20px;padding-top: 5px;color:white;font-family:Open Sans;font-size:20px;font-weight:600;"><a  href="{$context-path}/" style="color:white;text-decoration:none;">FID AAC</a></div>
 			</div>
 			</div>
-			<div style="font-size:50px;font-family:Open Sans;color:white;padding-left:40px;padding-top:16px;">
+			<div style="font-size:40px;font-family:Open Sans;color:white;padding-left:30px;padding-top:16px;">
 			<a href="{$context-path}/" style="color:white;text-decoration:none;">The Stacks</a>
 			</div>
 			</div>
 
 			<div class="clearfixheader float-my-children hidden-xs visible-sm hidden-md hidden-lg">
-                        <div>
+                        <!--<div>
                         <div class="clearfixheader float-my-children">
                         <div style="color:white;font-size:14px;font-family:Open Sans;line-height:18px;padding-top:10px;font-weight:400;"><a href="{$context-path}/" style="color:white;text-decoration:none;">Library of <br /><span style="font-weight:600;">Anglo-American</span> Culture &amp; History</a></div>
                         </div>
@@ -363,8 +363,9 @@
                         <a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:7px;height:20px;"/></a>
                         <div style="padding-left:30px;padding-top: 5px;color:white;font-family:Open Sans;font-size:14px;font-weight:600;"><a  href="{$context-path}/" style="color:white;text-decoration:none;">FID AAC</a></div>
                         </div>
-                        </div>
-                        <div style="font-size:40px;font-family:Open Sans;color:white;padding-left:20px;padding-top:16px;">
+                        </div>-->
+			<div><a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:18px;height:15px;"/></a></div>
+                        <div style="font-size:18px;font-family:Open Sans;color:white;padding-left:10px;padding-top:12px;">
                         <a href="{$context-path}/" style="color:white;text-decoration:none;">The Stacks</a>
                         </div>
                         </div>
@@ -428,6 +429,12 @@
                                                     <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
                                                 </a>
                                             </li>
+						<li>
+                                                <a href="/submit">
+                                                    <i18n:text>xmlui.EPerson.Navigation.submit</i18n:text>
+                                                </a>
+                                            </li>
+
                                             <li>
                                                 <a href="{/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='logoutURL']}">
@@ -481,6 +488,12 @@
                                                     <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
                                                 </a>
                                             </li>
+					 <li>
+                                                <a href="/submit">
+                                                    <i18n:text>xmlui.EPerson.Navigation.submit</i18n:text>
+                                                </a>
+                                            </li>
+
                                             <li>
                                                 <a href="{/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='logoutURL']}">

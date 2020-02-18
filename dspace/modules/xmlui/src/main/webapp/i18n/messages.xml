@@ -3050,4 +3050,5 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.dri2xhtml.METS-1.0.item-thestacks-license">The Stacks License</message>
 <message key="xmlui.general.publish_now">Publish Now</message>
 <message key="xmlui.general.publish_here">Publish Here</message>
+<message key="xmlui.EPerson.Navigation.submit">Publish</message>
 </catalogue>
