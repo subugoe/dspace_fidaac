@@ -346,9 +346,6 @@ div.publish {
 a.publishButton:visited {
     color: #039;
 }
-a:visited {
-    color: #7c4678;
-}
 .publishButton {
     -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -368,4 +365,9 @@ a:visited {
     text-align: center;
     text-decoration: none;
     width: 100%;
+}
+
+header .navbar-default .navbar-toggle > .open > a, header .navbar-default .navbar-toggle > .open > a:hover, header .navbar-default .navbar-toggle > .open > a:focus, header .navbar-default .navbar-nav > .open > a, header .navbar-default .navbar-nav > .open > a:hover, header .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #183267;
+    color: #fff;
 }

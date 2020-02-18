@@ -380,6 +380,7 @@
                             <img class="visible-xs hidden-sm hidden-md hidden-lg"  alt="Open Startpage" src="{$theme-path}/images/Logo.PNG" style="margin-left:15px; height:34px; width:200px;"/>
                         </a>-->
                         <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
+			<ul class="nav navbar-nav pull-left"><li><a target="_blank" href="https://libaac.de" title="Library AAC">Library AAC</a></li></ul>
 			<ul class="nav nav-pills pull-left ">
 
                             <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
@@ -451,7 +452,8 @@
                               </div>
                     </div>
 
-                    <div class="navbar-header pull-right hidden-xs">
+                    <div class="navbar-header pull-right hidden-xs visible-sm visible-md visible-lg">
+		<ul class="nav navbar-nav pull-left"><li><a target="_blank" href="https://libaac.de" title="Library AAC">Library AAC</a></li></ul>
 			<ul class="nav navbar-nav pull-left">
                               <xsl:call-template name="languageSelection"/>
                         </ul>
