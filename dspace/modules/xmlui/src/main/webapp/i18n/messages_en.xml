@@ -3048,5 +3048,6 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.mirage2.itemSummaryView.Subjects">Subjects: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.relationDOI">DOI of Anthology: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.item-thestacks-license">The Stacks License</message>
-
+<message key="xmlui.general.publish_now">Publish Now</message>
+<message key="xmlui.general.publish_here">Publish Here</message>
 </catalogue>

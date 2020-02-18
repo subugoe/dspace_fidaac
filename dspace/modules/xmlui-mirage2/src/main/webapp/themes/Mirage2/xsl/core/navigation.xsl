@@ -49,8 +49,8 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                     <!-- The form, complete with a text box and a button, all built from attributes referenced
                  from under pageMeta. -->
 
-<!--<div class="publish">
-                                <a>
+<div class="publish">
+                                <a class="publishButton">
                                 <xsl:choose>
                                         <xsl:when test="contains(//dri:metadata[@element='request'][@qualifier='URI'], 'submit')">
                                                 <xsl:attribute name="href"><xsl:text>#</xsl:text></xsl:attribute>
@@ -78,7 +78,7 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                                         </xsl:otherwise>
                                 </xsl:choose>
                                 </a>
-                        </div>-->
+                        </div>
 
 
                     <form id="ds-search-form" class="" method="post">
@@ -158,11 +158,14 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                 </div>
             </xsl:if>
 
+<xsl:if test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
+        <xsl:apply-templates select="dri:list[@n='account']"/>
+</xsl:if>
+
+
 	<xsl:apply-templates select="dri:list[@n='browse']"/>
 
 	<xsl:apply-templates select="dri:list[@n='discovery']"/>
-
-	<xsl:apply-templates select="dri:list[@n='account']"/>
 
 	<xsl:apply-templates select="dri:list[@n='context']"/>
 

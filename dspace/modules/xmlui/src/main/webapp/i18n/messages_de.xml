@@ -3090,5 +3090,7 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.dri2xhtml.METS-1.0.relationDOI">DOI des Sammelwerks: </message>
 
 <message key="xmlui.dri2xhtml.METS-1.0.item-thestacks-license">The Stacks-Lizenz</message>
+<message key="xmlui.general.publish_now">Veröffentlichen</message>
+<message key="xmlui.general.publish_here">Hier veröffentlichen</message>
 
 </catalogue>
