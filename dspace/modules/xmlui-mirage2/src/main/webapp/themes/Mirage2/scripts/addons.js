@@ -2,6 +2,18 @@
 {
     if (/English/.test($("#ds-language-selection > a > span").text()))
     {
+
+
+      if (/Describe/.test($("#aspect_submission_StepTransformer_field_submit_jump_3_3").text()))
+    {
+        $("#aspect_submission_StepTransformer_field_submit_jump_3_3").each(function ()
+        {
+                $(this).text("Select License");
+        });
+    }
+
+
+
         $("li, h2, a, a > span, head > title, label").each(function ()
         {
 	     if ($(this).text() == "Dokumente") {
@@ -76,6 +88,18 @@
 
      if (/Deutsch/.test($("#ds-language-selection > a > span").text()))
     {
+
+
+	    if (/Beschreiben/.test($("#aspect_submission_StepTransformer_field_submit_jump_3_3").text()))
+    {
+        $("#aspect_submission_StepTransformer_field_submit_jump_3_3").each(function ()
+        {
+                $(this).text("Lizenz auswählen");
+        });
+    }
+
+
+
         $("li, h2, a, a > span, head > title, label").each(function ()
         {
              if ($(this).text() == "americanstudies") {
@@ -138,10 +162,9 @@
 	 if ($(this).text() == "postcolonial") {
                $(this).text("Postkoloniale Studien");
             }
-
-
-
-        });
+      });
     }
+
+
 
 })(jQuery);
