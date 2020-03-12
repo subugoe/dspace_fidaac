@@ -270,6 +270,9 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                         <xsl:when test="../@id='aspect.browseArtifacts.Navigation.list.global' and contains(dri:xref/@target, 'type=series')">
                                 <xsl:text>/series</xsl:text>
                         </xsl:when>
+			<xsl:when test="../@id='aspect.browseArtifacts.Navigation.list.global' and contains(dri:xref/@target, 'type=eventdate')">
+                                <xsl:text>/events</xsl:text>
+                        </xsl:when>
                         <xsl:otherwise>
                                 <xsl:value-of select="dri:xref/@target"/>
                         </xsl:otherwise>

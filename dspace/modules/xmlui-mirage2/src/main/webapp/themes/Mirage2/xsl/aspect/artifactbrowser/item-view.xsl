@@ -311,8 +311,7 @@ select="dim:field[@element='relation'][@qualifier='reviewOf']" /></i><i18n:text>
 				   <xsl:when test="dim:field[@element='contributor'][@qualifier='organiser']">
 				<xsl:for-each select="dim:field[@element='contributor'][@qualifier='organiser']">
 				<a>
-                                <xsl:attribute name="href"><xsl:value-of select="concat('/browse?type=author&amp;value=', substring-before(., ','), '%2C', 
-translate(substring-after(., ','), ' ', '+'))" /></xsl:attribute>
+                                <xsl:attribute name="href"><xsl:value-of select="concat('/browse?type=author&amp;value=', .)" /></xsl:attribute>
 				 <xsl:value-of select="./node()"/> <xsl:if test="count(following-sibling::dim:field[@element='contributor' and 
 @qualifier='organiser']) != 0">
                         <xsl:text>; </xsl:text>
@@ -324,6 +323,29 @@ translate(substring-after(., ','), ' ', '+'))" /></xsl:attribute>
                         <i18n:text>xmlui.dri2xhtml.METS-1.0.no-organiser</i18n:text>
                     </xsl:otherwise>
                    </xsl:choose>
+                                   <xsl:if test="dim:field[@element='contributor'][@qualifier='organisertwo']">
+                                <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organisertwo']"><xsl:text>, </xsl:text>
+                                <a>
+                                <xsl:attribute name="href"><xsl:value-of select="concat('/browse?type=author&amp;value=', .)" /></xsl:attribute>
+                                 <xsl:value-of select="./node()"/> <xsl:if test="count(following-sibling::dim:field[@element='contributor' and
+@qualifier='organisertwo']) != 0">
+                        <xsl:text>; </xsl:text>
+                        </xsl:if>
+                                </a>
+                                </xsl:for-each>
+			</xsl:if>
+                                   <xsl:if test="dim:field[@element='contributor'][@qualifier='organiserthree']">
+                                <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organiserthree']"><xsl:text>, </xsl:text>
+                                <a>
+                                <xsl:attribute name="href"><xsl:value-of select="concat('/browse?type=author&amp;value=', .)" /></xsl:attribute>
+                                 <xsl:value-of select="./node()"/> <xsl:if test="count(following-sibling::dim:field[@element='contributor' and
+@qualifier='organiserthree']) != 0">
+                        <xsl:text>; </xsl:text>
+                        </xsl:if>
+                                </a>
+                                </xsl:for-each>
+                        </xsl:if>
+
 		<xsl:choose>
                                 <xsl:when test="count(dim:field[@element='title'][not(@qualifier)])">
                                 <br/><i><xsl:value-of select="dim:field[@element='title'][not(@qualifier)]"/></i>

@@ -112,7 +112,7 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.conjunction">Verknüpfung</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_type">Suchmodus</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_for">Suche nach</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Autor</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Mitwirkender</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_title">Titel</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Fachlicher Schwerpunkt</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">Zusammenfassung</message>
@@ -162,11 +162,11 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.asc">aufsteigend</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">absteigend</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Autorenname</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Mitwirkende</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Fachlicher Schwerpunkt</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Auflistung  {0} nach Autor {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Auflistung  {0} nach Autor</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Auflistung  {0} nach Mitwirkenden {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Auflistung  {0} nach Mitwirkenden</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Auflistung {0} nach fachlichem Schwerpunkt {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Auflistung {0} nach fachlichem Schwerpunkt</message>
@@ -187,7 +187,7 @@
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Volltextsuche:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Auflistung nach</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titel</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Autor</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Mitwirkende</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_dates">Datum</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.advanced_search_link">Erweiterte Suche</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_recent_submissions">Neueste Zugänge</message>
@@ -204,7 +204,7 @@
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Volltextsuche:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Auflistung nach</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titel</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Autoren</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Mitwirkende</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_dates">Datum</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.advanced_search_link">Erweiterte Suche</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities">Teilbereiche in diesem Bereich</message>
@@ -253,7 +253,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Gesamter Bestand</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Sammlungen</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titel</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autoren</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Mitwirkende</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Fachlicher Schwerpunkt</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Erscheinungsdatum</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Zugangsdatum</message>
@@ -572,7 +572,7 @@
 	<message key="xmlui.Submission.Submissions.submit_column2">Titel</message>
 	<message key="xmlui.Submission.Submissions.submit_column3">Sammlung</message>
 	<message key="xmlui.Submission.Submissions.submit_column4">Veröffentlicht von</message>
-	<message key="xmlui.Submission.Submissions.submit_head3">Autoren:</message>
+	<message key="xmlui.Submission.Submissions.submit_head3">Mitwirkende:</message>
 	<message key="xmlui.Submission.Submissions.submit_info3">Es gibt keine unvollendeten Veröffentlichungen</message>
 	<message key="xmlui.Submission.Submissions.submit_head4">Supervision:</message>
 	<message key="xmlui.Submission.Submissions.submit_submit_remove">Ausgewählte Beiträge/Einreichungen löschen</message>
@@ -1558,7 +1558,7 @@
 	<message key="xmlui.administrative.mapper.SearchItemForm.submit_map">Ausgewählte Dokumente spiegeln</message>
 	<message key="xmlui.administrative.mapper.SearchItemForm.column1"></message>
 	<message key="xmlui.administrative.mapper.SearchItemForm.column2">Sammlung</message>
-	<message key="xmlui.administrative.mapper.SearchItemForm.column3">Autor</message>
+	<message key="xmlui.administrative.mapper.SearchItemForm.column3">Mitwirkende</message>
 	<message key="xmlui.administrative.mapper.SearchItemForm.column4">Titel</message>
 		
 	<!-- org.dspace.app.xmlui.administrative.mapper.BrowseItemForm -->
@@ -1568,7 +1568,7 @@
 	<message key="xmlui.administrative.mapper.BrowseItemForm.submit_unmap">Spiegelungen löschen</message>
 	<message key="xmlui.administrative.mapper.BrowseItemForm.column1"></message>
 	<message key="xmlui.administrative.mapper.BrowseItemForm.column2">Sammlung</message>
-	<message key="xmlui.administrative.mapper.BrowseItemForm.column3">Autor</message>
+	<message key="xmlui.administrative.mapper.BrowseItemForm.column3">Mitwirkende</message>
 	<message key="xmlui.administrative.mapper.BrowseItemForm.column4">Titel</message>
 	<message key="xmlui.administrative.mapper.BrowseItemForm.no_remove">Sie benötigen REMOVE (Entfernen) Rechte an dieser Sammlung, um Spiegelungen zu löschen.</message>
 	
@@ -2195,7 +2195,7 @@
   <message key="xmlui.mobile.search_all">Suche</message>
   <message key="xmlui.mobile.browse_all">Stöbern nach:</message>
   <message key="xmlui.mobile.browse_date">Datum</message>
-  <message key="xmlui.mobile.browse_author">Autor</message>
+  <message key="xmlui.mobile.browse_author">Mitwirkende</message>
   <message key="xmlui.mobile.browse_title">Titel</message>
   <message key="xmlui.mobile.browse_subject">Fachlicher Schwerpunkt</message>
   <message key="xmlui.mobile.related_google_scholar">verwandt</message>
@@ -3093,5 +3093,17 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.general.publish_now">Veröffentlichen</message>
 <message key="xmlui.general.publish_here">Hier veröffentlichen</message>
 <message key="xmlui.EPerson.Navigation.submit">Veröffentlichen</message>
+<message key="xmlui.ArtifactBrowser.Navigation.browse_eventdate">Veranstaltungen</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.eventdate">Auflistung nach Veranstaltungsdatum</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.eventdate">Veranstaltungsdatum</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.eventdate.column_heading">Veranstaltungsdatum</message>
+
+<message key="xmlui.events.head">Veranstaltungen</message>
+<message key="xmlui.events.text"> <ul>
+        <li><a href="handle/11858/468/browse?type=eventdate">Postgraduate Forum (DGfA)</a></li>
+        </ul>
+</message>
+<message key="xmlui.events">Veranstaltungen</message>
+
 
 </catalogue>

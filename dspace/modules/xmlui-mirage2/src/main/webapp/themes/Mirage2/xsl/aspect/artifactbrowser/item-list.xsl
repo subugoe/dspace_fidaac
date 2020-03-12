@@ -84,6 +84,16 @@ or dim:field[@element='type'] = 'conferencePaper'">
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:if>
+			<xsl:if test="dim:field[@element='contributor'][@qualifier='organisertwo']">
+                            <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organisertwo']">
+                                <xsl:text>; </xsl:text><xsl:copy-of select="node()"/>
+                            </xsl:for-each>
+                        </xsl:if>
+			<xsl:if test="dim:field[@element='contributor'][@qualifier='organiserthree']">
+                            <xsl:for-each select="dim:field[@element='contributor'][@qualifier='organiserthree']">
+                                <xsl:text>; </xsl:text><xsl:copy-of select="node()"/>
+                            </xsl:for-each>
+                        </xsl:if>
                 </xsl:when>
 				<xsl:when test="dim:field[@element='type'] = 'syllabus'">
                         <xsl:if test="dim:field[@element='contributor'][@qualifier='lecturer']">

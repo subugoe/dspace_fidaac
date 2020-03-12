@@ -62,6 +62,16 @@ collections / items / and bitstreams.
            <map:serialize type="xml"/>
         </map:match>
 
+<!-- statische Seite für Events -->
+        <map:match pattern="events">
+           <map:act type="DSpacePropertyFileReader">
+           <map:parameter name="dspace.dir" value="dspace.dir" />
+           <map:transform type="Include" src="file://{dspace.dir}/config/events.xml" />
+           </map:act>
+           <map:serialize type="xml"/>
+        </map:match>
+
+
 <!-- statische Seite für Impressum -->
             <map:match pattern="impressum">
                 <map:act type="DSpacePropertyFileReader">

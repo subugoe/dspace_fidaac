@@ -1534,19 +1534,24 @@ substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n
                                 <div class="col-sm-9 artifact-description">
                                         <div class="artifact-info">
                                         <span class="author h4"> <small>
-                        <xsl:choose>
-                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.contributor.organiser'))]">
+                            <xsl:if test="dri:list[@n=(concat($handle, ':dc.contributor.organiser'))]">
                                 <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.contributor.organiser'))]/dri:item">
                                      <xsl:apply-templates select="."/>
                                     <xsl:if test="count(following-sibling::dri:item) != 0">
                                         <xsl:text>, </xsl:text>
                                     </xsl:if>
                                 </xsl:for-each>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
-                            </xsl:otherwise>
-                        </xsl:choose>
+                            </xsl:if>
+				<xsl:if test="dri:list[@n=(concat($handle, ':dc.contributor.organisertwo'))]">
+                                <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.contributor.organisertwo'))]/dri:item">
+                                    <xsl:text>, </xsl:text> <xsl:apply-templates select="."/>
+                                </xsl:for-each>
+                            </xsl:if>
+				<xsl:if test="dri:list[@n=(concat($handle, ':dc.contributor.organiserthree'))]">
+                                <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.contributor.organiserthree'))]/dri:item">
+                                     <xsl:text>, </xsl:text><xsl:apply-templates select="."/>
+                                </xsl:for-each>
+                            </xsl:if>
                         </small></span>
 			<xsl:text> </xsl:text>
                     <xsl:if test="dri:list[@n=(concat($handle, ':dc.date.issued'))]">
