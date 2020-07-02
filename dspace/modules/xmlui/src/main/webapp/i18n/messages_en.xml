@@ -3052,7 +3052,7 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.general.publish_here">Publish Here</message>
 
 <message key="xmlui.EPerson.Navigation.submit">Publish</message>
-<message key="xmlui.ArtifactBrowser.Navigation.browse_eventdate">Events</message>
+<message key="xmlui.ArtifactBrowser.Navigation.browse_eventdate">Event Date</message>
 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.eventdate">Browse by Event Date</message>
 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.eventdate">Event Date</message>
 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.eventdate.column_heading">Event Date</message>
@@ -3063,5 +3063,7 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
         </ul>
 </message>
 <message key="xmlui.events">Events</message>
-
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.eventdate">Browsing by Event Date</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.eventdate">Event Date</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.sort_by.eventdate">event date</message>
 </catalogue>

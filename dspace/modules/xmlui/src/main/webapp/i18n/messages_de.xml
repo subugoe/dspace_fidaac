@@ -2567,7 +2567,7 @@
   <p>1. Rechteeinräumung: Als Urheberin bzw. Urheber räume ich der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) zeitlich unbegrenzt und unwiderruflich das nicht ausschließliche Recht ein, das Werk öffentlich zugänglich zu machen, auf dem Repositorium The Stacks der SUB Göttingen zu archivieren und über Print-on-Demand in Papierform oder auf anderen Speichermedien zu vervielfältigen. Der urheberrechtliche Schutz bleibt durch diese Lizenz unberührt. Mit dem Hochladen des Dokuments ist kein rechtlich verbindlicher Anspruch auf die Bereitstellung oder Archivierung verbunden.</p>
   <p>2. Rechte Dritter: Als Urheberin bzw. Urheber erkläre ich, dass mit der Bereitstellung des Werkes und jedes Bestandteils (z.B. Abbildungen) keine Rechte Dritter (z.B. Miturheberinnen bzw. Miturheber, Co-Autorinnen bzw. Co-Autoren, Verlage, Verwertungsgesellschaften, Drittmittelgeber) verletzt werden. Ich stelle die SUB Göttingen von etwaigen Ansprüchen Dritter frei. Die SUB Göttingen ist berechtigt, den Zugriff auf ein Dokument zu sperren, soweit konkrete Anhaltspunkte für eine Verletzung von Rechten Dritter bestehen.</p>
   <p>3. Langzeitarchivierung und Transformation in andere Formate: Als Urheberin bzw. Urheber räume ich der SUB Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, das Werk in ihrem Langzeitarchiv zu speichern und bei Bedarf (z.B. Migration, Barrierefreiheit, bessere Zugänglichkeit oder Erschließung) in andere elektronische und physische Formate zu überführen.</p>
-  <p>4. Weitergabe von Metadaten und Dokumenten: ls Urheberin bzw. Urheber räume ich der SUB Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, die Metadaten des Werks unentgeltlich anderen Datenbanken zur Verfügung zu stellen. Darüber hinaus ist die SUB Göttingen berechtigt, das Werk Dritten im Rahmen nationaler Sammelaufträge zur Online-Bereitstellung oder Archivierung zur Verfügung zu stellen. Wenn Sie Fragen zu der Rechtevereinbarung haben, wenden Sie sich an <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettingen.de</a>.</p>
+  <p>4. Weitergabe von Metadaten und Dokumenten: Als Urheberin bzw. Urheber räume ich der SUB Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, die Metadaten des Werks unentgeltlich anderen Datenbanken zur Verfügung zu stellen. Darüber hinaus ist die SUB Göttingen berechtigt, das Werk Dritten im Rahmen nationaler Sammelaufträge zur Online-Bereitstellung oder Archivierung zur Verfügung zu stellen. Wenn Sie Fragen zu der Rechtevereinbarung haben, wenden Sie sich an <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettingen.de</a>.</p>
   </message>
   <message key="xmlui.imprint.head">Impressum</message>
   <message key="xmlui.imprint.text">
@@ -3093,7 +3093,7 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.general.publish_now">Veröffentlichen</message>
 <message key="xmlui.general.publish_here">Hier veröffentlichen</message>
 <message key="xmlui.EPerson.Navigation.submit">Veröffentlichen</message>
-<message key="xmlui.ArtifactBrowser.Navigation.browse_eventdate">Veranstaltungen</message>
+<message key="xmlui.ArtifactBrowser.Navigation.browse_eventdate">Veranstaltungsdatum</message>
 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.eventdate">Auflistung nach Veranstaltungsdatum</message>
 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.eventdate">Veranstaltungsdatum</message>
 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.eventdate.column_heading">Veranstaltungsdatum</message>
@@ -3104,6 +3104,7 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
         </ul>
 </message>
 <message key="xmlui.events">Veranstaltungen</message>
-
-
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.eventdate">Auflistung nach Veranstaltungsdatum</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.eventdate">Veranstaltungsdatum</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.sort_by.eventdate">Veranstaltungsdatum</message>
 </catalogue>
