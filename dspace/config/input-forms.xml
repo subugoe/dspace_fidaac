@@ -17,6 +17,7 @@
    <name-map collection-handle="default" form-name="default" />
   <name-map collection-handle="11858/48" form-name="journals" /> 
   <name-map collection-handle="11858/377" form-name="journals" />
+<name-map collection-handle="11858/398" form-name="journals" />
  </form-map>
 
 
@@ -52,6 +53,18 @@
                         </field>
                 </page>
                 <page number="2">
+			 <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>type</dc-element>
+                                 <dc-qualifier>version</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Document version</label>
+                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
+                                 <hint>Select your document type.</hint>
+                                 <required>Select your document type.</required>
+                                 <type-bind>monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>subject</dc-element>
@@ -84,17 +97,40 @@
                                  <required>Enter the lecturer of the seminar!</required>
                                  <type-bind>courseDescription,syllabus</type-bind>
                         </field>
-                        <field>
+
+			<field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>contributor</dc-element>
                                  <dc-qualifier>organiser</dc-qualifier>
                                  <repeatable>true</repeatable>
                                  <label>*Organiser(s)</label>
                                  <input-type>onebox</input-type>
-                                 <hint>Enter the institution(s) hosting the conference.</hint>
-                                 <required>Enter the institution(s) (university, seminar, research institute...) hosting the conference!</required>
+                                 <hint>Enter the department(s) hosting the event.</hint>
+                                 <required>Enter the department(s) hosting the event!</required>
                                  <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
                         </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>organisertwo</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Organiser</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the university or research institution(s) hosting the event.</hint>
+                                 <required>Enter the university or research institution(s) hosting the event!</required>
+                                 <type-bind>conferenceProg</type-bind>
+                        </field>
+						<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>organiserthree</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Organiser(s)</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the association hosting the event or the event series (e.g. title of the lecture series)</hint>
+                                 <type-bind>conferenceProg</type-bind>
+                        </field>
+
                                                 <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>contributor</dc-element>
@@ -469,17 +505,6 @@
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
-                                 <dc-element>type</dc-element>
-                                 <dc-qualifier>version</dc-qualifier>
-                                 <repeatable>false</repeatable>
-                                 <label>Document version</label>
-                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
-                                 <hint>Select your document type.</hint>
-                                 <required></required>
-                                 <type-bind>monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
-                        </field>
-                        <field>
-                                 <dc-schema>dc</dc-schema>
                                  <dc-element>description</dc-element>
                                  <dc-qualifier>abstract</dc-qualifier>
                                  <repeatable>true</repeatable>
@@ -488,6 +513,7 @@
                                  <hint>Enter abstracts in different languages in separate fields.</hint>
                                  <required></required>
                         </field>
+
                                                 <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>description</dc-element>
@@ -498,6 +524,8 @@
                                  <hint>If a website is related to your document (for example a conference website) enter the URL here.</hint>
                                  <required></required>
                         </field>
+		</page>
+		<page number="3">
                         <field>
                                 <dc-schema>dc</dc-schema>
                                 <dc-element>rights</dc-element>
@@ -527,6 +555,18 @@
                         </field>
                 </page>
                 <page number="2">
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>type</dc-element>
+                                 <dc-qualifier>version</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Document version</label>
+                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
+                                 <hint>Select your document type.</hint>
+                                 <required>Select your document type.</required>
+                                 <type-bind>monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>subject</dc-element>
@@ -666,7 +706,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the series information in the following form: Literary Research; Vol. 13</hint>
                                  <required></required>
-                                <type-bind>article</type-bind>
+                                <type-bind>article,review</type-bind>
                         </field>
 
                         <field>
@@ -755,7 +795,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the ISSN of the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction</type-bind>
+                                 <type-bind>article,digitalReproduction,review</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -766,7 +806,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,cfppublication</type-bind>
+                                 <type-bind>article,digitalReproduction,cfppublication,review</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -777,7 +817,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,cfppublication</type-bind>
+                                 <type-bind>article,digitalReproduction,cfppublication,review</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -799,7 +839,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>review,article,digitalReproduction,anthologyArticle</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -810,7 +850,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>review,article,digitalReproduction,anthologyArticle</type-bind>
                         </field>
 
                         <field>
@@ -846,17 +886,6 @@
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
-                                 <dc-element>type</dc-element>
-                                 <dc-qualifier>version</dc-qualifier>
-                                 <repeatable>false</repeatable>
-                                 <label>Document version</label>
-                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
-                                 <hint>Select your publication type.</hint>
-                                 <required></required>
-                                 <type-bind>monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
-                        </field>
-                        <field>
-                                 <dc-schema>dc</dc-schema>
                                  <dc-element>description</dc-element>
                                  <dc-qualifier>abstract</dc-qualifier>
                                  <repeatable>true</repeatable>
@@ -865,6 +894,9 @@
                                  <hint>Enter abstracts in different languages in separate fields.</hint>
                                  <required></required>
                         </field>
+               </page>
+                <page number="3">
+
                          <field>
                                 <dc-schema>dc</dc-schema>
                                 <dc-element>rights</dc-element>
@@ -996,15 +1028,15 @@
 
    <value-pairs value-pairs-name="common_versions" dc-term="type_version">
      <pair>
-       <displayed-value>Verlagsversion</displayed-value>
+       <displayed-value>Published version</displayed-value>
        <stored-value>publishedVersion</stored-value>
      </pair>
      <pair>
-       <displayed-value>Autorenversion</displayed-value>
+       <displayed-value>Accepted version</displayed-value>
        <stored-value>submittedVersion</stored-value>
      </pair>
      <pair>
-       <displayed-value>Entwurf</displayed-value>
+       <displayed-value>Draft</displayed-value>
        <stored-value>draft</stored-value>
      </pair>
    </value-pairs>

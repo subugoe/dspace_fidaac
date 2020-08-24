@@ -17,6 +17,7 @@
    <name-map collection-handle="default" form-name="default" />
   <name-map collection-handle="11858/48" form-name="journals" /> 
    <name-map collection-handle="11858/377" form-name="journals" />
+   <name-map collection-handle="11858/398" form-name="journals" />
  </form-map>
 
 
@@ -52,6 +53,18 @@
                         </field>
                 </page>
                 <page number="2">
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>type</dc-element>
+                                 <dc-qualifier>version</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Dokumentversion</label>
+                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
+                                 <hint>Bitte wählen Sie die Dokumentversion aus.</hint>
+                                 <required>Bitte wählen Sie die Dokumentversion aus.</required>
+                                 <type-bind>review,monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>subject</dc-element>
@@ -84,16 +97,37 @@
                                  <required>Geben Sie den/die Dozent*in bzw. die Dozent*innen des Seminars an!</required>
                                  <type-bind>courseDescription,syllabus</type-bind>
                         </field>
-                        <field>
+			<field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>contributor</dc-element>
                                  <dc-qualifier>organiser</dc-qualifier>
                                  <repeatable>true</repeatable>
                                  <label>*Organisator(en)</label>
                                  <input-type>onebox</input-type>
-                                 <hint>Geben Sie die ausrichtende Institution (z.B. Universität) an.</hint>
-                                 <required>Geben Sie bitte die Institution (z.B. Universität, Lehrstuhl, Seminar...) an, welche die Konferenz ausgerichtet hat!</required>
+                                 <hint>Geben Sie die ausrichtenden Fachbereiche, Lehrstühle oder Institute an.</hint>
+                                 <required>Geben Sie die ausrichtenden Fachbereiche, Lehrstühle oder Institute an!</required>
                                  <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                        </field>
+						<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>organisertwo</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Organisator</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Geben Sie die ausrichtende Universität oder Forschungseinrichtung an.</hint>
+                                 <required>Geben Sie die ausrichtende Universität oder Forschungseinrichtung an!</required>
+                                 <type-bind>conferenceProg</type-bind>
+                        </field>
+						<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>organiserthree</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Organisator(en)</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Geben Sie die ausrichtende Gesellschaft oder die Veranstaltungsreihe (z.B. Titel der Ringvorlesung) ein.</hint>
+                                 <type-bind>conferenceProg</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -469,17 +503,6 @@
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
-                                 <dc-element>type</dc-element>
-                                 <dc-qualifier>version</dc-qualifier>
-                                 <repeatable>false</repeatable>
-                                 <label>Dokumentversion</label>
-                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
-                                 <hint>Bitte wählen Sie die Dokumentversion aus.</hint>
-                                 <required></required>
-                                 <type-bind>review,monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
-                        </field>
-                        <field>
-                                 <dc-schema>dc</dc-schema>
                                  <dc-element>description</dc-element>
                                  <dc-qualifier>abstract</dc-qualifier>
                                  <repeatable>true</repeatable>
@@ -498,6 +521,9 @@
                                  <hint>Wenn es eine Webseite zu Ihrem Dokument gibt (z.B. eine Konferenz-Webseite), geben Sie die URL bitte hier an.</hint>
                                  <required></required>
                         </field>
+               </page>
+                <page number="3">
+
 
                          <field>
                                 <dc-schema>dc</dc-schema>
@@ -530,6 +556,18 @@
                         </field>
                 </page>
                 <page number="2">
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>type</dc-element>
+                                 <dc-qualifier>version</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Dokumentversion</label>
+                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
+                                 <hint>Bitte wählen Sie die Dokumentversion aus.</hint>
+                                 <required>Bitte wählen Sie die Dokumentversion aus.</required>
+                                 <type-bind>review,monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>subject</dc-element>
@@ -697,7 +735,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Bitte geben Sie die Serie in folgender Form an: Literary Research; Vol.13</hint>
                                  <required></required>
-                                 <type-bind>article</type-bind>
+                                 <type-bind>article,review</type-bind>
                         </field>
 
                         <field>
@@ -709,7 +747,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Geben Sie bitte an, in welcher Zeitschrift das Dokument erschienen ist.</hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction</type-bind>
+                                 <type-bind>article,digitalReproduction,review</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -755,7 +793,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Falls zutreffend, geben Sie die ISSN der Zeitschrift an, in der das Dokument erschienen ist.</hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction</type-bind>
+                                 <type-bind>article,digitalReproduction,review</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -766,7 +804,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,cfppublication</type-bind>
+                                 <type-bind>article,digitalReproduction,cfppublication,review</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -777,7 +815,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,cfppublication</type-bind>
+                                 <type-bind>article,digitalReproduction,cfppublication,review</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -799,7 +837,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>article,digitalReproduction,anthologyArticle,review</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -810,7 +848,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>article,digitalReproduction,anthologyArticle,review</type-bind>
                         </field>
 
                         <field>
@@ -845,17 +883,6 @@
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
-                                 <dc-element>type</dc-element>
-                                 <dc-qualifier>version</dc-qualifier>
-                                 <repeatable>false</repeatable>
-                                 <label>Dokumentversion</label>
-                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
-                                 <hint>Bitte wählen Sie die Dokumentversion aus.</hint>
-                                 <required></required>
-                                 <type-bind>monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
-                        </field>
-                        <field>
-                                 <dc-schema>dc</dc-schema>
                                  <dc-element>description</dc-element>
                                  <dc-qualifier>abstract</dc-qualifier>
                                  <repeatable>true</repeatable>
@@ -864,6 +891,9 @@
                                  <hint>Bitte geben Sie Zusammenfassungen in verschiedenen Sprachen in getrennte Felder ein. </hint>
                                  <required></required>
                         </field>
+               </page>
+                <page number="3">
+
                          <field>
                                 <dc-schema>dc</dc-schema>
                                 <dc-element>rights</dc-element>
@@ -997,7 +1027,7 @@
        <stored-value>publishedVersion</stored-value>
      </pair>
      <pair>
-       <displayed-value>Autorenversion</displayed-value>
+       <displayed-value>Angenommene Version</displayed-value>
        <stored-value>submittedVersion</stored-value>
      </pair>
      <pair>
