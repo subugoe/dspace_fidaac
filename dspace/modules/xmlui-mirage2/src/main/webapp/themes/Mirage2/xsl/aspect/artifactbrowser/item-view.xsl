@@ -171,6 +171,134 @@ string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><x
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Monograph-->
+
+<!--Arbeitspapier-->
+          <xsl:when test="dim:field[@element='type'] = 'workingPaper'">
+                <div class="itemview-citation">
+                <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or
+dim:field[@element='contributor' and descendant::text()]">
+                   <xsl:choose>
+                    <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
+                        <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
+                        <a>
+                                <xsl:attribute name="href"><xsl:value-of select="concat('/browse?type=author&amp;value=', substring-before(., ','), '%2C',
+translate(substring-after(., ','), ' ', '+'))" /></xsl:attribute>
+                                <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
+                        </a>
+                        <xsl:if test="count(following-sibling::dim:field[@element='contributor' and @qualifier='author']) != 0">
+                        <xsl:text>; </xsl:text>
+                        </xsl:if>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="dim:field[@element='creator']">
+                        <xsl:for-each select="dim:field[@element='creator']">
+                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" /><xsl:text>, </xsl:text>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="dim:field[@element='contributor']">
+                        <xsl:for-each select="dim:field[@element='contributor']">
+                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" /><xsl:text>, </xsl:text>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
+                    </xsl:otherwise>
+                   </xsl:choose>
+                        </xsl:if>
+                         <xsl:text> </xsl:text>
+                        <xsl:call-template name="itemSummaryView-DIM-date"/>
+                         <xsl:choose>
+                                <xsl:when test="count(dim:field[@element='title'][not(@qualifier)])">
+                                <xsl:text>&quot;</xsl:text><xsl:value-of select="dim:field[@element='title'][not(@qualifier)]"/>
+                                <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
+                                <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) !=
+'?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and
+substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'">
+                                <xsl:text>:</xsl:text>
+
+		                              </xsl:if>
+                                <xsl:text> </xsl:text>
+                                <xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" />
+                                </xsl:if>
+                                <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) !=
+'?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and
+substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:if
+test="not(dim:field[@element='title'][@qualifier='alternative'])"><xsl:text>.</xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dim:field[@element='title'][@qualifier='alternative'],
+string-length(dim:field[@element='title'][@qualifier='alternative'])) != '?' and substring(dim:field[@element='title'][@qualifier='alternative'],
+string-length(dim:field[@element='title'][@qualifier='alternative'])) != '!' and substring(dim:field[@element='title'][@qualifier='alternative'],
+string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><xsl:if
+test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:text></xsl:if>
+                                </xsl:if>
+                                <xsl:text>&quot; </xsl:text></xsl:when>
+                                <xsl:otherwise>
+                                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                                </xsl:otherwise>
+                        </xsl:choose>
+                
+		<xsl:if test="dim:field[@element='relation'][@qualifier='volume']">
+                               <i>
+                                <xsl:if test="contains(dim:field[@element='relation'][@qualifier='volume'], ';')">
+                                <xsl:value-of select="substring-before(dim:field[@element='relation'][@qualifier='volume'], ';')" />
+                                </xsl:if>
+                                <xsl:if test="not(contains(dim:field[@element='relation'][@qualifier='volume'], ';'))">
+                                <xsl:value-of select="dim:field[@element='relation'][@qualifier='volume']" />
+                                </xsl:if>
+                                </i><xsl:text>. </xsl:text>
+                            </xsl:if>
+
+                 
+                <xsl:if test="dim:field[@element='description'][@qualifier='institution']">
+                       <xsl:value-of select="dim:field[@element='description'][@qualifier='institution']/node()"/><xsl:text>. </xsl:text>
+                </xsl:if>
+				<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='volume']">
+                         <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']/node()"/>
+                </xsl:if>
+                <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
+                         <xsl:text>.</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']/node()"/>
+                </xsl:if>
+                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
+                         <xsl:text> (</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']/node()"/>
+						<xsl:text>)</xsl:text>
+						  </xsl:if>
+                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
+                       <xsl:text>: </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
+                </xsl:if>
+                <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
+                         <xsl:text>&#150;</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>.
+</xsl:text>
+                </xsl:if>
+                </div>
+        <div class="itemview-citation-small">
+        
+        <xsl:if test="dim:field[@element='type'] = 'workingPaper'">
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeworkingpaper</i18n:text>
+        </xsl:if>
+        </div>
+
+		  <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <xsl:call-template name="itemSummaryView-DIM-DOI"/>
+                <span class="spacer">&#160;</span>
+                <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
+                <td><xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                <xsl:if test="$ds_item_view_toggle_url != ''">
+                <xsl:call-template name="itemSummaryView-show-full"/>
+                </xsl:if></td></tr></table>
+                <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                <!--<xsl:call-template name="itemSummaryView-collections"/>-->
+                <xsl:call-template name="itemSummaryView-subjects"/>
+                <!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
+                <xsl:call-template name="display-rights"/>
+          </xsl:when>
+                <!--/Arbeitspapier-->
+
+
+
+
+
+
+
  <!--Report-->
           <xsl:when test="dim:field[@element='type'] = 'report'">
 		<div class="itemview-citation">
@@ -251,13 +379,12 @@ test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:te
                 </xsl:if>
 		 </xsl:if>
 		 <xsl:if test="dim:field[@element='publishedIn']">
-			<xsl:value-of select="dim:field[@element='publishedIn']/node()"/>
-		
+			<xsl:value-of select="dim:field[@element='publishedIn']/node()"/><xsl:text>: </xsl:text>
+		</xsl:if>	
 		 <xsl:if test="dim:field[@element='publisher']">
-                        <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='publisher']/node()"/>
-                </xsl:if>
+                        <xsl:value-of select="dim:field[@element='publisher']/node()"/><xsl:text>. </xsl:text>
 		<xsl:if test="dim:field[@element='relation'][@qualifier='ispartofseries']">
-                       <xsl:text> </xsl:text> <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofseries']/node()"/>
+                       <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofseries']/node()"/>
                 </xsl:if>
 		
 		 </xsl:if>
@@ -295,6 +422,131 @@ test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:te
 		<xsl:call-template name="display-rights"/>
           </xsl:when>
                 <!--/Report-->
+
+
+ <!--Dissertation-->
+          <xsl:when test="dim:field[@element='type'] = 'dissertation'">
+                <div class="itemview-citation">
+                <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or
+dim:field[@element='contributor' and descendant::text()]">
+                   <xsl:choose>
+                    <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
+                        <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
+                        <a>
+                                <xsl:attribute name="href"><xsl:value-of select="concat('/browse?type=author&amp;value=', substring-before(., ','), '%2C',
+translate(substring-after(., ','), ' ', '+'))" /></xsl:attribute>
+                                <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
+                        </a>
+                        <xsl:if test="count(following-sibling::dim:field[@element='contributor' and @qualifier='author']) != 0">
+                        <xsl:text>; </xsl:text>
+                        </xsl:if>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="dim:field[@element='creator']">
+                        <xsl:for-each select="dim:field[@element='creator']">
+                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" /><xsl:text>, </xsl:text>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when test="dim:field[@element='contributor']">
+                        <xsl:for-each select="dim:field[@element='contributor']">
+                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" /><xsl:text>, </xsl:text>
+                        </xsl:for-each>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
+                    </xsl:otherwise>
+                   </xsl:choose>
+                        </xsl:if>
+                         <xsl:text> </xsl:text>
+                        <xsl:call-template name="itemSummaryView-DIM-date"/>
+                         <xsl:choose>
+                                <xsl:when test="count(dim:field[@element='title'][not(@qualifier)])">
+                                <i><xsl:value-of select="dim:field[@element='title'][not(@qualifier)]"/></i>
+                                <xsl:if test="dim:field[@element='title'][@qualifier='alternative']">
+                                <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) !=
+'?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and
+substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'">
+                                <xsl:text>:</xsl:text>
+                                </xsl:if>
+                                <xsl:text> </xsl:text>
+                                <i><xsl:value-of select="dim:field[@element='title'][@qualifier='alternative']" /></i>
+                                </xsl:if>
+                                <xsl:if test="substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) !=
+'?' and substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '!' and
+substring(dim:field[@element='title'][not(@qualifier)], string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:if
+test="not(dim:field[@element='title'][@qualifier='alternative'])"><xsl:text>. </xsl:text></xsl:if></xsl:if>
+                                <xsl:if test="substring(dim:field[@element='title'][@qualifier='alternative'],
+string-length(dim:field[@element='title'][@qualifier='alternative'])) != '?' and substring(dim:field[@element='title'][@qualifier='alternative'],
+string-length(dim:field[@element='title'][@qualifier='alternative'])) != '!' and substring(dim:field[@element='title'][@qualifier='alternative'],
+string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><xsl:if
+test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>. </xsl:text></xsl:if>
+                                </xsl:if>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                                </xsl:otherwise>
+                        </xsl:choose>
+                
+				<xsl:if test="dim:field[@element='relation'][@qualifier='university']">
+                                <xsl:value-of select="dim:field[@element='relation'][@qualifier='university']" /><xsl:text>, </xsl:text>
+                            </xsl:if>
+							<xsl:if test="dim:field[@element='date'][@qualifier='submitted']">
+                                <xsl:value-of select="dim:field[@element='date'][@qualifier='submitted']" /><xsl:text>. </xsl:text>
+                            </xsl:if>
+                            <xsl:if test="dim:field[@element='publishedIn']">
+                                <xsl:value-of select="dim:field[@element='publishedIn']" /><xsl:text>: </xsl:text>
+                            </xsl:if>
+                            <xsl:if test="dim:field[@element='publisher']">
+                                <xsl:value-of select="dim:field[@element='publisher']" /><xsl:text>. </xsl:text>
+                            </xsl:if>
+                            <xsl:if test="dim:field[@element='relation'][@qualifier='ispartofseries']">
+                                <xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartofseries']">
+                                <xsl:if test="contains(./node(), ';')">
+                                <xsl:copy-of select="substring-before(./node(), ';')"/><xsl:copy-of select="substring-after(./node(), ';')"/>
+                                </xsl:if>
+                                <xsl:if test="not(contains(./node(), ';'))">
+                                <xsl:copy-of select="./node()" />
+                                </xsl:if>
+                        </xsl:for-each>
+                        <xsl:text>.</xsl:text></xsl:if>
+				
+				
+
+                </div>
+        <div class="itemview-citation-small">
+        <xsl:if test="dim:field[@element='type'] = 'dissertation'">
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.dctypedissertation</i18n:text>
+        </xsl:if>
+
+
+        </div>
+                <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
+                <xsl:call-template name="itemSummaryView-DIM-language"/>
+                <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>
+                <xsl:call-template name="itemSummaryView-DIM-descriptionSponsor"/>-->
+                <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <xsl:call-template name="itemSummaryView-DIM-DOI"/>
+                <span class="spacer">&#160;</span>
+                <table class="item-view"><tr><td><xsl:call-template name="itemSummaryView-DIM-thumbnail"/></td>
+                <td><xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                <xsl:if test="$ds_item_view_toggle_url != ''">
+                <xsl:call-template name="itemSummaryView-show-full"/>
+                </xsl:if></td></tr></table>
+                <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+                <!--<xsl:call-template name="itemSummaryView-collections"/>-->
+                <xsl:call-template name="itemSummaryView-subjects"/>
+                <!-- <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.standard-license-text</i18n:text></div>
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.link-standard-license</i18n:text></div>-->
+                <xsl:call-template name="display-rights"/>
+          </xsl:when>
+                <!--/Dissertation-->
+
+
+
+
+
+
+
 
 <!--Lecture-->
           <xsl:when test="dim:field[@element='type'] = 'lecture'">
@@ -434,6 +686,20 @@ translate(substring-after(., ','), ' ', '+'))" /></xsl:attribute>
                         </xsl:if>
                         </xsl:for-each>
                     </xsl:when>
+			<xsl:when test="dim:field[@element='contributor'][@qualifier='editor']">
+                                <xsl:for-each select="dim:field[@element='contributor'][@qualifier='editor']">
+                                <a>
+                                <xsl:attribute name="href"><xsl:value-of select="concat('/browse?type=author&amp;value=', substring-before(., ','), '%2C',
+translate(substring-after(., ','), ' ', '+'))" /></xsl:attribute>
+                                 <xsl:value-of select="./node()"/>
+                                                                 <xsl:if test="count(following-sibling::dim:field[@element='contributor' and @qualifier='editor']) !=
+0">
+                        <xsl:text>; </xsl:text>
+                        </xsl:if>
+                                </a>
+                                </xsl:for-each>
+                        </xsl:when>
+
                     <xsl:when test="dim:field[@element='creator']">
                         <xsl:for-each select="dim:field[@element='creator']">
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" /><xsl:text>, </xsl:text>
@@ -1697,172 +1963,205 @@ select="concat('https://thestacks.libaac.de/discover?filtertype=SubjectField&amp
                 <xsl:call-template name="view-open"/>
             </xsl:otherwise>
         </xsl:choose>-->
-		<xsl:choose>
-			<xsl:when test="dim:field[@element='rights'] = 'L::The Stacks License'">
-				<a href="/rights"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-thestacks-license</i18n:text>
+
+                <xsl:choose>
+                        <xsl:when test="dim:field[@element='rights'] = 'L::The Stacks License'">
+                                <a href="/rights"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-thestacks-license</i18n:text>
                                 </a>
                         </xsl:when>
-			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 1.0'">
-				<a href="https://creativecommons.org/licenses/by-nc/1.0/">
-				<img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 1.0"/>
-				</a>
-			</xsl:when>
-			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 2.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc/2.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 2.0"/>
+                        <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 1.0'">
+							<img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 1.0" style="float:left;margin-right:10px;"/>
+                                <a href="https://creativecommons.org/licenses/by-nc/1.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC 1.0</xsl:text>
                                 </a>
                         </xsl:when>
-			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 2.5'">
-                                <a href="https://creativecommons.org/licenses/by-nc/2.5/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 2.5"/>
+                         <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 2.0'">
+									<img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 2.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc/2.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC 2.0</xsl:text>
                                 </a>
                         </xsl:when>
-			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 3.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc/3.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 3.0"/>
+                         <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 2.5'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 2.5" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc/2.5/" style="font-size:20px">
+                                <xsl:text>CC BY-NC 2.5</xsl:text>
                                 </a>
                         </xsl:when>
-			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 4.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc/4.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 4.0"/>
+                         <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 3.0'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 3.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc/3.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC 3.0</xsl:text>
                                 </a>
                         </xsl:when>
-			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY 1.0'">
-                                <a href="https://creativecommons.org/licenses/by/1.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 1.0"/>
+                         <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC 4.0'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc.png" alt="Attribution-NonCommercial 4.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc/4.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC 4.0</xsl:text>
+                                </a>
+                        </xsl:when>
+                        <xsl:when test="dim:field[@element='rights'] = 'L::CC BY 1.0'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 1.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by/1.0/" style="font-size:20px">
+                                <xsl:text>CC BY 1.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY 2.0'">
-                                <a href="https://creativecommons.org/licenses/by/2.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 2.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 2.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by/2.0/" style="font-size:20px">
+                                <xsl:text>CC BY 2.0</xsl:text>
                                 </a>
                         </xsl:when>
-			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY 2.5'">
-                                <a href="https://creativecommons.org/licenses/by/2.5/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 2.5"/>
+                        <xsl:when test="dim:field[@element='rights'] = 'L::CC BY 2.5'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 2.5" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by/2.5/" style="font-size:20px">
+                                <xsl:text>CC BY 2.5</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY 3.0'">
-                                <a href="https://creativecommons.org/licenses/by/3.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 3.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 3.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by/3.0/" style="font-size:20px">
+                                <xsl:text>CC BY 3.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY 4.0'">
-                                <a href="https://creativecommons.org/licenses/by/4.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 4.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by.png" alt="Attribution 4.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by/4.0/" style="font-size:20px">
+                                <xsl:text>CC BY 4.0</xsl:text>
                                 </a>
                         </xsl:when>
-			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 1.0'">
-                                <a href="https://creativecommons.org/licenses/by-sa/1.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 1.0"/>
+                        <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 1.0'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 1.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-sa/1.0/" style="font-size:20px">
+                                <xsl:text>CC BY-SA 1.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 2.0'">
-                                <a href="https://creativecommons.org/licenses/by-sa/2.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 2.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 2.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-sa/2.0/" style="font-size:20px">
+                                <xsl:text>CC BY-SA 2.0</xsl:text>
                                 </a>
                         </xsl:when>
-			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 2.5'">
-                                <a href="https://creativecommons.org/licenses/by-sa/2.5/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 2.5"/>
+                         <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 2.5'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 2.5" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-sa/2.5/" style="font-size:20px">
+                                <xsl:text>CC BY-SA 2.5</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 3.0'">
-                                <a href="https://creativecommons.org/licenses/by-sa/3.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 3.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 3.0" style="float:left;margin-right:10px;"/>
+                                <a href="https://creativecommons.org/licenses/by-sa/3.0/" style="font-size:20px">
+                                <xsl:text> CC BY-SA 3.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-SA 4.0'">
-                                <a href="https://creativecommons.org/licenses/by-sa/4.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 4.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-sa.png" alt="Attribution-ShareAlike 4.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-sa/4.0/" style="font-size:20px">
+                                <xsl:text>CC BY-SA 4.0</xsl:text>
                                 </a>
                         </xsl:when>
-			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 1.0'">
-                                <a href="https://creativecommons.org/licenses/by-nd/1.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 1.0"/>
+                        <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 1.0'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 1.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nd/1.0/" style="font-size:20px">
+                                <xsl:text>CC BY-ND 1.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 2.0'">
-                                <a href="https://creativecommons.org/licenses/by-nd/2.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 2.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 2.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nd/2.0/" style="font-size:20px">
+                                <xsl:text>CC BY-ND 2.0</xsl:text>
                                 </a>
                         </xsl:when>
-			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 2.5'">
-                                <a href="https://creativecommons.org/licenses/by-nd/2.5/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 2.5"/>
+                        <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 2.5'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 2.5" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nd/2.5/" style="font-size:20px">
+                                <xsl:text>CC BY-ND 2.5</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 3.0'">
-                                <a href="https://creativecommons.org/licenses/by-nd/3.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 3.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 3.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nd/3.0/" style="font-size:20px">
+                                <xsl:text>CC BY-ND 3.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-ND 4.0'">
-                                <a href="https://creativecommons.org/licenses/by-nd/4.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 4.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nd.png" alt="Attribution-NoDerivs 4.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nd/4.0/" style="font-size:20px">
+                                <xsl:text>CC BY-ND 4.0</xsl:text>
                                 </a>
                         </xsl:when>
-			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 1.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc-nd/1.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 
-1.0"/>
+                         <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 1.0'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs
+1.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-nd/1.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-ND 1.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 2.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 
-2.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs
+2.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-ND 2.0</xsl:text>
                                 </a>
                         </xsl:when>
-			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 2.5'">
-                                <a href="https://creativecommons.org/licenses/by-nc-nd/2.5/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 
-2.5"/>
+                         <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 2.5'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs
+2.5" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-nd/2.5/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-ND 2.5</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 3.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 
-3.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs
+3.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-ND 3.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-ND 4.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs 
-4.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-nd.png" alt="Attribution-NonCommercial-NoDerivs
+4.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-ND 4.0</xsl:text>
                                 </a>
                         </xsl:when>
-			 <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 1.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc-sa/1.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 
-1.0"/>
+                         <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 1.0'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike
+1.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-sa/1.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-SA 1.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 2.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 
-2.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike
+2.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-SA 2.0</xsl:text>
                                 </a>
                         </xsl:when>
-			<xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 2.5'">
-                                <a href="https://creativecommons.org/licenses/by-nc-sa/2.5/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 
-2.5"/>
+                        <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 2.5'">
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike
+2.5" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-sa/2.5/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-SA 2.5</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 3.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 
-3.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike
+3.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-SA 3.0</xsl:text>
                                 </a>
                         </xsl:when>
                          <xsl:when test="dim:field[@element='rights'] = 'L::CC BY-NC-SA 4.0'">
-                                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike 
-4.0"/>
+                                <img class="img-responsive" src="/themes/Mirage2/images/creativecommons/cc-by-nc-sa.png" alt="Attribution-NonCommercial-ShareAlike
+4.0" style="float:left;margin-right:10px;"/>
+								<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="font-size:20px">
+                                <xsl:text>CC BY-NC-SA 4.0</xsl:text>
                                 </a>
                         </xsl:when>
-		</xsl:choose>
+                </xsl:choose>
+
+
     </xsl:template>
     <xsl:template name="getFileIcon">
         <xsl:param name="mimetype"/>

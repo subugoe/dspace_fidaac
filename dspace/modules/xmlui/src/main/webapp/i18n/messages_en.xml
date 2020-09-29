@@ -3069,4 +3069,9 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.dri2xhtml.METS-1.0.dctypedissertation">Dissertation</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypelecture">Lecture</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypereport">Report</message>
+
+ <message key="dissertation">Dissertation</message>
+  <message key="lecture">Lecture</message>
+  <message key="report">Report</message>
+
 </catalogue>

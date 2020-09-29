@@ -2936,6 +2936,7 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="australianstudies">Australienstudien</message>
   <message key="newzealandstudies">Neuseelandstudien</message>
 
+
   <message key="article">Zeitschriftenartikel</message>
   <message key="monograph">Monographie</message>
   <message key="digitalReproduction">Digitalisat</message>
@@ -2984,6 +2985,7 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfboa">Book of Abstracts</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeconfpaper">Conference Paper</message>
  <message key="xmlui.dri2xhtml.METS-1.0.dctypereview">Rezension</message>
+
 
 <message key="xmlui.dri2xhtml.METS-1.0.standard-license-text">Nutzungslizenz(en) für diese Dokumente: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.link-standard-license"><a href="/rights" >Standard FID AAC Lizenz</a></message>
@@ -3111,4 +3113,9 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.dri2xhtml.METS-1.0.dctypedissertation">Dissertation</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypelecture">Vortrag</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypereport">Report</message>
+
+ <message key="dissertation">Dissertation</message>
+  <message key="lecture">Vortrag</message>
+  <message key="report">Report</message>
+
 </catalogue>
