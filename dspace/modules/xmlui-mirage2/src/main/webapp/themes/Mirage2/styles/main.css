@@ -5707,7 +5707,7 @@ tbody.collapse.in {
 /* line 530, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse {
   background-color: #1F3F5E;
-  border-color: #183267;
+  border-color: #122538;
 }
 /* line 534, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-brand {
@@ -5734,7 +5734,7 @@ tbody.collapse.in {
 /* line 558, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
   color: #fff;
-  background-color: #183267;
+  background-color: #122538;
 }
 /* line 566, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
@@ -5760,17 +5760,17 @@ tbody.collapse.in {
 }
 /* line 595, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #183267;
+  background-color: #122538;
   color: #fff;
 }
 @media (max-width: 767px) {
   /* line 606, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #183267;
+    border-color: #122538;
   }
   /* line 609, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-    background-color: #183267;
+    background-color: #122538;
   }
   /* line 612, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
@@ -5784,7 +5784,7 @@ tbody.collapse.in {
   /* line 621, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #fff;
-    background-color: #183267;
+    background-color: #122538;
   }
   /* line 629, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -5827,7 +5827,7 @@ tbody.collapse.in {
 }
 /* line 16, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb > li + li:before {
-  content: "/ ";
+  content: "/ ";
   padding: 0 5px;
   color: #ccc;
 }
@@ -8531,7 +8531,7 @@ header .navbar-default .navbar-toggle .icon-bar, header .navbar-default .navbar-
 /* line 264, classic_mirage_color_scheme/_general.scss */
 header .navbar-default .navbar-toggle:hover, header .navbar-default .navbar-toggle:focus, header .navbar-default .navbar-nav:hover, header .navbar-default .navbar-nav:focus {
   color: #fff;
-  background-color: #183267;
+  background-color: #122538;
 }
 /* line 270, classic_mirage_color_scheme/_general.scss */
 header .navbar-default .navbar-toggle > li > a, header .navbar-default .navbar-nav > li > a {
@@ -8540,12 +8540,12 @@ header .navbar-default .navbar-toggle > li > a, header .navbar-default .navbar-n
 /* line 272, classic_mirage_color_scheme/_general.scss */
 header .navbar-default .navbar-toggle > li > a:hover, header .navbar-default .navbar-toggle > li > a:focus, header .navbar-default .navbar-nav > li > a:hover, header .navbar-default .navbar-nav > li > a:focus {
   color: #fff;
-  background-color: #183267;
+  background-color: #122538;
 }
 /* line 279, classic_mirage_color_scheme/_general.scss */
 header .navbar-default .navbar-toggle > .active > a, header .navbar-default .navbar-toggle > .active > a:hover, header .navbar-default .navbar-toggle > .active > a:focus, header .navbar-default .navbar-nav > .active > a, header .navbar-default .navbar-nav > .active > a:hover, header .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
-  background-color: #183267;
+  background-color: #122538;
 }
 /* line 287, classic_mirage_color_scheme/_general.scss */
 header .navbar-default .navbar-toggle > .disabled > a, header .navbar-default .navbar-toggle > .disabled > a:hover, header .navbar-default .navbar-toggle > .disabled > a:focus, header .navbar-default .navbar-nav > .disabled > a, header .navbar-default .navbar-nav > .disabled > a:hover, header .navbar-default .navbar-nav > .disabled > a:focus {
@@ -8554,7 +8554,7 @@ header .navbar-default .navbar-toggle > .disabled > a, header .navbar-default .n
 }
 /* line 295, classic_mirage_color_scheme/_general.scss */
 header .navbar-default .navbar-toggle > .open > a, header .navbar-default .navbar-toggle > .open > a:hover, header .navbar-default .navbar-toggle > .open > a:focus, header .navbar-default .navbar-nav > .open > a, header .navbar-default .navbar-nav > .open > a:hover, header .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #183267;
+  background-color: #122538;
   color: #fff;
 }
 
@@ -10288,4 +10288,9 @@ a.publishButton:visited {
 header .navbar-default .navbar-toggle > .open > a, header .navbar-default .navbar-toggle > .open > a:hover, header .navbar-default .navbar-toggle > .open > a:focus, header .navbar-default .navbar-nav > .open > a, header .navbar-default .navbar-nav > .open > a:hover, header .navbar-default .navbar-nav > .open > a:focus {
   background-color: #183267;
   color: #fff;
+}
+
+/* line 375, _style.scss */
+ul.vocabulary ul {
+  padding-left: 5px;
 }

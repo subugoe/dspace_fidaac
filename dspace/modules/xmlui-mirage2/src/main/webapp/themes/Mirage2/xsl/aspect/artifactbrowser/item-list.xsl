@@ -439,11 +439,14 @@ test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>. </xsl:t
 
 
 	<xsl:when test="dim:field[@element='type'] = 'anthology'">
+				 <xsl:if test="dim:field[@element='relation'][@qualifier='ispartofseries']">
+                       <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofseries']/node()"/><xsl:text>. </xsl:text>
+                </xsl:if>
                             <xsl:if test="dim:field[@element='publishedIn']">
                                 <xsl:value-of select="dim:field[@element='publishedIn']" /><xsl:text>: </xsl:text>
                             </xsl:if>
                             <xsl:if test="dim:field[@element='publisher']">
-                                <xsl:value-of select="dim:field[@element='publisher']" /><xsl:text>. </xsl:text>
+                                <xsl:value-of select="dim:field[@element='publisher']" />
                             </xsl:if>
         </xsl:when>
 		

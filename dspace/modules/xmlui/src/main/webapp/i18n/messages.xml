@@ -770,9 +770,9 @@
 	<message key="xmlui.Submission.submit.DescribeStep.day">Day</message>
 	<message key="xmlui.Submission.submit.DescribeStep.series_name">Series Name</message>
 	<message key="xmlui.Submission.submit.DescribeStep.report_no">Volume No.</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Select License</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Licenses (Older versions: To open the version folders click on the folder symbols.)</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter licences</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Select ...</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Please select appropriate option:</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filter</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Please wait while the controlled vocabulary is loading.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">There was an issue when loading the controlled vocabulary, please try again later.</message>
@@ -3067,11 +3067,21 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.eventdate">Event Date</message>
 <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.sort_by.eventdate">event date</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypedissertation">Dissertation</message>
-<message key="xmlui.dri2xhtml.METS-1.0.dctypelecture">Vortrag</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypelecture">Lecture</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypereport">Report</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypeworkingpaper">Working Paper</message>
 
  <message key="dissertation">Dissertation</message>
   <message key="lecture">Lecture</message>
   <message key="report">Report</message>
+
+<message key="workingPaper">Working Paper</message>
+
+ <message key="filmstudies">Film studies</message>
+  <message key="mediastudies">Media studies</message>
+  <message key="theatrestudies">Theatre studies</message>
+  <message key="arthistory">Art history</message>
+  <message key="comics">Comics &amp; graphic novels</message>
+
 
 </catalogue>

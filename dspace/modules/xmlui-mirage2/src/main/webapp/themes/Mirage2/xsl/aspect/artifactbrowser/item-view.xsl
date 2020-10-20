@@ -1150,7 +1150,12 @@ string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><x
                                         <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                                 </xsl:otherwise>
                                 </xsl:choose>
-                <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/></div>
+		 <xsl:if test="dim:field[@element='relation'][@qualifier='ispartofseries']">
+                       <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofseries']/node()"/><xsl:text>. </xsl:text>
+                </xsl:if>
+                <xsl:call-template name="itemSummaryView-DIM-publishedIn"/>
+		 <xsl:if test="dim:field[@element='publisher']">
+                        <xsl:value-of select="dim:field[@element='publisher']/node()"/></xsl:if></div>
 		<div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeantho</i18n:text></div>
                 <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
                 <xsl:call-template name="itemSummaryView-DIM-language"/>

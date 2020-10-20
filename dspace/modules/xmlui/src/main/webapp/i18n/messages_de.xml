@@ -658,9 +658,9 @@
 	<message key="xmlui.Submission.submit.DescribeStep.day">Tag</message>
 	<message key="xmlui.Submission.submit.DescribeStep.series_name">Reihe</message>
 	<message key="xmlui.Submission.submit.DescribeStep.report_no">Band</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Lizenz auswählen</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Lizenzen (Um die Ordner mit den älteren Versionen zu öffnen, auf die Ordnersymbole klicken.)</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Nach Lizenzen filtern</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Auswählen</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Passende Option auswählen:</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filtern</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filtern</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Bitte warten Sie, der Thesaurus wird geladen.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">Beim Laden des Thesaurus ist ein Fehler aufgetreten. Bitte versuchen Sie es später nochmal.</message>
@@ -3114,8 +3114,21 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.dri2xhtml.METS-1.0.dctypelecture">Vortrag</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypereport">Report</message>
 
+<message key="xmlui.dri2xhtml.METS-1.0.dctypeworkingpaper">Arbeitspapier</message>
+
+
  <message key="dissertation">Dissertation</message>
   <message key="lecture">Vortrag</message>
   <message key="report">Report</message>
+<message key="workingPaper">Arbeitspapier</message>
+
+
+ <message key="filmstudies">Filmwissenschaft</message>
+  <message key="mediastudies">Medienwissenschaft</message>
+  <message key="theatrestudies">Theaterwissenschaft</message>
+  <message key="arthistory">Kunstwissenschaft</message>
+  <message key="comics">Comics &amp; graphic novels</message>
+
+
 
 </catalogue>

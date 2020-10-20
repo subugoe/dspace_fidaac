@@ -877,6 +877,14 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                         </span>
                     </i></span>
                 </xsl:element>
+		<xsl:choose>
+                            <xsl:when test="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]">
+                                <xsl:text>. </xsl:text>
+                                <xsl:value-of select="dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]/dri:item" />
+                                <xsl:text>. </xsl:text>
+                            </xsl:when>
+                 </xsl:choose>
+
 		 <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.publishedIn'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publishedIn'))]/dri:item"/><xsl:text>: </xsl:text>
