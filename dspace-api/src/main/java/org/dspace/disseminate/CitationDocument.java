@@ -7,6 +7,11 @@
  */
 package org.dspace.disseminate;
 
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.pdfbox.exceptions.COSVisitorException;
@@ -16,6 +21,9 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.edit.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectImage;
+import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObject;
+import org.apache.pdfbox.pdmodel.graphics.xobject.PDJpeg;
 import org.dspace.authorize.AuthorizeException;
 import org.dspace.authorize.AuthorizeManager;
 import org.dspace.content.*;
@@ -312,7 +320,7 @@ public class CitationDocument {
         try {
             Item item = (Item) bitstream.getParentObject();
             sourceDocument = sourceDocument.load(bitstream.retrieve());
-            PDPage coverPage = new PDPage(PDPage.PAGE_SIZE_LETTER);
+            PDPage coverPage = new PDPage(PDPage.PAGE_SIZE_A4);
             generateCoverPage(document, coverPage, item);
             addCoverPageToDocument(document, sourceDocument, coverPage);
 
@@ -327,33 +335,42 @@ public class CitationDocument {
     private void generateCoverPage(PDDocument document, PDPage coverPage, Item item) throws IOException, COSVisitorException {
         PDPageContentStream contentStream = new PDPageContentStream(document, coverPage);
         try {
-            int ypos = 760;
+            int ypos = 650;
             int xpos = 30;
             int xwidth = 550;
             int ygap = 20;
+
+
+            String imagePath = "/opt/dspace/aac/webapps/xmlui/themes/Mirage2/images/sub-logo.jpg";
+            InputStream in = Files.newInputStream(Paths.get(imagePath));
+            PDJpeg pdImage = new PDJpeg(document, in);
+
+            String imagePath2 = "/opt/dspace/aac/webapps/xmlui/themes/Mirage2/images/dfg-logo.jpg";
+           InputStream in2 = Files.newInputStream(Paths.get(imagePath2));
+            PDJpeg pdImage2 = new PDJpeg(document, in2);
+
+           String imagePath3 = "/opt/dspace/aac/webapps/xmlui/themes/Mirage2/images/libaac-logo.jpg";
+            InputStream in3 = Files.newInputStream(Paths.get(imagePath3));
+            PDJpeg pdImage3 = new PDJpeg(document, in3);
 
             PDFont fontHelvetica = PDType1Font.HELVETICA;
             PDFont fontHelveticaBold = PDType1Font.HELVETICA_BOLD;
             PDFont fontHelveticaOblique = PDType1Font.HELVETICA_OBLIQUE;
             contentStream.setNonStrokingColor(Color.BLACK);
 
-            String[][] content = {header1};
-            drawTable(coverPage, contentStream, ypos, xpos, content, fontHelveticaBold, 11, false);
-            ypos -=(ygap);
-
-            String[][] content2 = {header2};
-            drawTable(coverPage, contentStream, ypos, xpos, content2, fontHelveticaBold, 11, false);
-            ypos -=ygap;
+        contentStream.drawXObject(pdImage3, 20, 715, 550, 113);
 
             contentStream.fillRect(xpos, ypos, xwidth, 1);
-            contentStream.closeAndStroke();
+            contentStream.setStrokingColor(Color.white);
+//            contentStream.closeAndStroke();
 
-            String[][] content3 = {{getOwningCommunity(item), getOwningCollection(item)}};
-            drawTable(coverPage, contentStream, ypos, xpos, content3, fontHelvetica, 9, false);
-            ypos -=ygap;
+//            String[][] content3 = {{getOwningCommunity(item), getOwningCollection(item)}};
+//            drawTable(coverPage, contentStream, ypos, xpos, content3, fontHelvetica, 9, false);
+//            ypos -=ygap;
 
-            contentStream.fillRect(xpos, ypos, xwidth, 1);
-            contentStream.closeAndStroke();
+//            contentStream.fillRect(xpos, ypos, xwidth, 1);
+//          contentStream.setStrokingColor(Color.white);
+//            contentStream.closeAndStroke();
             ypos -=(ygap*2);
 
             for(String field : fields) {
@@ -368,7 +385,8 @@ public class CitationDocument {
                 }
 
                 if(field.equals("_line_")) {
-                    contentStream.fillRect(xpos, ypos, xwidth, 1);
+                    contentStream.fillRect(xpos, ypos, xwidth, 0);
+                    contentStream.setStrokingColor(Color.white);
                     contentStream.closeAndStroke();
                     ypos -=(ygap);
 
@@ -383,9 +401,12 @@ public class CitationDocument {
 
             contentStream.beginText();
             contentStream.setFont(fontHelveticaOblique, 11);
-            contentStream.moveTextPositionByAmount(xpos, ypos);
+            contentStream.moveTextPositionByAmount(xpos, ypos-50);
             contentStream.drawString(footer);
             contentStream.endText();
+            contentStream.drawXObject(pdImage, 20, 21, 264, 26);
+            contentStream.drawXObject(pdImage2, 410, 20, 140, 30);
+           // contentStream.drawImage(pdImage3, 244, 20);
         } finally {
             contentStream.close();
         }
@@ -395,7 +416,7 @@ public class CitationDocument {
         List<PDPage> sourcePageList = sourceDocument.getDocumentCatalog().getAllPages();
 
         if (isCitationFirstPage()) {
-            //citation as cover page
+            //citation as cover page/opt/dspace/aac/webapps/xmlui/themes/Mirage2/images
             document.addPage(coverPage);
             for (PDPage sourcePage : sourcePageList) {
                 document.addPage(sourcePage);
@@ -554,3 +575,4 @@ public class CitationDocument {
         }
     }
 }
+

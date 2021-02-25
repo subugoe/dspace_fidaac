@@ -766,19 +766,41 @@ select="dim:field[@element='relation'][@qualifier='reviewOf']" /></i><i18n:text>
 		<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='volume']">
                        <xsl:text> </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']/node()"/>
                 </xsl:if>
-		<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
+				<xsl:if test="not(dim:field[@element='bibliographicCitation'][@qualifier='issue']) and not(dim:field[@element='bibliographicCitation'][@qualifier='article']) and not(dim:field[@element='bibliographicCitation'][@qualifier='firstPage'])">
+				<xsl:text>.</xsl:text>
+				</xsl:if>
+				
+				<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue'] or dim:field[@element='bibliographicCitation'][@qualifier='article'] or dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
+
+               <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
                          <xsl:text>.</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']/node()"/>
                 </xsl:if>
-		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
+				<xsl:if test="not(dim:field[@element='bibliographicCitation'][@qualifier='article']) and not(dim:field[@element='bibliographicCitation'][@qualifier='firstPage'])">
+				<xsl:text>.</xsl:text>
+				</xsl:if>
+				
+				<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article'] or dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
+
+                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
                          <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']/node()"/>
                 </xsl:if>
-		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
+				<xsl:if test="not(dim:field[@element='bibliographicCitation'][@qualifier='firstPage'])">
+				<xsl:text>.</xsl:text>
+				</xsl:if>
+                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
                        <xsl:text>: </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
                 </xsl:if>
                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
-                         <xsl:text>&#150;</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>. 
-</xsl:text>
+                         <xsl:text>&#150;</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>.</xsl:text>
                 </xsl:if>
+				</xsl:if>
+
+				</xsl:if>
+
+
+
+
+
                 </div>
         <div class="itemview-citation-small">
 	<xsl:if test="dim:field[@element='type'] = 'review'">
@@ -1177,7 +1199,7 @@ string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><x
           </xsl:when>
                 <!--/Sammelband-->
 	<!--Sammelbandbeitrag-->
-          <xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">
+          <xsl:when test="dim:field[@element='type'] = 'anthologyArticle' or dim:field[@element='type'] = 'blogentry'">
                 <div class="itemview-citation">
                 <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or 
 dim:field[@element='contributor' and descendant::text()]">
@@ -1234,6 +1256,9 @@ test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:te
 			<xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']/node()"/>
 			</i>
 		</xsl:if>
+		<xsl:if test="dim:field[@element='description'][@qualifier='institution']">
+                       <xsl:text>. </xsl:text><xsl:value-of select="dim:field[@element='description'][@qualifier='institution']/node()"/>
+                </xsl:if>
 		<xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
                         
 			<xsl:if test="count(dim:field[@element='relation'][@qualifier='editor']) = 1">
@@ -1253,6 +1278,11 @@ count(following-sibling::dim:field[@element='relation' and @qualifier='editor'])
                         </xsl:for-each>
 			<xsl:text>. </xsl:text>
                 </xsl:if>
+		 <xsl:if test="dim:field[@element='date'][@qualifier='blog']">
+                        <xsl:copy-of select="substring(dim:field[@element='date'][@qualifier='blog']/node(),9,2)"/><xsl:text>.</xsl:text><xsl:copy-of
+select="substring(dim:field[@element='date'][@qualifier='blog']/node(),6,2)"/><xsl:text>.</xsl:text><xsl:copy-of
+select="substring(dim:field[@element='date'][@qualifier='blog']/node(),1,4)"/><xsl:text>.</xsl:text>
+                </xsl:if>
                  <xsl:call-template name="itemSummaryView-DIM-publishedIn"/><xsl:call-template name="itemSummaryView-DIM-publisher"/>
 		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
                        <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
@@ -1264,7 +1294,12 @@ count(following-sibling::dim:field[@element='relation' and @qualifier='editor'])
 		<xsl:call-template name="itemSummaryView-DIM-ispartofseries"/>
 		
                 </div>
+		<xsl:if test="dim:field[@element='type'] = 'anthologyArticle'">
                 <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></div>
+		</xsl:if>
+		<xsl:if test="dim:field[@element='type'] = 'blogentry'">
+                <div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeblogentry</i18n:text></div>
+                </xsl:if>
 		<!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
                 <xsl:call-template name="itemSummaryView-DIM-language"/>
                 <xsl:call-template name="itemSummaryView-DIM-relationIsPartOf"/>

@@ -211,7 +211,7 @@ test="not(dim:field[@element='title'][@qualifier='alternative'])"><xsl:text>. </
 string-length(dim:field[@element='title'][@qualifier='alternative'])) != '?' and substring(dim:field[@element='title'][@qualifier='alternative'], 
 string-length(dim:field[@element='title'][@qualifier='alternative'])) != '!' and substring(dim:field[@element='title'][@qualifier='alternative'], 
 string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><xsl:if 
-test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:text></xsl:if>
+test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>. </xsl:text></xsl:if>
                                 </xsl:if>
                         </xsl:when>
                         <xsl:otherwise>
@@ -223,7 +223,7 @@ test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:te
                     <xsl:attribute name="title">
                         <xsl:call-template name="renderCOinS"/>
                     </xsl:attribute>
-                    &#xFEFF; <!-- non-breaking space to force separating the end tag -->
+<!--                    &#xFEFF; --><!-- non-breaking space to force separating the end tag -->
                 </span>
             </span>
 	</xsl:when>
@@ -268,7 +268,7 @@ string-length(dim:field[@element='title'][not(@qualifier)])) != '.'"><xsl:text>.
             </i></span>
         </xsl:when>
 	
-	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle' or dim:field[@element='type'] = 'workingPaper'">
+	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle' or dim:field[@element='type'] = 'workingPaper' or dim:field[@element='type'] = 'blogentry'">
         <span class="artifact-title">
                 <xsl:element name="a">
                     <xsl:attribute name="href">
@@ -308,7 +308,7 @@ test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:te
                     <xsl:attribute name="title">
                         <xsl:call-template name="renderCOinS"/>
                     </xsl:attribute>
-                    &#xFEFF; <!-- non-breaking space to force separating the end tag -->
+<!--                    &#xFEFF;  non-breaking space to force separating the end tag -->
                 </span>
             </span>
         </xsl:when>
@@ -352,7 +352,7 @@ test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>. </xsl:t
                     <xsl:attribute name="title">
                         <xsl:call-template name="renderCOinS"/>
                     </xsl:attribute>
-                    &#xFEFF; <!-- non-breaking space to force separating the end tag -->
+<!--                    &#xFEFF;  non-breaking space to force separating the end tag -->
                 </span>
             </i></span>
 	</xsl:otherwise>
@@ -479,27 +479,49 @@ select="dim:field[@element='relation'][@qualifier='reviewOf']" /></i><i18n:text>
                        	 	<xsl:text>. </xsl:text>
                 	    </xsl:if>
                             <xsl:if test="dim:field[@element='relation'][@qualifier='journal']">
-                               <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='journal']" /></i>
+                               <i><xsl:value-of select="dim:field[@element='relation'][@qualifier='journal']" /></i>
                             </xsl:if>
 			     <xsl:if test="dim:field[@element='relation'][@qualifier='journalalt']">
-                               <i> <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='journalalt']" /></i>
+                               <i><xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='relation'][@qualifier='journalalt']" /></i>
                             </xsl:if>
-                            <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='volume']">
-                                <xsl:text> </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']" />
-                            </xsl:if>
-			    <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
-                                <xsl:text>.</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']" />
-                            </xsl:if>
-			     <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
-                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']" />
-                            </xsl:if>
-                            <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
-                                <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']" 
-/><xsl:text>&#150;</xsl:text>
-                            </xsl:if>
-                     	    <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
-                                <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']" /><xsl:text>.</xsl:text>
-                            </xsl:if>
+				<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='volume']">
+                       <xsl:text> </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='volume']/node()"/>
+                </xsl:if>
+				<xsl:if test="not(dim:field[@element='bibliographicCitation'][@qualifier='issue']) and not(dim:field[@element='bibliographicCitation'][@qualifier='article']) and not(dim:field[@element='bibliographicCitation'][@qualifier='firstPage'])">
+				<xsl:text>.</xsl:text>
+				</xsl:if>
+				
+				<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue'] or dim:field[@element='bibliographicCitation'][@qualifier='article'] or dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
+
+               <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='issue']">
+                         <xsl:text>.</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='issue']/node()"/>
+                </xsl:if>
+				<xsl:if test="not(dim:field[@element='bibliographicCitation'][@qualifier='article']) and not(dim:field[@element='bibliographicCitation'][@qualifier='firstPage'])">
+				<xsl:text>.</xsl:text>
+				</xsl:if>
+				
+				<xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article'] or dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
+
+                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='article']">
+                         <xsl:text>: </xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='article']/node()"/>
+                </xsl:if>
+				<xsl:if test="not(dim:field[@element='bibliographicCitation'][@qualifier='firstPage'])">
+				<xsl:text>.</xsl:text>
+				</xsl:if>
+                 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
+                       <xsl:text>: </xsl:text> <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
+                </xsl:if>
+                <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']">
+                         <xsl:text>&#150;</xsl:text><xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='lastPage']/node()"/><xsl:text>.</xsl:text>
+                </xsl:if>
+				</xsl:if>
+
+				</xsl:if>
+
+
+
+
+
         </xsl:when>
 	<xsl:when test="dim:field[@element='type'] = 'report'">
 							<xsl:if test="dim:field[@element='contributor'][@qualifier='editor']">
@@ -647,13 +669,16 @@ count(following-sibling::dim:field[@element='relation' and @qualifier='editor'])
 
 
 
-	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle'">
+	<xsl:when test="dim:field[@element='type'] = 'anthologyArticle' or dim:field[@element='type'] = 'blogentry'">
                             <xsl:if test="dim:field[@element='relation'][@qualifier='ispartof']">
                                <i> <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartof']" />
 				<xsl:if test="dim:field[@element='relation'][@qualifier='ispartofalt']"><xsl:text>: </xsl:text></xsl:if>
 				<xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofalt']" /></i>
 				<xsl:text>. </xsl:text>
                             </xsl:if>
+			<xsl:if test="dim:field[@element='description'][@qualifier='institution']">
+                       <xsl:value-of select="dim:field[@element='description'][@qualifier='institution']/node()"/><xsl:text>. </xsl:text>
+                </xsl:if>
 		    <xsl:if test="dim:field[@element='relation'][@qualifier='editor']">
 			 <xsl:if test="count(dim:field[@element='relation'][@qualifier='editor']) = 1">
                          <i18n:text>xmlui.dri2xhtml.METS-1.0.editorone</i18n:text>
@@ -674,6 +699,13 @@ count(following-sibling::dim:field[@element='relation' and @qualifier='editor'])
                         </xsl:for-each>
                         <xsl:text>. </xsl:text>
 		</xsl:if>
+			<xsl:if test="dim:field[@element='date'][@qualifier='blog']">
+                        <xsl:copy-of
+select="substring(dim:field[@element='date'][@qualifier='blog']/node(),9,2)"/><xsl:text>.</xsl:text><xsl:copy-of
+select="substring(dim:field[@element='date'][@qualifier='blog']/node(),6,2)"/><xsl:text>.</xsl:text><xsl:copy-of
+select="substring(dim:field[@element='date'][@qualifier='blog']/node(),1,4)"/><xsl:text>.</xsl:text>
+                        </xsl:if>
+		
                             <xsl:if test="dim:field[@element='publishedIn']">
                                 <xsl:text> </xsl:text><xsl:value-of select="dim:field[@element='publishedIn']" /><xsl:text>: </xsl:text>
                             </xsl:if>
@@ -728,6 +760,9 @@ count(following-sibling::dim:field[@element='relation' and @qualifier='editor'])
         </xsl:if>
 	<xsl:if test="dim:field[@element='type'] = 'anthologyArticle'">
                 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle</i18n:text></div>
+        </xsl:if>
+	<xsl:if test="dim:field[@element='type'] = 'blogentry'">
+                <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeblogentry</i18n:text></div>
         </xsl:if>
 	 <xsl:if test="dim:field[@element='type'] = 'digitalReproduction'">
                 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypedigital</i18n:text></div>

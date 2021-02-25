@@ -2866,6 +2866,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
         <li><a href="handle/11858/48/browse?type=series">American Studies Journal</a></li>
 	<li><a href="handle/11858/377/browse?type=series">americana</a></li>
 	<li><a href="handle/11858/398/browse?type=series">Zeitschrift für Australienstudien / Australian Studies Journal</a></li>
+	<li><a href="handle/11858/669/browse?type=series">Working Papers of the John F. Kennedy Institute</a></li>
         </ul>
 	<!--<li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
         <li><a href="handle/11858/13">Electronic Journal of the Freiberg Geoscience Department</a></li>
@@ -2926,6 +2927,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Anthology</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Journal Article</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Article in Anthology</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypeblogentry">Blog Entry</message>
   <message key="xmlui.dri2xhtml.METS-1.0.editorone">Ed. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.editormult">Eds. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypedigital">Digital Reproduction</message>
@@ -2963,6 +2965,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="genderstudies">Gender Studies</message>
   <message key="anglophoneliterature">Anglophone Literatures and Cultures</message>
 
+  <message key="blogentry">Blog Entry</message>
 
   <message key="preprint">Preprint</message>
   <message key="monograph">Monograph</message>

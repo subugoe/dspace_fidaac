@@ -2623,7 +2623,7 @@ E-Mail: <a href="mailto:sekretariat@sub.uni-goettingen.de">sekretariat@sub.uni-g
 Internet: <a href="www.sub.uni-goettingen.de">www.sub.uni-goettingen.de</a></p>
 <h3>Vertreter </h3>
 <p>Die Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) wird vertreten durch den leitenden Direktor Prof. Dr. Wolfram Horstmann.<br />
-Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch die Präsidentin (kommissarisch) Dr. Valérie Schüller (Vizepräsidentin für Finanzen und Personal) gesetzlich vertretenSie wird durch die Präsidentin (kommissarisch) Dr. Valérie Schüller (Vizepräsidentin für Finanzen und Personal) gesetzlich vertreten.</p>
+Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch die Präsidentin (kommissarisch) Dr. Valérie Schüller (Vizepräsidentin für Finanzen und Personal) gesetzlich vertreten.</p>
 <h3>Zuständige Aufsichtsbehörde </h3>
 <p>Georg-August-Universität Göttingen Stiftung Öffentlichen Rechts, Stiftungsausschuss Universität, Wilhelmsplatz 1, 37073 Göttingen </p>
 <h3>Umsatzsteueridentifikationsnummer </h3>
@@ -2872,6 +2872,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
         <li><a href="handle/11858/48/browse?type=series">American Studies Journal</a></li>
 	<li><a href="handle/11858/377/browse?type=series">americana</a></li>
 	<li><a href="handle/11858/398/browse?type=series">Zeitschrift für Australienstudien / Australian Studies Journal</a></li>
+	<li><a href="handle/11858/669/browse?type=series">Working Papers of the John F. Kennedy Institute</a></li>
 	</ul>
         <!--<li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
         <li><a href="handle/11858/13">Electronic Journal of the Freiberg Geoscience Department</a></li>
@@ -2975,6 +2976,7 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="australianstudies">Australienstudien</message>
   <message key="newzealandstudies">Neuseelandstudien</message>
 
+ <message key="blogentry">Blog-Beitrag</message>
 
   <message key="article">Zeitschriftenartikel</message>
   <message key="monograph">Monographie</message>
@@ -3012,6 +3014,7 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Sammelband</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Zeitschriftenartikel</message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Sammelbandbeitrag</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypeblogentry">Blog-Beitrag</message>
 <message key="xmlui.dri2xhtml.METS-1.0.editor">Hrsg. </message>
 <message key="xmlui.metadata.export">Metadaten-Export: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.dctypedigital">Digitalisat</message>

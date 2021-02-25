@@ -163,15 +163,16 @@
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.sort_by.title">title</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.sort_by.dateissued">issue date</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.sort_by.dateaccessioned">submit date</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.sort_by.volume">volume</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.asc">ascending</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.order.desc">descending</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Authors Name</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.author.column_heading">Contributors</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.subject.column_heading">Subject</message>
 
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Browsing {0} by Author {1}</message>
-	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Browsing {0} by Author</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.author">Browsing {0} by Contributor {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.author">Browsing {0} by Contributor</message>
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.subject">Browsing {0} by Subject {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.subject">Browsing {0} by Subject</message>
@@ -184,6 +185,9 @@
 
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.dateaccessioned">Browsing {0} by Submit Date {1}</message>
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.dateaccessioned">Browsing {0} by Submit Date</message>
+	
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.volume">Browsing {0} by Volume {1}</message>
+        <message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.volume">Browsing {0} by Volume</message>
 
 
 	<!-- org.dspace.app.xmlui.administrative.WithdrawnItems.java -->
@@ -212,7 +216,7 @@
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Search within this collection:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titles</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Authors</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_authors">Contributors</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_dates">Dates</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.advanced_search_link">Advanced Search</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_recent_submissions">Recent Submissions</message>
@@ -229,7 +233,7 @@
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Search within this community and its collections:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titles</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Authors</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_authors">Contributors</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_dates">Dates</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.advanced_search_link">Advanced Search</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities">Sub-communities within this community</message>
@@ -275,7 +279,7 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">The Stacks</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Contributors</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_subject">Subjects</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateissued">Issue Date</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_dateaccessioned">Submit Date</message>
@@ -722,7 +726,7 @@
 	<message key="xmlui.Submission.submit.progressbar.verify">Review</message>
 	<message key="xmlui.Submission.submit.progressbar.creative-commons">Creative Commons</message>
 	<message key="xmlui.Submission.submit.progressbar.CClicense">CC License</message>
-    <message key="xmlui.Submission.submit.progressbar.license">License</message>
+    <message key="xmlui.Submission.submit.progressbar.license">Grant rights</message>
 	<message key="xmlui.Submission.submit.progressbar.complete">Complete</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.ResumeStep -->
@@ -763,16 +767,16 @@
 	<message key="xmlui.Submission.submit.DescribeStep.head">Describe the item <small>(*obligatory fields)</small></message>
 	<message key="xmlui.Submission.submit.DescribeStep.unknown_field">Error: Unknown field type</message>
 	<message key="xmlui.Submission.submit.DescribeStep.required_field">This field is required</message>
-	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Last name, <i>e.g. Smith</i></message>
-	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">First name(s) + "Jr", <i>e.g. Peter Jr</i></message>
+	<message key="xmlui.Submission.submit.DescribeStep.last_name_help">Last name</message>
+	<message key="xmlui.Submission.submit.DescribeStep.first_name_help">First name(s) + "Jr"</message>
 	<message key="xmlui.Submission.submit.DescribeStep.year">Year</message>
 	<message key="xmlui.Submission.submit.DescribeStep.month">Month</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">Day</message>
 	<message key="xmlui.Submission.submit.DescribeStep.series_name">Series Name</message>
 	<message key="xmlui.Submission.submit.DescribeStep.report_no">Volume No.</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Select License</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Licenses (Older versions: To open the version folders click on the folder symbols.)</message>
-	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter licences</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Select ...</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Please select appropriate option:</message>
+	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.button">Filter</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.loading">Please wait while the controlled vocabulary is loading.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.error">There was an issue when loading the controlled vocabulary, please try again later.</message>
@@ -2541,24 +2545,58 @@
    <p>If you would like to upload other types of material, please <a href="mailto:fid-aac@sub.uni-goettingen.de">contact us</a>.</p>
    <p>All uploaded material is made available in Open Access, either immediately or after the time span you choose. You may select a Creative Commons License that best suits your needs.</p>
    <p>All documents uploaded to The Stacks are assigned (if needed) a unique digital object identifier (DOI) to provide a persistent reference to each document. </p>
-   <p>The Library of Anglo-American Culture &amp; History (Library AAC) is the central provider of literature, resources and services for scholars and students in the fields of American studies, Anglophone literatures &amp; cultures, Australian &amp; New Zealand studies, British &amp; Irish studies, Canadian studies, and English. Currently, it is funded by the German Research Foundation (DFG) (<a href="http://www.dfg.de/foerderung/programme/infrastruktur/lis/lis_foerderangebote/fachinformationsdienste_wissenschaft/index.html">'Specialised Information Services'</a>).</p>
+   <p>The Library of Anglo-American Culture &amp; History (Library AAC) is the central provider of literature, resources and services for scholars and students in the fields of American studies, Anglophone literatures &amp; cultures, Australian &amp; New Zealand studies, British &amp; Irish studies, Canadian studies, and English. Currently, it is funded by the German Research Foundation (DFG) (<a href="http://www.dfg.de/foerderung/programme/infrastruktur/lis/lis_foerderangebote/fachinfodienste_wissenschaft/index.html">'Specialised Information Services'</a>).</p>
    <p>The main goal of the Library AAC is to develop services which improve access to specialist literature and information for all researchers in Germany working in the fields mentioned above. We aim to tailor our activities to the specific needs of the respective research communities and the individual characteristics of the disciplines. </p>
    <p>Learn more about our services on our website <a href="https://libaac.de">libaac.de</a>! </p>
 </message>
    <message key="xmlui.help.head">Help</message>
-<message key="xmlui.rights.head">Nutzungsbedingungen</message>
+  <message key="xmlui.rights.head">Nutzungsbedingungen THE STACKS</message>
   <message key="xmlui.rights.text">
-  <h3>Lizenz für die Nutzung von Dokumenten in The Stacks (The Stacks-Lizenz)</h3>
-  <p>Nutzerinnen und Nutzer von The Stacks sind berechtigt, Dokumente nach Maßgabe des Urhebergesetzes unentgeltlich zu nutzen, insbesondere, das Dokument zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern und in kleiner Anzahl zu drucken (§§ 53, 60c, 60d UrhG). </p>
-<p>Darüber hinaus können für einzelne Dokumenten weitere Rechte (z.B. Creative Commons-Lizenzen) gelten. Die jeweilige Lizenz ist dem Dokument zugeordnet und auf der dazugehörigen Download-Seite deutlich gekennzeichnet. Der Lizenztext ist verlinkt und kann zu Informationszwecken aufgerufen werden. </p>
-  <h3>Rechteeinräumung für das Publizieren in The Stacks</h3>
+  <h3>Einleitung</h3>
+  <p>THE STACKS ist ein interdisziplinäres Open Access-Repositorium, das von der <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a> (Library AAC) als Projekt der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) für die Veröffentlichung wissenschaftlicher Publikationen aus den Fächern Amerikastudien, Anglistik, Anglophone Literaturen und Kulturen, Australien- &amp; Neuseelandstudien, Großbritannien- &amp; Irlandstudien und Kanadastudien betrieben wird. Zurzeit wird die Library AAC von der Deutschen Forschungsgemeinschaft (DFG) finanziert (<a href="http://www.dfg.de/foerderung/programme/infrastruktur/lis/lis_foerderangebote/fachinfodienste_wissenschaft/index.html">'Fachinformationsdienste'</a>).</p>
+  <p>Ziel der Library AAC ist es, mit ihren Diensten den Zugang zu spezialisierter Forschungsliteratur und Fachinformation für alle in Deutschland arbeitenden Wissenschaftler*innen in den oben genannten Fächern zu verbessern. Wir streben danach, unsere Angebote bestmöglich an den Bedürfnissen der Fachgemeinschaft und den Spezifika der betreffenden Disziplinen auszurichten. Wichtiger Bestandteil dieses Verständnisses ist der stetige Einsatz für die Verbesserung der Open Access-Strukturen. Damit unterstützt die Library AAC mit ihrer Arbeit maßgeblich die Ziele der Georg-August-Universität Göttingen, die sich seit mehreren Jahren für Open Access einsetzt um "<a href="https://www.uni-goettingen.de/de/document/download/35276f46a7d847913bba168149f44047.pdf/AM%20I%202016Nr.65.pdf">wissenschaftliche Ergebnisse ihrer Wissenschaftler und Wissenschaftlerinnen möglichst breit öffentlich zugänglich und nutzbar zu machen</a>", wie es in der Open Access Leitlinie heißt. Gleichzeitig unterstützt die Universität aber auch unsere Arbeit zum Beispiel durch das Bereitstellen wichtiger Infrastruktur.</p>
+  <h3>Inhalt</h3>
+  <p>In THE STACKS können Forscher*innen ihre Artikel, Monographien, Rezensionen sowie vollständige Hefte und Bände von Zeitschriften und Serien publizieren und archivieren. Außerdem werden Graue Literatur wie Calls for Papers, Konferenzprogramme, Books of Abstracts, Vorträge, Konferenzberichte, Seminarmaterialien (Seminarbeschreibungen, Syllabi) in THE STACKS aufgenommen.
+THE STACKS ist das Fachrepositorium der Library AAC und definiert als solches sein Sammlungsprofil entsprechend des abgedeckten Fächerspektrums. Das Selbstverständnis der Fächer als interdisziplinäre historische Kulturwissenschaften bzw. regionalwissenschaftliche Area Studies eröffnet somit eine breite fachliche wie auch geographische Palette der Sammlung. Analog zum <a href="https://libaac.de/information-for/librarians/#c969">Erwerbungsprofil des FID</a> werden in THE STACKS wissenschaftliche Beiträge wie auch graue Literatur aus den folgenden Bereichen, jeweils in Bezug auf die Länder Großbritannien, Irland, USA, Kanada, Australien und Neuseeland gesammelt: </p>
+  <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px; margin-bottom: 10px;">
+  <li>Literatur</li>
+  <li>Sprache</li>
+  <li>Geschichte</li>
+  <li>Politik</li>
+  <li>Medien</li>
+  <li>Film- und Theaterwissenschaft</li>
+  <li>Fachdidaktik</li>
+  <li>Kulturgeographie</li>
+  <li>Recht</li>
+  </ul>
+  <p>Der Fokus des Repositoriums liegt auf der Förderung des grünen Weges zu Open Access durch einen Zweitveröffentlichungsservice, bei dem Wissenschaftler*innen ihre Publikationslisten auf die Möglichkeiten der Zweitverwertung durch unsere Mitarbeiter*innen prüfen lassen können. Dabei werden die Beiträge nach Kriterien des deutschen Urheberrechts (u.a. §38 UrhG) sowie mithilfe von Diensten wie <a href="https://v2.sherpa.ac.uk/romeo/">Sherpa Romeo</a> oder durch Überprüfung der Open Access-Policies der Verlage überprüft. Durch diesen Fokus auf bereits veröffentlichte Beiträge ist eine Qualitätssicherung der guten wissenschaftlichen Praxis garantiert, da die meisten Publikationen bereits eine peer review durchlaufen haben. Erstveröffentlichungen machen einen geringen Anteil in der Sammlung aus und müssen durch andere Merkmale der Qualitätssicherung ihre wissenschaftliche Integrität ausweisen. Die klassifikatorische Erschließung der Publikationen erfolgt durch unsere Mitarbeiter*Innen nach definierten Fächerkategorien und den entsprechenden Sachgruppen der DDC.</p>
+  <p>Da die Library AAC ihre Dienste vornehmlich der in Deutschland tätigen Gemeinschaft der Forscher*innen zur Verfügung stellt, soll auch das Fachrepositorium THE STACKS einen repräsentativen Blick auf deren Produktivität, die Vielfalt der Forschungsinteressen und die methodischen Ansätze bieten. Als Open Access-Repositorium ermöglichen wir zudem einen weltweiten Zugriff auf die Forschungsinhalte. Die Aufnahme grauer Literatur (CfPs, Konferenzprogramme und -Berichte, thematische Bibliographien, Seminarpläne) in das Sammlungsprofil soll eine dokumentierende Funktion erfüllen und thematische Trends in der Forschung und Lehre nachvollziehbar machen. Als fachliche Besonderheit in den Geistes- und Sozialwissenschaften wird ein großer Teil der Publikationen in den o. g. Fächern als Beiträge in Sammelbänden veröffentlicht. Ein älterer Teil dieser Publikationen ist nach wie vor nur in gedruckter Form verfügbar. Durch die Zweitveröffentlichung dieser Beiträge erhöhen wir somit deren Sichtbarkeit und Zugänglichkeit und schaffen somit einen Mehrwert für die Fachgemeinschaft. Als eine wichtige Textgattung in der wissenschaftlichen Kommunikation finden neben Zeitschriftenartikeln und Beiträgen aus Sammelbänden außerdem Rezensionen von Fachliteratur Eingang in das Repositorium.</p>
+  <h3>Technische Informationen</h3>
+  <p>Um eine erfolgreiche Nachnutzung zu gewährleisten, erfüllt ein elektronisches Dokument, das auf THE STACKS veröffentlicht und archiviert werden soll folgende Bedingungen:</p>
+  <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px; margin-bottom: 10px;">
+  <li>Das Dokument ist zur Verbreitung in der Öffentlichkeit bestimmt.</li>
+  <li>Das Dokument ist vollendet. Eventuelle Veränderungen werden in einer neuen Version gespeichert. Das Ursprungsdokument bleibt davon unberührt.</li>
+  <li>Das Dokument liegt als PDF oder PDF/A vor.</li>
+  <li>Das Dokument ist frei von technischen Schutzmaßnahmen wie Passwörtern oder Druckschutz.</li>
+  </ul>
+  <p>Jedem Dokument wird ein Persistent Uniform Resource Locator (PURL) zugewiesen, der eine konsistente Referenzierbarkeit gewährleistet. Nach Möglichkeit und wenn die Publikationslage es zulässt, erhalten die hochgeladenen Dokumente zusätzlich einen eindeutigen Digital Object Identifier (DOI). </p>
+<p>Da es ein Ziel von THE STACKS ist, die Forschungsarbeiten und Materialien deutscher Forscher*innen im Open Access verfügbar zu machen und die Nachnutzbarkeit wissenschaftlicher Arbeit zu fördern, unterstützen wir eine Veröffentlichung der Dokumente möglichst unter der jeweils aktuellen Creative Commons-Lizenz mit Namensnennung.</p>
+<p>Als Projekt der SUB Göttingen, hält sich die Library AAC beim Betrieb des Repositoriums an die Richtlinien und Grundsätze der SUB für <a href="https://www.sub.uni-goettingen.de/wir-ueber-uns/portrait/digital-policies-grundsaetze-fuer-die-digitalen-angebote-der-sub-goettingen/digitaler-zugang/#c9379">"eine vertrauenswürdige digitale Langzeitarchivierung"</a>. </p>  
+  <p>Veröffentlichte Dokumente werden nach ihrer Veröffentlichung nicht verändert; andere Versionen des ursprünglichen Dokumentes werden ggf. unter dem persistenten URL bekannt gegeben. Das Löschen von Dokumenten aus dem Repositorium erfolgt nur in Ausnahmefällen und wird unter dem persistenten URL des ursprünglichen Dokumentes bekannt gegeben.</p>
+  <p>Das Repositorium wird mit der Software DSpace betrieben, die sich auf Grund ausgezeichneter Reputation und internationaler Verbreitung als Plattform für Repositorien durchgesetzt hat. DSpace ist ein Open Source-Programm, das stetig weiterentwickelt und verbessert wird.</p>
+  <p>Der technische Betrieb des Repositoriums wird von der Niedersächsischen Staats- und Universitätbibliothek Göttingen, die Bereitstellung der notwendigen Infrastruktur von der Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen (GWDG) vorgehalten. Institutionell angebunden ist THE STACKS an die Georg-August-Universität Göttingen.</p>
+  <h3>Lizenz für die Nutzung von Dokumenten in The Stacks (THE STACKS-Lizenz)</h3>
+  <p>Nutzerinnen und Nutzer von THE STACKS sind berechtigt, Dokumente nach Maßgabe des Urhebergesetzes unentgeltlich zu nutzen, insbesondere, das Dokument zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern und in kleiner Anzahl zu drucken (§§ 53, 60c, 60d UrhG). </p>
+  <p>Darüber hinaus können für einzelne Dokumenten weitere Rechte (z.B. Creative Commons-Lizenzen) gelten. Die jeweilige Lizenz ist dem Dokument zugeordnet und auf der dazugehörigen Download-Seite deutlich gekennzeichnet. Der Lizenztext ist dort verlinkt und kann zu Informationszwecken aufgerufen werden. </p>
+  <h3>Rechteeinräumung für das Publizieren in THE STACKS</h3>
   <p>Ich stimme einer Rechtevereinbarung in den folgenden Punkten zu:</p>
-  <p>Bei Herausgeberwerken: Ich versichere als Herausgeberin bzw. Herausgeber, dass von den an dem Werk beteiligten Autorinnen und Autoren die Zustimmung eingeholt wurde, ihre Beiträge in der unten erklärten Art und Weise nutzen zu dürfen. Ich stelle die SUB Göttingen von allen möglichen Ansprüchen der Autorinnen bzw. Autoren frei.</p>
-  <p>1. Rechteeinräumung: Als Urheberin bzw. Urheber räume ich der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) zeitlich unbegrenzt und unwiderruflich das nicht ausschließliche Recht ein, das Werk öffentlich zugänglich zu machen, auf dem Repositorium The Stacks der SUB Göttingen zu archivieren und über Print-on-Demand in Papierform oder auf anderen Speichermedien zu vervielfältigen. Der urheberrechtliche Schutz bleibt durch diese Lizenz unberührt. Mit dem Hochladen des Dokuments ist kein rechtlich verbindlicher Anspruch auf die Bereitstellung oder Archivierung verbunden.</p>
-  <p>2. Rechte Dritter: Als Urheberin bzw. Urheber erkläre ich, dass mit der Bereitstellung des Werkes und jedes Bestandteils (z.B. Abbildungen) keine Rechte Dritter (z.B. Miturheberinnen bzw. Miturheber, Co-Autorinnen bzw. Co-Autoren, Verlage, Verwertungsgesellschaften, Drittmittelgeber) verletzt werden. Ich stelle die SUB Göttingen von etwaigen Ansprüchen Dritter frei. Die SUB Göttingen ist berechtigt, den Zugriff auf ein Dokument zu sperren, soweit konkrete Anhaltspunkte für eine Verletzung von Rechten Dritter bestehen.</p>
-  <p>3. Langzeitarchivierung und Transformation in andere Formate: Als Urheberin bzw. Urheber räume ich der SUB Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, das Werk in ihrem Langzeitarchiv zu speichern und bei Bedarf (z.B. Migration, Barrierefreiheit, bessere Zugänglichkeit oder Erschließung) in andere elektronische und physische Formate zu überführen.</p>
-  <p>4. Weitergabe von Metadaten und Dokumenten: ls Urheberin bzw. Urheber räume ich der SUB Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, die Metadaten des Werks unentgeltlich anderen Datenbanken zur Verfügung zu stellen. Darüber hinaus ist die SUB Göttingen berechtigt, das Werk Dritten im Rahmen nationaler Sammelaufträge zur Online-Bereitstellung oder Archivierung zur Verfügung zu stellen. Wenn Sie Fragen zu der Rechtevereinbarung haben, wenden Sie sich an <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettingen.de</a>.</p>
+  <p>Bei Herausgeberwerken: Ich versichere als Herausgeberin bzw. Herausgeber, dass von den an dem Werk beteiligten Autorinnen und Autoren die Zustimmung eingeholt wurde, ihre Beiträge in der unten erklärten Art und Weise nutzen zu dürfen. Ich stelle die Georg-August-Universität Göttingen (Universität Göttingen) von allen möglichen Ansprüchen der Autorinnen bzw. Autoren frei.</p>
+  <p>1. Rechteeinräumung: Als Urheberin bzw. Urheber räume ich der Universität Göttingen zeitlich unbegrenzt und unwiderruflich das nicht ausschließliche Recht ein, das Werk öffentlich zugänglich zu machen, auf dem Repositorium "THE STACKS", betrieben von der Niedersächsischen Staats- und Universitätbibliothek Göttingen, zu archivieren und zu diesen Zwecken zu vervielfältigen. Dies kann auch auf Servern beauftragter Dritter geschehen. Der urheberrechtliche Schutz bleibt durch diese Lizenz unberührt. Mit dem Hochladen des Dokuments ist kein rechtlich verbindlicher Anspruch auf die Bereitstellung oder Archivierung verbunden.</p>
+  <p>2. Rechte Dritter: Als Urheberin bzw. Urheber erkläre ich, dass mit der Bereitstellung des Werkes und jedes Bestandteils (z.B. Abbildungen) keine Rechte Dritter (z.B. Miturheberinnen bzw. Miturheber, Co-Autorinnen bzw. Co-Autoren, Verlage, Verwertungsgesellschaften, Drittmittelgeber) verletzt werden. Ich stelle die Universität Göttingen von etwaigen Ansprüchen Dritter frei. Die Universität Göttingen ist berechtigt, den Zugriff auf ein Dokument zu sperren, soweit konkrete Anhaltspunkte für eine Verletzung von Rechten Dritter bestehen.</p>
+  <p>3. Langzeitarchivierung und Transformation in andere Formate: Als Urheberin bzw. Urheber räume ich der Universität Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, das Werk in ihrem Langzeitarchiv zu speichern und bei Bedarf (z.B. Migration, Barrierefreiheit, bessere Zugänglichkeit oder Erschließung) in andere elektronische und physische Formate zu überführen.</p>
+  <p>4. Weitergabe von Metadaten und Dokumenten: Als Urheberin bzw. Urheber räume ich der Universität Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, die Metadaten des Werks unentgeltlich anderen Datenbanken zur Verfügung zu stellen. Darüber hinaus ist die Universität Göttingen berechtigt, das Werk Dritten im Rahmen nationaler Sammelaufträge zur Online-Bereitstellung oder Archivierung zur Verfügung zu stellen. Wenn Sie Fragen zu der Rechtevereinbarung haben, wenden Sie sich an <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettingen.de</a>.</p>
   </message>
+
   <message key="xmlui.imprint.head">Impressum</message>
   <message key="xmlui.imprint.text">
   <h3>Anbieter</h3>
@@ -2574,7 +2612,7 @@ E-Mail: <a href="mailto:sekretariat@sub.uni-goettingen.de">sekretariat@sub.uni-g
 Internet: <a href="www.sub.uni-goettingen.de">www.sub.uni-goettingen.de</a></p>
 <h3>Vertreter </h3>
 <p>Die Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) wird vertreten durch den leitenden Direktor Prof. Dr. Wolfram Horstmann.<br />
-Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch Prof. Dr. Reinhard Jahn gesetzlich vertreten, der beauftragt ist, das Amt des Präsidenten wahrzunehmen. </p>
+Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch die Präsidentin (kommissarisch) Dr. Valérie Schüller (Vizepräsidentin für Finanzen und Personal) gesetzlich vertreten.</p>
 <h3>Zuständige Aufsichtsbehörde </h3>
 <p>Georg-August-Universität Göttingen Stiftung Öffentlichen Rechts, Stiftungsausschuss Universität, Wilhelmsplatz 1, 37073 Göttingen </p>
 <h3>Umsatzsteueridentifikationsnummer </h3>
@@ -2741,7 +2779,17 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
         <h2>Welcome to The Stacks!</h2>
         <p>The Stacks is the subject repository for American studies, Anglophone literatures &amp; cultures,  Australian &amp; New Zealand studies, British &amp; Irish studies, Canadian studies and English, including all sub-fields such as cultural studies, English language teaching, gender studies, geography, history, law, linguistics, literary studies, media studies, medieval studies, political science, postcolonial studies and social sciences. </p>
         <p>By publishing in The Stacks, your research will be more visible. All uploaded material is made available in Open Access, either immediately or after the time span you choose. <a href="https://thestacks.libaac.de/help">Read more</a> on how to publish in The Stacks!</p>
-        <p>The Stacks is provided by the <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a>.</p>
+        <p style="margin-bottom:20px;">The Stacks is provided by the <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a>.</p>
+	<h2 class="page-header">Regular Contributors</h2>
+<p>
+<image style="width: 40px;vertical-align:middle;margin-right:5px;" src="/themes/Mirage2/images/asjlogo.jpg" alt="ASJ Logo"/>
+<span><a href="https://thestacks.libaac.de/handle/11858/48">American Studies Journal</a></span>
+</p>
+<p style="margin-bottom: 40px;">
+<image style="width: 40px;vertical-align:middle;margin-right:5px;" src="/themes/Mirage2/images/gastlogo.svg" alt="GASt Logo"/>
+<span><a href="https://thestacks.libaac.de/handle/11858/398">German Association for Australian Studies</a></span>
+</p>
+
         </div>
 <!--	<div style="max-width: 505px;" class="hidden-xs">
         <h2 style="text-align: center;">The Stacks</h2>
@@ -2878,6 +2926,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeantho">Anthology</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypearticle">Journal Article</message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypeanthoarticle">Article in Anthology</message>
+  <message key="xmlui.dri2xhtml.METS-1.0.dctypeblogentry">Blog Entry</message>
   <message key="xmlui.dri2xhtml.METS-1.0.editorone">Ed. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.editormult">Eds. </message>
   <message key="xmlui.dri2xhtml.METS-1.0.dctypedigital">Digital Reproduction</message>
@@ -2915,6 +2964,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="genderstudies">Gender Studies</message>
   <message key="anglophoneliterature">Anglophone Literatures and Cultures</message>
 
+  <message key="blogentry">Blog Entry</message>
 
   <message key="preprint">Preprint</message>
   <message key="monograph">Monograph</message>
@@ -3038,5 +3088,40 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 <message key="xmlui.mirage2.itemSummaryView.Subjects">Subjects: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.relationDOI">DOI of Anthology: </message>
 <message key="xmlui.dri2xhtml.METS-1.0.item-thestacks-license">The Stacks License</message>
+<message key="xmlui.general.publish_now">Publish Now</message>
+<message key="xmlui.general.publish_here">Publish Here</message>
+
+<message key="xmlui.EPerson.Navigation.submit">Publish</message>
+<message key="xmlui.ArtifactBrowser.Navigation.browse_eventdate">Event Date</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.eventdate">Browse by Event Date</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.eventdate">Event Date</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.eventdate.column_heading">Event Date</message>
+
+<message key="xmlui.events.head">Events</message>
+<message key="xmlui.events.text"> <ul>
+        <li><a href="handle/11858/468/browse?type=eventdate">Postgraduate Forum (DGfA)</a></li>
+        </ul>
+</message>
+<message key="xmlui.events">Events</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.item.eventdate">Browsing by Event Date</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.item.eventdate">Event Date</message>
+<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.sort_by.eventdate">event date</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypedissertation">Dissertation</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypelecture">Lecture</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypereport">Report</message>
+<message key="xmlui.dri2xhtml.METS-1.0.dctypeworkingpaper">Working Paper</message>
+
+ <message key="dissertation">Dissertation</message>
+  <message key="lecture">Lecture</message>
+  <message key="report">Report</message>
+
+<message key="workingPaper">Working Paper</message>
+
+ <message key="filmstudies">Film studies</message>
+  <message key="mediastudies">Media studies</message>
+  <message key="theatrestudies">Theatre studies</message>
+  <message key="arthistory">Art history</message>
+  <message key="comics">Comics &amp; graphic novels</message>
+<message key="economics">Economics</message>
 
 </catalogue>

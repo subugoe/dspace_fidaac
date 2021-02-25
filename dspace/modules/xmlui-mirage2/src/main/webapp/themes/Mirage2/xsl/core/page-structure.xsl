@@ -756,7 +756,9 @@
                              <xsl:text>  </xsl:text>-->
                              <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
                              <xsl:text>  </xsl:text>
-                             <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
+                             <a href="https://libaac.de/publish/publish-in-the-stacks/"><xsl:text>How to Publish</xsl:text></a>
+                             <xsl:text>  </xsl:text>
+			     <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
                              <xsl:text>  </xsl:text>
 			     <a href ="/help"> <i18n:text>xmlui.dri2xhtml.structural.help-link</i18n:text></a>
                              <xsl:text>  </xsl:text>

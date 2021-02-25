@@ -149,7 +149,7 @@
                                                 </xsl:with-param>
                                         </xsl:call-template>
                                 </xsl:when>
-				<xsl:when test="dri:list[@n=(concat($handle, ':dc.type'))] = 'anthologyArticle'">
+				<xsl:when test="dri:list[@n=(concat($handle, ':dc.type'))] = 'anthologyArticle' or dri:list[@n=(concat($handle, ':dc.type'))] = 'blogentry'">
 					<xsl:call-template name="itemSummaryListAnthologyArticle">
 						<xsl:with-param name="handle">
 							<xsl:value-of select="$handle"/>
@@ -367,7 +367,7 @@ substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </span>
@@ -540,7 +540,7 @@ substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </span>
@@ -715,7 +715,7 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </span>
@@ -872,7 +872,8 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </i></span>
@@ -1011,7 +1012,7 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </i></span>
@@ -1156,7 +1157,7 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </i></span>
@@ -1305,7 +1306,7 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </span>
@@ -1499,7 +1500,7 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </span>
@@ -1519,6 +1520,9 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.volume'))]">
                                 <xsl:text> </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, 
 ':dc.bibliographicCitation.volume'))]/dri:item"/>
+			<xsl:if test="not(dri:list[@n=(concat($handle, ':dc.bibliographicCitation.issue'))]) and not(dri:list[@n=(concat($handle, ':dc.bibliographicCitation.article'))]) and not(dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))])">
+				<xsl:text>.</xsl:text>
+				</xsl:if>
                             </xsl:when>
                         </xsl:choose>
                  <xsl:choose>
@@ -1798,7 +1802,7 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </span>
@@ -1809,6 +1813,9 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
 select="dri:list[@n=(concat($handle, ':dc.relation.ispartofalt'))]/dri:item"/></xsl:if>
 				<xsl:text>. </xsl:text></i>
                             </xsl:if>
+		<xsl:if test="dri:list[@n=(concat($handle, ':dc.description.institution'))]">
+                        <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.description.institution'))]/dri:item"/><xsl:text>. </xsl:text>
+        </xsl:if>
 		
                   <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.editor'))]">
 			<xsl:if test="count(dri:list[@n=(concat($handle, ':dc.relation.editor'))]/dri:item) = 1">
@@ -1827,6 +1834,12 @@ select="dri:list[@n=(concat($handle, ':dc.relation.ispartofalt'))]/dri:item"/></
                         </xsl:for-each>
                         <xsl:text>. </xsl:text>
                     </xsl:if>
+		 <xsl:if test="dri:list[@n=(concat($handle, ':dc.date.blog'))]">
+                <xsl:copy-of select="substring(dri:list[@n=(concat($handle,
+':dc.date.blog'))]/dri:item,9,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dri:list[@n=(concat($handle,
+':dc.date.blog'))]/dri:item,6,2)"/><xsl:text>.</xsl:text><xsl:copy-of select="substring(dri:list[@n=(concat($handle,
+':dc.date.blog'))]/dri:item,1,4)"/><xsl:text>.</xsl:text>
+        </xsl:if>
                         <xsl:if test="dri:list[@n=(concat($handle, ':dc.publishedIn'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publishedIn'))]/dri:item"/><xsl:text>: </xsl:text>
                             </xsl:if>
@@ -1953,16 +1966,16 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </i></span>
                 </xsl:element>
         <xsl:if test="dri:list[@n=(concat($handle, ':dc.description.seminar'))]">
-                        <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.description.seminar'))]/dri:item"/><xsl:text>. </xsl:text>
+                        <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.description.seminar'))]/dri:item"/><xsl:text>.</xsl:text>
         </xsl:if>
         <xsl:if test="dri:list[@n=(concat($handle, ':dc.description.location'))]">
-                      <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.description.location'))]/dri:item"/><xsl:text>, </xsl:text>
+                      <xsl:text> </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.description.location'))]/dri:item"/><xsl:text>, </xsl:text>
         </xsl:if>
         <xsl:if test="dri:list[@n=(concat($handle, ':dc.description.institution'))]">
                         <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.description.institution'))]/dri:item"/><xsl:text>, </xsl:text>
@@ -2079,13 +2092,13 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                                     <xsl:call-template name="renderCOinS"/>
                                 </xsl:for-each>
                             </xsl:attribute>
-                            <xsl:text>&#160;</xsl:text>
+<!--                            <xsl:text>&#160;</xsl:text>-->
                             <!-- non-breaking space to force separating the end tag -->
                         </span>
                     </i></span>
  </xsl:element>
 	 <xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventLocation'))]">
-                        <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventLocation'))]/dri:item"/><xsl:text>, </xsl:text>
+                        <xsl:text> </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.relation.eventLocation'))]/dri:item"/><xsl:text>, </xsl:text>
         </xsl:if>
        
 	<xsl:if test="dri:list[@n=(concat($handle, ':dc.relation.eventStart'))]">
