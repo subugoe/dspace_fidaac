@@ -62,7 +62,7 @@
                                  <input-type value-pairs-name="common_versions">dropdown</input-type>
                                  <hint>Select your document type.</hint>
                                  <required>Select your document type.</required>
-                                 <type-bind>monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
+                                 <type-bind>workingPaper,dissertation,report,lecture,monograph,article,anthologyArticle,anthology,digitalReproduction,blogentry,review</type-bind>
                         </field>
 
                         <field>
@@ -75,6 +75,17 @@
                                  <hint>Please select at least one subject field. Hold CTR to select multiple categories.</hint>
                                  <required>Select at least one or more categorie(s) from the dropdown menu!</required>
                         </field>
+			 <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>subject</dc-element>
+                                 <dc-qualifier>ddc</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*DDC categorie(s)</label>
+				<input-type value-pairs-name="subject_ddc">dropdown</input-type>
+                                 <hint>Please select at least one DDC categorie.</hint>
+                                 <required>Select at least one or more categorie(s) from the dropdown menu!</required>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>contributor</dc-element>
@@ -84,8 +95,9 @@
                                  <input-type>name</input-type>
                                  <hint></hint>
                                  <required>Enter the author(s) of this item!</required>
-                                 <type-bind>review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper</type-bind>
+                                 <type-bind>workingPaper,dissertation,report,review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper,blogentry</type-bind>
                         </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>contributor</dc-element>
@@ -95,7 +107,7 @@
                                  <input-type>name</input-type>
                                  <hint></hint>
                                  <required>Enter the lecturer of the seminar!</required>
-                                 <type-bind>courseDescription,syllabus</type-bind>
+                                 <type-bind>courseDescription,syllabus,lecture</type-bind>
                         </field>
 
 			<field>
@@ -138,9 +150,9 @@
                                  <repeatable>true</repeatable>
                                  <label>Organized by</label>
                                  <input-type>name</input-type>
-                                 <hint>Enter the person(s) organising the conference.</hint>
+                                 <hint>Enter the person(s) organising the event.</hint>
                                  <required></required>
-                                 <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                                 <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -150,7 +162,7 @@
                                  <label>Editor</label>
                                  <input-type>name</input-type>
                                  <hint></hint>
-                                 <type-bind>anthology,conferenceBoA,conferenceCall,cfppublication</type-bind>
+                                 <type-bind>report,lecture,anthology,conferenceBoA,conferenceCall,cfppublication</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -200,11 +212,11 @@
                                  <dc-element>relation</dc-element>
                                  <dc-qualifier>eventStart</dc-qualifier>
                                  <repeatable>false</repeatable>
-                                 <label>*Start of conference</label>
+                                 <label>*Start of event</label>
                                  <input-type>date</input-type>
-                                 <hint>Enter the date of the first day of the conference.</hint>
-                                 <required>Enter the date of the first day of the conference!</required>
-                                <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                                 <hint>Enter the date of the first day of the event.</hint>
+                                 <required>Enter the date of the first day of the event!</required>
+                                <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
                         </field>
                          <field>
                                  <dc-schema>dc</dc-schema>
@@ -222,11 +234,10 @@
                                  <dc-element>relation</dc-element>
                                  <dc-qualifier>eventLocation</dc-qualifier>
                                  <repeatable>false</repeatable>
-                                 <label>*Conference location</label>
+                                 <label>Event location</label>
                                  <input-type>onebox</input-type>
-                                 <hint>Enter the location (city etc.) where the conference took place.</hint>
-                                 <required>Enter the location (city etc.) where the conference took place!</required>
-                                <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                                 <hint>Enter the location (city etc.) where the event took place.</hint>
+                                <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -238,6 +249,27 @@
                                  <hint>Enter the institution hosting the seminar.</hint>
                                  <required>Enter the institution hosting the seminar!</required>
                                 <type-bind>courseDescription,syllabus</type-bind>
+                        </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                <dc-qualifier>institution</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Institution</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the institution.</hint>
+                                 <required>Enter the institution!</required>
+                                <type-bind>workingPaper</type-bind>
+                        </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                <dc-qualifier>institution</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Institution</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the institution.</hint>
+                                <type-bind>blogentry</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -274,6 +306,17 @@
                                  <required>Enter the title of the anthology the item was published in!</required>
                                  <type-bind>anthologyArticle</type-bind>
                         </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>ispartof</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Title of blog</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required>Enter the title of the blog the item was published in!</required>
+                                 <type-bind>blogentry</type-bind>
+                        </field>
                          <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>relation</dc-element>
@@ -284,7 +327,16 @@
                                  <hint>Enter the subtitle of the anthology the item was published in.</hint>
                                  <type-bind>anthologyArticle</type-bind>
                         </field>
-
+			 <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>ispartofalt</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Subtitle of blog</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the subtitle of the blog the item was published in.</hint>
+                                 <type-bind>blogentry</type-bind>
+                        </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>relation</dc-element>
@@ -293,21 +345,53 @@
                                  <label>*Editor of anthology</label>
                                  <input-type>name</input-type>
                                  <hint></hint>
-                                 <required>Enter the editor(s) of the anthology the item was published in!</required>
-                                 <type-bind>anthologyArticle</type-bind>
+                		<required>Enter the editor of the anthology the item was published in!</required>  
+		               <type-bind>anthologyArticle</type-bind>
                         </field>
-
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>editor</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Editor of blog</label>
+                                 <input-type>name</input-type>
+                                 <hint></hint>
+                               <type-bind>blogentry</type-bind>
+                        </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>relation</dc-element>
                                  <dc-qualifier></dc-qualifier>
                                  <repeatable>true</repeatable>
-                                 <label>ID of anthology</label>
+                                 <label>ID of anthology/blog</label>
                                  <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-                                 <hint>Select the ID (DOI, ISBN etc.) of the anthology the item was published in. For DOIs type prefix and suffix only, e.g. 'https://doi.org/10.17974/gin2015-1073' – type '10.17974/gin2015-1073'.</hint>
+                                 <hint>Select the ID (DOI, ISBN etc.) of the anthology/blog the item was published in. For DOIs type prefix and suffix only, e.g. 'https://doi.org/10.17974/gin2015-1073' – type '10.17974/gin2015-1073'.</hint>
                                  <required></required>
-                                 <type-bind>anthologyArticle</type-bind>
+                                 <type-bind>anthologyArticle,blogentry</type-bind>
                         </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>date</dc-element>
+                                 <dc-qualifier>submitted</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Year of submission</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the year in which the dissertation was submitted.</hint>
+                                 <required>Enter the year in which the dissertation was submitted.</required>
+				<type-bind>dissertation</type-bind>
+                        </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>university</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Name of degree-granting university</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the university where the dissertation was submitted.</hint>
+                                 <required>Enter the university where the dissertation was submitted.</required>
+                                <type-bind>dissertation</type-bind>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>date</dc-element>
@@ -318,6 +402,17 @@
                                  <hint>Enter the year in which the item was first published. Unpublished material: Enter the year in which you are uploading the document in The Stacks.</hint>
                                  <required>Enter the year in which the item was first published!</required>
                         </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>date</dc-element>
+                                 <dc-qualifier>blog</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Issue date</label>
+                                 <input-type>date</input-type>
+                                 <hint>Enter the date in which the blog entry was first published.</hint>
+                                 <required>Enter the date in which the blog entry was first published!</required>
+				<type-bind>blogentry</type-bind>
+                        </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>publisher</dc-element>
@@ -327,7 +422,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>If this item has been previously published, enter the publisher's name.</hint>
                                  <required></required>
-                                <type-bind>review,monograph,anthologyArticle,anthology,digitalReproduction</type-bind>
+                                <type-bind>report,lecture,dissertation,review,monograph,anthologyArticle,anthology,digitalReproduction</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -338,7 +433,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>If this item has been previously published, enter the place of publication.</hint>
                                  <required></required>
-                                <type-bind>review,monograph,anthologyArticle,anthology,digitalReproduction</type-bind>
+                                <type-bind>report,lecture,dissertation,review,monograph,anthologyArticle,anthology,digitalReproduction</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -349,8 +444,20 @@
                                  <input-type>series</input-type>
                                  <hint>If this item is part of a series, enter the title and volume number here.</hint>
                                  <required></required>
-                                 <type-bind>review,monograph,anthology,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>blogentry,report,lecture,dissertation,review,monograph,anthology,digitalReproduction,anthologyArticle</type-bind>
                         </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>volume</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Series</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the series information in the following form: Literary Research; Vol.13</hint>
+                                 <required></required>
+                                 <type-bind>workingPaper,article,review</type-bind>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>relation</dc-element>
@@ -360,7 +467,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction</type-bind>
+                                 <type-bind>report,lecture,review,article,digitalReproduction</type-bind>
                         </field>
                                                 <field>
                                  <dc-schema>dc</dc-schema>
@@ -371,7 +478,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the subtitle of the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction</type-bind>
+                                 <type-bind>report,lecture,review,article,digitalReproduction</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -404,7 +511,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the ISSN of the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction</type-bind>
+                                 <type-bind>report,lecture,review,article,digitalReproduction</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -415,7 +522,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction,cfppublication</type-bind>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction,cfppublication</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -426,7 +533,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction,cfppublication</type-bind>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction,cfppublication</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -437,7 +544,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction</type-bind>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -448,7 +555,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction,anthologyArticle</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -459,7 +566,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction,anthologyArticle</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -533,7 +640,7 @@
                                 <repeatable>false</repeatable>
                                 <label>*License</label>
                                 <input-type>onebox</input-type>
-                                <hint>Click 'Select license'. If the document is already licensed under a Creative Commons license or you want to assign one, choose a license from the dropdown menu. If you do not want to assign a Creative Commons license, you have to choose the standard distribution license of The Stacks. For more information see 'Help' below.</hint>
+                                <hint>Click 'Select license'. If the document is already licensed under a Creative Commons license or you want to assign one, choose a license from the dropdown menu. If you do not want to assign a Creative Commons license, you have to choose the standard distribution license of The Stacks. You can find the wording for the standard distribution license of The Stacks in the 'Terms of Use.' For more information see 'Help' below.</hint>
                                 <required>Select a license.</required>
                                 <vocabulary closed="true">cc</vocabulary>
                         </field>
@@ -577,6 +684,17 @@
                                  <hint>Please select at least one subject field. Hold CTR to select multiple categories. Hold CTR to select multiple categories!</hint>
                                  <required>Select at least one or more categorie(s) from the dropdown menu!</required>
                         </field>
+			 <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>subject</dc-element>
+                                 <dc-qualifier>ddc</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*DDC categorie(s)</label>
+				<input-type value-pairs-name="subject_ddc">dropdown</input-type>
+                                 <hint>Please select at least one DDC categorie.</hint>
+                                 <required>Select at least one or more categorie(s) from the menu!</required>
+                        </field>
+
 			<field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>contributor</dc-element>
@@ -668,11 +786,11 @@
                                  <dc-element>relation</dc-element>
                                  <dc-qualifier>eventStart</dc-qualifier>
                                  <repeatable>false</repeatable>
-                                 <label>*Start of conference</label>
+                                 <label>*Start of event</label>
                                  <input-type>date</input-type>
-                                 <hint>Enter the date of the first day of the conference.</hint>
+                                 <hint>Enter the date of the first day of the event.</hint>
                                  <required>Enter the date of the first day of the conference!</required>
-                                <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                                <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
                         </field>
                          <field>
                                  <dc-schema>dc</dc-schema>
@@ -690,11 +808,10 @@
                                  <dc-element>relation</dc-element>
                                  <dc-qualifier>eventLocation</dc-qualifier>
                                  <repeatable>false</repeatable>
-                                 <label>*Conference location</label>
+                                 <label>Event location</label>
                                  <input-type>onebox</input-type>
-                                 <hint>Enter the location (city etc.) where the conference took place.</hint>
-                                 <required>Enter the location (city etc.) where the conference took place!</required>
-                                <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                                 <hint>Enter the location (city etc.) where the event took place.</hint>
+                                <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
                         </field>
 
                          <field>
@@ -904,7 +1021,7 @@
                                 <repeatable>false</repeatable>
                                 <label>License</label>
                                 <input-type>onebox</input-type>
-                                <hint>Click 'Select license'. If the document is already licensed under a Creative Commons license or you want to assign one, choose a license from the dropdown menu. If you do not want to assign a Creative Commons license, you have to choose the standard distribution license of The Stacks. For more information see 'Help' below.</hint>
+                                <hint>Click 'Select license'. If the document is already licensed under a Creative Commons license or you want to assign one, choose a license from the dropdown menu. If you do not want to assign a Creative Commons license, you have to choose the standard distribution license of The Stacks. You can find the wording for the standard distribution license of The Stacks in the 'Terms of Use.' For more information see 'Help' below.</hint>
                                 <required></required>
                                 <vocabulary closed="true">cc</vocabulary>
                         </field>
@@ -953,6 +1070,26 @@
        <displayed-value>Anthology</displayed-value>
        <stored-value>anthology</stored-value>
      </pair>
+
+ <pair>
+       <displayed-value>Dissertation</displayed-value>
+       <stored-value>dissertation</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Report</displayed-value>
+       <stored-value>report</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Lecture</displayed-value>
+       <stored-value>lecture</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Preprint</displayed-value>
+       <stored-value>prepublication</stored-value>
+     </pair>
+
+
+
      <pair>
        <displayed-value>Conference Report</displayed-value>
        <stored-value>conferenceReport</stored-value>
@@ -968,14 +1105,6 @@
      <pair>
        <displayed-value>Book of Abstracts</displayed-value>
        <stored-value>conferenceBoA</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Call for Papers (Publication)</displayed-value>
-       <stored-value>cfppublication</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Digital Reproduction</displayed-value>
-       <stored-value>digitalReproduction</stored-value>
      </pair>
     <pair>
        <displayed-value>Course Description</displayed-value>
@@ -993,6 +1122,15 @@
        <displayed-value>Review</displayed-value>
        <stored-value>review</stored-value>
      </pair>
+    <pair>
+       <displayed-value>Working Paper</displayed-value>
+       <stored-value>workingPaper</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Blog Entry</displayed-value>
+       <stored-value>blogentry</stored-value>
+     </pair>
+
     </value-pairs>
 
 <!--   <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
@@ -1033,7 +1171,7 @@
      </pair>
      <pair>
        <displayed-value>Accepted version</displayed-value>
-       <stored-value>submittedVersion</stored-value>
+       <stored-value>acceptedVersion</stored-value>
      </pair>
      <pair>
        <displayed-value>Draft</displayed-value>
@@ -1126,10 +1264,31 @@
        <displayed-value>English Language Teaching</displayed-value>
        <stored-value>englishlanguageteaching</stored-value>
      </pair>
-      <pair>
-       <displayed-value>Film &amp; Media Studies</displayed-value>
+
+<pair>
+       <displayed-value>Media studies</displayed-value>
        <stored-value>mediastudies</stored-value>
      </pair>
+
+ <pair>
+       <displayed-value>Film studies</displayed-value>
+       <stored-value>filmstudies</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Theatre studies</displayed-value>
+       <stored-value>theatrestudies</stored-value>
+     </pair>
+         <pair>
+       <displayed-value>Art history</displayed-value>
+       <stored-value>arthistory</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Comics &amp; graphic novels</displayed-value>
+       <stored-value>comics</stored-value>
+     </pair>
+
+
+
    <pair>
        <displayed-value>Gender Studies</displayed-value>
        <stored-value>genderstudies</stored-value>
@@ -1178,6 +1337,11 @@
        <displayed-value>Social Science</displayed-value>
        <stored-value>socialscience</stored-value>
      </pair>
+     <pair>
+       <displayed-value>Economics</displayed-value>
+       <stored-value>economics</stored-value>
+     </pair>
+
     </value-pairs>
       <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
          <pair>
@@ -1209,6 +1373,142 @@
        <stored-value>other</stored-value>
      </pair>
    </value-pairs>
+<value-pairs value-pairs-name="subject_ddc" dc-term="subject_ddc">
+         <pair>
+       <displayed-value>070 - Nachrichtenmedien, Journalismus, Verlagswesen</displayed-value>
+       <stored-value>ddc:070</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>300 - Sozialwissenschaften</displayed-value>
+       <stored-value>ddc:300</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>305 - Soziale Gruppen</displayed-value>
+       <stored-value>ddc:305</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>305.3 - Personen nach Gender und Geschlecht</displayed-value>
+       <stored-value>ddc:305.3</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>320 - Politik</displayed-value>
+       <stored-value>ddc:320</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>340 - Recht</displayed-value>
+       <stored-value>ddc:340</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>370 - Bildung und Erziehung</displayed-value>
+       <stored-value>ddc:370</stored-value>
+     </pair>
+	 <pair>
+       <displayed-value>371 - Schulen, schulische Tätigkeiten; Sonderpädagogik</displayed-value>
+       <stored-value>ddc:371</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>371.3 - Unterrichts- und Lernmethoden</displayed-value>
+       <stored-value>ddc:371.3</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>400 - Sprache</displayed-value>
+       <stored-value>ddc:400</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>420 - Englisch, Altenglisch</displayed-value>
+       <stored-value>ddc:420</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>700 - Künste und Unterhaltung</displayed-value>
+       <stored-value>ddc:700</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>740 - Zeichnung und Handwerk</displayed-value>
+       <stored-value>ddc:740</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>741.5 - Comics and graphic novels</displayed-value>
+       <stored-value>ddc:741.5</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>780 - Musik</displayed-value>
+       <stored-value>ddc:780</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>790 - Freizeitgestaltung, Darstellende Kunst</displayed-value>
+       <stored-value>ddc:790</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>791 - Filmwissenschaften</displayed-value>
+       <stored-value>ddc:791</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>792 - Theaterwissenschaften</displayed-value>
+       <stored-value>ddc:792</stored-value>
+     </pair>
+	 <pair>
+       <displayed-value>800 - Literatur</displayed-value>
+       <stored-value>ddc:800</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>810 - Englische Literatur Amerikas</displayed-value>
+       <stored-value>ddc:810</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>820 - Englische Literatur</displayed-value>
+       <stored-value>ddc:820</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>900 - Geschichte</displayed-value>
+       <stored-value>ddc:900</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>909 - Weltgeschichte</displayed-value>
+       <stored-value>ddc:909</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>909.07 - Weltgeschichte/Ca. 500-1450/1500</displayed-value>
+       <stored-value>ddc:909.07</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>910 - Geografie, Reisen</displayed-value>
+       <stored-value>ddc:910</stored-value>
+     </pair>
+	 <pair>
+       <displayed-value>940 - Geschichte Europas</displayed-value>
+       <stored-value>ddc:940</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>941 - britische Inseln (Geschichte)</displayed-value>
+       <stored-value>ddc:941</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>941.7 - Republik Irland (Geschichte)</displayed-value>
+       <stored-value>ddc:941.7</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>970 - Geschichte Nordamerikas</displayed-value>
+       <stored-value>ddc:970</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>971 - Geschichte Kanadas</displayed-value>
+       <stored-value>ddc:971</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>980 - Geschichte Südamerikas</displayed-value>
+       <stored-value>ddc:980</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>990 - Geschichte der übrigen Welt</displayed-value>
+       <stored-value>ddc:990</stored-value>
+     </pair>
+	 <pair>
+       <displayed-value>993 - Neuseeland (Geschichte)</displayed-value>
+       <stored-value>ddc:993</stored-value>
+     </pair>
+   </value-pairs>
+
+
  </form-value-pairs>
 
 

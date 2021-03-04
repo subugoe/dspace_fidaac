@@ -17,8 +17,8 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 
 import org.apache.log4j.Logger;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.util.PDFTextStripper;
+import org.apache.pdfbox.pdmodel.*;
+import org.apache.pdfbox.text.*;
 import org.dspace.core.ConfigurationManager;
 
 /*

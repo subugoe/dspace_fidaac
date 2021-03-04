@@ -51,6 +51,6 @@
 
  <!ELEMENT vocabulary (#PCDATA) >
 
- <!ATTLIST vocabulary closed (true|false) "false"> 
+ <!ATTLIST vocabulary closed (true|false) "true"> 
 
  <!ELEMENT visibility (#PCDATA) >
