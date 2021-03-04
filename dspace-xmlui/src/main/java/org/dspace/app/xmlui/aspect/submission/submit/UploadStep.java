@@ -82,10 +82,10 @@ public class UploadStep extends AbstractSubmissionStep
     protected static final Message T_virus_error =
             message("xmlui.Submission.submit.UploadStep.virus_error");
 
-    //protected static final Message T_description =
-    //        message("xmlui.Submission.submit.UploadStep.description");
-    //protected static final Message T_description_help =
-    //        message("xmlui.Submission.submit.UploadStep.description_help");
+    protected static final Message T_description =
+            message("xmlui.Submission.submit.UploadStep.description");
+    protected static final Message T_description_help =
+            message("xmlui.Submission.submit.UploadStep.description_help");
     protected static final Message T_submit_upload =
             message("xmlui.Submission.submit.UploadStep.submit_upload");
     protected static final Message T_head2 =
@@ -243,9 +243,9 @@ public class UploadStep extends AbstractSubmissionStep
                 file.addError(T_virus_error);
             }
 
-            //Text description = upload.addItem().addText("description");
-            //description.setLabel(T_description);
-            //description.setHelp(T_description_help);
+            Text description = upload.addItem().addText("description");
+            description.setLabel(T_description);
+            description.setHelp(T_description_help);
 
             Button uploadSubmit = upload.addItem().addButton("submit_upload");
             uploadSubmit.setValue(T_submit_upload);
@@ -265,7 +265,7 @@ public class UploadStep extends AbstractSubmissionStep
             header.addCellContent(T_column1); // select checkbox
             header.addCellContent(T_column2); // file name
             header.addCellContent(T_column3); // size
-//            header.addCellContent(T_column4); // description
+            header.addCellContent(T_column4); // description
             header.addCellContent(T_column5); // format
             header.addCellContent(T_column6); // edit button
 
@@ -275,7 +275,7 @@ public class UploadStep extends AbstractSubmissionStep
                 String name = bitstream.getName();
                 String url = makeBitstreamLink(item, bitstream);
                 long bytes = bitstream.getSize();
-  //              String desc = bitstream.getDescription();
+                String desc = bitstream.getDescription();
                 String algorithm = bitstream.getChecksumAlgorithm();
                 String checksum = bitstream.getChecksum();
 
@@ -306,14 +306,14 @@ public class UploadStep extends AbstractSubmissionStep
 
                 row.addCell().addXref(url,name);
                 row.addCellContent(bytes + " bytes");
-                //if (desc == null || desc.length() == 0)
-                //{
-                //    row.addCellContent(T_unknown_name);
-                //}
-                //else
-                //{
-                //    row.addCellContent(desc);
-                //}
+                if (desc == null || desc.length() == 0)
+                {
+                    row.addCellContent(T_unknown_name);
+                }
+                else
+                {
+                    row.addCellContent(desc);
+                }
 
                 BitstreamFormat format = bitstream.getFormat();
                 if (format == null)

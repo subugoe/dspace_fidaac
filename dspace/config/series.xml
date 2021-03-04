@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
+
+<body>
+<div id="file.series" n="text" rend="primary">
+<head><i18n:text >xmlui.series.head</i18n:text></head>
+
+  <div>
+
+        <i18n:text>xmlui.series.text</i18n:text>
+  </div>
+</div>
+
+</body>
+
+<options/>
+<meta>
+<userMeta/>
+<pageMeta>
+<metadata element="title">FID AAC: <i18n:text>xmlui.series.periodicals</i18n:text></metadata>
+<trail target="/">FID AAC</trail>
+<trail><i18n:text>xmlui.series.periodicals</i18n:text></trail>
+</pageMeta>
+<repositoryMeta/>
+</meta>
+</document>
