@@ -562,12 +562,12 @@ substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:list[@n
                  </xsl:choose>
 		<xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.contributor.editor'))]">
-                                <xsl:text>. </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.contributor.editor'))]/dri:item"/><xsl:text>. </xsl:text>
+                                <xsl:text>. </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.contributor.editor'))]/dri:item"/>
                             </xsl:when>
                  </xsl:choose>
 				 <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.publishedIn'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publishedIn'))]/dri:item"/><xsl:text>: </xsl:text>
+                                <xsl:text>. </xsl:text><xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publishedIn'))]/dri:item"/><xsl:text>: </xsl:text>
                             </xsl:when>
                         </xsl:choose>
                  <xsl:choose>
@@ -587,6 +587,17 @@ select="substring-after(dri:list[@n=(concat($handle, ':dc.relation.ispartofserie
                                 </xsl:if>
 				<xsl:text>.</xsl:text>
                             </xsl:when>
+			    <xsl:when test="not(dri:list[@n=(concat($handle, ':dc.relation.ispartofseries'))]) and dri:list[@n=(concat($handle, ':dc.relation.volume'))]">
+                                <xsl:text>. </xsl:text>
+                                <xsl:if test="contains(dri:list[@n=(concat($handle, ':dc.relation.volume'))]/dri:item, ';')">
+                                <xsl:value-of select="substring-before(dri:list[@n=(concat($handle, ':dc.relation.volume'))]/dri:item, ';')"/><xsl:value-of
+select="substring-after(dri:list[@n=(concat($handle, ':dc.relation.volume'))]/dri:item, ';')"/>
+                                </xsl:if>
+                                 <xsl:if test="not(contains(dri:list[@n=(concat($handle, ':dc.relation.volume'))]/dri:item, ';'))">
+                                <xsl:value-of select="dri:list[@n=(concat($handle, ':dc.relation.volume'))]/dri:item" />
+                                </xsl:if>
+                                <xsl:text>.</xsl:text>
+                            </xsl:when>	
                  </xsl:choose>
                   <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.bibliographicCitation.firstPage'))]">
@@ -893,7 +904,7 @@ and substring(dri:list[@n=(concat($handle, ':dc.title'))], string-length(dri:lis
                         </xsl:choose>
                  <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.publisher'))]">
-                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/>
+                                <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.publisher'))]/dri:item"/><xsl:text>. </xsl:text>
                             </xsl:when>
                  </xsl:choose>
 		 <div class="dctype"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeantho</i18n:text></div>

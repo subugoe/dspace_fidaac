@@ -603,7 +603,7 @@
     <message key="xmlui.Submission.Submissions.completed.column1">Zugangsdatum</message>
     <message key="xmlui.Submission.Submissions.completed.column2">Titel</message>
     <message key="xmlui.Submission.Submissions.completed.column3">Sammlung</message>
-    <message key="xmlui.Submission.Submissions.completed.limit">Es werden 50 Ihrer Veröffentlichungen angezeigt. </message>
+    <message key="xmlui.Submission.Submissions.completed.limit">Es werden 10 Ihrer Veröffentlichungen angezeigt. </message>
     <message key="xmlui.Submission.Submissions.completed.displayall">Anzeige aller Veröffentlichungen.</message>
 
 	<!-- submission progress bar messages -->
@@ -2560,14 +2560,14 @@
    <p>Lesen Sie mehr über unsere Dienste auf unserer Webseite <a href="https://libaac.de">libaac.de</a>! </p>
 </message>
   <message key="xmlui.help.head">Hilfe</message>
-  <message key="xmlui.rights.head">Nutzungsbedingungen THE STACKS</message>
+  <message key="xmlui.rights.head">Nutzungsbedingungen The Stacks</message>
   <message key="xmlui.rights.text">
   <h3>Einleitung</h3>
-  <p>THE STACKS ist ein interdisziplinäres Open Access-Repositorium, das von der <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a> (Library AAC) als Projekt der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) für die Veröffentlichung wissenschaftlicher Publikationen aus den Fächern Amerikastudien, Anglistik, Anglophone Literaturen und Kulturen, Australien- &amp; Neuseelandstudien, Großbritannien- &amp; Irlandstudien und Kanadastudien betrieben wird. Zurzeit wird die Library AAC von der Deutschen Forschungsgemeinschaft (DFG) finanziert (<a href="http://www.dfg.de/foerderung/programme/infrastruktur/lis/lis_foerderangebote/fachinfodienste_wissenschaft/index.html">'Fachinformationsdienste'</a>).</p>
+  <p>The Stacks ist ein interdisziplinäres Open Access-Repositorium, das von der  <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a> (Library AAC) als Projekt der Niedersächsischen Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) für die Veröffentlichung wissenschaftlicher Publikationen aus den Fächern Amerikastudien, Anglistik, Anglophone Literaturen und Kulturen, Australien- &amp; Neuseelandstudien, Großbritannien- &amp; Irlandstudien und Kanadastudien betrieben wird. Zurzeit wird die Library AAC von der Deutschen Forschungsgemeinschaft (DFG) finanziert (<a href="http://www.dfg.de/foerderung/programme/infrastruktur/lis/lis_foerderangebote/fachinfodienste_wissenschaft/index.html">'Fachinformationsdienste'</a>).</p>
   <p>Ziel der Library AAC ist es, mit ihren Diensten den Zugang zu spezialisierter Forschungsliteratur und Fachinformation für alle in Deutschland arbeitenden Wissenschaftler*innen in den oben genannten Fächern zu verbessern. Wir streben danach, unsere Angebote bestmöglich an den Bedürfnissen der Fachgemeinschaft und den Spezifika der betreffenden Disziplinen auszurichten. Wichtiger Bestandteil dieses Verständnisses ist der stetige Einsatz für die Verbesserung der Open Access-Strukturen. Damit unterstützt die Library AAC mit ihrer Arbeit maßgeblich die Ziele der Georg-August-Universität Göttingen, die sich seit mehreren Jahren für Open Access einsetzt um "<a href="https://www.uni-goettingen.de/de/document/download/35276f46a7d847913bba168149f44047.pdf/AM%20I%202016Nr.65.pdf">wissenschaftliche Ergebnisse ihrer Wissenschaftler und Wissenschaftlerinnen möglichst breit öffentlich zugänglich und nutzbar zu machen</a>", wie es in der Open Access Leitlinie heißt. Gleichzeitig unterstützt die Universität aber auch unsere Arbeit zum Beispiel durch das Bereitstellen wichtiger Infrastruktur.</p>
   <h3>Inhalt</h3>
-  <p>In THE STACKS können Forscher*innen ihre Artikel, Monographien, Rezensionen sowie vollständige Hefte und Bände von Zeitschriften und Serien publizieren und archivieren. Außerdem werden Graue Literatur wie Calls for Papers, Konferenzprogramme, Books of Abstracts, Vorträge, Konferenzberichte, Seminarmaterialien (Seminarbeschreibungen, Syllabi) in THE STACKS aufgenommen.
-THE STACKS ist das Fachrepositorium der Library AAC und definiert als solches sein Sammlungsprofil entsprechend des abgedeckten Fächerspektrums. Das Selbstverständnis der Fächer als interdisziplinäre historische Kulturwissenschaften bzw. regionalwissenschaftliche Area Studies eröffnet somit eine breite fachliche wie auch geographische Palette der Sammlung. Analog zum <a href="https://libaac.de/information-for/librarians/#c969">Erwerbungsprofil des FID</a> werden in THE STACKS wissenschaftliche Beiträge wie auch graue Literatur aus den folgenden Bereichen, jeweils in Bezug auf die Länder Großbritannien, Irland, USA, Kanada, Australien und Neuseeland gesammelt: </p>
+  <p>In The Stacks können Forscher*innen ihre Artikel, Monographien, Rezensionen sowie vollständige Hefte und Bände von Zeitschriften und Serien publizieren und archivieren. Außerdem werden Graue Literatur wie Calls for Papers, Konferenzprogramme, Books of Abstracts, Vorträge, Konferenzberichte, Seminarmaterialien (Seminarbeschreibungen, Syllabi) in The Stacks aufgenommen.
+The Stacks ist das Fachrepositorium der Library AAC und definiert als solches sein Sammlungsprofil entsprechend des abgedeckten Fächerspektrums. Das Selbstverständnis der Fächer als interdisziplinäre historische Kulturwissenschaften bzw. regionalwissenschaftliche <i>Area Studies</i> eröffnet somit eine breite fachliche wie auch geographische Palette der Sammlung. Analog zum <a href="https://libaac.de/information-for/librarians/#c969">Erwerbungsprofil des FID</a> werden in The Stacks wissenschaftliche Beiträge wie auch graue Literatur aus den folgenden Bereichen, jeweils in Bezug auf die Länder Großbritannien, Irland, USA, Kanada, Australien und Neuseeland gesammelt: </p>
   <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px; margin-bottom: 10px;">
   <li>Literatur</li>
   <li>Sprache</li>
@@ -2580,29 +2580,29 @@ THE STACKS ist das Fachrepositorium der Library AAC und definiert als solches se
   <li>Recht</li>
   </ul>
   <p>Der Fokus des Repositoriums liegt auf der Förderung des grünen Weges zu Open Access durch einen Zweitveröffentlichungsservice, bei dem Wissenschaftler*innen ihre Publikationslisten auf die Möglichkeiten der Zweitverwertung durch unsere Mitarbeiter*innen prüfen lassen können. Dabei werden die Beiträge nach Kriterien des deutschen Urheberrechts (u.a. §38 UrhG) sowie mithilfe von Diensten wie <a href="https://v2.sherpa.ac.uk/romeo/">Sherpa Romeo</a> oder durch Überprüfung der Open Access-Policies der Verlage überprüft. Durch diesen Fokus auf bereits veröffentlichte Beiträge ist eine Qualitätssicherung der guten wissenschaftlichen Praxis garantiert, da die meisten Publikationen bereits eine peer review durchlaufen haben. Erstveröffentlichungen machen einen geringen Anteil in der Sammlung aus und müssen durch andere Merkmale der Qualitätssicherung ihre wissenschaftliche Integrität ausweisen. Die klassifikatorische Erschließung der Publikationen erfolgt durch unsere Mitarbeiter*Innen nach definierten Fächerkategorien und den entsprechenden Sachgruppen der DDC.</p>
-  <p>Da die Library AAC ihre Dienste vornehmlich der in Deutschland tätigen Gemeinschaft der Forscher*innen zur Verfügung stellt, soll auch das Fachrepositorium THE STACKS einen repräsentativen Blick auf deren Produktivität, die Vielfalt der Forschungsinteressen und die methodischen Ansätze bieten. Als Open Access-Repositorium ermöglichen wir zudem einen weltweiten Zugriff auf die Forschungsinhalte. Die Aufnahme grauer Literatur (CfPs, Konferenzprogramme und -Berichte, thematische Bibliographien, Seminarpläne) in das Sammlungsprofil soll eine dokumentierende Funktion erfüllen und thematische Trends in der Forschung und Lehre nachvollziehbar machen. Als fachliche Besonderheit in den Geistes- und Sozialwissenschaften wird ein großer Teil der Publikationen in den o. g. Fächern als Beiträge in Sammelbänden veröffentlicht. Ein älterer Teil dieser Publikationen ist nach wie vor nur in gedruckter Form verfügbar. Durch die Zweitveröffentlichung dieser Beiträge erhöhen wir somit deren Sichtbarkeit und Zugänglichkeit und schaffen somit einen Mehrwert für die Fachgemeinschaft. Als eine wichtige Textgattung in der wissenschaftlichen Kommunikation finden neben Zeitschriftenartikeln und Beiträgen aus Sammelbänden außerdem Rezensionen von Fachliteratur Eingang in das Repositorium.</p>
+  <p>Da die Library AAC ihre Dienste vornehmlich der in Deutschland tätigen Gemeinschaft der Forscher*innen zur Verfügung stellt, soll auch das Fachrepositorium The Stacks einen repräsentativen Blick auf deren Produktivität, die Vielfalt der Forschungsinteressen und die methodischen Ansätze bieten. Als Open Access-Repositorium ermöglichen wir zudem einen weltweiten Zugriff auf die Forschungsinhalte. Die Aufnahme grauer Literatur (CfPs, Konferenzprogramme und -Berichte, thematische Bibliographien, Seminarpläne) in das Sammlungsprofil soll eine dokumentierende Funktion erfüllen und thematische Trends in der Forschung und Lehre nachvollziehbar machen. Als fachliche Besonderheit in den Geistes- und Sozialwissenschaften wird ein großer Teil der Publikationen in den o. g. Fächern als Beiträge in Sammelbänden veröffentlicht. Ein älterer Teil dieser Publikationen ist nach wie vor nur in gedruckter Form verfügbar. Durch die Zweitveröffentlichung dieser Beiträge erhöhen wir somit deren Sichtbarkeit und Zugänglichkeit und schaffen somit einen Mehrwert für die Fachgemeinschaft. Als eine wichtige Textgattung in der wissenschaftlichen Kommunikation finden neben Zeitschriftenartikeln und Beiträgen aus Sammelbänden außerdem Rezensionen von Fachliteratur Eingang in das Repositorium.</p>
   <h3>Technische Informationen</h3>
-  <p>Um eine erfolgreiche Nachnutzung zu gewährleisten, erfüllt ein elektronisches Dokument, das auf THE STACKS veröffentlicht und archiviert werden soll folgende Bedingungen:</p>
+  <p>Um eine erfolgreiche Nachnutzung zu gewährleisten, erfüllt ein elektronisches Dokument, das auf The Stacks veröffentlicht und archiviert werden soll folgende Bedingungen:</p>
   <ul style="list-style-position: outside; list-style-type: disc; margin-left: 20px; margin-bottom: 10px;">
   <li>Das Dokument ist zur Verbreitung in der Öffentlichkeit bestimmt.</li>
   <li>Das Dokument ist vollendet. Eventuelle Veränderungen werden in einer neuen Version gespeichert. Das Ursprungsdokument bleibt davon unberührt.</li>
   <li>Das Dokument liegt als PDF oder PDF/A vor.</li>
   <li>Das Dokument ist frei von technischen Schutzmaßnahmen wie Passwörtern oder Druckschutz.</li>
   </ul>
-  <p>Jedem Dokument wird ein Persistent Uniform Resource Locator (PURL) zugewiesen, der eine konsistente Referenzierbarkeit gewährleistet. Nach Möglichkeit und wenn die Publikationslage es zulässt, erhalten die hochgeladenen Dokumente zusätzlich einen eindeutigen Digital Object Identifier (DOI). </p>
+  <p>Jedem Dokument wird ein Persistent Uniform Resource Locator (PURL) zugewiesen, der eine konsistente Referenzierbarkeit gewährleistet. Nach Möglichkeit und wenn die Publikationslage es zulässt, erhalten die hochgeladenen Dokumente zusätzlich einen eindeutigen Digital Object Identifier (DOI). Wenn einem Dokument bereits eine DOI von crossref oder DataCite zugeordnet wurde, so können die Metadaten über eine Metadaten-Import-Funktion beim Upload übernommen werden. Für Importe aus anderen Systemen wie z.B. OJS steht eine Standard SWORD Schnittstelle zur Verfügung.</p>
 <p>Da es ein Ziel von THE STACKS ist, die Forschungsarbeiten und Materialien deutscher Forscher*innen im Open Access verfügbar zu machen und die Nachnutzbarkeit wissenschaftlicher Arbeit zu fördern, unterstützen wir eine Veröffentlichung der Dokumente möglichst unter der jeweils aktuellen Creative Commons-Lizenz mit Namensnennung.</p>
-<p>Als Projekt der SUB Göttingen, hält sich die Library AAC beim Betrieb des Repositoriums an die Richtlinien und Grundsätze der SUB für <a href="https://www.sub.uni-goettingen.de/wir-ueber-uns/portrait/digital-policies-grundsaetze-fuer-die-digitalen-angebote-der-sub-goettingen/digitaler-zugang/#c9379">"eine vertrauenswürdige digitale Langzeitarchivierung"</a>. </p>  
+<p>Die SUB Göttingen hält sich beim Betrieb des Repositoriums an ihre Richtlinien und Grundsätze für <a href="https://www.sub.uni-goettingen.de/wir-ueber-uns/portrait/digital-policies-grundsaetze-fuer-die-digitalen-angebote-der-sub-goettingen/digitaler-zugang/#c9379">"eine vertrauenswürdige digitale Langzeitarchivierung"</a>. The Stacks ist Teil eines DFG-geförderten Projekts. Im Rahmen dieser Förderung wird eine Gewährleistung zu Verfügbarmachung der angebotenen Dokumente von mindestens zehn Jahren zugesagt. Der technische Betrieb des Repositoriums, sowie die Bereitstellung der notwendigen Infrastruktur wird von der Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen (GWDG) vorgehalten. Der Service läuft regelmäßig in ein Backup bei der GWDG bei dem eine Bitstream Preservation stattfindet. Die ausführlichen Metadaten zu den einzelnen Dokumenten werden dabei ebenfalls mit gesichert. Institutionell angebunden ist The Stacks an die Georg-August-Universität Göttingen.</p>  
   <p>Veröffentlichte Dokumente werden nach ihrer Veröffentlichung nicht verändert; andere Versionen des ursprünglichen Dokumentes werden ggf. unter dem persistenten URL bekannt gegeben. Das Löschen von Dokumenten aus dem Repositorium erfolgt nur in Ausnahmefällen und wird unter dem persistenten URL des ursprünglichen Dokumentes bekannt gegeben.</p>
-  <p>Das Repositorium wird mit der Software DSpace betrieben, die sich auf Grund ausgezeichneter Reputation und internationaler Verbreitung als Plattform für Repositorien durchgesetzt hat. DSpace ist ein Open Source-Programm, das stetig weiterentwickelt und verbessert wird.</p>
+  <p>Das Repositorium wird mit der Software DSpace betrieben, die sich auf Grund ausgezeichneter Reputation und internationaler Verbreitung als Plattform für Repositorien durchgesetzt hat. DSpace ist ein Open Source-Programm, das stetig weiterentwickelt und verbessert wird. Der Dienst führt im Rahmen der rechtlichen Bestimmungen eine eigene konsistente Zugriffsstatistik.</p>
   <p>Der technische Betrieb des Repositoriums wird von der Niedersächsischen Staats- und Universitätbibliothek Göttingen, die Bereitstellung der notwendigen Infrastruktur von der Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen (GWDG) vorgehalten. Institutionell angebunden ist THE STACKS an die Georg-August-Universität Göttingen.</p>
-  <h3>Lizenz für die Nutzung von Dokumenten in The Stacks (THE STACKS-Lizenz)</h3>
-  <p>Nutzerinnen und Nutzer von THE STACKS sind berechtigt, Dokumente nach Maßgabe des Urhebergesetzes unentgeltlich zu nutzen, insbesondere, das Dokument zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern und in kleiner Anzahl zu drucken (§§ 53, 60c, 60d UrhG). </p>
+  <h3>Lizenz für die Nutzung von Dokumenten in The Stacks (The Stacks-Lizenz)</h3>
+  <p>Nutzerinnen und Nutzer von The Stacks sind berechtigt, Dokumente nach Maßgabe des Urhebergesetzes unentgeltlich zu nutzen, insbesondere, das Dokument zum privaten und sonstigen eigenen Gebrauch herunterzuladen, zu speichern und in kleiner Anzahl zu drucken (§§ 53, 60c, 60d UrhG). </p>
   <p>Darüber hinaus können für einzelne Dokumenten weitere Rechte (z.B. Creative Commons-Lizenzen) gelten. Die jeweilige Lizenz ist dem Dokument zugeordnet und auf der dazugehörigen Download-Seite deutlich gekennzeichnet. Der Lizenztext ist dort verlinkt und kann zu Informationszwecken aufgerufen werden. </p>
-  <h3>Rechteeinräumung für das Publizieren in THE STACKS</h3>
+  <h3>Rechteeinräumung für das Publizieren in The Stacks</h3>
   <p>Ich stimme einer Rechtevereinbarung in den folgenden Punkten zu:</p>
   <p>Bei Herausgeberwerken: Ich versichere als Herausgeberin bzw. Herausgeber, dass von den an dem Werk beteiligten Autorinnen und Autoren die Zustimmung eingeholt wurde, ihre Beiträge in der unten erklärten Art und Weise nutzen zu dürfen. Ich stelle die Georg-August-Universität Göttingen (Universität Göttingen) von allen möglichen Ansprüchen der Autorinnen bzw. Autoren frei.</p>
-  <p>1. Rechteeinräumung: Als Urheberin bzw. Urheber räume ich der Universität Göttingen zeitlich unbegrenzt und unwiderruflich das nicht ausschließliche Recht ein, das Werk öffentlich zugänglich zu machen, auf dem Repositorium "THE STACKS", betrieben von der Niedersächsischen Staats- und Universitätbibliothek Göttingen, zu archivieren und zu diesen Zwecken zu vervielfältigen. Dies kann auch auf Servern beauftragter Dritter geschehen. Der urheberrechtliche Schutz bleibt durch diese Lizenz unberührt. Mit dem Hochladen des Dokuments ist kein rechtlich verbindlicher Anspruch auf die Bereitstellung oder Archivierung verbunden.</p>
-  <p>2. Rechte Dritter: Als Urheberin bzw. Urheber erkläre ich, dass mit der Bereitstellung des Werkes und jedes Bestandteils (z.B. Abbildungen) keine Rechte Dritter (z.B. Miturheberinnen bzw. Miturheber, Co-Autorinnen bzw. Co-Autoren, Verlage, Verwertungsgesellschaften, Drittmittelgeber) verletzt werden. Ich stelle die Universität Göttingen von etwaigen Ansprüchen Dritter frei. Die Universität Göttingen ist berechtigt, den Zugriff auf ein Dokument zu sperren, soweit konkrete Anhaltspunkte für eine Verletzung von Rechten Dritter bestehen.</p>
+  <p>1. Rechteeinräumung: Als Urheberin bzw. Urheber räume ich der Universität Göttingen zeitlich unbegrenzt und unwiderruflich das nicht ausschließliche Recht ein, das Werk und dessen Metadaten, sofern diese eigens schutzfähig sind, öffentlich zugänglich zu machen, auf dem Repositorium "The Stacks", betrieben von der Niedersächsischen Staats- und Universitätbibliothek Göttingen, elektronisch zu speichern und zu diesen Zwecken zu vervielfältigen. Dies kann auch auf Servern beauftragter Dritter geschehen. Der urheberrechtliche Schutz bleibt durch diese Lizenz unberührt. Mit dem Hochladen des Dokuments ist kein rechtlich verbindlicher Anspruch auf die Bereitstellung oder Archivierung verbunden.</p>
+  <p>2. Rechte Dritter: Als Urheberin bzw. Urheber erkläre ich, dass mit der Bereitstellung des Werkes und jedes Bestandteils (z.B. Abbildungen) keine Rechte Dritter (z.B. Miturheberinnen bzw. Miturheber, Co-Autorinnen bzw. Co-Autoren, Verlage, Verwertungsgesellschaften, Drittmittelgeber) verletzt werden. Für den Fall, dass nach Veröffentlichung Verletzungen von Rechten Dritter geltend gemacht werden, versichere ich die Betreibenden hiervon unverzüglich in Kenntnis zu setzen. Ich stelle die Universität Göttingen von etwaigen Ansprüchen Dritter frei. Die Universität Göttingen ist berechtigt, den Zugriff auf ein Dokument zu sperren, soweit konkrete Anhaltspunkte für eine Verletzung von Rechten Dritter bestehen.</p>
   <p>3. Langzeitarchivierung und Transformation in andere Formate: Als Urheberin bzw. Urheber räume ich der Universität Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, das Werk in ihrem Langzeitarchiv zu speichern und bei Bedarf (z.B. Migration, Barrierefreiheit, bessere Zugänglichkeit oder Erschließung) in andere elektronische und physische Formate zu überführen.</p>
   <p>4. Weitergabe von Metadaten und Dokumenten: Als Urheberin bzw. Urheber räume ich der Universität Göttingen im Rahmen der Rechtseinräumung (Ziffer 1) das Recht ein, die Metadaten des Werks unentgeltlich anderen Datenbanken zur Verfügung zu stellen. Darüber hinaus ist die Universität Göttingen berechtigt, das Werk Dritten im Rahmen nationaler Sammelaufträge zur Online-Bereitstellung oder Archivierung zur Verfügung zu stellen. Wenn Sie Fragen zu der Rechtevereinbarung haben, wenden Sie sich an <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettingen.de</a>.</p>
   </message>
@@ -2871,8 +2871,10 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
         <ul>
         <li><a href="handle/11858/48/browse?type=series">American Studies Journal</a></li>
 	<li><a href="handle/11858/377/browse?type=series">americana</a></li>
-	<li><a href="handle/11858/398/browse?type=series">Zeitschrift für Australienstudien / Australian Studies Journal</a></li>
+        <li><a href="handle/11858/830/browse?type=series">German Historical Institute Washington, D.C.: Annual Lecture Series</a></li>
+	<li><a href="handle/11858/835/browse?type=series">German Historical Institute Washington, D.C.: Occasional Papers</a></li>
 	<li><a href="handle/11858/669/browse?type=series">Working Papers of the John F. Kennedy Institute</a></li>
+	<li><a href="handle/11858/398/browse?type=series">Zeitschrift für Australienstudien / Australian Studies Journal</a></li>
 	</ul>
         <!--<li><a href="handle/11858/12">E&amp;G-Quaternary Science Journal</a></li>
         <li><a href="handle/11858/13">Electronic Journal of the Freiberg Geoscience Department</a></li>
@@ -3046,23 +3048,26 @@ Zustimmung verweigern: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminH
 <message key="xmlui.help.index">
 <h2>Veröffentlichungsprozess</h2>
 </message>
+
+
 <message key="xmlui.help.paragraph1">
 <div class="help">
 <h4 class="page-header"><a href="#benefits" data-toggle="collapse">Welche Vorteile hat das Publizieren in The Stacks?</a></h4>
 <div id="benefits" class="collapse"><p><ul style="list-style-type: disc; list-style-position: outside;">
   <li>Höhere Sichtbarkeit: Ihre Veröffentlichung wird durch Suchmaschinen (z.B. Google/Google-Scholar, Yahoo, BASE) gefunden.</li>
   <li>Zeit- und ortsunabhängige Erreichbarkeit weltweit</li>
-  <li>Langzeitarchivierung und Speicherung unter deutschem Datenschutzrecht bei einer nicht-kommerziellen Institution</li>
-  <li>Zitierbarkeit: Durch die permanente DOI ist Ihre elektronische Publikation eindeutig identifizierbar.</li>
-  <li>Dokumentieren Sie Ihre Leistungen: Durch die Publikation von Preprints (Autorenversionen) und Konferenzbeiträgen können Sie Ihre Forschungsergebnisse frühzeitig als Ihre Leistung nachweisen. Durch das Publizieren von Konferenzprogrammen, -berichten und Seminarunterlagen können Sie Ihre Organisations- und Lehrerfahrung belegen und wissenschaftliche Interessen nachweisen, die noch nicht in Ihrer Publikationsliste aufscheinen.</li>
+  <li>Elektronische Archivierung Ihrer Dokumente unter deutschem Datenschutzrecht bei einer nicht-kommerziellen Institution</li>
+  <li>Zitierbarkeit: Durch persistente Identifikatoren (PURL und/oder DOI) ist Ihre elektronische Publikation eindeutig identifizierbar.</li>
+  <li>Sie leisten einen wichtigen Beitrag zur Stärkung der Wissenschaft, indem Ihre Arbeit und Forschungsergebnisse im Open Access verfügbar gemacht werden. Ein Ziel, dem sich sowohl die Bundesregierung als auch die Europäische Union verschrieben hat.</li>
+  <li>Dokumentieren Sie Ihre Leistungen: Durch die Publikation von Preprints (Autorenversionen) und Konferenzbeiträgen können Sie Ihre Forschungsergebnisse frühzeitig als Ihre Leistung nachweisen. Durch das Publizieren von Konferenzprogrammen, -berichten und Seminarunterlagen können Sie Ihre Organisations- und Lehrerfahrung belegen und wissenschaftliche Interessen nachweisen, die noch nicht in Ihrer Publikationsliste erscheinen.</li>
 </ul></p></div>
 
 <h4 class="page-header"><a href="#first" data-toggle="collapse">Ich habe noch nie in einem Repositorium publiziert. Was muss ich beachten?</a></h4>
-<div id="first" class="collapse"><p>Grundlegende Hinweise, worauf Sie in rechtlicher Hinsicht beim Publizieren in The Stacks achten müssen, finden Sie auf der Webseite <a href="https://libaac.de/publish-it/publish-in-the-stacks/" target="_blank">Publish in The Stacks</a> der Library AAC.</p></div>
+<div id="first" class="collapse"><p>Grundlegende Hinweise, worauf Sie in rechtlicher Hinsicht beim Publizieren in The Stacks achten müssen, finden Sie unter <a href="https://libaac.de/publish/publish-in-the-stacks/things-to-consider/" target="_blank">Things to Consider</a> auf der Website der Library AAC.</p></div>
 
 <h4 class="page-header"><a href="#who" data-toggle="collapse">Wer darf Dokumente in The Stacks hochladen?</a></h4>
-<div id="who" class="collapse"><p>Alle, die in den Fächern American Studies, Australian &amp; New Zealand Studies, Canadian Studies and English / British &amp; Irish Studies wissenschaftlich arbeiten, dürfen in The Stacks archivieren oder publizieren. Nicht nur natürliche Personen, sondern auch Fachgesellschaften, Institute usw. dürfen in The Stacks veröffentlichen.</p>
-<p>Um in The Stacks zu veröffentlichen oder zu archivieren, ist es erforderlich, sich als Benutzer bzw. Benutzerin zu registrieren.</p></div>
+<div id="who" class="collapse"><p>Alle, die in den Fächern Amerikastudien, Anglistik, Anglophone postkoloniale Studien, Australien- &amp; Neuseelandstudien, Großbritannien- &amp; Irlandstudien und Kanadastudien wissenschaftlich arbeiten, dürfen in The Stacks archivieren oder publizieren. Nicht nur natürliche Personen, sondern auch Fachgesellschaften, Institute usw. dürfen in The Stacks veröffentlichen.</p>
+<p>Um in The Stacks zu veröffentlichen oder zu archivieren, ist es erforderlich, sich als Benutzer*in zu registrieren.</p></div>
 
 <h4 class="page-header"><a href="#what" data-toggle="collapse">Welche Dokumente können in The Stacks veröffentlicht werden?</a></h4>
 <div id="what" class="collapse"><p><ul style="list-style-type: disc; list-style-position: outside;">
@@ -3074,40 +3079,64 @@ Zustimmung verweigern: <a href="http://piwik.gwdg.de/index.php?module=CoreAdminH
   <li>Konferenzbeiträge</li>
   <li>Seminarunterlagen (Seminarbeschreibungen, Syllabi)</li>
 </ul>
-in elektronischer oder retrodigitalisierter Form. Wenn Sie andere Materialtypen hochladen möchten, <a href="mailto:fid-aac@sub.uni-goettingen.de">kontaktieren Sie uns bitte.</a></p></div>
+in elektronischer oder retrodigitalisierter Form. Wenn Sie andere Materialtypen hochladen möchten, kontaktieren Sie uns bitte: <a href="mailto:thestacks@sub.uni-goettingen.de">thestacks@sub.uni-goettingen.de</a></p></div>
+
 
 
 <h4 class="page-header"><a href="#rights" data-toggle="collapse">Unter welchen Bedingungen darf ich ein Dokument in The Stacks veröffentlichen?</a></h4>
-<div id="rights" class="collapse"><p>Sie dürfen nur Dokumente veröffentlichen, wenn Sie die Rechte dazu besitzen. Wenn das Dokument schon einmal woanders veröffentlich worden ist, kann es sein, dass Sie dabei Rechte an Dritte abgegeben haben, z.B. in einem Verlagsvertrag. Bitte klären Sie ab, ob der Vertrag die Zweitveröffentlichung erlaubt und wenn nicht, holen Sie vom Verlag das Recht dazu ein. Im Zweifel wenden Sie sich zur Unterstützung bei der Rechteklärung an eine entsprechende Stelle Ihrer Heimatinstitution. Das Team der Library AAC kann leider keine individuelle Rechtsberatung leisten. Grundlegende Informationen zum Zweitveröffentlichungsrecht finden Sie auf der Webseite <a href="https://libaac.de/publish-it/publish-in-the-stacks/" target="_blank">Publish in The Stacks</a> in der Library AAC. </p></div>
+<div id="rights" class="collapse"><p>Sie dürfen nur Dokumente veröffentlichen, wenn Sie die Rechte dazu besitzen. Wenn das Dokument schon einmal woanders veröffentlich worden ist, kann es sein, dass Sie dabei Rechte an Dritte abgegeben haben, z.B. in einem Verlagsvertrag. Um die Rechtssituation für Ihr Dokument zu klären gibt es mehrere Möglichkeiten:
 
+<ul style="list-style-type: disc; list-style-position: outside; margin-left:20px;">
+  <li>Sie klären eventuelle Fragen direkt mit dem Verlag ab.</li>
+  <li>Sie konsultieren das deutsche Urheberrechtsgesetz (für Zweitveröffentlichungen insbesondere §38), für Veröffentlichungen bei deutschen Verlagen.</li>
+  <li>Sie nutzen den SHERPA/RoMEO Dienst zur Informationsfindung für Zeitschriftenartikel bei internationalen Verlagen. </li>
+  <li>Sie nutzen unseren <a href="https://libaac.de/publish/publish-in-the-stacks/" target="_blank"> individuellen Publikationsservice</a>, der die Rechteklärung für Sie übernimmt.</li>
+</ul>
+Grundlegende Informationen zum Zweitveröffentlichungsrecht finden Sie unter <a href="https://libaac.de/publish/publish-in-the-stacks/things-to-consider/" target="_blank">Things to Consider</a> auf der Webseite der Library AAC.
+</p></div>
+
+<h4 class="page-header"><a href="#rightssupport" data-toggle="collapse">Kann mich der FID bei der Rechteklärung unterstützen?</a></h4>
+<div id="rightssupport" class="collapse"><p>Ja. Wir bieten eine Rechteklärung (keine Rechtsberatung) an, um zu ermitteln, welche Ihrer bisherigen Veröffentlichungen zu welchen Bedingungen im Open Access archiviert werden kann.<br />
+Nähere Informationen zum Ablauf finden Sie unter <a href="https://libaac.de/publish/publish-in-the-stacks/" target="_blank">Publish in The Stacks</a> auf der Webseite der Library AAC.
+</p></div>
 
 <h4 class="page-header"><a href="#how" data-toggle="collapse">Wie lade ich ein Dokument in The Stacks hoch?</a></h4>
-<div id="how" class="collapse"><p>Der Veröffentlichungsprozess beinhaltet mehrere Schritte: <br />
-Select a Collection &gt; Metadata-Import (optional) &gt; Describe the item (Schritt 1) &gt; Describe the item (Schritt 2) &gt; Upload file(s) &gt; Review submission &gt; Distribution license &gt; Submission complete.
-</p>
-<p>Zu den Schritten im Einzelnen:
+<div id="how" class="collapse"><p>Der Veröffentlichungsprozess beinhaltet mehrere Schritte: 
+
 <ul style="list-style-type: disc; list-style-position: outside;">
   <li>Loggen Sie sich mit Ihren Benutzerdaten ein.</li>
-  <li>Select a Collection: Wählen Sie die Sammlung aus, der Ihr Dokument hinzugefügt werden soll.</li>
-  <li>Metadata-Import (optional): Wenn Ihr Dokument schon anderswo erschienen ist und über eine Identifikationsnummer wie z.B. einen Digital Object Identifier (DOI) verfügt oder im Gemeinsamen Verbundkatalog (GVK) verzeichnet ist und eine Pica-Produktionsnummer hat (PPN, wird im GVK über dem Titel angegeben), können Sie über diese Nummer die Metadaten des Dokuments in The Stacks importieren. Wenn es keine ID-Nummer gibt, über die Sie Metadaten importieren können, klicken Sie auf „Weiter“.</li>
-  <li>Describe the item: Geben Sie den Typ des Dokuments an.</li>
-  <li>Describe the item: </li>
-        <ul style="list-style-type: circle; list-style-position: outside; margin-left: 20px;">
-        <li>Ordnen Sie dem Dokument passende fachliche Schwerpunkte zu und geben Sie die bibliographischen Daten des Dokuments an. Pflichtfelder sind mit einem Stern markiert. </li>
-        <li>Wenn Sie Daten über eine ID importiert haben, können diese auch unter den betreffenden Feldern stehen – man übersieht sie leicht. Bitte kontrollieren Sie, ob die Daten korrekt übernommen wurden, und korrigieren oder ergänzen Sie sie ggf. </li>
-        <li>Lizenz angeben: Die hier anzugebende Lizenz regelt, was andere mit Ihrem Dokument außer lesen und zitieren tun dürfen. Wenn das Dokument schon eine Lizenz hat, geben Sie diese hier an. CC-BY-Lizenzen können Sie über „Select a license“ eintragen. Wenn es noch keine hat und Sie der Urheber des Dokuments sind, können Sie ihm hier erstmals eine Lizenz zuweisen. Wir empfehlen eine möglichst offene Lizenz (z.B. CC-BY) in der aktuellsten Version.</li>
-        </ul>
-  <li>Upload File(s): Laden Sie hier die Datei(en) des Dokuments im PDF-Format hoch. Bitte geben Sie vorher der Datei einen möglichst aussagekräftigen Namen (z.B. Nachname_Kurztitel) und vermeiden Sie dabei Umlaute, Sonderzeichen und die folgenden Zeichen: “ / \ : * ? ‘ &gt; &lt; [ ] &amp; $ = ; , |</li>
-  <li>Edit file: Hier können Sie ggf. eine Embargo-Frist eintragen und zusätzliche Angaben zu der Datei und zum Dateiformat machen.</li>
-  <li>Review Submission: Hier finden Sie eine Zusammenfassung der eingegebenen Daten (incl. der hochgeladenen Datei) und können diese ggf. korrigieren.</li>
-  <li>Distribution License: Diese Lizenz regelt, was die Library AAC als Betreiber von The Stacks mit Ihrem Dokument tun darf. Sie umfasst das unwiderrufliche und nicht ausschließliche Recht, Ihr Dokument zeitlich und räumlich unbegrenzt öffentlich zugänglich zu machen und zu diesem Zweck zu vervielfältigen, auch mit technisch bedingten Änderungen. Dieser Lizenzvereinbarung mit The Stacks müssen Sie zustimmen, wenn Ihr Dokument veröffentlicht werden soll. Wenn Sie der Lizenz nicht zustimmen, können Sie das Dokument zwar in The Stacks archivieren, aber es wird dann nicht öffentlich sichtbar sein.</li>
-  <li>Submission complete: Die Metadaten Ihrer Veröffentlichung werden nun von einem Teammitglied der Library AAC überprüft. Wenn sie korrekt sind, wird es freigeschaltet. Bei Unklarheiten setzen wir uns mit Ihnen in Verbindung.</li>
+  <li>Wählen Sie eine Sammlung aus: Wählen Sie die Sammlung aus, der Ihr Dokument hinzugefügt werden soll. Sofern nicht anders abgesprochen, ist die Sammlung "Dokumente" passend.</li>
+  <li>Metadata-Import (optional): Wenn Ihr Dokument schon woanders erschienen ist und über eine Identifikationsnummer wie z.B. einen Digital Object Identifier (DOI) verfügt oder im Gemeinsamen Verbundkatalog (GVK) verzeichnet ist und eine Pica-Produktionsnummer hat (PPN, wird im GVK über dem Titel angegeben), können Sie über diese Nummer die Metadaten des Dokuments in The Stacks importieren. Wenn es keine ID-Nummer gibt, über die Sie Metadaten importieren können, klicken Sie auf „Weiter“.</li>
+  <li>Beschreiben I: Geben Sie den Typ des Dokuments an.</li>
+  <li>Beschreiben II: Ordnen Sie dem Dokument passende fachliche Schwerpunkte zu und geben Sie die zutreffenden bibliographischen Daten des Dokuments an. Pflichtfelder sind mit einem Stern markiert. Wenn Sie Daten über persistente Indentifkatoren importiert haben, können diese auch unter den betreffenden Feldern stehen – man übersieht sie leicht. Bitte kontrollieren Sie, ob die Daten korrekt übernommen wurden, und korrigieren oder ergänzen Sie sie ggf. </li>
+  <li>Beschreiben III: Vergeben Sie hier eine Lizenz die regelt, was andere mit Ihrem Dokument außer lesen und zitieren tun dürfen. Wenn das Dokument schon eine Lizenz hat, geben Sie diese hier an. CC-BY-Lizenzen können Sie über „Select a license“ eintragen. Wenn es noch keine hat und Sie der Urheber des Dokuments sind, können Sie ihm hier erstmals eine Lizenz zuweisen. Wir empfehlen eine möglichst offene Lizenz (z.B. <a href="https://de.creativecommons.net/was-ist-cc/" target="_blank">CC-BY</a>) in der aktuellsten Version.  </li>
+  <li>Hochladen: Laden Sie hier die Datei(en) des Dokuments im PDF-Format hoch. Bitte geben Sie vorher der Datei einen möglichst aussagekräftigen Namen (z.B. Nachname_Kurztitel) und vermeiden Sie dabei Umlaute, Sonderzeichen und die folgenden Zeichen: “ / \ : * ? ‘ &gt; &lt; [ ] &amp; $ = ; , | </li>
+  <li>Datei bearbeiten: Hier können Sie ggf. eine Embargo-Frist eintragen und zusätzliche Angaben zu der Datei und zum Dateiformat machen.</li>
+  <li>Überprüfen: Hier finden Sie eine Zusammenfassung der eingegebenen Daten (incl. der hochgeladenen Datei) und können diese ggf. korrigieren.</li>
+  <li>Rechteeinräumung: Diese Lizenz regelt, was die Library AAC als Betreiber von The Stacks mit Ihrem Dokument tun darf. Sie umfasst das unwiderrufliche und nicht ausschließliche Recht, Ihr Dokument zeitlich und räumlich unbegrenzt öffentlich zugänglich zu machen und zu diesem Zweck zu vervielfältigen, auch mit technisch bedingten Änderungen. Dieser Lizenzvereinbarung mit The Stacks müssen Sie zustimmen, wenn Ihr Dokument veröffentlicht werden soll. Wenn Sie der Lizenz nicht zustimmen, können Sie das Dokument zwar in The Stacks archivieren, aber es wird dann nicht öffentlich sichtbar sein. Nähere Informationen zur Rechteeinräumung finden Sie in unseren <a href="https://thestacks.libaac.de/rights" target="_blank"> Nutzungsbedingungen.</a></li>
+  <li>Veröffentlichung abschließen: Die Metadaten Ihrer Veröffentlichung werden nun von einem Teammitglied der Library AAC überprüft. Wenn sie korrekt sind, wird das Dokument freigeschaltet. Bei Unklarheiten setzen wir uns mit Ihnen in Verbindung.</li>
 </ul>
-Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Dokumentes ist nur während des Veröffentlichungsprozesses möglich. Nach dem Freischalten werden keine Änderungen mehr vorgenommen, um die dauerhafte Zitierbarkeit des Dokuments zu gewährleisten.</p>
+Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Dokumentes durch sie selbst ist nur während des Veröffentlichungsprozesses möglich. Vor der Freischaltung werden Metadaten und Dokument von der Redaktion überprüft. Nach dem Freischalten werden Metadaten und Dokument nur in Ausnahmefällen geändert, zurückgezogen oder gar gelöscht.<br />
+Wenn Sie Fragen haben oder Probleme beim Upload, wenden Sie sich gerne an das Team von The Stacks: thestacks@sub.uni-goettingen.de </p>
 </div>
+
+<h4 class="page-header"><a href="#tech" data-toggle="collapse">Welche technischen Voraussetzungen müssen meine Dokumente erfüllen?</a></h4>
+<div id="tech" class="collapse"><p>
+Um eine erfolgreiche Nachnutzung zu gewährleisten, erfüllt ein elektronisches Dokument, das auf The Stacks veröffentlicht und archiviert werden soll folgende Bedingungen: 
+<ul style="list-style-type: disc; list-style-position: outside; margin-left:20px;">
+  <li>Das Dokument ist zur Verbreitung in der Öffentlichkeit bestimmt. </li>
+  <li>Das Dokument ist abgeschlossen. Eventuelle Veränderungen werden in einer neuen Version gespeichert. Das Ursprungsdokument bleibt davon unberührt. </li>
+  <li>Das Dokument liegt als PDF oder PDF/A vor.</li>
+  <li>Das Dokument ist frei von technischen Schutzmaßnahmen wie Passwörtern oder Schreib- 
+und Druckschutz. </li>
+</ul>
+Weitere technische Details rund um den Betrieb des Repositoriums entnehmen Sie bitte unseren <a href="https://thestacks.libaac.de/rights" target="_blank"> Nutzungsbedingungen.</a>. 
+
+</p></div>
 
 <h4 class="page-header"><a href="#format" data-toggle="collapse">Muss ich bei der Eingabe der Daten Formatierungsregeln beachten?</a></h4>
 <div id="format" class="collapse"><p>Verwenden Sie bitte die Groß- und Kleinschreibung entsprechend dem MLA-Style. Im Zweifel: <a href="https://capitalizemytitle.com/">Capitalize My Title!</a>. Bitte beachten Sie, dass Kursivierung im Hochladeformular nicht möglich ist.</p></div>
+
 
 <h4 class="page-header"><a href="#lang" data-toggle="collapse">Ich habe die Sprache von The Stacks gewechselt und erhalte eine Fehlermeldung. Warum?</a></h4>
 <div id="lang" class="collapse"><p>Wenn Sie auf The Stacks in Formularen arbeiten (z.B. im Hochlade-Formular, im Feedback-Formular usw.) lässt sich die Sprache aus technischen Gründen nicht wechseln. Entscheiden Sie sich daher vorab, in welcher Sprache Sie die Formulare bearbeiten möchten.</p></div>
@@ -3117,7 +3146,10 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 
 
 <h4 class="page-header"><a href="#delete" data-toggle="collapse">Kann ich die Veröffentlichung wieder zurücknehmen oder löschen?</a></h4>
-<div id="delete" class="collapse"><p>Während des Publikationsprozesses können Sie jederzeit abbrechen und das angefangene Dokument löschen. Nach dem Freischalten durch das Team der Library AAC werden weder das Dokument noch die Metadaten verändert, um die dauerhafte Zitierbarkeit des Dokuments zu gewährleisten.</p></div>
+<div id="delete" class="collapse"><p>Während des Publikationsprozesses können Sie jederzeit abbrechen und das angefangene Dokument löschen. Nach dem Freischalten durch das Team der Library AAC werden das Dokument und dessen Metadaten nur zur Fehlerkorrektur verändert, um die dauerhafte Zitierbarkeit des Dokuments zu gewährleisten.<br />
+Weitere Informationen hierzu entnehmen Sie bitte unseren <a href="https://thestacks.libaac.de/rights" target="_blank"> Nutzungsbedingungen.</a>. 
+
+</p></div>
 
 
 <h4 class="page-header"><a href="#embargo" data-toggle="collapse">Kann ich mein Dokument jetzt schon hochladen, es aber erst nach einer bestimmten Frist („Embargo-Frist“) öffentlich sichtbar machen?</a></h4>
@@ -3125,7 +3157,10 @@ Bitte beachten Sie: Die Korrektur der Beschreibungsdaten bzw. Austausch des Doku
 
 
 <h4 class="page-header"><a href="#multi" data-toggle="collapse">Darf ich mein Dokument gleichzeitig auch anderswo veröffentlichen?</a></h4>
-<div id="multi" class="collapse"><p>Autoren räumen dem Publikationsserver The Stacks nur das nicht-ausschließliche Recht zur öffentlichen Zugänglichmachung Ihrer Publikation ein. Sie behalten damit das Recht, ihre Publikationen auch anderweitig (auf Ihrer Homepage, bei Verlagen usw.) zu publizieren.</p></div>
+<div id="multi" class="collapse"><p>Autoren räumen dem Publikationsserver The Stacks nur das nicht-ausschließliche Recht zur öffentlichen Zugänglichmachung Ihrer Publikation ein. Sie behalten damit das Recht, ihre Publikationen auch anderweitig (auf ihrer Homepage, bei Verlagen usw.) zu publizieren.<br />
+Weitere Informationen zur Rechteeinräumung entnehmen Sie bitte unseren <a href="https://thestacks.libaac.de/rights" target="_blank"> Nutzungsbedingungen.</a>. 
+
+</p></div>
 </div>
 </message>
 
