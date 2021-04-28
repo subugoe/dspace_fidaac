@@ -338,7 +338,7 @@ public class CitationDocument {
         PDPageContentStream contentStream = new PDPageContentStream(document, coverPage);
         try {
             int ypos = 650;
-            int xpos = 30;
+            int xpos = 55;
             int xwidth = 550;
             int ygap = 20;
 
@@ -354,6 +354,9 @@ public class CitationDocument {
             InputStream in3 = Files.newInputStream(Paths.get(imagePath3));
             PDImageXObject pdImage3 = PDImageXObject.createFromFile(imagePath3, document);
 
+	 String imagePath4 = "/opt/dspace/aac/webapps/xmlui/themes/Mirage2/images/hintergrund.jpg";
+            InputStream in4 = Files.newInputStream(Paths.get(imagePath4));
+            PDImageXObject pdImage4 = PDImageXObject.createFromFile(imagePath4, document);
 
 
             PDFont fontHelvetica = PDType1Font.HELVETICA;
@@ -361,11 +364,13 @@ public class CitationDocument {
             PDFont fontHelveticaOblique = PDType1Font.HELVETICA_OBLIQUE;
             contentStream.setNonStrokingColor(Color.BLACK);
 
-            contentStream.drawImage(pdImage3, 20, 715, 550, 113);
+            contentStream.drawImage(pdImage3, 55, 695, 505, 107);
 
-            contentStream.fillRect(xpos, ypos, xwidth, 1);
-            contentStream.setStrokingColor(Color.white);
+	    contentStream.drawImage(pdImage4, 40, 325, 520, 340);
 
+	    //contentStream.setNonStrokingColor(200, 200, 200);
+	    //contentStream.fillRect(xpos, 470, 520, 300);
+	    //contentStream.setNonStrokingColor(Color.BLACK);
 
             ypos -=(ygap*2);
 
@@ -374,10 +379,10 @@ public class CitationDocument {
                 PDFont font = fontHelvetica;
                 int fontSize = 11;
                 if(field.contains("title")) {
-                    fontSize = 26;
+                    fontSize = 22;
                     ypos -= ygap;
                 } else if(field.contains("creator") || field.contains("contributor")) {
-                    fontSize = 16;
+                    fontSize = 14;
                 }
 
                 if(field.equals("_line_")) {
@@ -387,7 +392,11 @@ public class CitationDocument {
                     ypos -=(ygap);
 
                 } else if(StringUtils.isNotEmpty(item.getMetadata(field))) {
+			if (item.getMetadata(field).equals("review")) {
+				 ypos = drawStringWordWrap(coverPage, contentStream, "Review", xpos, ypos, font, fontSize);
+			} else {
                     ypos = drawStringWordWrap(coverPage, contentStream, item.getMetadata(field), xpos, ypos, font, fontSize);
+			}
                 }
 
                 if(field.contains("title")) {
@@ -397,11 +406,11 @@ public class CitationDocument {
 
             contentStream.beginText();
             contentStream.setFont(fontHelveticaOblique, 11);
-		contentStream.moveTextPositionByAmount(xpos, ypos-50);
+            contentStream.moveTextPositionByAmount(xpos, ypos-250);
             contentStream.drawString(footer);
             contentStream.endText();
-            contentStream.drawImage(pdImage, 20, 21, 264, 26);
-            contentStream.drawImage(pdImage2, 410, 20, 140, 30);
+            contentStream.drawImage(pdImage, 40, 41, 264, 26);
+            contentStream.drawImage(pdImage2, 410, 40, 140, 30);
         } finally {
             contentStream.close();
         }
