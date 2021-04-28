@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Creative Commons Licenses
+-->
+
+<node id="CC" label="CC">
+        <isComposedBy>
+                     <node id="40" label="CC Version 4.0" >
+						<isComposedBy>
+							<node id="40by" label="CC BY 4.0" />
+							<node id="40bysa" label="CC BY-SA 4.0" />
+                            <node id="40bynd" label="CC BY-ND 4.0" />
+                            <node id="40bync" label="CC BY-NC 4.0" />
+                            <node id="40byncsa" label="CC BY-NC-SA 4.0" />
+                            <node id="40byndnc" label="CC BY-ND-NC 4.0" />
+						</isComposedBy>
+					  </node>
+					  <node id="30" label="CC Version 3.0" >
+						<isComposedBy>
+							<node id="30by" label="CC BY 3.0" />
+                            <node id="30bysa" label="CC BY-SA 3.0" />
+                            <node id="30bynd" label="CC BY-ND 3.0" />
+                            <node id="30bync" label="CC BY-NC 3.0" />
+                            <node id="30byncsa" label="CC BY-NC-SA 3.0" />
+                            <node id="30byndnc" label="CC BY-ND-NC 3.0" />
+						</isComposedBy>
+					  </node>
+					   <node id="20" label="CC Version 2.0" >
+						<isComposedBy>
+							<node id="20by" label="CC BY 2.0" />
+                            <node id="20bysa" label="CC BY-SA 2.0" />
+                            <node id="20bynd" label="CC BY-ND 2.0" />
+                            <node id="20bync" label="CC BY-NC 2.0" />
+                            <node id="20byncsa" label="CC BY-NC-SA 2.0" />
+                            <node id="20byndnc" label="CC BY-ND-NC 2.0" />
+						</isComposedBy>
+					  </node>
+					  <node id="10" label="CC Version 1.0" >
+						<isComposedBy>
+							<node id="10by" label="CC BY 1.0" />
+                            <node id="10bysa" label="CC BY-SA 1.0" />
+                            <node id="10bynd" label="CC BY-ND 1.0" />
+                            <node id="10bync" label="CC BY-NC 1.0" />
+                            <node id="10byncsa" label="CC BY-NC-SA 1.0" />
+                            <node id="10byndnc" label="CC BY-ND-NC 1.0" />
+						</isComposedBy>
+					  </node>
+		</isComposedBy>
+</node>		

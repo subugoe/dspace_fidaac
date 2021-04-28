@@ -95,11 +95,12 @@
         <!--Which sidebar facets are to be displayed-->
         <property name="sidebarFacets">
             <list>
-                <ref bean="searchFilterAuthor" />
+                <!--<ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" />
-		<ref bean="searchFilterPublisher" />
-		<ref bean="searchFilterDescriptionType" />
+                <ref bean="searchFilterIssued" />-->
+		<ref bean="searchFilterType" />
+		<ref bean="searchFilterSubjectField" />
+		<!--<ref bean="searchFilterTypeDigitized" />-->
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -111,8 +112,9 @@
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
-		<ref bean="searchFilterPublisher" />
-		<ref bean="searchFilterDescriptionType" />
+		<ref bean="searchFilterSubjectField" />
+		<ref bean="searchFilterType" />
+		<!--<ref bean="searchFilterTypeDigitized" />-->
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -130,24 +132,24 @@
             </bean>
         </property>
         <!--Any default filter queries, these filter queries will be used for all queries done by discovery for this configuration-->
-        <!--<property name="defaultFilterQueries">-->
-            <!--<list>-->
+        <property name="defaultFilterQueries">
+            <list>
                 <!--Only find items-->
-                <!--<value>search.resourcetype:2</value>-->
-            <!--</list>-->
-        <!--</property>-->
+                <value>search.resourcetype:2</value>
+            </list>
+        </property>
         <!--The configuration for the recent submissions-->
         <property name="recentSubmissionConfiguration">
             <bean class="org.dspace.discovery.configuration.DiscoveryRecentSubmissionsConfiguration">
                 <property name="metadataSortField" value="dc.date.accessioned" />
                 <property name="type" value="date"/>
-                <property name="max" value="20"/>
+                <property name="max" value="50"/>
                 <!-- If enabled the collection home page will not display metadata but show a pageable list of recent submissions -->
                 <property name="useAsHomePage" value="false"/>
             </bean>
         </property>
         <!--Default result per page  -->
-        <property name="defaultRpp" value="10" />
+        <property name="defaultRpp" value="50" />
         <property name="hitHighlightingConfiguration">
             <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightingConfiguration">
                 <property name="metadataFields">
@@ -204,11 +206,12 @@
         <!--Which sidebar facets are to be displayed (same as defaultConfiguration above)-->
         <property name="sidebarFacets">
             <list>
-                <ref bean="searchFilterAuthor" />
+               <!-- <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
-                <ref bean="searchFilterIssued" />
-		<ref bean="searchFilterPublisher" />
-		<ref bean="searchFilterDescriptionType" />
+                <ref bean="searchFilterIssued" />-->
+		<ref bean="searchFilterType" />
+		<ref bean="searchFilterSubjectField" />
+		<!--<ref bean="searchFilterTypeDigitized" />-->
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -220,8 +223,9 @@
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
-		<ref bean="searchFilterPublisher" />
-		<ref bean="searchFilterDescriptionType" />
+		<ref bean="searchFilterSubjectField" />
+		<ref bean="searchFilterType" />
+		<!--<ref bean="searchFilterTypeDigitized" />-->
             </list>
         </property>
         <!--The sort filters for the discovery search (same as defaultConfiguration above)-->
@@ -413,23 +417,36 @@
         <property name="sortOrder" value="VALUE"/>
     </bean>
 
-    <bean id="searchFilterPublisher" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
-        <property name="indexFieldName" value="publisher"/>
+    <bean id="searchFilterSubjectField" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="SubjectField"/>
         <property name="metadataFields">
             <list>
-                <value>dc.publisher</value>
+                <value>dc.subject.field</value>
             </list>
         </property>
+	<property name="facetLimit" value="25"/>
+	<property name="sortOrder" value="COUNT"/>
     </bean>
 
-    <bean id="searchFilterDescriptionType" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
-	<property name="indexFieldName" value="publisher"/>
+    <bean id="searchFilterType" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+	<property name="indexFieldName" value="type"/>
 	<property name="metadataFields">
 	   <list>
-		<value>dc.description.type</value>
+		<value>dc.type</value>
 	   </list>
  	</property>
+	<property name="facetLimit" value="15"/>
+        <property name="sortOrder" value="COUNT"/>
     </bean>
+    <!--<bean id="searchFilterTypeDigitized" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="typeDigitized"/>
+        <property name="metadataFields">
+           <list>
+                <value>dc.type.digitized</value>
+           </list>
+        </property>
+    </bean>-->
+
     <!--Sort properties-->
     <bean id="sortTitle" class="org.dspace.discovery.configuration.DiscoverySortFieldConfiguration">
         <property name="metadataField" value="dc.title"/>
@@ -440,4 +457,7 @@
         <property name="type" value="date"/>
     </bean>
     
+        <bean id="sortType" class="org.dspace.discovery.configuration.DiscoverySortFieldConfiguration">
+        <property name="metadataField" value="dc.type"/>
+    </bean>
 </beans>

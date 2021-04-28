@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<node id="ddc_de" label="DDC Kategorien">
+	<isComposedBy>
+	
+	
+		<node id="ddc:000" label="000 - Allgemeines, Informatik, Informationswissenschaft">
+			<isComposedBy>	
+				<node id="ddc:070" label="070 - Nachrichtenmedien, Journalismus, Verlagswesen"/>
+			</isComposedBy>
+		</node>
+		
+		
+		<node id="ddc:300" label="300 - Sozialwissenschaften">
+			<isComposedBy>
+				<node id="ddc:305" label="305 - Soziale Gruppen">
+					<isComposedBy>
+						<node id="ddc:305.3" label="305.3 - Personen nach Gender und Geschlecht"/>
+					</isComposedBy>	
+				</node>
+				<node id="ddc:320" label="320 - Politik"/>
+				<node id="ddc:340" label="340 - Recht"/>
+				<node id="ddc:370" label="370 - Bildung und Erziehung">
+					<isComposedBy>
+						<node id="ddc:371" label="371 - Schulen, schulische Tätigkeiten; Sonderpädagogik">
+							<isComposedBy>
+								<node id="ddc:371.3" label="371.3 - Unterrichts- und Lernmethoden"/>
+							</isComposedBy>
+						</node>
+					</isComposedBy>
+				</node>
+			</isComposedBy>
+		</node>
+
+		
+		<node id="ddc:400" label="400 - Sprache">
+			<isComposedBy>
+				<node id="ddc:420" label="420 - Englisch, Altenglisch"/>
+			</isComposedBy>
+		</node>
+
+		<node id="ddc:700" label="700 - Künste und Unterhaltung">
+			<isComposedBy>
+				<node id="ddc:740" label="740 - Zeichnung und Handwerk">
+					<isComposedBy>
+						<node id="ddc:741" label="741 - Zeichnung, Zeichnungen">
+							<isComposedBy>
+								<node id="ddc:741.5" label="741.5 - Comics and graphic novels"/>
+							</isComposedBy>
+						</node>
+					</isComposedBy>
+				</node>
+				<node id="ddc:780" label="780 - Musik" />
+
+				<node id="ddc:790" label="790 - Freizeitgestaltung, Darstellende Kunst">
+					<isComposedBy>
+						<node id="ddc:791" label="791 - Filmwissenschaften"/>
+						<node id="ddc:792" label="792 - Theaterwissenschaften"/>
+					</isComposedBy>
+				</node>
+			</isComposedBy>
+		</node>
+		
+		<node id="ddc:800" label="800 - Literatur">
+			<isComposedBy>
+				<node id="ddc:810" label="810 - Englische Literatur Amerikas" />
+				<node id="ddc:820" label="820 - Englische Literatur" />
+			</isComposedBy>
+		</node>
+
+		<node id="ddc:900" label="900 - Geschichte und Geografie">
+			<isComposedBy>
+				<node id="ddc:900" label="900 - Geschichte">
+					<isComposedBy>
+						<node id="ddc:909" label="909 - Weltgeschichte">
+							<isComposedBy>
+								<node id="ddc:909.07" label="909.07 - Weltgeschichte/Ca. 500-1450/1500"/>
+							</isComposedBy>
+						</node>
+					</isComposedBy>
+				</node>
+				<node id="ddc:910" label="910 - Geografie, Reisen"/>
+				<node id="ddc:940" label="940 - Geschichte Europas">
+					<isComposedBy>
+						<node id="ddc:941" label="941 - britische Inseln (Geschichte)">
+							<isComposedBy>
+								<node id="ddc:941.7" label="941.7 - Republik Irland (Geschichte)"/>
+							</isComposedBy>
+						</node>
+					</isComposedBy>
+				</node>
+				<node id="ddc:970" label="970 - Geschichte Nordamerikas">
+					<isComposedBy>
+						<node id="ddc:971" label="971 - Geschichte Kanadas"/>
+					</isComposedBy>
+				</node>
+				<node id="ddc:980" label="980 - Geschichte Südamerikas"/>
+				<node id="ddc:990" label="990 - Geschichte der übrigen Welt">
+					<isComposedBy>
+						<node id="ddc:993" label="993 - Neuseeland (Geschichte)"/>
+					</isComposedBy>
+				</node>
+			</isComposedBy>
+		</node>
+		
+
+	</isComposedBy>
+</node>

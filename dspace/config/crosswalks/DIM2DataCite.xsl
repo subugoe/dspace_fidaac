@@ -15,7 +15,7 @@
     
     <!-- CONFIGURATION -->
     <!-- The content of the following variable will be used as element publisher. -->
-    <xsl:variable name="publisher">My University</xsl:variable>
+    <xsl:variable name="publisher">The Stacks Lib AAC</xsl:variable>
     <!-- The content of the following variable will be used as element contributor with contributorType datamanager. -->
     <xsl:variable name="datamanager"><xsl:value-of select="$publisher" /></xsl:variable>
     <!-- The content of the following variable will be used as element contributor with contributorType hostingInstitution. -->
@@ -158,10 +158,10 @@
             </xsl:if>
 
             <!-- Add language(s). -->
-            <xsl:apply-templates select="//dspace:field[@mdschema='dc' and @element='language' and (@qualifier='iso' or @qualifier='rfc3066')]" />
+            <xsl:apply-templates select="//dspace:field[@mdschema='dc' and @element='language' and (@qualifier='iso' or @qualifier='rfc3066')][1]" />
 
             <!-- Add resource type. -->
-            <xsl:apply-templates select="//dspace:field[@mdschema='dc' and @element='type']" />
+            <xsl:apply-templates select="//dspace:field[@mdschema='dc' and @element='type' and not(@qualifier)]" />
 
             <!-- 
                  Add alternativeIdentifiers.
@@ -194,7 +194,7 @@
             -->
 
             <!-- Add rights. -->
-            <xsl:apply-templates select="//dspace:field[@mdschema='dc' and @element='rights']" />
+            <xsl:apply-templates select="//dspace:field[@mdschema='dc' and @element='rights' and @qualifier='uri']" />
 
             <!-- Add descriptions. -->
             <xsl:if test="//dspace:field[@mdschema='dc' and @element='description'][not(@qualifier='provenance')]">
@@ -308,8 +308,8 @@
         Adds Language information
         Transforming the language flags according to ISO 639-2/B & ISO 639-3
     -->
-    <xsl:template match="//dspace:field[@mdschema='dc' and @element='language' and (@qualifier='iso' or @qualifier='rfc3066')]">
-        <xsl:for-each select=".">
+    <xsl:template match="//dspace:field[@mdschema='dc' and @element='language' and (@qualifier='iso' or @qualifier='rfc3066')][1]">
+        <!--<xsl:for-each select=".">-->
             <xsl:element name="language">
                 <xsl:choose>
                     <xsl:when test="contains(string(text()), '_')">
@@ -320,19 +320,19 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:element>
-        </xsl:for-each>
+        <!--</xsl:for-each>-->
     </xsl:template>
 
     <!-- 
         DataCite (10), DataCite (10.1)
         Adds resourceType and resourceTypeGeneral information
     -->
-        <xsl:template match="//dspace:field[@mdschema='dc' and @element='type']">
-        <xsl:for-each select=".">
+        <xsl:template match="//dspace:field[@mdschema='dc' and @element='type' and not(@qualifier)]">
             <!-- Transforming the language flags according to ISO 639-2/B & ISO 639-3 -->
             <xsl:element name="resourceType">
                 <xsl:attribute name="resourceTypeGeneral">
-                    <xsl:choose>
+			<xsl:text>Text</xsl:text>
+                   <!-- <xsl:choose>
                         <xsl:when test="string(text())='Animation'">Image</xsl:when>
                         <xsl:when test="string(text())='Article'">Text</xsl:when>
                         <xsl:when test="string(text())='Book'">Text</xsl:when>
@@ -353,17 +353,21 @@
                         <xsl:when test="string(text())='Technical Report'">Text</xsl:when>
                         <xsl:when test="string(text())='Thesis'">Text</xsl:when>
                         <xsl:when test="string(text())='Video'">Film</xsl:when>
-                        <xsl:when test="string(text())='Working Paper'">Text</xsl:when>
+                        <xsl:when test="string(text())='Working Paper'">Text</xsl:when>-->
                         <!-- FIXME -->
-                        <xsl:when test="string(text())='Other'">Collection</xsl:when>
+                        <!--<xsl:when test="string(text())='Other'">Collection</xsl:when>-->
                         <!-- FIXME -->
-                        <xsl:otherwise>Collection</xsl:otherwise>
-                    </xsl:choose>
-                </xsl:attribute>
-                <xsl:value-of select="." />
+		 </xsl:attribute>
+                <xsl:choose>
+                        <xsl:when test="starts-with(., 'article')">Article</xsl:when>
+                        <xsl:when test="starts-with(., 'anthologyArticle')">Article</xsl:when>
+			<xsl:when test="starts-with(., 'monograph')">Book</xsl:when>
+			<xsl:when test="starts-with(., 'anthology')">Book</xsl:when>
+                        <xsl:otherwise><xsl:value-of select="." /></xsl:otherwise>
+                </xsl:choose>
             </xsl:element>
-        </xsl:for-each>
     </xsl:template>
+		
 
     <!--
         DataCite (11), DataCite (11.1) 
