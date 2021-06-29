@@ -187,6 +187,7 @@ exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
                 </div>
 
             </xsl:if>
+<div>	<img src="{$theme-path}images/DINI.png" style="width:150px;display:block;margin:auto;"/></div>
         </div>
     </xsl:template>
 
