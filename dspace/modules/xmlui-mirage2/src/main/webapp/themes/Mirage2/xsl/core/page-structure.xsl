@@ -339,42 +339,17 @@
                             <span class="icon-bar"></span>
                         </button>
 
-			<div class="clearfixheader float-my-children visible-md visible-lg" style="margin-bottom:10px;">
+			<div class="clearfixheader float-my-children visible-sm visible-md visible-lg" style="margin-bottom:10px;">
 			<div>
 			<div class="clearfixheader float-my-children">
-			<div style="color:white;font-size:18px;font-family:Open Sans;line-height:20px;padding-top:10px;font-weight:400;"><a href="{$context-path}/" style="color:white;text-decoration:none;">Library of <br /><span style="font-weight:600;">Anglo-American</span> Culture &amp; History</a></div>
+   			<a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/fid_header.svg"/></a>
 			</div>
-			<div class="clearfixheader float-my-children">
-   			<a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:7px;"/></a>
-			<div style="padding-left:20px;padding-top: 5px;color:white;font-family:Open Sans;font-size:20px;font-weight:600;"><a  href="{$context-path}/" style="color:white;text-decoration:none;">FID AAC</a></div>
-			</div>
-			</div>
-			<div style="font-size:40px;font-family:Open Sans;color:white;padding-left:30px;padding-top:16px;">
-			<a href="{$context-path}/" style="color:white;text-decoration:none;">The Stacks</a>
 			</div>
 			</div>
 
-			<div class="clearfixheader float-my-children hidden-xs visible-sm hidden-md hidden-lg">
-                        <!--<div>
-                        <div class="clearfixheader float-my-children">
-                        <div style="color:white;font-size:14px;font-family:Open Sans;line-height:18px;padding-top:10px;font-weight:400;"><a href="{$context-path}/" style="color:white;text-decoration:none;">Library of <br /><span style="font-weight:600;">Anglo-American</span> Culture &amp; History</a></div>
-                        </div>
-                        <div class="clearfixheader float-my-children">
-                        <a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:7px;height:20px;"/></a>
-                        <div style="padding-left:30px;padding-top: 5px;color:white;font-family:Open Sans;font-size:14px;font-weight:600;"><a  href="{$context-path}/" style="color:white;text-decoration:none;">FID AAC</a></div>
-                        </div>
-                        </div>-->
-			<div><a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:18px;height:15px;"/></a></div>
-                        <div style="font-size:18px;font-family:Open Sans;color:white;padding-left:10px;padding-top:12px;">
-                        <a href="{$context-path}/" style="color:white;text-decoration:none;">The Stacks</a>
-                        </div>
-                        </div>
 			
 			<div class="pull-left clearfixheader float-my-children visible-xs hidden-sm hidden-md hidden-lg">
-                        <div><a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/logo_fidaac.svg" style="margin-top:18px;height:15px;"/></a></div>
-                        <div style="font-size:18px;font-family:Open Sans;color:white;padding-left:10px;padding-top:12px;">
-                        <a href="{$context-path}/" style="color:white;text-decoration:none;">The Stacks</a>
-                        </div>
+                        <div><a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/fid_header.svg" style="height: 100px;"/></a></div>
                         </div>
 
                         <!--<a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
@@ -743,22 +718,18 @@
     </xsl:template>
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
-        <footer>
-                <div class="row-footer visible-md visible-lg">
+        <footer style="height:60px;">
+                <div class="row-footer visible-xs visible-sm visible-md visible-lg">
                     <hr/>
-			<div class="col-xs-7 col-sm-8">
+			<div class="col-xs-7 col-sm-8" style="width:40%;">
                         <div class="hidden-print">
 			     <a href="/impressum"> <i18n:text>xmlui.dri2xhtml.structural.impressum-link</i18n:text></a>
                              <xsl:text>  </xsl:text>
-			     <a href="/privacy"> <i18n:text>xmlui.dri2xhtml.structural.privacy-link</i18n:text></a>
+			     <a href="/privacy"> <i18n:text>xmlui.dri2xhtml.structural.privacy-link</i18n:text></a><br />
+				<a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
                              <xsl:text>  </xsl:text>
-			     <!--<a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
-                             <xsl:text>  </xsl:text>-->
-                             <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
-                             <xsl:text>  </xsl:text>
+                             <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a><br />
                              <a href="https://libaac.de/publish/publish-in-the-stacks/"><xsl:text>How to Publish</xsl:text></a>
-                             <xsl:text>  </xsl:text>
-			     <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
                              <xsl:text>  </xsl:text>
 			     <a href ="/help"> <i18n:text>xmlui.dri2xhtml.structural.help-link</i18n:text></a>
                              <xsl:text>  </xsl:text>
@@ -782,15 +753,37 @@
                         </div>
                 	</div>
 
-			<div class="col-xs-5 col-sm-4 footer-right hidden-print visible-md visible-lg">
+			<div class="col-xs-5 col-sm-4 footer-right hidden-print hidden-md visible-lg" style="padding-left:0;margin-top:5px;width:60%;">
 				<div class="pull-right">
-				<a title="DFG" href="http://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" height="24"/></a>
-				<xsl:text>  </xsl:text><a title="SUB Göttingen" href="http://www.sub.uni-goettingen.de"><img src="{$theme-path}/images/sub-logo.png" height="30"/></a>
+				<span style="margin-right:10px;"><xsl:text>Ein Service von:</xsl:text></span>
+				 <a title="FID AAC" href="https://libaac.de"><img src="{$theme-path}/images/fid_footer.svg" width="25%"/></a><xsl:text>  </xsl:text>
+				<a title="DFG" href="https://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" width="25%"/></a>
+				<xsl:text>  </xsl:text><a title="SUB Göttingen" href="https://www.sub.uni-goettingen.de"><img src="{$theme-path}/images/SUB-logo.svg" width="20%"/></a>
 				</div>
 			</div>
 
+			<div class="col-xs-5 col-sm-4 footer-right hidden-print visible-md" style="padding-left:0;margin-top:5px;width:60%;">
+                                <div class="pull-right">
+                                <span style="margin-right:10px;"><xsl:text>Ein Service von:</xsl:text></span><br />
+                                 <a title="FID AAC" href="https://libaac.de"><img src="{$theme-path}/images/fid_footer.svg" width="25%"/></a><xsl:text>  </xsl:text>
+                                <a title="DFG" href="https://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" width="25%"/></a>
+                                <xsl:text>  </xsl:text><a title="SUB Göttingen" href="https://www.sub.uni-goettingen.de"><img src="{$theme-path}/images/SUB-logo.svg" width="20%"/></a>
+                                </div>
+                        </div>
+
+			<div class="col-xs-5 col-sm-4 footer-right hidden-print visible-xs visible-sm hidden-md hidden-lg" style="margin-top:5px;">
+                                <div class="pull-left">
+				<span style="margin-right:10px;"><xsl:text>Ein Service von:</xsl:text></span><br />
+                                 <a title="FID AAC" href="https://libaac.de"><img src="{$theme-path}/images/fid_footer.svg" width="70%"/></a><br />
+                                <a title="DFG" href="https://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" width="70%"/></a><br />
+                                <xsl:text>  </xsl:text><a title="SUB Göttingen" href="https://www.sub.uni-goettingen.de"><img src="{$theme-path}/images/SUB-logo.svg" width="70%" style="margin-top:10px;"/></a>
+                                </div>
+                        </div>
+
+			
+
 		</div>
-		<div class="row-footer hidden-md hidden-lg visible-xs visible-sm">
+		<!--<div class="row-footer hidden-md hidden-lg visible-xs hidden-sm">
                     <hr/>
                         <div class="col-xs-7 col-sm-8">
                         <div class="hidden-print">
@@ -798,8 +791,6 @@
                              <br/>
 			     <a href="/privacy"> <i18n:text>xmlui.dri2xhtml.structural.privacy-link</i18n:text></a>
                              <br/>
-                             <!--<a href ="/credits"> <i18n:text>xmlui.dri2xhtml.structural.copyright-link</i18n:text></a>
-                             <br/>-->
                              <a href="/aboutus"><i18n:text>xmlui.dri2xhtml.structural.aboutus-link</i18n:text></a>
                              <br/>
                              <a href ="/rights"> <i18n:text>xmlui.dri2xhtml.structural.rights-link</i18n:text></a>
@@ -825,13 +816,15 @@
                             </a>
 			    <br/>
 			  <div style="margin-top: 10px;">
-			    <a title="DFG" href="http://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" height="24" style="margin-bottom: 5px"/></a>
-			    <a title="SUB Göttingen" href="http://www.sub.uni-goettingen.de" style="margin-left: -5px"><img src="{$theme-path}/images/sub-logo.png" height="30"/></a>
+				<span style="margin-right:10px;"><xsl:text>Ein Service von:</xsl:text></span><br />
+                                 <a title="FID AAC" href="https://libaac.de"><img src="{$theme-path}/images/fid_footer.svg" height="30"/></a><br />
+			    <a title="DFG" href="http://dfg.de"><img src="{$theme-path}/images/dfg-logo.jpg" height="30" style="margin-bottom: 5px"/></a><br />
+			    <a title="SUB Göttingen" href="http://www.sub.uni-goettingen.de" style="margin-left: -5px"><img src="{$theme-path}/images/SUB-logo.svg" height="23"/></a>
                           </div>
 			</div>
                         </div>
 
-                </div>
+                </div>-->
 
                 <!--Invisible link to HTML sitemap (for search engines) -->
                 <a class="hidden">

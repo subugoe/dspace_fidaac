@@ -28,7 +28,7 @@
 header .navbar-default {
     background-color: #183267;
     position: relative;
-    max-height: 110px;
+    height: 130px;
 }
 
 ul {
@@ -95,13 +95,12 @@ body {
 }
 
 header .navbar-brand img {
-   height: 41px;
+   height: 130px;
    z-index: 1;
    display: block;
    text-indent: -9999px;
    position: relative;
-   margin-top: 5px;
-   margin-left: 15px;
+   padding-bottom: 5px;
 }
 
 header .navbar-brand-small img {
@@ -277,8 +276,8 @@ ul.share-buttons li {
   margin-left: 5px;
 }
 
-hr {
-  border-top: 1px solid #ddd;
+footer hr {
+    border-top: 1px solid #ddd;
 }
 
 #toc_container {

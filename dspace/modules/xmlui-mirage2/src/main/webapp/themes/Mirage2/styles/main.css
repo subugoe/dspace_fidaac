@@ -5827,7 +5827,7 @@ tbody.collapse.in {
 }
 /* line 16, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb > li + li:before {
-  content: "/ ";
+  content: "/ ";
   padding: 0 5px;
   color: #ccc;
 }
@@ -8388,7 +8388,7 @@ dl {
 
 /* line 134, classic_mirage_color_scheme/_general.scss */
 footer hr {
-  display: none;
+border-top: 1px solid #ddd;
 }
 /* line 138, classic_mirage_color_scheme/_general.scss */
 footer .row > div {
@@ -8478,7 +8478,6 @@ footer > .container .pull-right {
 
 /* line 215, classic_mirage_color_scheme/_general.scss */
 .main-content {
-  background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -9892,7 +9891,7 @@ p.pre {
 header .navbar-default {
   background-color: #183267;
   position: relative;
-  max-height: 110px;
+  height: 130px;
 }
 
 /* line 34, _style.scss */
@@ -9971,16 +9970,15 @@ body {
 
 /* line 97, _style.scss */
 header .navbar-brand img {
-  height: 41px;
+  height: 130px;
   z-index: 1;
   display: block;
   text-indent: -9999px;
   position: relative;
-  margin-top: 5px;
-  margin-left: 15px;
+  padding-bottom: 5px;
 }
 
-/* line 107, _style.scss */
+/* line 106, _style.scss */
 header .navbar-brand-small img {
   height: 20px;
   z-index: 1;
@@ -9991,7 +9989,7 @@ header .navbar-brand-small img {
   margin-left: 5px;
 }
 
-/* line 117, _style.scss */
+/* line 116, _style.scss */
 .logo-title {
   padding-top: 15px;
   font-size: 120%;
@@ -9999,52 +9997,52 @@ header .navbar-brand-small img {
   text-align: center;
 }
 
-/* line 124, _style.scss */
+/* line 123, _style.scss */
 .dctype {
   margin-top: 10px;
 }
 
-/* line 128, _style.scss */
+/* line 127, _style.scss */
 #aspect_discovery_SimpleSearch_div_search-results .ds-artifact-item {
   margin-bottom: 0;
 }
 
-/* line 132, _style.scss */
+/* line 131, _style.scss */
 .thumbnail {
   margin-bottom: 0;
 }
 
-/* line 136, _style.scss */
+/* line 135, _style.scss */
 footer {
   margin-bottom: 50px;
 }
 
-/* line 140, _style.scss */
+/* line 139, _style.scss */
 div.visible-xs footer {
   height: 80px;
 }
 
-/* line 144, _style.scss */
+/* line 143, _style.scss */
 div.visible-sm footer {
   height: 80px;
 }
 
-/* line 148, _style.scss */
+/* line 147, _style.scss */
 div.hidden-xs footer {
   height: 40px;
 }
 
-/* line 152, _style.scss */
+/* line 151, _style.scss */
 div.hidden-sm footer {
   height: 40px;
 }
 
-/* line 156, _style.scss */
+/* line 155, _style.scss */
 footer a {
   margin-right: 8px;
 }
 
-/* line 160, _style.scss */
+/* line 159, _style.scss */
 footer div.col-xs-7, div.col-sm-8 {
   margin-top: 10px;
   line-height: 20px;
@@ -10052,7 +10050,7 @@ footer div.col-xs-7, div.col-sm-8 {
   padding-left: 0;
 }
 
-/* line 167, _style.scss */
+/* line 166, _style.scss */
 footer div.footer-right {
   margin-top: 5px;
   line-height: 20px;
@@ -10060,44 +10058,44 @@ footer div.footer-right {
   padding-right: 0;
 }
 
-/* line 174, _style.scss */
+/* line 173, _style.scss */
 footer .row > div {
   border-top: none;
 }
 
 @media (max-width: 767px) {
-  /* line 179, _style.scss */
+  /* line 178, _style.scss */
   .item-wrapper.row {
     border-bottom: none;
   }
 }
-/* line 183, _style.scss */
+/* line 182, _style.scss */
 table.item-view td {
   padding: 20px;
   vertical-align: top;
 }
 
-/* line 188, _style.scss */
+/* line 187, _style.scss */
 .item-page-field-wrapper {
   margin-bottom: 5px;
 }
 
-/* line 192, _style.scss */
+/* line 191, _style.scss */
 span.artifact-title {
   font-size: 16px;
 }
 
-/* line 196, _style.scss */
+/* line 195, _style.scss */
 #main-container .row-offcanvas {
   background-color: white;
 }
 
-/* line 200, _style.scss */
+/* line 199, _style.scss */
 div.artifact-info {
   margin-bottom: 10px;
 }
 
-/* line 204, _style.scss */
+/* line 203, _style.scss */
 figure.copyrightimages {
   margin-bottom: 10px;
 }
@@ -10115,7 +10113,7 @@ img.frontpage:hover {
     filter: grayscale(0);
     opacity: 1;
 }*/
-/* line 222, _style.scss */
+/* line 221, _style.scss */
 figure.frontpage_images {
   display: inline-block;
   margin-right: 60px;
@@ -10126,12 +10124,12 @@ figure.frontpage_images {
   width: 220px;
 }
 
-/* line 232, _style.scss */
+/* line 231, _style.scss */
 #first_row img, #second_row img {
   display: inline-block;
 }
 
-/* line 236, _style.scss */
+/* line 235, _style.scss */
 figure.frontpage_images figcaption {
   position: absolute;
   bottom: 0;
@@ -10145,30 +10143,30 @@ figure.frontpage_images figcaption {
   color: white;
 }
 
-/* line 249, _style.scss */
+/* line 248, _style.scss */
 div.itemview-citation {
   font-size: 18px;
   margin-bottom: 5px;
 }
 
-/* line 254, _style.scss */
+/* line 253, _style.scss */
 div.itemview-citation-small {
   font-size: 14px;
   margin-bottom: 5px;
 }
 
-/* line 259, _style.scss */
+/* line 258, _style.scss */
 .control-label.required::after {
   content: none;
 }
 
-/* line 263, _style.scss */
+/* line 262, _style.scss */
 div#socialmedia {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
 
-/* line 268, _style.scss */
+/* line 267, _style.scss */
 ul.share-buttons {
   list-style: none;
   padding: 0;
@@ -10177,42 +10175,42 @@ ul.share-buttons {
   display: inline-block;
 }
 
-/* line 275, _style.scss */
+/* line 274, _style.scss */
 ul.share-buttons li {
   display: inline;
   margin-left: 5px;
 }
 
-/* line 280, _style.scss */
-hr {
+/* line 279, _style.scss */
+footer hr {
   border-top: 1px solid #ddd;
 }
 
-/* line 284, _style.scss */
+/* line 283, _style.scss */
 #toc_container {
   font-size: 95%;
   margin-bottom: 1em;
   width: auto;
 }
 
-/* line 294, _style.scss */
+/* line 293, _style.scss */
 .toc_title {
   font-weight: 700;
   text-align: center;
 }
 
-/* line 299, _style.scss */
+/* line 298, _style.scss */
 #toc_container li, #toc_container ul, #toc_container ul li {
   list-style: inside none none !important;
 }
 
-/* line 303, _style.scss */
+/* line 302, _style.scss */
 details p {
   margin-left: 15px;
   padding-top: 10px;
 }
 
-/* line 307, _style.scss */
+/* line 306, _style.scss */
 details ul {
   margin-left: 35px;
   padding-top: 10px;
@@ -10220,49 +10218,49 @@ details ul {
   list-style-position: outside;
 }
 
-/* line 314, _style.scss */
+/* line 313, _style.scss */
 #how ul, #what ul, #benefits ul {
   margin-left: 20px;
 }
 
 /* tell the container's children to float left: */
-/* line 318, _style.scss */
+/* line 317, _style.scss */
 .float-my-children > * {
   float: left;
   margin-right: 5px;
 }
 
 /* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
-/* line 325, _style.scss */
+/* line 324, _style.scss */
 .clearfixheader {
   *zoom: 1;
 }
 
-/* line 329, _style.scss */
+/* line 328, _style.scss */
 .clearfixheader:before,
 .clearfixheader:after {
   content: " ";
   display: table;
 }
 
-/* line 335, _style.scss */
+/* line 334, _style.scss */
 .clearfixheader:after {
   clear: both;
 }
 
-/* line 340, _style.scss */
+/* line 339, _style.scss */
 div.publish {
   font-weight: bold;
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-/* line 346, _style.scss */
+/* line 345, _style.scss */
 a.publishButton:visited {
   color: #039;
 }
 
-/* line 349, _style.scss */
+/* line 348, _style.scss */
 .publishButton {
   -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -10284,13 +10282,13 @@ a.publishButton:visited {
   width: 100%;
 }
 
-/* line 370, _style.scss */
+/* line 369, _style.scss */
 header .navbar-default .navbar-toggle > .open > a, header .navbar-default .navbar-toggle > .open > a:hover, header .navbar-default .navbar-toggle > .open > a:focus, header .navbar-default .navbar-nav > .open > a, header .navbar-default .navbar-nav > .open > a:hover, header .navbar-default .navbar-nav > .open > a:focus {
   background-color: #183267;
   color: #fff;
 }
 
-/* line 375, _style.scss */
+/* line 374, _style.scss */
 ul.vocabulary ul {
   padding-left: 5px;
 }
