@@ -623,15 +623,34 @@ test="dim:field[@element='title'][@qualifier='alternative']"><xsl:text>.</xsl:te
 		<xsl:if test="dim:field[@element='contributor'][@qualifier='editor']">
                          <xsl:value-of select="dim:field[@element='contributor'][@qualifier='editor']/node()"/><xsl:text>. </xsl:text>
                 </xsl:if>
-		 <xsl:if test="dim:field[@element='pulishedIn']">
+		 <xsl:if test="dim:field[@element='publishedIn']">
                          <xsl:value-of select="dim:field[@element='publishedIn']/node()"/><xsl:text>: </xsl:text>
                 </xsl:if>
 				<xsl:if test="dim:field[@element='publisher']">
                          <xsl:value-of select="dim:field[@element='publisher']/node()"/><xsl:text>. </xsl:text>
                 </xsl:if>
 				<xsl:if test="dim:field[@element='relation'][@qualifier='ispartofseries']">
-                         <xsl:value-of select="dim:field[@element='relation'][@qualifier='ispartofseries']/node()"/><xsl:text>. </xsl:text>
+				<xsl:for-each select="dim:field[@element='relation' and @qualifier='ispartofseries']">
+                                <xsl:if test="contains(./node(), ';')">
+                                <xsl:copy-of select="substring-before(./node(), ';')"/><xsl:copy-of select="substring-after(./node(), ';')"/>
+                                </xsl:if>
+                                <xsl:if test="not(contains(./node(), ';'))">
+                                <xsl:copy-of select="./node()" />
+                                </xsl:if>
+                                </xsl:for-each>
+                                <xsl:text>.</xsl:text>
                 </xsl:if>
+		<xsl:if test="not(dim:field[@element='relation'][@qualifier='ispartofseries']) and dim:field[@element='relation'][@qualifier='volume']">
+                                <xsl:for-each select="dim:field[@element='relation' and @qualifier='volume']">
+                                <xsl:if test="contains(./node(), ';')">
+                                <xsl:copy-of select="substring-before(./node(), ';')"/><xsl:copy-of select="substring-after(./node(), ';')"/>
+                                </xsl:if>
+                                <xsl:if test="not(contains(./node(), ';'))">
+                                <xsl:copy-of select="./node()" />
+                                </xsl:if>
+                                </xsl:for-each>
+                                <xsl:text>.</xsl:text>
+                            </xsl:if>
 		 <xsl:if test="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']">
                        <xsl:value-of select="dim:field[@element='bibliographicCitation'][@qualifier='firstPage']/node()"/>
                 </xsl:if>
@@ -1177,7 +1196,7 @@ string-length(dim:field[@element='title'][@qualifier='alternative'])) != '.'"><x
                 </xsl:if>
                 <xsl:call-template name="itemSummaryView-DIM-publishedIn"/>
 		 <xsl:if test="dim:field[@element='publisher']">
-                        <xsl:value-of select="dim:field[@element='publisher']/node()"/></xsl:if></div>
+                        <xsl:value-of select="dim:field[@element='publisher']/node()"/><xsl:text>. </xsl:text></xsl:if></div>
 		<div class="itemview-citation-small"><i18n:text>xmlui.dri2xhtml.METS-1.0.dctypeantho</i18n:text></div>
                 <!--<xsl:call-template name="itemSummaryView-DIM-typeVersion"/>
                 <xsl:call-template name="itemSummaryView-DIM-language"/>

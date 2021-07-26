@@ -18,7 +18,13 @@
   <name-map collection-handle="11858/48" form-name="journals" /> 
   <name-map collection-handle="11858/377" form-name="journals" />
 <name-map collection-handle="11858/398" form-name="journals" />
+<name-map collection-handle="11858/830" form-name="journals" />
+<name-map collection-handle="11858/835" form-name="journals" />
+<name-map collection-handle="11858/937" form-name="sammelband" />
+<name-map collection-handle="11858/984" form-name="sammelband" />
+<name-map collection-handle="11858/985" form-name="sammelband" />
  </form-map>
+
 
 
  <!-- The form-definitions map lays out the detailed definition of all the -->
@@ -162,7 +168,7 @@
                                  <label>Editor</label>
                                  <input-type>name</input-type>
                                  <hint></hint>
-                                 <type-bind>report,lecture,anthology,conferenceBoA,conferenceCall,cfppublication</type-bind>
+                                 <type-bind>article,report,lecture,anthology,conferenceBoA,conferenceCall,cfppublication</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -255,10 +261,10 @@
                                  <dc-element>description</dc-element>
                                 <dc-qualifier>institution</dc-qualifier>
                                  <repeatable>true</repeatable>
-                                 <label>*Institution</label>
+                                 <label>Institution</label>
                                  <input-type>onebox</input-type>
                                  <hint>Enter the institution.</hint>
-                                 <required>Enter the institution!</required>
+                                 <required></required>
                                 <type-bind>workingPaper</type-bind>
                         </field>
 			<field>
@@ -480,6 +486,18 @@
                                  <required></required>
                                  <type-bind>report,lecture,review,article,digitalReproduction</type-bind>
                         </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>title</dc-element>
+                                 <dc-qualifier>specialissue</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Title of special issue</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>If your article was published in a special issue of a journal, enter the title of the special issue here.</hint>
+                                 <required></required>
+                                 <type-bind>article</type-bind>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>relation</dc-element>
@@ -648,6 +666,628 @@
                 </page>
         </form>
 
+	<form name="sammelband">
+                <page number="1">
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>type</dc-element>
+                                 <dc-qualifier></dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Publication type</label>
+                                 <input-type value-pairs-name="publication_sammelband_types">dropdown</input-type>
+                                 <hint>Select your publication type.</hint>
+                                 <required>Please select your publication type from the dropdown menu!</required>
+                        </field>
+                </page>
+                <page number="2">
+                         <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>type</dc-element>
+                                 <dc-qualifier>version</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Document version</label>
+                                 <input-type value-pairs-name="common_versions">dropdown</input-type>
+                                 <hint>Select your document type.</hint>
+                                 <required>Select your document type.</required>
+                                 <type-bind>workingPaper,dissertation,report,lecture,monograph,article,anthologyArticle,anthology,digitalReproduction,blogentry,review</type-bind>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>subject</dc-element>
+                                 <dc-qualifier>field</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Categorie(s)</label>
+                                 <input-type value-pairs-name="subject_field">dropdown</input-type>
+                                 <hint>Please select at least one subject field. Hold CTR to select multiple categories.</hint>
+                                 <required>Select at least one or more categorie(s) from the dropdown menu!</required>
+                        </field>
+                         <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>subject</dc-element>
+                                 <dc-qualifier>ddc</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*DDC categorie(s)</label>
+                                <input-type value-pairs-name="subject_ddc">dropdown</input-type>
+                                 <hint>Please select at least one DDC categorie.</hint>
+                                 <required>Select at least one or more categorie(s) from the dropdown menu!</required>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>author</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Author(s)</label>
+                                 <input-type>name</input-type>
+                                 <hint></hint>
+                                 <required>Enter the author(s) of this item!</required>
+                                 <type-bind>workingPaper,dissertation,report,review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper,blogentry</type-bind>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>lecturer</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Lecturer</label>
+                                 <input-type>name</input-type>
+                                 <hint></hint>
+                                 <required>Enter the lecturer of the seminar!</required>
+                                 <type-bind>courseDescription,syllabus,lecture</type-bind>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>organiser</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Organiser(s)</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the department(s) hosting the event.</hint>
+                                 <required>Enter the department(s) hosting the event!</required>
+                                 <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>organisertwo</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Organiser</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the university or research institution(s) hosting the event.</hint>
+                                 <required>Enter the university or research institution(s) hosting the event!</required>
+                                 <type-bind>conferenceProg</type-bind>
+                        </field>
+                                                <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>organiserthree</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Organiser(s)</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the association hosting the event or the event series (e.g. title of the lecture series)</hint>
+                                 <type-bind>conferenceProg</type-bind>
+                        </field>
+
+                                                <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>organizedBy</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Organized by</label>
+                                 <input-type>name</input-type>
+                                 <hint>Enter the person(s) organising the event.</hint>
+                                 <required></required>
+                                 <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>contributor</dc-element>
+                                 <dc-qualifier>editor</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Editor</label>
+                                 <input-type>name</input-type>
+                                 <hint></hint>
+                                 <type-bind>article,report,lecture,anthology,conferenceBoA,conferenceCall,cfppublication</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>title</dc-element>
+                                 <dc-qualifier></dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Document title</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required>Enter the title of this item!</required>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>title</dc-element>
+                                 <dc-qualifier>alternative</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Subtitle</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required></required>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>reviewOf</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Review of</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the title of the reviewed work.</hint>
+                                 <required></required>
+                                 <type-bind>review</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>reviewOfBy</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Author of reviewed publication</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the author of the reviewed work.</hint>
+                                 <required></required>
+                                 <type-bind>review</type-bind>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>eventStart</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Start of event</label>
+                                 <input-type>date</input-type>
+                                 <hint>Enter the date of the first day of the event.</hint>
+                                 <required>Enter the date of the first day of the event!</required>
+                                <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                        </field>
+                         <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>eventEnd</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>End of conference</label>
+                                 <input-type>date</input-type>
+                                 <hint>Enter the date of the last day of the conference. For one-day conferences, please enter only the start date.</hint>
+                                 <required></required>
+                                <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>eventLocation</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Event location</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the location (city etc.) where the event took place.</hint>
+                                <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                <dc-qualifier>institution</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Institution</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the institution hosting the seminar.</hint>
+                                 <required>Enter the institution hosting the seminar!</required>
+                                <type-bind>courseDescription,syllabus</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                <dc-qualifier>institution</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Institution</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the institution.</hint>
+                                 <required></required>
+                                <type-bind>workingPaper</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                <dc-qualifier>institution</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Institution</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the institution.</hint>
+                                <type-bind>blogentry</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                 <dc-qualifier>location</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Location</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required></required>
+                                <type-bind>courseDescription,syllabus</type-bind>
+                        </field>
+
+                         <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                 <dc-qualifier>semester</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Term and year</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the term and year of the seminar, for example Summer Term 2017.</hint>
+                                 <required>Enter the term and year of the seminar!</required>
+                                <type-bind>courseDescription,syllabus</type-bind>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>ispartof</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Title of anthology</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required>Enter the title of the anthology the item was published in!</required>
+                                 <type-bind>anthologyArticle</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>ispartof</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Title of blog</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required>Enter the title of the blog the item was published in!</required>
+                                 <type-bind>blogentry</type-bind>
+                        </field>
+                         <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>ispartofalt</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Subtitle of anthology</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the subtitle of the anthology the item was published in.</hint>
+                                 <type-bind>anthologyArticle</type-bind>
+                        </field>
+                         <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>ispartofalt</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Subtitle of blog</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the subtitle of the blog the item was published in.</hint>
+                                 <type-bind>blogentry</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>editor</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Editor of anthology</label>
+                                 <input-type>name</input-type>
+                                 <hint></hint>
+                                <required>Enter the editor of the anthology the item was published in!</required>
+                               <type-bind>anthologyArticle</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>editor</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Editor of blog</label>
+                                 <input-type>name</input-type>
+                                 <hint></hint>
+                               <type-bind>blogentry</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier></dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>ID of anthology/blog</label>
+                                 <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+                                 <hint>Select the ID (DOI, ISBN etc.) of the anthology/blog the item was published in. For DOIs type prefix and suffix only, e.g. 'https://doi.org/10.17974/gin2015-1073' – type '10.17974/gin2015-1073'.</hint>
+                                 <required></required>
+                                 <type-bind>anthologyArticle,blogentry</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>date</dc-element>
+                                 <dc-qualifier>submitted</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Year of submission</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the year in which the dissertation was submitted.</hint>
+                                 <required>Enter the year in which the dissertation was submitted.</required>
+                                <type-bind>dissertation</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>university</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Name of degree-granting university</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the university where the dissertation was submitted.</hint>
+                                 <required>Enter the university where the dissertation was submitted.</required>
+                                <type-bind>dissertation</type-bind>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>date</dc-element>
+                                 <dc-qualifier>issued</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Issue date (year)</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the year in which the item was first published. Unpublished material: Enter the year in which you are uploading the document in The Stacks.</hint>
+                                 <required>Enter the year in which the item was first published!</required>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>date</dc-element>
+                                 <dc-qualifier>blog</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>*Issue date</label>
+                                 <input-type>date</input-type>
+                                 <hint>Enter the date in which the blog entry was first published.</hint>
+                                 <required>Enter the date in which the blog entry was first published!</required>
+                                <type-bind>blogentry</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>publisher</dc-element>
+                                 <dc-qualifier></dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Publisher</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>If this item has been previously published, enter the publisher's name.</hint>
+                                 <required></required>
+                                <type-bind>report,lecture,dissertation,review,monograph,anthologyArticle,anthology,digitalReproduction</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>publishedIn</dc-element>
+                                 <dc-qualifier></dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Published in</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>If this item has been previously published, enter the place of publication.</hint>
+                                 <required></required>
+                                <type-bind>report,lecture,dissertation,review,monograph,anthologyArticle,anthology,digitalReproduction</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>ispartofseries</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Series/Volume</label>
+                                 <input-type>series</input-type>
+                                 <hint>If this item is part of a series, enter the title and volume number here.</hint>
+                                 <required></required>
+                                 <type-bind>blogentry,report,lecture,dissertation,review,monograph,anthology,digitalReproduction,anthologyArticle</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>volume</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Series</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the series information in the following form: Literary Research; Vol.13</hint>
+                                 <required></required>
+                                 <type-bind>workingPaper,article,review</type-bind>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>journal</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Journal</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the journal your article was published in.</hint>
+                                 <required></required>
+                                 <type-bind>report,lecture,review,article,digitalReproduction</type-bind>
+                        </field>
+                                                <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>journalalt</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Subtitle of journal</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the subtitle of the journal your article was published in.</hint>
+                                 <required></required>
+                                 <type-bind>report,lecture,review,article,digitalReproduction</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>title</dc-element>
+                                 <dc-qualifier>specialissue</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Title of special issue</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>If your article was published in a special issue of a journal, enter the title of the special issue here.</hint>
+                                 <required></required>
+                                 <type-bind>article</type-bind>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>journal</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Journal</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the journal for which you call for papers.</hint>
+                                 <required></required>
+                                 <type-bind>cfppublication</type-bind>
+                        </field>
+                         <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>journalalt</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Subtitle of journal</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the subtitle of the journal for which you call for papers.</hint>
+                                 <required></required>
+                                 <type-bind>cfppublication</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>issn</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>ISSN of journal</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>Enter the ISSN of the journal your article was published in.</hint>
+                                 <required></required>
+                                 <type-bind>report,lecture,review,article,digitalReproduction</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>bibliographicCitation</dc-element>
+                                 <dc-qualifier>volume</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Volume</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required></required>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction,cfppublication</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>bibliographicCitation</dc-element>
+                                 <dc-qualifier>issue</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Issue</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required></required>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction,cfppublication</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>bibliographicCitation</dc-element>
+                                 <dc-qualifier>article</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Article number</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required></required>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>bibliographicCitation</dc-element>
+                                 <dc-qualifier>firstPage</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>First page</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required></required>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction,anthologyArticle</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>bibliographicCitation</dc-element>
+                                 <dc-qualifier>lastPage</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Last page</label>
+                                 <input-type>onebox</input-type>
+                                 <hint></hint>
+                                 <required></required>
+                                 <type-bind>workingPaper,report,lecture,review,article,digitalReproduction,anthologyArticle</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>format</dc-element>
+                                 <dc-qualifier>extent</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Extent in pages</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>for example: 188</hint>
+                                 <required></required>
+                                 <type-bind>review,preprint,monograph,anthology,digitalReproduction</type-bind>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>identifier</dc-element>
+                                 <dc-qualifier></dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>ID of document</label>
+                                 <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+                                 <hint>If your document already has an ID (DOI, ISBN etc.), enter it here. For DOIs type prefix and suffix only, e.g. 'https://doi.org/10.17974/gin2015-1073' – type '10.17974/gin2015-1073'.</hint>
+                                 <required></required>
+                        </field>
+
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>relation</dc-element>
+                                 <dc-qualifier>isbasedon</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Research data URL</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>If your document is based on research data which is publicly available, enter the URL here.</hint>
+                                 <required></required>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>language</dc-element>
+                                 <dc-qualifier>iso</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>*Language</label>
+                                 <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                                 <hint>Hold CTR to select multiple languages.</hint>
+                                 <required>Select the language your document is written in!</required>
+                        </field>
+                        <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                 <dc-qualifier>abstract</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>Abstract</label>
+                                 <input-type>textarea</input-type>
+                                 <hint>Enter abstracts in different languages in separate fields.</hint>
+                                 <required></required>
+                        </field>
+
+                                                <field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>description</dc-element>
+                                 <dc-qualifier>url</dc-qualifier>
+                                 <repeatable>true</repeatable>
+                                 <label>URL</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>If a website is related to your document (for example a conference website) enter the URL here.</hint>
+                                 <required></required>
+                        </field>
+                </page>
+                <page number="3">
+                        <field>
+                                <dc-schema>dc</dc-schema>
+                                <dc-element>rights</dc-element>
+                                <dc-qualifier></dc-qualifier>
+                                <repeatable>false</repeatable>
+                                <label>*License</label>
+                                <input-type>onebox</input-type>
+                                <hint>Click 'Select license'. If the document is already licensed under a Creative Commons license or you want to assign one, choose a license from the dropdown menu. If you do not want to assign a Creative Commons license, you have to choose the standard distribution license of The Stacks. You can find the wording for the standard distribution license of The Stacks in the 'Terms of Use.' For more information see 'Help' below.</hint>
+                                <required>Select a license.</required>
+                                <vocabulary closed="true">cc</vocabulary>
+                        </field>
+
+                </page>
+        </form>
+
+
                 <form name="journals">
                 <page number="1">
                         <field>
@@ -671,7 +1311,7 @@
                                  <input-type value-pairs-name="common_versions">dropdown</input-type>
                                  <hint>Select your document type.</hint>
                                  <required>Select your document type.</required>
-                                 <type-bind>monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
+                                 <type-bind>lecture,monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
                         </field>
 
                         <field>
@@ -704,7 +1344,7 @@
                                  <input-type>name</input-type>
                                  <hint></hint>
                                  <required>Enter the author(s) of this item!</required>
-                                 <type-bind>review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper</type-bind>
+                                 <type-bind>lecture,review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -726,7 +1366,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the institution(s) hosting the conference.</hint>
                                  <required>Enter the institution(s) (university, seminar, research institute...) hosting the conference!</required>
-                                 <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                                 <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA,lecture</type-bind>
                         </field>
                                                 <field>
                                  <dc-schema>dc</dc-schema>
@@ -737,7 +1377,7 @@
                                  <input-type>name</input-type>
                                  <hint>Enter the person(s) organising the conference.</hint>
                                  <required></required>
-                                 <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
+                                 <type-bind>conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA,lecture</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -747,7 +1387,7 @@
                                  <label>Editor</label>
                                  <input-type>name</input-type>
                                  <hint></hint>
-                                 <type-bind>anthology,conferenceBoA,conferenceCall,cfppublication</type-bind>
+                                 <type-bind>article,anthology,conferenceBoA,conferenceCall,cfppublication,lecture</type-bind>
                         </field>
 
 
@@ -813,7 +1453,6 @@
                                  <hint>Enter the location (city etc.) where the event took place.</hint>
                                 <type-bind>lecture,conferencePaper,conferenceReport,conferenceCall,conferenceProg,conferenceBoA</type-bind>
                         </field>
-
                          <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>relation</dc-element>
@@ -823,7 +1462,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the series information in the following form: Literary Research; Vol. 13</hint>
                                  <required></required>
-                                <type-bind>article,review</type-bind>
+                                <type-bind>anthology,anthologyArticle,lecture,article,review</type-bind>
                         </field>
 
                         <field>
@@ -865,7 +1504,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction</type-bind>
+                                 <type-bind>anthology,anthologyArticle,lecture,review,article,digitalReproduction</type-bind>
                         </field>
 			  <field>
                                  <dc-schema>dc</dc-schema>
@@ -876,8 +1515,20 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the subtitle of the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction</type-bind>
+                                 <type-bind>anthology,anthologyArticle,lecture,review,article,digitalReproduction</type-bind>
                         </field>
+			<field>
+                                 <dc-schema>dc</dc-schema>
+                                 <dc-element>title</dc-element>
+                                 <dc-qualifier>specialissue</dc-qualifier>
+                                 <repeatable>false</repeatable>
+                                 <label>Title of special issue</label>
+                                 <input-type>onebox</input-type>
+                                 <hint>If your article was published in a special issue of a journal, enter the title of the special issue here.</hint>
+                                 <required></required>
+                                 <type-bind>article</type-bind>
+                        </field>
+
                         <field>
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>relation</dc-element>
@@ -912,7 +1563,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the ISSN of the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,review</type-bind>
+                                 <type-bind>article,digitalReproduction,review,lecture</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -923,7 +1574,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,cfppublication,review</type-bind>
+                                 <type-bind>lecture,article,digitalReproduction,cfppublication,review</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -934,7 +1585,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,cfppublication,review</type-bind>
+                                 <type-bind>lecture,article,digitalReproduction,cfppublication,review</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -956,7 +1607,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>lecture,review,article,digitalReproduction,anthologyArticle</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -967,7 +1618,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction,anthologyArticle</type-bind>
+                                 <type-bind>lecture,review,article,digitalReproduction,anthologyArticle</type-bind>
                         </field>
 
                         <field>
@@ -1048,6 +1699,20 @@
  <!-- stores the associated stored-values in the database.                  -->
 
  <form-value-pairs>
+
+<value-pairs value-pairs-name="publication_sammelband_types" dc-term="type">
+<pair>
+       <displayed-value>Anthology Article</displayed-value>
+       <stored-value>anthologyArticle</stored-value>
+     </pair>
+ <pair>
+       <displayed-value>Anthology</displayed-value>
+       <stored-value>anthology</stored-value>
+     </pair>
+
+
+</value-pairs>
+
 
         <value-pairs value-pairs-name="publication_types" dc-term="type">
          <!-- <pair>
