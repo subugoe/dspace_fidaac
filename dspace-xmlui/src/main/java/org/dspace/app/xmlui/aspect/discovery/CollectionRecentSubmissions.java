@@ -57,6 +57,10 @@ public class CollectionRecentSubmissions extends AbstractRecentSubmissionTransfo
             return;
         }
 
+
+
+	if (collection.getMetadata(org.dspace.content.Collection.SIDEBAR_TEXT).length() == 0) {
+
         if(0 < queryResults.getDspaceObjects().size()){
             // Build the collection viewer division.
             Division home = body.addDivision("collection-home", "primary repository collection");
@@ -79,5 +83,6 @@ public class CollectionRecentSubmissions extends AbstractRecentSubmissionTransfo
             if (collection.countItems() > maxRecentSubmissions)
                 addViewMoreLink(lastSubmittedDiv, collection);
         }
+	}
     }
 }

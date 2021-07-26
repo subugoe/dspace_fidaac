@@ -61,33 +61,33 @@ public class CollectionBrowse extends AbstractDSpaceTransformer {
 
         Division home = body.addDivision("collection-home", "primary repository collection");
 
-        Division search = home.addDivision("collection-search-browse",
-                "secondary search-browse");
+        //Division search = home.addDivision("collection-search-browse",
+          //      "secondary search-browse");
 
         // Browse by list
-        Division browseDiv = search.addDivision("collection-browse", "secondary browse");
-        List browse = browseDiv.addList("collection-browse", List.TYPE_SIMPLE,
-                "collection-browse");
-        browse.setHead(T_head_browse);
+        //Division browseDiv = search.addDivision("collection-browse", "secondary browse");
+        //List browse = browseDiv.addList("collection-browse", List.TYPE_SIMPLE,
+//                "collection-browse");
+        //browse.setHead(T_head_browse);
         String url = contextPath + "/handle/" + collection.getHandle();
 
         try {
-            // Get a Map of all the browse tables
+           //  Get a Map of all the browse tables
             BrowseIndex[] bis = BrowseIndex.getBrowseIndices();
             for (BrowseIndex bix : bis) {
                 // Create a Map of the query parameters for this link
                 Map<String, String> queryParams = new HashMap<String, String>();
 
-                queryParams.put("type", bix.getName());
+              queryParams.put("type", bix.getName());
 
                 // Add a link to this browse
-                browse.addItemXref(generateURL(url + "/browse", queryParams),
-                        message("xmlui.ArtifactBrowser.Navigation.browse_" + bix.getName()));
+    //            browse.addItemXref(generateURL(url + "/browse", queryParams),
+      //                  message("xmlui.ArtifactBrowser.Navigation.browse_" + bix.getName()));
             }
         } catch (BrowseException bex) {
-            browse.addItemXref(url + "/browse?type=title", T_browse_titles);
-            browse.addItemXref(url + "/browse?type=author", T_browse_authors);
-            browse.addItemXref(url + "/browse?type=dateissued", T_browse_dates);
+        //    browse.addItemXref(url + "/browse?type=title", T_browse_titles);
+          //  browse.addItemXref(url + "/browse?type=author", T_browse_authors);
+           //browse.addItemXref(url + "/browse?type=dateissued", T_browse_dates);
         }
     }
 }

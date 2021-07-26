@@ -151,6 +151,9 @@ public class CollectionRecentSubmissions extends AbstractDSpaceTransformer imple
         
         Division home = body.addDivision("collection-home", "primary repository collection");
         
+	// if collection.metadat.news is null
+
+
         Division lastSubmittedDiv = home
                 .addDivision("collection-recent-submission","secondary recent-submission");
         lastSubmittedDiv.setHead(T_head_recent_submissions);

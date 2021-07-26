@@ -201,10 +201,10 @@ public class CollectionViewer extends AbstractDSpaceTransformer implements Cache
         }
 
         // The search / browse box placeholder, this division will be populated either in the browse or discovery aspect
-        {
-            home.addDivision("collection-search-browse",
-                    "secondary search-browse");
-        }
+        //{
+          //  home.addDivision("collection-search-browse",
+            //        "secondary search-browse");
+        //}
 
         // Add the reference
         {
