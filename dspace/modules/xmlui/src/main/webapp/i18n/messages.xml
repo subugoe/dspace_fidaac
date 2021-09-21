@@ -2251,7 +2251,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.collection-logo-alt">The collection's logo</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.community-logo-alt">The community's logo</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.no-logo-alt">No logo</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.news">News</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.news">Articles</message>
 
 	<!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
 		DS-METS-1.0-QDC.xsl -->
@@ -2613,7 +2613,7 @@ E-Mail: <a href="mailto:sekretariat@sub.uni-goettingen.de">sekretariat@sub.uni-g
 Internet: <a href="www.sub.uni-goettingen.de">www.sub.uni-goettingen.de</a></p>
 <h3>Vertreter </h3>
 <p>Die Niedersächsische Staats- und Universitätsbibliothek Göttingen (SUB Göttingen) wird vertreten durch den leitenden Direktor Prof. Dr. Wolfram Horstmann.<br />
-Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch die Präsidentin (kommissarisch) Dr. Valérie Schüller (Vizepräsidentin für Finanzen und Personal) gesetzlich vertreten.</p>
+Die SUB Göttingen ist als zentrale Einrichtung eine organisatorische, rechtlich nicht selbständige Einheit der Georg-August-Universität Göttingen. Die Georg-August-Universität Göttingen ist eine Körperschaft des öffentlichen Rechts. Sie wird durch den Präsidenten Prof. Dr. Metin Tolan gesetzlich vertreten.</p>
 <h3>Zuständige Aufsichtsbehörde </h3>
 <p>Georg-August-Universität Göttingen Stiftung Öffentlichen Rechts, Stiftungsausschuss Universität, Wilhelmsplatz 1, 37073 Göttingen </p>
 <h3>Umsatzsteueridentifikationsnummer </h3>
@@ -2642,7 +2642,6 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 <p>Sofern nicht anders angegeben, stehen das Layout der Homepage von The Stacks, die verwendeten Grafiken sowie die sonstigen Inhalte der Internetpräsenz unter der Creative Commons-Lizenz Namensnennung 4.0 International (CC BY 4.0).</p>
 <p>Jede vom Urheberrechtsgesetz oder der Creative Commons-Lizenz nicht zugelassene Verwertung bedarf vorheriger ausdrücklicher Zustimmung der SUB Göttingen. Dies gilt insbesondere für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Fotokopien und Downloads von Web-Seiten für den privaten, wissenschaftlichen und nicht kommerziellen Gebrauch dürfen hergestellt werden.</p>
 <p>Das Urheberrecht aller Logos liegt bei den jeweiligen Rechteinhabern.</p>
-<h2>Bildnachweise</h2>
 <!--   <div>
                 <figure class="copyrightimages">
                 <image src="/themes/Mirage2/images/britain80.jpg" alt="Great Britain and Ireland from Space"/>
@@ -2675,14 +2674,6 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
                 </figcaption>
                 </figure>
         </div>-->
-	<div>
-                <figure class="copyrightimage">
-                <image src="/themes/Mirage2/images/frontpage160.jpg" alt="peaceful ocean"/>
-                <figcaption>
-                        trent roche - <a href="https://www.flickr.com/photos/trentroche/5582517269/in/photolist-9viRTK" title="Link to Source Image">peaceful ocean</a> (resized, cropped) - <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC-BY-NC 2.0</a>
-                </figcaption>
-                </figure>
-        </div>
   </message>
 
   <message key="xmlui.privacy.head">Datenschutzerklärung</message>
@@ -2775,21 +2766,187 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 
 <message key="xmlui.home.text">
 <div style="max-width: 900px;">
-        <image style="width: 340px;" class="visible-xs hidden-md hidden-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
-        <image style="width: 840px;" class="hidden-xs visible-md visible-sm visible-lg" src="/themes/Mirage2/images/frontpagefull.jpg" alt="peaceful ocean"/>
+
         <h2>Welcome to The Stacks!</h2>
-        <p>The Stacks is the subject repository for American studies, Anglophone literatures &amp; cultures,  Australian &amp; New Zealand studies, British &amp; Irish studies, Canadian studies and English, including all sub-fields such as cultural studies, English language teaching, gender studies, geography, history, law, linguistics, literary studies, media studies, medieval studies, political science, postcolonial studies and social sciences. </p>
+<p>The Stacks is the subject repository for American studies, Anglophone literatures &amp; cultures,  Australian &amp; New Zealand studies, British &amp; Irish studies, Canadian studies and English, including all sub-fields. </p>
         <p>By publishing in The Stacks, your research will be more visible. All uploaded material is made available in Open Access, either immediately or after the time span you choose. <a href="https://thestacks.libaac.de/help">Read more</a> on how to publish in The Stacks!</p>
-        <p style="margin-bottom:20px;">The Stacks is provided by the <a href="https://libaac.de">Library of Anglo-American Culture &amp; History</a>.</p>
-	<h2 class="page-header">Regular Contributors</h2>
-<p>
-<image style="width: 40px;vertical-align:middle;margin-right:5px;" src="/themes/Mirage2/images/asjlogo.jpg" alt="ASJ Logo"/>
-<span><a href="https://thestacks.libaac.de/handle/11858/48">American Studies Journal</a></span>
-</p>
-<p style="margin-bottom: 40px;">
-<image style="width: 40px;vertical-align:middle;margin-right:5px;" src="/themes/Mirage2/images/gastlogo.svg" alt="GASt Logo"/>
-<span><a href="https://thestacks.libaac.de/handle/11858/398">German Association for Australian Studies</a></span>
-</p>
+<div>
+        <h3>Search:</h3>
+                            <form method="post" class="" id="ds-search-form" action="/discover">
+                                <fieldset>
+                                    <div class="input-group">
+                                        <input class="ds-text-field form-control" name="query" type="text"/><span class="input-group-btn"><button title="Go" class="ds-button-field btn btn-primary"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button></span>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
+<div><input type="checkbox" class="read-more-state" id="post-2" /><div class="read-more-wrap">
+
+<ul style="list-style-type: disc; list-style-position: inside; padding-left: 1em; margin-bottom: 0.5em; text-indent: -1.4em; margin-left: 1em;">
+  <li class="read-more-target" style="padding-top: 1em;">If a search item has more than one accepted spelling, all accepted spellings yield search results. Capitalization is not considered, e.g. the search query “theorize” or “Theorize” also yields results for “theorization,” “theorise,” and “theorisation,” etc.
+</li>
+  <li class="read-more-target" style="padding-top: 1em;">By default, a list of search items is linked by “and”, e.g. the query “sea changes” lists results for “sea” as well as “changes.” However, both words do not occur necessarily side by side. If both words are for example connected by a hyphen, i.e. “sea-changes,” we advise, wherever possible, to include the hyphen in your search query. Otherwise, the specific title you have in mind might be listed further down in your results than you would expect.
+</li>
+  <li class="read-more-target" style="padding-top: 1em;">To start a search query for a specific word order, put your search items in double quotation marks, e.g. “"constant sea-changes".”
+</li>
+  <li class="read-more-target" style="padding-top: 1em;">To start an “or” search query, separate the search items with “OR,” e.g. “sea OR changes.”
+</li>
+<li class="read-more-target" style="padding-top: 1em;">If you are looking for a specific date follow this format “yyyy-mm-dd.”
+</li>
+  </ul>
+
+ <label for="post-2" class="read-more-trigger">Search Hints</label></div>
+</div>
+<div>
+<h3>Browse through The Stacks:</h3>
+<div class="btn-group" style="margin-bottom:30px;">
+
+
+<div class="btn-group" style="margin-right: 20px;margin-top:20px;">
+
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-size:20px; background-color:#183267;color: white;border-radius:0;">
+      Articles</button>
+
+<ul class="dropdown-menu" role="menu">
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=article">Journal Articles</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/337/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=anthologyArticle">Anthology Articles</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=review">Reviews</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=blogentry">Blogs</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="btn-group" style="margin-right: 20px;margin-top:20px;">
+
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-size:20px; background-color:#183267;color: white;border-radius:0;">
+      Books</button>
+
+<ul class="dropdown-menu" role="menu">
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=monograph">Monographs</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/1049">Anthologies</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=dissertation">Dissertations</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="btn-group" style="margin-right: 20px;margin-top:20px;">
+
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-size:20px; background-color:#183267;color: white;border-radius:0;">
+      Journals</button>
+
+<ul class="dropdown-menu" role="menu">
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/1012">americana</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/1018">American Studies Journal</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/1015">Australian Studies Journal</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="btn-group" style="margin-right: 20px;margin-top:20px;">
+
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-size:20px; background-color:#183267;color: white;border-radius:0;">
+      Series</button>
+
+<ul class="dropdown-menu" role="menu">
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/669">JFKI-Workingpaper</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/1045">German Historical Institute</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/1061">Crime Reduction Research Series</a>
+</li>
+
+
+</ul>
+
+</div>
+
+
+<div class="btn-group" style="margin-right: 20px;margin-top:20px;">
+
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-size:20px; background-color:#183267;color: white;border-radius:0;">
+      Conferences</button>
+
+<ul class="dropdown-menu" role="menu">
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=conferenceReport">Conference Reports</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=conferenceCall">Call for Papers</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=conferenceProg">Programs</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="btn-group" style="margin-right: 20px;margin-top:20px;">
+
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-size:20px; background-color:#183267;color: white;border-radius:0;">
+      Course Materials</button>
+
+<ul class="dropdown-menu" role="menu">
+
+<li>
+<a href="https://thestacks.libaac.de/discover?filtertype=type&amp;filter_relational_operator=equals&amp;filter=syllabus">Syllabi</a>
+</li>
+
+
+</ul>
+
+</div>
+
+
+
+
+  </div>
+</div>
+
+
 
         </div>
 <!--	<div style="max-width: 505px;" class="hidden-xs">
@@ -2859,6 +3016,24 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
         </div>
         </div>-->
   </message>
+
+
+<message key="xmlui.home.text2">
+<h2 class="page-header">Regular Contributors</h2>
+<a href="https://thestacks.libaac.de/handle/11858/1018">
+<image style="height: 66px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/asjlogo.jpg" alt="ASJ Logo" title="American Studies Journal"/>
+</a>
+<a href="https://thestacks.libaac.de/handle/11858/1015">
+<image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/gastlogo.svg" alt="GASt Logo" title ="German Association for Australian Studies"/>
+</a>
+<a href="https://thestacks.libaac.de/handle/11858/1012">
+<image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/americana_logo_stacks.png" alt="americana Logo" title="americana"/>
+</a><br />
+<image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/Peter_Lang_Logo.png" alt="Peter Lang Verlag Logo" title ="Peter Lang Verlag"/>
+<image style="height: 30px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/logo_univerlag.png" alt="Univerlag Logo" title ="Univerlag"/>
+<image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/logo_agf.jpg" alt="AGF Logo" title="AGF"/>
+</message>
+
 
 
   <message key="xmlui.series.head"><h2>Periodicals</h2></message>
@@ -3162,4 +3337,21 @@ Weitere Informationen zur Rechteeinräumung entnehmen Sie bitte unseren <a href=
   <message key="comics">Comics &amp; graphic novels</message>
 <message key="economics">Economics</message>
 
+<message key="xmlui.howtopublish.head">The Stacks: Upload Your Work Today</message>
+
+<message key="xmlui.howtopublish.text">
+                        <p>1) <a href="/register" title="register for the Stacks" target="_blank">Create an account for The Stacks</a></p>
+                        <p>2) Be sure to have <a href="https://libaac.de/publish/publish-in-the-stacks/things-to-consider/">the necessary rights</a></p>
+                        <p>3) <a href="https://thestacks.libaac.de/submit" title="Upload to The Stacks" target="_blank">Upload your work in PDF format</a></p>
+                        <p>4) Share persistent records of your work</p>
+
+
+            <h3>We're Here to Help: Our Publication Service</h3>
+                        <p>If you are not sure about rights, images, digitization, etc., or you simply do not have the time to do it yourself, but really like the idea of making your work accessible, we offer extensive services to support the upload of your work:</p><ol><li>Send us your publication list <a href="mailto:thestacks@sub.uni-goettingen.de" title="The Stacks Email">via email</a></li><li>We review which entries can be archived according to German copyright laws and international publisher policies</li><li>We send you our assessment</li><li>We digitize publications that have been print-only thus far</li><li>With your permission, we upload PDFs of your work and send you a persistent link</li></ol>
+
+
+            <h3>Advantages of Publishing in The Stacks</h3>
+
+                        <ol><li>Higher visibility: Your publication will be found more easily by (academic) search engines such as Google, Google Scholar, or BASE.</li><li>Citability: Your electronic publication will be clearly identifiable and citable through permanent identifiers such as Persistent Uniform Resource Locators (PURL) and Digital Object Identifiers (DOI).</li><li>Accessibility independent of time and location</li><li>Your publication is archived and saved by a non-profit institution within the realm of German data privacy law.</li><li>Document the entirety of your achievements in one place by publishing preprints (author's versions), conference papers, conference programmes, reports, and course materials.</li></ol><h4>Before you publish in The Stacks, please read our <a href="/rights" title="The Stacks Policy Statement" target="_blank">Policy Statement</a>.</h4>
+                        </message>
 </catalogue>

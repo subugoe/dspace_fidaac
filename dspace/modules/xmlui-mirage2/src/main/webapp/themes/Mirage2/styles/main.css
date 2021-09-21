@@ -8388,7 +8388,7 @@ dl {
 
 /* line 134, classic_mirage_color_scheme/_general.scss */
 footer hr {
-border-top: 1px solid #ddd;
+  display: none;
 }
 /* line 138, classic_mirage_color_scheme/_general.scss */
 footer .row > div {
@@ -8478,6 +8478,7 @@ footer > .container .pull-right {
 
 /* line 215, classic_mirage_color_scheme/_general.scss */
 .main-content {
+  background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -10291,4 +10292,42 @@ header .navbar-default .navbar-toggle > .open > a, header .navbar-default .navba
 /* line 374, _style.scss */
 ul.vocabulary ul {
   padding-left: 5px;
+}
+
+/* line 377, _style.scss */
+read-more-wrap {
+  font-size: 90%;
+}
+
+/* line 381, _style.scss */
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+  margin-bottom: 1em;
+}
+
+/* line 392, _style.scss */
+.read-more-state {
+  display: none;
+}
+
+/* line 396, _style.scss */
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+/* line 403, _style.scss */
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
 }

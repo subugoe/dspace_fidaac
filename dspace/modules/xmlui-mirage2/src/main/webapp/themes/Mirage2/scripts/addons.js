@@ -53,7 +53,10 @@
                $(this).text("Literary Studies");
             }
          if ($(this).text() == "mediastudies") {
-                $(this).text("Film & Media Studies");
+                $(this).text("Media Studies");
+            }
+	if ($(this).text() == "filmstudies") {
+                $(this).text("Film Studies");
             }
          if ($(this).text() == "socialscience") {
                $(this).text("Social Sciences");
@@ -82,6 +85,23 @@
 	if ($(this).text() == "postcolonial") {
                $(this).text("Postcolonial Studies");
             }
+
+    if ($(this).text() == "musicology") {
+                $(this).text("Musicology");
+            }
+         if ($(this).text() == "popularculture") {
+               $(this).text("Popular Culture");
+            }
+        if ($(this).text() == "religiousstudies") {
+               $(this).text("Religious Studies");
+            }
+        if ($(this).text() == "environmentalstudies") {
+               $(this).text("Environmental Studies");
+            }
+
+
+
+
 
         });
     }
@@ -133,7 +153,7 @@
                $(this).text("Literaturwissenschaften");
             }
          if ($(this).text() == "mediastudies") {
-                $(this).text("Film- & Medienwissenschaften");
+                $(this).text("Medienwissenschaften");
             }
          if ($(this).text() == "socialscience") {
                $(this).text("Sozialwissenschaften");
@@ -162,6 +182,25 @@
 	 if ($(this).text() == "postcolonial") {
                $(this).text("Postkoloniale Studien");
             }
+
+	 if ($(this).text() == "filmstudies") {
+               $(this).text("Filmwissenschaften");
+            }
+	  if ($(this).text() == "musicology") {
+                $(this).text("Musikwissenschaften");
+            }
+         if ($(this).text() == "popularculture") {
+               $(this).text("Populärkultur");
+            }
+        if ($(this).text() == "religiousstudies") {
+               $(this).text("Religionswissenschaften");
+            }
+        if ($(this).text() == "environmentalstudies") {
+               $(this).text("Environmental Studies");
+            }
+
+
+
       });
     }
 

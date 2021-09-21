@@ -146,7 +146,7 @@
     <xsl:template name="buildHead">
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-
+	<meta name="google-site-verification" content="vPYH-_Ll0-clGbu1v9h0BDxXt0iRGd6_OTUYAsc2SlU" />
             <!-- Use the .htaccess and remove these lines to avoid edge case issues.
              More info: h5bp.com/i/378 -->
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -349,7 +349,7 @@
 
 			
 			<div class="pull-left clearfixheader float-my-children visible-xs hidden-sm hidden-md hidden-lg">
-                        <div><a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/fid_header.svg" style="height: 100px;"/></a></div>
+                        <div><a href="{$context-path}/" class="navbar-brand"><img src="/themes/Mirage2/images/fid_header.svg" style="height: 80px;"/></a></div>
                         </div>
 
                         <!--<a href="{$context-path}/" class="navbar-brand-small pull-left navbar-brand-xs">
