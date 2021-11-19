@@ -15,14 +15,54 @@
 
  <form-map>
    <name-map collection-handle="default" form-name="default" />
+
+  <name-map collection-handle="11858/1013" form-name="journals" />
+   <name-map collection-handle="11858/1014" form-name="journals" />
+   <name-map collection-handle="11858/1043" form-name="journals" />
+   <name-map collection-handle="11858/1042" form-name="journals" />
+   <name-map collection-handle="11858/1041" form-name="journals" />
+
+<name-map collection-handle="11858/1040" form-name="journals" />
+   <name-map collection-handle="11858/1039" form-name="journals" />
+   <name-map collection-handle="11858/1038" form-name="journals" />
+   <name-map collection-handle="11858/1037" form-name="journals" />
+   <name-map collection-handle="11858/1036" form-name="journals" />
+
+
+ <name-map collection-handle="11858/1035" form-name="journals" />
+   <name-map collection-handle="11858/1034" form-name="journals" />
+   <name-map collection-handle="11858/1033" form-name="journals" />
+   <name-map collection-handle="11858/1032" form-name="journals" />
+   <name-map collection-handle="11858/1031" form-name="journals" />
+
+<name-map collection-handle="11858/1030" form-name="journals" />
+   <name-map collection-handle="11858/1029" form-name="journals" />
+   <name-map collection-handle="11858/1027" form-name="journals" />
+   <name-map collection-handle="11858/1025" form-name="journals" />
+   <name-map collection-handle="11858/1020" form-name="journals" />
+
+<name-map collection-handle="11858/1016" form-name="journals" />
+   <name-map collection-handle="11858/1017" form-name="journals" />
+   <name-map collection-handle="11858/1021" form-name="journals" />
+   <name-map collection-handle="11858/1022" form-name="journals" />
+   <name-map collection-handle="11858/1023" form-name="journals" />
+
+
+ <name-map collection-handle="11858/1024" form-name="journals" />
+   <name-map collection-handle="11858/1026" form-name="journals" />
+   <name-map collection-handle="11858/1028" form-name="journals" />
+
+<name-map collection-handle="11858/1061" form-name="journals" />
+
+
   <name-map collection-handle="11858/48" form-name="journals" /> 
    <name-map collection-handle="11858/377" form-name="journals" />
    <name-map collection-handle="11858/398" form-name="journals" />
    <name-map collection-handle="11858/830" form-name="journals" />
    <name-map collection-handle="11858/835" form-name="journals" />
-   <name-map collection-handle="11858/937" form-name="sammelband" />
-   <name-map collection-handle="11858/984" form-name="sammelband" /> 
-<name-map collection-handle="11858/985" form-name="sammelband" />
+   <name-map collection-handle="11858/1050" form-name="sammelband" />
+   <name-map collection-handle="11858/1051" form-name="sammelband" /> 
+<name-map collection-handle="11858/1052" form-name="sammelband" />
  </form-map>
 
 
@@ -67,7 +107,6 @@
                                  <input-type value-pairs-name="common_versions">dropdown</input-type>
                                  <hint>Bitte wählen Sie die Dokumentversion aus.</hint>
                                  <required>Bitte wählen Sie die Dokumentversion aus.</required>
-                                 <type-bind>workingPaper,dissertation,report,lecture,review,monograph,article,anthologyArticle,anthology,digitalReproduction,blogentry</type-bind>
                         </field>
 
                         <field>
@@ -179,7 +218,7 @@
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>title</dc-element>
                                  <dc-qualifier>alternative</dc-qualifier>
-                                 <repeatable>true</repeatable>
+                                 <repeatable>false</repeatable>
                                  <label>Untertitel des Dokuments</label>
                                  <input-type>onebox</input-type>
                                  <hint></hint>
@@ -449,7 +488,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Bitte geben Sie die Serie in folgender Form an: Literary Research; Vol.13</hint>
                                  <required></required>
-                                 <type-bind>workingPaper,article</type-bind>
+                                 <type-bind>workingPaper,article,review</type-bind>
                         </field>
 
                         <field>
@@ -677,7 +716,6 @@
                                  <input-type value-pairs-name="common_versions">dropdown</input-type>
                                  <hint>Bitte wählen Sie die Dokumentversion aus.</hint>
                                  <required>Bitte wählen Sie die Dokumentversion aus.</required>
-                                 <type-bind>workingPaper,dissertation,report,lecture,review,monograph,article,anthologyArticle,anthology,digitalReproduction,blogentry</type-bind>
                         </field>
 
                         <field>
@@ -789,7 +827,7 @@
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>title</dc-element>
                                  <dc-qualifier>alternative</dc-qualifier>
-                                 <repeatable>true</repeatable>
+                                 <repeatable>false</repeatable>
                                  <label>Untertitel des Dokuments</label>
                                  <input-type>onebox</input-type>
                                  <hint></hint>
@@ -1059,7 +1097,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Bitte geben Sie die Serie in folgender Form an: Literary Research; Vol.13</hint>
                                  <required></required>
-                                 <type-bind>workingPaper,article</type-bind>
+                                 <type-bind>workingPaper,article,review</type-bind>
                         </field>
 
                         <field>
@@ -1289,7 +1327,6 @@
                                  <input-type value-pairs-name="common_versions">dropdown</input-type>
                                  <hint>Bitte wählen Sie die Dokumentversion aus.</hint>
                                  <required>Bitte wählen Sie die Dokumentversion aus.</required>
-                                 <type-bind>review,monograph,article,anthologyArticle,anthology,digitalReproduction,lecture</type-bind>
                         </field>
 
                         <field>
@@ -1322,7 +1359,7 @@
                                  <input-type>name</input-type>
                                  <hint></hint>
                                  <required>Geben Sie den/die Autor*in bzw. die Autor*innen des Dokuments an!</required>
-                                 <type-bind>review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper,lecture</type-bind>
+                                 <type-bind>review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper,lecture,report</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -1365,7 +1402,7 @@
                                  <label>Herausgeber</label>
                                  <input-type>name</input-type>
                                  <hint></hint>
-                                 <type-bind>article,anthology,conferenceBoA,conferenceCall,cfppublication,lecture</type-bind>
+                                 <type-bind>article,anthology,conferenceBoA,conferenceCall,cfppublication,lecture,report</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -1381,7 +1418,7 @@
                                  <dc-schema>dc</dc-schema>
                                  <dc-element>title</dc-element>
                                  <dc-qualifier>alternative</dc-qualifier>
-                                 <repeatable>true</repeatable>
+                                 <repeatable>false</repeatable>
                                  <label>Untertitel des Dokuments</label>
                                  <input-type>onebox</input-type>
                                  <hint></hint>
@@ -1469,7 +1506,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Bitte geben Sie die Serie in folgender Form an: Literary Research; Vol.13</hint>
                                  <required></required>
-                                 <type-bind>anthology,anthologyArticle,article,review,lecture</type-bind>
+                                 <type-bind>anthology,anthologyArticle,article,review,lecture,report</type-bind>
                         </field>
 
                         <field>
@@ -1481,7 +1518,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Geben Sie bitte an, in welcher Zeitschrift das Dokument erschienen ist.</hint>
                                  <required></required>
-                                 <type-bind>anthology,anthologyArticle,article,digitalReproduction,review,lecture</type-bind>
+                                 <type-bind>anthology,anthologyArticle,article,digitalReproduction,review,lecture,report</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -1492,7 +1529,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Geben Sie den Untertitel der Zeitschrift an, in der das Dokument erschienen ist.</hint>
                                  <required></required>
-                                 <type-bind>anthology,anthologyArticle,review,article,digitalReproduction,lecture</type-bind>
+                                 <type-bind>anthology,anthologyArticle,review,article,digitalReproduction,lecture,report</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -1550,7 +1587,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,cfppublication,review,lecture</type-bind>
+                                 <type-bind>article,digitalReproduction,cfppublication,review,lecture,report</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -1561,7 +1598,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>article,digitalReproduction,cfppublication,review,lecture</type-bind>
+                                 <type-bind>article,digitalReproduction,cfppublication,review,lecture,report</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -1572,7 +1609,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction</type-bind>
+                                 <type-bind>review,article,digitalReproduction,report</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -1884,6 +1921,10 @@
        <displayed-value>Fachdidaktik</displayed-value>
        <stored-value>englishlanguageteaching</stored-value>
      </pair>
+	<pair>
+       <displayed-value>Environmental Studies</displayed-value>
+       <stored-value>environmentalstudies</stored-value>
+     </pair>
      <pair>
        <displayed-value>Medienwissenschaften</displayed-value>
        <stored-value>mediastudies</stored-value>
@@ -1949,6 +1990,10 @@
        <stored-value>medievalstudies</stored-value>
      </pair>
      <pair>
+       <displayed-value>Musikwissenschaften</displayed-value>
+       <stored-value>musicology</stored-value>
+     </pair>
+     <pair>
        <displayed-value>Neuseelandstudien</displayed-value>
        <stored-value>newzealandstudies</stored-value>
      </pair>
@@ -1956,9 +2001,17 @@
        <displayed-value>Politikwissenschaften</displayed-value>
        <stored-value>politicalscience</stored-value>
      </pair>
+    <pair>
+       <displayed-value>Populärkultur</displayed-value>
+       <stored-value>popularculture</stored-value>
+     </pair>
         <pair>
        <displayed-value>postkoloniale Studien</displayed-value>
        <stored-value>postcolonial</stored-value>
+     </pair>
+	<pair>
+       <displayed-value>Religionswissenschaften</displayed-value>
+       <stored-value>religiousstudies</stored-value>
      </pair>
          <pair>
        <displayed-value>Sozialwissenschaften</displayed-value>

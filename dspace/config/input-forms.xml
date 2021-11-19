@@ -13,18 +13,57 @@
  <!-- collection which does not appear in this map will be associated with -->
  <!-- the mapping for handle "default".                                    -->
 
- <form-map>
+<form-map>
    <name-map collection-handle="default" form-name="default" />
-  <name-map collection-handle="11858/48" form-name="journals" /> 
-  <name-map collection-handle="11858/377" form-name="journals" />
-<name-map collection-handle="11858/398" form-name="journals" />
-<name-map collection-handle="11858/830" form-name="journals" />
-<name-map collection-handle="11858/835" form-name="journals" />
-<name-map collection-handle="11858/937" form-name="sammelband" />
-<name-map collection-handle="11858/984" form-name="sammelband" />
-<name-map collection-handle="11858/985" form-name="sammelband" />
- </form-map>
 
+  <name-map collection-handle="11858/1013" form-name="journals" />
+   <name-map collection-handle="11858/1014" form-name="journals" />
+   <name-map collection-handle="11858/1043" form-name="journals" />
+   <name-map collection-handle="11858/1042" form-name="journals" />
+   <name-map collection-handle="11858/1041" form-name="journals" />
+
+<name-map collection-handle="11858/1040" form-name="journals" />
+   <name-map collection-handle="11858/1039" form-name="journals" />
+   <name-map collection-handle="11858/1038" form-name="journals" />
+   <name-map collection-handle="11858/1037" form-name="journals" />
+   <name-map collection-handle="11858/1036" form-name="journals" />
+
+
+ <name-map collection-handle="11858/1035" form-name="journals" />
+   <name-map collection-handle="11858/1034" form-name="journals" />
+   <name-map collection-handle="11858/1033" form-name="journals" />
+   <name-map collection-handle="11858/1032" form-name="journals" />
+   <name-map collection-handle="11858/1031" form-name="journals" />
+
+<name-map collection-handle="11858/1030" form-name="journals" />
+   <name-map collection-handle="11858/1029" form-name="journals" />
+   <name-map collection-handle="11858/1027" form-name="journals" />
+   <name-map collection-handle="11858/1025" form-name="journals" />
+   <name-map collection-handle="11858/1020" form-name="journals" />
+
+<name-map collection-handle="11858/1016" form-name="journals" />
+   <name-map collection-handle="11858/1017" form-name="journals" />
+   <name-map collection-handle="11858/1021" form-name="journals" />
+   <name-map collection-handle="11858/1022" form-name="journals" />
+   <name-map collection-handle="11858/1023" form-name="journals" />
+
+
+ <name-map collection-handle="11858/1024" form-name="journals" />
+   <name-map collection-handle="11858/1026" form-name="journals" />
+   <name-map collection-handle="11858/1028" form-name="journals" />
+
+
+<name-map collection-handle="11858/1061" form-name="journals" />
+
+  <name-map collection-handle="11858/48" form-name="journals" />
+   <name-map collection-handle="11858/377" form-name="journals" />
+   <name-map collection-handle="11858/398" form-name="journals" />
+   <name-map collection-handle="11858/830" form-name="journals" />
+   <name-map collection-handle="11858/835" form-name="journals" />
+   <name-map collection-handle="11858/1050" form-name="sammelband" />
+   <name-map collection-handle="11858/1051" form-name="sammelband" />
+<name-map collection-handle="11858/1052" form-name="sammelband" />
+ </form-map>
 
 
  <!-- The form-definitions map lays out the detailed definition of all the -->
@@ -68,7 +107,6 @@
                                  <input-type value-pairs-name="common_versions">dropdown</input-type>
                                  <hint>Select your document type.</hint>
                                  <required>Select your document type.</required>
-                                 <type-bind>workingPaper,dissertation,report,lecture,monograph,article,anthologyArticle,anthology,digitalReproduction,blogentry,review</type-bind>
                         </field>
 
                         <field>
@@ -689,7 +727,6 @@
                                  <input-type value-pairs-name="common_versions">dropdown</input-type>
                                  <hint>Select your document type.</hint>
                                  <required>Select your document type.</required>
-                                 <type-bind>workingPaper,dissertation,report,lecture,monograph,article,anthologyArticle,anthology,digitalReproduction,blogentry,review</type-bind>
                         </field>
 
                         <field>
@@ -1311,7 +1348,6 @@
                                  <input-type value-pairs-name="common_versions">dropdown</input-type>
                                  <hint>Select your document type.</hint>
                                  <required>Select your document type.</required>
-                                 <type-bind>lecture,monograph,article,anthologyArticle,anthology,digitalReproduction</type-bind>
                         </field>
 
                         <field>
@@ -1344,7 +1380,7 @@
                                  <input-type>name</input-type>
                                  <hint></hint>
                                  <required>Enter the author(s) of this item!</required>
-                                 <type-bind>lecture,review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper</type-bind>
+                                 <type-bind>lecture,review,article,anthologyArticle,monograph,digitalReproduction,conferenceReport,conferencePaper,report</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -1387,7 +1423,7 @@
                                  <label>Editor</label>
                                  <input-type>name</input-type>
                                  <hint></hint>
-                                 <type-bind>article,anthology,conferenceBoA,conferenceCall,cfppublication,lecture</type-bind>
+                                 <type-bind>article,anthology,conferenceBoA,conferenceCall,cfppublication,lecture,report</type-bind>
                         </field>
 
 
@@ -1462,7 +1498,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the series information in the following form: Literary Research; Vol. 13</hint>
                                  <required></required>
-                                <type-bind>anthology,anthologyArticle,lecture,article,review</type-bind>
+                                <type-bind>anthology,anthologyArticle,lecture,article,review,report</type-bind>
                         </field>
 
                         <field>
@@ -1504,7 +1540,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>anthology,anthologyArticle,lecture,review,article,digitalReproduction</type-bind>
+                                 <type-bind>anthology,anthologyArticle,lecture,review,article,digitalReproduction,report</type-bind>
                         </field>
 			  <field>
                                  <dc-schema>dc</dc-schema>
@@ -1515,7 +1551,7 @@
                                  <input-type>onebox</input-type>
                                  <hint>Enter the subtitle of the journal your article was published in.</hint>
                                  <required></required>
-                                 <type-bind>anthology,anthologyArticle,lecture,review,article,digitalReproduction</type-bind>
+                                 <type-bind>anthology,anthologyArticle,lecture,review,article,digitalReproduction,report</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -1574,7 +1610,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>lecture,article,digitalReproduction,cfppublication,review</type-bind>
+                                 <type-bind>lecture,article,digitalReproduction,cfppublication,review,report</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -1585,7 +1621,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>lecture,article,digitalReproduction,cfppublication,review</type-bind>
+                                 <type-bind>lecture,article,digitalReproduction,cfppublication,review,report</type-bind>
                         </field>
 			<field>
                                  <dc-schema>dc</dc-schema>
@@ -1596,7 +1632,7 @@
                                  <input-type>onebox</input-type>
                                  <hint></hint>
                                  <required></required>
-                                 <type-bind>review,article,digitalReproduction</type-bind>
+                                 <type-bind>review,article,digitalReproduction,report</type-bind>
                         </field>
                         <field>
                                  <dc-schema>dc</dc-schema>
@@ -2005,6 +2041,23 @@
      <pair>
        <displayed-value>Economics</displayed-value>
        <stored-value>economics</stored-value>
+     </pair>
+
+<pair>
+ <displayed-value>Musicology</displayed-value>
+       <stored-value>musicology</stored-value>
+     </pair>
+         <pair>
+       <displayed-value>Popular Culture</displayed-value>
+       <stored-value>popularculture</stored-value>
+     </pair>
+        <pair>
+       <displayed-value>Religious Studies</displayed-value>
+       <stored-value>religiousstudies</stored-value>
+     </pair>
+         <pair>
+       <displayed-value>Environmental Studies</displayed-value>
+       <stored-value>environmentalstudies</stored-value>
      </pair>
 
     </value-pairs>
