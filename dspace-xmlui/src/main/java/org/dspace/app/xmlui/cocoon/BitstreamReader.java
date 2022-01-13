@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.avalon.excalibur.pool.Recyclable;
 import org.apache.avalon.framework.parameters.Parameters;
+import org.apache.avalon.framework.configuration.Configuration;
+import org.apache.avalon.framework.configuration.DefaultConfigurationBuilder;
 import org.apache.cocoon.ProcessingException;
 import org.apache.cocoon.ResourceNotFoundException;
 import org.apache.cocoon.environment.ObjectModelHelper;
@@ -46,6 +48,28 @@ import org.dspace.handle.HandleManager;
 import org.dspace.usage.UsageEvent;
 import org.dspace.utils.DSpace;
 import org.xml.sax.SAXException;
+
+import org.apache.fop.apps.Fop;
+import org.apache.fop.apps.FopFactory;
+
+import java.util.UUID;
+import org.apache.commons.io.IOUtils;
+import org.dspace.services.ConfigurationService;
+
+import org.xml.sax.helpers.DefaultHandler;
+
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.sax.SAXResult;
+import javax.xml.transform.stream.StreamSource;
+
+import org.apache.pdfbox.multipdf.PDFMergerUtility;
+import org.apache.xmlgraphics.util.MimeConstants;
+import org.apache.pdfbox.io.MemoryUsageSetting;
+
+import java.net.URI;
 
 import org.apache.log4j.Logger;
 import org.dspace.core.LogManager;
@@ -374,7 +398,14 @@ public class BitstreamReader extends AbstractReader implements Recyclable
             }
 
             this.bitstreamMimeType = bitstream.getFormat().getMIMEType();
-            this.bitstreamName = bitstream.getName();
+            int itemInternalId = item.getID();
+            if ("application/pdf".equals(this.bitstreamMimeType) ) {
+		String itemInternalIdString = Integer.toString(itemInternalId);
+		log.debug("Item ID: " + itemInternalIdString);
+                addFrontpageToBitstream(itemInternalIdString);
+            }
+
+	    this.bitstreamName = bitstream.getName();
             if (context.getCurrentUser() == null)
             {
                 this.isAnonymouslyReadable = true;
@@ -438,7 +469,68 @@ public class BitstreamReader extends AbstractReader implements Recyclable
         }
     }
 
-    
+    private void addFrontpageToBitstream(String itemInternalIdString) {
+        long originalBitstreamSize = this.bitstreamSize;
+        byte[] originalInputStreamBytesWorkingCopy = null;
+        try {
+            originalInputStreamBytesWorkingCopy = IOUtils.toByteArray(this.bitstreamInputStream);
+            //ConfigurationService configService = DSpaceServicesFactory.getInstance().getConfigurationService();
+            String frontpageConfigDirectory = new DSpace().getConfigurationService().getProperty("frontpage.config.directory");
+            String metadataUrlPrefix = new DSpace().getConfigurationService().getProperty("frontpage.metadataUrlPrefix");
+            Source xsltSoure = new StreamSource(frontpageConfigDirectory + "/frontpage.xsl");
+            DefaultConfigurationBuilder cfgBuilder = new DefaultConfigurationBuilder();
+            Configuration cfg = cfgBuilder.buildFromFile(new File("/opt/dspace/aac/config/frontpage/config.xconf"));
+            Transformer transformer = TransformerFactory.newInstance().newTransformer(xsltSoure);
+            log.debug("Config Dir: " + frontpageConfigDirectory);
+	    URI frontpageConfigDirectoryUri = new File(frontpageConfigDirectory).toURI();
+	    FopFactory fopFactory = FopFactory.newInstance(new File("/opt/dspace/aac/config/frontpage/config.xconf")); 
+//   FopFactory fopFactory = FopFactory.newInstance(frontpageConfigDirectoryUri);
+	 //   fopFactory.setUserConfig(cfg);
+	
+            
+            try ( ByteArrayOutputStream frontpageOutputStream = new ByteArrayOutputStream() ) {
+                Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, frontpageOutputStream);
+                
+                String metsUrl = metadataUrlPrefix + "/" + itemInternalIdString + "/mets.xml";
+                Source metadataXml = new StreamSource(metsUrl);
+                DefaultHandler defaultHandler = fop.getDefaultHandler();
+                Result sax = new SAXResult(defaultHandler);
+                
+                log.debug("transforming...");
+                transformer.transform(metadataXml, sax);
+                
+                // frontPageOut, frontPageByteBuffer, and frontPageIn all operate on
+                // the same byte array
+                byte[] frontpageByteArray = frontpageOutputStream.toByteArray();
+                
+                try (InputStream frontpageInputStream = new ByteArrayInputStream(frontpageByteArray) ) {
+                    PDFMergerUtility pdfMergerUtility = new PDFMergerUtility();
+                    
+                    ByteArrayOutputStream mergedPdfOutputStream = new ByteArrayOutputStream();
+                    pdfMergerUtility.setDestinationStream(mergedPdfOutputStream);
+                    
+                    pdfMergerUtility.addSource(frontpageInputStream);
+                    
+                    InputStream originalBitstreamInputStream = new ByteArrayInputStream(originalInputStreamBytesWorkingCopy);
+                    pdfMergerUtility.addSource(originalBitstreamInputStream);
+                    
+                    pdfMergerUtility.mergeDocuments( MemoryUsageSetting.setupMainMemoryOnly() );
+                    
+                    byte[] mergedPdfBytes = mergedPdfOutputStream.toByteArray();
+                    ByteArrayInputStream mergedPdfInputStream = new ByteArrayInputStream(mergedPdfBytes);
+                    int byteCount = mergedPdfInputStream.available();
+                    this.bitstreamInputStream = mergedPdfInputStream;
+                    this.bitstreamSize = byteCount;
+                }
+            }
+        }
+        catch (Throwable t) {
+            log.error("Something went wrong generating a PDF with frontpage", t);
+            this.bitstreamSize = originalBitstreamSize;
+            this.bitstreamInputStream = new ByteArrayInputStream(originalInputStreamBytesWorkingCopy);
+        }
+    }
+
     
     
     
