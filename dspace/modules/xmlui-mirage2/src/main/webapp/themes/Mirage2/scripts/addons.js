@@ -34,6 +34,13 @@
 	if ($(this).text() == "anglophoneliterature") {
                 $(this).text("Anglophone Literatures and Cultures");
             }
+	if ($(this).text() == "indigenousstudies") {
+               $(this).text("Indigenous Studies");
+            }
+         if ($(this).text() == "scienceresearch") {
+                $(this).text("Science & Research");
+            }
+
 	 if ($(this).text() == "politicalscience") {
                $(this).text("Politics");
             }
@@ -143,6 +150,14 @@
          if ($(this).text() == "englishstudies") {
                $(this).text("Anglistik");
         }
+
+	if ($(this).text() == "scienceresearch") {
+               $(this).text("Lehre und Forschung");
+            }
+         if ($(this).text() == "indigenousstudies") {
+                $(this).text("Indigenous Studies");
+            }
+
 	if ($(this).text() == "irishstudies") {
                $(this).text("Irlandstudien");
         }

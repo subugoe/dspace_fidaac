@@ -2683,7 +2683,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 <p>Die Nutzung dieser Webseite ist in der Regel ohne Angabe personenbezogener Daten m&#xF6;glich. Soweit auf diesen Seiten personenbezogene Daten erhoben werden, erfolgt dies, soweit m&#xF6;glich, stets auf freiwilliger Basis und im hier dargestellten Umfang. Diese Daten werden ohne Ihre ausdr&#xFC;ckliche Zustimmung nicht an Dritte weitergegeben.</p><p>S&#xE4;mtliche personenbezogenen Daten werden nur solange gespeichert, wie dies f&#xFC;r den jeweils genannten Zweck erforderlich ist. Hierbei werden bestehende gesetzliche Aufbewahrungsfristen ber&#xFC;cksichtigt.</p>
 <h3>Informationspflicht bei Erhebung von personenbezogenen Daten bei der betroffenen Person</h3>
 <h4>Name und Kontaktdaten des Verantwortlichen</h4>
-<p>Prof. Dr. Ulrike Beisiegel<br/> Wilhelmsplatz 1<br/> 37073 G&#xF6;ttingen<br/> +49 551 39 - 21000 (Tel.)<br/> +49 551 39 - 1821000 (Fax)<br/> praesidentin@uni-goettingen.de</p>
+<p>Georg-August-Universität<br />Der Präsident<br />Prof. Dr. Metin Tolan<br /> Wilhelmsplatz 1<br /> 37073 Göttingen<br /> +49 551 39 - 21000 (Tel.)<br /> +49 551 39 - 1821000 (Fax)<br /> praesident@uni-goettingen.de</p>
 <h4>Kontaktdaten des betrieblichen Datenschutzbeauftragen</h4>
 <p>Prof. Dr. Andreas Wiebe<br/> Lehrstuhl f&#xFC;r B&#xFC;rgerliches Recht,<br/> Wettbewerbs- und Immaterialg&#xFC;terrecht,<br/> Medien- und Informationsrecht<br/> Platz der G&#xF6;ttinger Sieben 6<br/> D-37073 G&#xF6;ttingen<br/> +49 551 39 -7381 (Tel.)<br/> +49 551 39 - 4437(Fax)<br/> datenschutz@uni-goettingen.de</p>
 <h4>Zwecke und Rechtsgrundlagen der Verarbeitung</h4>
@@ -2872,6 +2872,9 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 <a href="https://thestacks.libaac.de/handle/11858/1015">Australian Studies Journal</a>
 </li>
 
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/2352">aspeers</a>
+</li>
 </ul>
 
 </div>
@@ -2895,6 +2898,13 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 <a href="https://thestacks.libaac.de/handle/11858/1061">Crime Reduction Research Series</a>
 </li>
 
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/1609">Göttinger Schriften zur Englischen Philologie (GSEP)</a>
+</li>
+
+<li>
+<a href="https://thestacks.libaac.de/handle/11858/1656">Publications of The German Association for British Studies (AGF)</a>
+</li>
 
 </ul>
 
@@ -3028,10 +3038,18 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 </a>
 <a href="https://thestacks.libaac.de/handle/11858/1012">
 <image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/americana_logo_stacks.png" alt="americana Logo" title="americana"/>
-</a><br />
-<image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/Peter_Lang_Logo.png" alt="Peter Lang Verlag Logo" title ="Peter Lang Verlag"/>
+</a>
+<a href="https://thestacks.libaac.de/handle/11858/468">
+<image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/PGF-Logo.png" alt="PGF Logo" title="PGF"/>
+</a>
+<image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/Peter_Lang_Logo.png" alt="Peter Lang Verlag Logo" title ="Peter Lang Verlag"/><br />
 <image style="height: 30px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/logo_univerlag.png" alt="Univerlag Logo" title ="Univerlag"/>
+<a href="https://thestacks.libaac.de/handle/11858/1656">
 <image style="height: 60px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/logo_agf.jpg" alt="AGF Logo" title="AGF"/>
+</a>
+<a href="https://thestacks.libaac.de/handle/11858/2352">
+<image style="height: 66px;vertical-align:middle;margin:15px;" src="/themes/Mirage2/images/aspeers_klein.png" alt="aspeers Logo" title="aspeers"/>
+</a>
 </message>
 
 
@@ -3142,6 +3160,10 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
   <message key="digitalhumanities">Digital Humanities</message>
   <message key="genderstudies">Gender Studies</message>
   <message key="anglophoneliterature">Anglophone Literatures and Cultures</message>
+
+  <message key="scienceresearch">Science &amp; Research</message>
+<message key="indigenousstudies">Indigenous Studies</message>
+
 
   <message key="blogentry">Blog Entry</message>
 
