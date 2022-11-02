@@ -3163,7 +3163,7 @@ E-Mail: <a href="mailto:fid-aac@sub.uni-goettingen.de">fid-aac@sub.uni-goettinge
 
   <message key="scienceresearch">Science &amp; Research</message>
 <message key="indigenousstudies">Indigenous Studies</message>
-
+<message key="creativework">Creative Work</message>
 
   <message key="blogentry">Blog Entry</message>
 
@@ -3376,4 +3376,26 @@ Weitere Informationen zur Rechteeinräumung entnehmen Sie bitte unseren <a href=
 
                         <ol><li>Higher visibility: Your publication will be found more easily by (academic) search engines such as Google, Google Scholar, or BASE.</li><li>Citability: Your electronic publication will be clearly identifiable and citable through permanent identifiers such as Persistent Uniform Resource Locators (PURL) and Digital Object Identifiers (DOI).</li><li>Accessibility independent of time and location</li><li>Your publication is archived and saved by a non-profit institution within the realm of German data privacy law.</li><li>Document the entirety of your achievements in one place by publishing preprints (author's versions), conference papers, conference programmes, reports, and course materials.</li></ol><h4>Before you publish in The Stacks, please read our <a href="/rights" title="The Stacks Policy Statement" target="_blank">Policy Statement</a>.</h4>
                         </message>
+<message key="xmlui.klaro.acceptall">That\'s ok</message>
+        <message key="xmlui.klaro.decline">Refuse optional cookies</message>
+                <message key="xmlui.klaro.privacyPolicy.name">Data Protection Information</message>
+        <message key="xmlui.klaro.privacyPolicy.text">To learn more please read our <a href="/privacy">Data Protection Information</a></message>
+
+
+        <message key="xmlui.klaro.consentNotice">We use cookies that are necessary to make our site work. We may also use analytical services to improve our website and your user expirience. For more information, see our <a href="privacy">Data Protection Information</a></message><message key="xmlui.klaro.consentNotice.learnmore">Learn more...</message><message key="xmlui.klaro.apps.cookie.title">Session Cookie</message><message key="xmlui.klaro.apps.cookie.description">The session cookie is required to make our service work.</message><message key="xmlui.klaro.purposes.functional">Website</message><message key="xmlui.klaro.purposes.preferences">Preferences</message><message key="xmlui.klaro.purposes.statistical">Statistics</message><message key="xmlui.klaro.apps.matomo.title">Matomo</message><message key="xmlui.klaro.consent.matomo.description">We collect data about your user behavior</message><message key="xmlui.klaro.apps.dataConsent.title" /><message key="xmlui.klaro.apps.dataConsent.description">We save your decisions you make here.</message>
+        <message key="xmlui.structural.manage.cookies">Cookie Consents</message>
+        <message key="xmlui.klaro.acceptall">That\'s ok</message>
+        <message key="xmlui.klaro.ok">That\'s ok</message>
+        <message key="xmlui.klaro.decline">Necessary only</message>
+                <message key="xmlui.klaro.privacyPolicy.name">Data Protection Information</message>
+<message key="xmlui.klaro.consentmodal.description">Enable or disable them as you see fit.</message>
+<message key="xmlui.klaro.purposes.required.title">(always required)</message>
+<message key="xmlui.klaro.service.required.title">(always required)</message>
+        <message key="xmlui.klaro.consentmodal.title">Services / Cookies we would like to use</message>
+<message key="xmlui.klaro.consentNotice.changeDescription">There were changes since your last visit, please renew your consent.</message>
+<message key="xmlui.klaro.service.purpose">purpose</message>
+<message key="xmlui.klaro.service.purposes">purposes</message>
+<message key="xmlui.klaro.acceptSelected">Save selected</message>
+<message key="xmlui.klaro.apps.matomo.description">We collect data to about your user behaviour</message>
+
 </catalogue>

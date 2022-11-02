@@ -3168,6 +3168,8 @@ Falls Sie der Meinung sind, dass es diese Seite geben sollte, bitte kontaktieren
   <message key="canadianstudies">Kanadastudien</message>
   <message key="australianstudies">Australienstudien</message>
   <message key="newzealandstudies">Neuseelandstudien</message>
+  <message key="creativework">Künstlerisches Werk</message>
+
 
  <message key="blogentry">Blog-Beitrag</message>
 
@@ -3416,6 +3418,28 @@ Weitere Informationen zur Rechteeinräumung entnehmen Sie bitte unseren <a href=
                 
 			<ol><li>Higher visibility: Your publication will be found more easily by (academic) search engines such as Google, Google Scholar, or BASE.</li><li>Citability: Your electronic publication will be clearly identifiable and citable through permanent identifiers such as Persistent Uniform Resource Locators (PURL) and Digital Object Identifiers (DOI).</li><li>Accessibility independent of time and location</li><li>Your publication is archived and saved by a non-profit institution within the realm of German data privacy law.</li><li>Document the entirety of your achievements in one place by publishing preprints (author's versions), conference papers, conference programmes, reports, and course materials.</li></ol><h4>Before you publish in The Stacks, please read our <a href="/rights" title="The Stacks Policy Statement" target="_blank">Policy Statement</a>.</h4>
 			</message>
+
+<message key="xmlui.klaro.consentmodal.title">Dienste / Cookies, die wir nutzen möchten</message>
+<message key="xmlui.klaro.consentmodal.description">Aktivieren Sie die Dienste / Cookies, die Sie für richtig halten. </message>
+        <message key="xmlui.klaro.apps.matomo.description">Wir erheben Daten über Ihr Nutzerverhalten.</message>
+        <message key="xmlui.structural.manage.cookies">Cookie-Einwilligung</message>
+        <message key="xmlui.klaro.acceptall">Alles erlauben</message>
+        <message key="xmlui.klaro.consentNotice.changeDescription">Seit Ihrem letzten Besuch gab es Änderungen, bitte erneuern Sie Ihre Zustimmung.</message>
+        <message key="xmlui.klaro.decline">Nur notwendige Cookies erlauben</message>
+                <message key="xmlui.klaro.privacyPolicy.name">Datenschutzhinweis</message>
+        <message key="xmlui.klaro.privacyPolicy.text">Mehr Information dazu finden Sie in unserer <a href="/privacy">Datenschutzhinweis</a></message>
+
+
+        <message key="xmlui.klaro.consentNotice">Für das Funktionieren unserer Website sind Cookies notwendig. Optional verwenden wir auch analytische Dienste, um unser Service zu verbessern. Sind Sie damit einverstanden? Mehr Information dazu finden Sie in unserer <a href="/privacy">Datenschutzhinweis</a></message><message key="xmlui.klaro.consentNotice.learnmore">Anpassen...</message><message key="xmlui.klaro.apps.cookie.title">Sitzungscookie</message><message key="xmlui.klaro.apps.cookie.description">Der Sitzungscookie ist notwendig für das reibungslose Funktionieren unseres Services</message><message key="xmlui.klaro.purposes.functional">Website</message><message key="xmlui.klaro.purposes.preferences">Präferenzen</message><message key="xmlui.klaro.purposes.statistical">Statistik</message><message key="xmlui.klaro.apps.matomo.title">Matomo</message><message key="xmlui.klaro.consent.matomo.description">Ermöglicht uns, Nutzungsdaten zu sammeln, um unser Service zu verbessern.</message><message key="xmlui.klaro.apps.dataConsent.title">Datenschutzeinstellungen</message><message key="xmlui.klaro.apps.dataConsent.description">Wir speichern die Auwahl, die Sie hier bzgl. privaten Daten treffen.</message>
+        <message key="xmlui.structural.manage.cookies">Cookie-Einwilligung</message>
+        <message key="xmlui.klaro.acceptall">Alles erlauben</message>
+        <message key="xmlui.klaro.ok">OK</message>
+        <message key="xmlui.klaro.decline">Nur notwendige erlauben</message>
+        <message key="xmlui.klaro.service.required.title">(immer erforderlich)</message>
+                <message key="xmlui.klaro.privacyPolicy.name">Datenschutzhinweis</message>
+        <message key="xmlui.klaro.privacyPolicy.text">Mehr Information dazu finden Sie in unserer <a href="/privacy">Datenschutzhinweis</a></message>
+<message key="xmlui.klaro.acceptSelected">Auswahl speichern</message>
+<message key="xmlui.klaro.service.purpose">Zweck</message>
 
 
 
